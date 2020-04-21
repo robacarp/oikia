@@ -10,8 +10,8 @@
 		{
 			"name": "iPhone Wifi Presence",
 			"category": "Security",
-			"location": "https://raw.githubusercontent.com/package2/packageManifest.json",
-			"description": "The iPhone Wifi Presence Sensor"
+			"location": "https://raw.githubusercontent.com/robacarp/oikia/master/hubitat-packages/iphone-wifi-presence-sensor.json",
+			"description": "The iPhone Wifi Presence Sensor from joelwetzel"
 		}
 	]
 }
