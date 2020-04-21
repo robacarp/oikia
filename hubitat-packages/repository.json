@@ -4,7 +4,7 @@
 		{
 			"name": "Combined Presence ",
 			"category": "Security",
-			"location": "https://raw.githubusercontent.com/package1/packageManifest.json",
+			"location": "https://github.com/robacarp/oikia/raw/master/packages/combined-presence.json",
 			"description": "The Combined Presence application from joelwetzel"
 		},
 		{
