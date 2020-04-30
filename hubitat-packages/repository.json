@@ -12,6 +12,12 @@
 			"category": "Security",
 			"location": "https://hubitat-package-manifest.herokuapp.com/g/joelwetzel/Hubitat-iPhone-Presence-Sensor",
 			"description": "The iPhone Wifi Presence Sensor from joelwetzel"
+		},
+		{
+			"name": "Device Monitor",
+			"category": "Utility",
+			"location": "http://hubitat-package-manifest.herokuapp.com/g/erocm123/SmartThingsPublic/smartapps/erocm123/device-monitor.src",
+			"description": "Device monitor from erocm123"
 		}
 	]
 }
