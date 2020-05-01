@@ -4,14 +4,20 @@
 		{
 			"name": "Combined Presence ",
 			"category": "Security",
-			"location": "https://github.com/robacarp/oikia/raw/master/packages/combined-presence.json",
+			"location": "https://hubitat-package-manifest.herokuapp.com/g/joelwetzel/Hubitat-Combined-Presence",
 			"description": "The Combined Presence application from joelwetzel"
 		},
 		{
 			"name": "iPhone Wifi Presence",
 			"category": "Security",
-			"location": "https://raw.githubusercontent.com/robacarp/oikia/master/hubitat-packages/iphone-wifi-presence-sensor.json",
+			"location": "https://hubitat-package-manifest.herokuapp.com/g/joelwetzel/Hubitat-iPhone-Presence-Sensor",
 			"description": "The iPhone Wifi Presence Sensor from joelwetzel"
+		},
+		{
+			"name": "Device Monitor",
+			"category": "Utility",
+			"location": "http://hubitat-package-manifest.herokuapp.com/g/erocm123/SmartThingsPublic/smartapps/erocm123/device-monitor.src",
+			"description": "Device monitor from erocm123"
 		}
 	]
 }
