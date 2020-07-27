@@ -18,6 +18,24 @@
 			"category": "Utility",
 			"location": "http://hubitat-package-manifest.herokuapp.com/g/erocm123/SmartThingsPublic/smartapps/erocm123/device-monitor.src",
 			"description": "Device monitor from erocm123"
+		},
+		{
+			"name": "Zooz Garage Door Opener",
+			"category": "Utility",
+			"location": "http://hubitat-package-manifest.herokuapp.com/g/krlaframboise/Hubitat/apps/zooz/zooz-garage-door-opener.src",
+			"description": "Device monitor from erocm123"
+		},
+		{
+			"name": "Zooz Garage Door Opener App",
+			"category": "Utility",
+			"location": "http://hubitat-package-manifest.herokuapp.com/g/krlaframboise/Hubitat/apps/zooz/zooz-garage-door-opener-app.src",
+			"description": "Device monitor from erocm123"
+		},
+		{
+			"name": "Zooz Garage Door Opener Driver",
+			"category": "Utility",
+			"location": "http://hubitat-package-manifest.herokuapp.com/g/krlaframboise/Hubitat/drivers/zooz/zooz-garage-door.src",
+			"description": "Device monitor from erocm123"
 		}
 	]
 }
