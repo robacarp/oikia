@@ -49,13 +49,6 @@
         "info": ""
     },
     {
-        "id": "dcc75a46.7b2f9",
-        "type": "tab",
-        "label": "Flow 1",
-        "disabled": true,
-        "info": ""
-    },
-    {
         "id": "c1c7f362.7de41",
         "type": "subflow",
         "name": "Time Converter",
@@ -246,38 +239,44 @@
         ],
         "out": [
             {
-                "x": 660,
-                "y": 140,
+                "x": 940,
+                "y": 160,
                 "wires": [
                     {
-                        "id": "37082482.1d726c",
+                        "id": "f95fc416.12cdb8",
                         "port": 0
                     }
                 ]
             },
             {
-                "x": 660,
-                "y": 240,
+                "x": 940,
+                "y": 220,
                 "wires": [
                     {
-                        "id": "37082482.1d726c",
-                        "port": 1
+                        "id": "f9fb7202.670248",
+                        "port": 0
                     }
                 ]
             }
         ],
-        "env": [],
+        "env": [
+            {
+                "name": "Zone Name",
+                "type": "str",
+                "value": "Motion zone"
+            }
+        ],
         "color": "#DDAA99",
         "status": {
-            "x": 640,
-            "y": 500,
+            "x": 900,
+            "y": 340,
             "wires": [
                 {
                     "id": "baa794b2.a49bd",
                     "port": 0
                 },
                 {
-                    "id": "59cb4a60.3b64e4",
+                    "id": "3adf6856.200d98",
                     "port": 0
                 }
             ]
@@ -5431,22 +5430,11 @@
         ]
     },
     {
-        "id": "b4faf972.793d5",
-        "type": "subflow:4c7c8cd1.6a2a1c",
-        "z": "f9337f21.0eab78",
-        "name": "",
-        "x": 430,
-        "y": 3040,
-        "wires": [
-            [],
-            []
-        ]
-    },
-    {
         "id": "49c7b900.58bf28",
         "type": "subflow:4c7c8cd1.6a2a1c",
         "z": "58b64745.d5681",
         "name": "",
+        "env": [],
         "x": 940,
         "y": 660,
         "wires": [
@@ -5463,17 +5451,15 @@
         "type": "unsafe-function",
         "z": "4c7c8cd1.6a2a1c",
         "name": "",
-        "func": "// Output 1 - Active event\n// Output 2 - Inactive event\n\nlet motionStatus = null;\nlet activeCount = 0;\n\nlet sensors = flow.get(\"sensors\") || {};\nlet state = flow.get(\"state\") || \"inactive\";\nnode.warn(\"state:\"+state)\nif (typeof msg.payload != \"undefined\" && msg.payload !== null) {\n    let deviceId = msg.payload.deviceId;\n}\n\nif (typeof deviceId != \"undefined\") {\n    // If we didn't receive an event, the process was triggered by something else (eg. enabling the automation)\n    motionStatus = msg.payload.value\n\n    if (typeof sensors[deviceId] == \"undefined\") {\n        sensors[deviceId] = {}\n    }\n\n    let deviceObject = sensors[deviceId]\n\n    deviceObject.state = motionStatus\n    deviceObject.displayName = msg.topic\n\n    flow.set(\"sensors\", sensors)\n}\n\n\nfor (let [deviceId, values] of Object.entries(sensors)) {\nnode.warn(`sensor: ${deviceId}, state: ${values.state}`)\n    if ( values.state == 'active' ) {\n\t\t\t\n        activeCount++\n    }\n}\n\nnode.warn(\"activecount \"+activeCount)\n\nif (activeCount > 0 && state == \"inactive\") {\n     flow.set(\"state\", \"active\")\n    return [msg, null];\n} else if (state == \"active\") {\n    flow.set(\"state\", \"inactive\")\n    return [null, msg];\n}",
-        "outputs": 2,
+        "func": "let motionStatus = null;\nlet activeCount = 0;\n\nlet sensors = context.get(\"sensors\") || {};\nlet wasActive = context.get(\"active\") || false;\nlet deviceId\n\nif (typeof msg.payload != \"undefined\" && msg.payload !== null) {\n    deviceId = msg.payload.deviceId;\n}\n\nif (typeof deviceId != \"undefined\") {\n\n    // If we didn't receive an event, the process was triggered by something else (eg. enabling the automation)\n    motionStatus = msg.payload.value\n\n    if (typeof sensors[deviceId] == \"undefined\") {\n        sensors[deviceId] = {}\n    }\n\n    let deviceObject = sensors[deviceId]\n\n    deviceObject.state = motionStatus\n    deviceObject.displayName = msg.topic\n\n    context.set(\"sensors\", sensors)\n}\n\n\nfor (let [deviceId, values] of Object.entries(sensors)) {\n    if ( values.state == 'active' ) {\n        activeCount++\n    }\n}\n\nconst active = activeCount > 0\n\nnewMessage = {\n  topic: env.get(\"Zone Name\"),\n  payload: active ? \"active\" : \"inactive\",\n  count: activeCount\n}\n\n    context.set(\"active\", active)\n    return newMessage\n",
+        "outputs": 1,
         "noerr": 0,
-        "x": 420,
+        "x": 380,
         "y": 180,
         "wires": [
             [
-                "baa794b2.a49bd"
-            ],
-            [
-                "59cb4a60.3b64e4"
+                "f95fc416.12cdb8",
+                "d1fef5e9.1faa"
             ]
         ]
     },
@@ -5521,8 +5507,8 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "Active",
-                "tot": "str"
+                "to": "count  & \" \" & payload & \" sensors\"",
+                "tot": "jsonata"
             }
         ],
         "action": "",
@@ -5530,14 +5516,99 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 420,
-        "y": 440,
+        "x": 740,
+        "y": 320,
         "wires": [
             []
         ]
     },
     {
-        "id": "59cb4a60.3b64e4",
+        "id": "f9fb7202.670248",
+        "type": "trigger",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "payl",
+        "duration": "5",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 810,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f95fc416.12cdb8",
+        "type": "switch",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "active",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "inactive",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 550,
+        "y": 180,
+        "wires": [
+            [],
+            [
+                "f9fb7202.670248"
+            ]
+        ]
+    },
+    {
+        "id": "d1fef5e9.1faa",
+        "type": "switch",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "",
+        "property": "count",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 550,
+        "y": 360,
+        "wires": [
+            [
+                "baa794b2.a49bd"
+            ],
+            [
+                "3adf6856.200d98"
+            ]
+        ]
+    },
+    {
+        "id": "3adf6856.200d98",
         "type": "change",
         "z": "4c7c8cd1.6a2a1c",
         "name": "",
@@ -5546,8 +5617,8 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "Inactive",
-                "tot": "str"
+                "to": "\"inactive\"",
+                "tot": "jsonata"
             }
         ],
         "action": "",
@@ -5555,8 +5626,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 440,
-        "y": 520,
+        "x": 740,
+        "y": 380,
         "wires": [
             []
         ]
