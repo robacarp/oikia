@@ -228,29 +228,29 @@
         "category": "",
         "in": [
             {
-                "x": 100,
-                "y": 160,
+                "x": 80,
+                "y": 60,
                 "wires": [
                     {
-                        "id": "37082482.1d726c"
+                        "id": "28720ce3.415504"
                     }
                 ]
             }
         ],
         "out": [
             {
-                "x": 940,
-                "y": 160,
+                "x": 960,
+                "y": 260,
                 "wires": [
                     {
                         "id": "f95fc416.12cdb8",
-                        "port": 0
+                        "port": "1"
                     }
                 ]
             },
             {
-                "x": 940,
-                "y": 220,
+                "x": 1280,
+                "y": 120,
                 "wires": [
                     {
                         "id": "f9fb7202.670248",
@@ -268,8 +268,8 @@
         ],
         "color": "#DDAA99",
         "status": {
-            "x": 900,
-            "y": 340,
+            "x": 1060,
+            "y": 400,
             "wires": [
                 {
                     "id": "baa794b2.a49bd",
@@ -5450,12 +5450,12 @@
         "id": "37082482.1d726c",
         "type": "unsafe-function",
         "z": "4c7c8cd1.6a2a1c",
-        "name": "",
+        "name": "Motion Aggregator",
         "func": "let motionStatus = null;\nlet activeCount = 0;\n\nlet sensors = context.get(\"sensors\") || {};\nlet wasActive = context.get(\"active\") || false;\nlet deviceId\n\nif (typeof msg.payload != \"undefined\" && msg.payload !== null) {\n    deviceId = msg.payload.deviceId;\n}\n\nif (typeof deviceId != \"undefined\") {\n\n    // If we didn't receive an event, the process was triggered by something else (eg. enabling the automation)\n    motionStatus = msg.payload.value\n\n    if (typeof sensors[deviceId] == \"undefined\") {\n        sensors[deviceId] = {}\n    }\n\n    let deviceObject = sensors[deviceId]\n\n    deviceObject.state = motionStatus\n    deviceObject.displayName = msg.topic\n\n    context.set(\"sensors\", sensors)\n}\n\n\nfor (let [deviceId, values] of Object.entries(sensors)) {\n    if ( values.state == 'active' ) {\n        activeCount++\n    }\n}\n\nconst active = activeCount > 0\n\nnewMessage = {\n  topic: env.get(\"Zone Name\"),\n  payload: active ? \"active\" : \"inactive\",\n  count: activeCount\n}\n\n    context.set(\"active\", active)\n    return newMessage\n",
         "outputs": 1,
         "noerr": 0,
-        "x": 380,
-        "y": 180,
+        "x": 410,
+        "y": 280,
         "wires": [
             [
                 "f95fc416.12cdb8",
@@ -5501,7 +5501,7 @@
         "id": "baa794b2.a49bd",
         "type": "change",
         "z": "4c7c8cd1.6a2a1c",
-        "name": "",
+        "name": "Active sensor count",
         "rules": [
             {
                 "t": "set",
@@ -5516,8 +5516,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 740,
-        "y": 320,
+        "x": 820,
+        "y": 440,
         "wires": [
             []
         ]
@@ -5526,21 +5526,21 @@
         "id": "f9fb7202.670248",
         "type": "trigger",
         "z": "4c7c8cd1.6a2a1c",
-        "name": "",
+        "name": "Activity off delay",
         "op1": "",
         "op2": "",
         "op1type": "nul",
         "op2type": "payl",
         "duration": "5",
         "extend": true,
-        "overrideDelay": false,
+        "overrideDelay": true,
         "units": "min",
         "reset": "",
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 810,
-        "y": 220,
+        "x": 1000,
+        "y": 100,
         "wires": [
             []
         ]
@@ -5549,30 +5549,32 @@
         "id": "f95fc416.12cdb8",
         "type": "switch",
         "z": "4c7c8cd1.6a2a1c",
-        "name": "",
+        "name": "is active?",
         "property": "payload",
         "propertyType": "msg",
         "rules": [
             {
                 "t": "eq",
-                "v": "active",
+                "v": "inactive",
                 "vt": "str"
             },
             {
                 "t": "eq",
-                "v": "inactive",
+                "v": "active",
                 "vt": "str"
             }
         ],
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 550,
-        "y": 180,
+        "x": 600,
+        "y": 200,
         "wires": [
-            [],
             [
                 "f9fb7202.670248"
+            ],
+            [
+                "bf8561c.27047a"
             ]
         ]
     },
@@ -5580,13 +5582,13 @@
         "id": "d1fef5e9.1faa",
         "type": "switch",
         "z": "4c7c8cd1.6a2a1c",
-        "name": "",
+        "name": "is active?",
         "property": "count",
         "propertyType": "msg",
         "rules": [
             {
-                "t": "gte",
-                "v": "1",
+                "t": "eq",
+                "v": "0",
                 "vt": "str"
             },
             {
@@ -5596,14 +5598,14 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 550,
-        "y": 360,
+        "x": 600,
+        "y": 400,
         "wires": [
             [
-                "baa794b2.a49bd"
+                "3adf6856.200d98"
             ],
             [
-                "3adf6856.200d98"
+                "baa794b2.a49bd"
             ]
         ]
     },
@@ -5611,7 +5613,7 @@
         "id": "3adf6856.200d98",
         "type": "change",
         "z": "4c7c8cd1.6a2a1c",
-        "name": "",
+        "name": "Inactive",
         "rules": [
             {
                 "t": "set",
@@ -5626,10 +5628,68 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 740,
+        "x": 800,
         "y": 380,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "28720ce3.415504",
+        "type": "switch",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "Separate config messages",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "else"
+            },
+            {
+                "t": "eq",
+                "v": "config",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 200,
+        "y": 120,
+        "wires": [
+            [
+                "f9fb7202.670248"
+            ],
+            [
+                "37082482.1d726c"
+            ]
+        ]
+    },
+    {
+        "id": "bf8561c.27047a",
+        "type": "change",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "Reset",
+        "rules": [
+            {
+                "t": "set",
+                "p": "reset",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 830,
+        "y": 180,
+        "wires": [
+            [
+                "f9fb7202.670248"
+            ]
         ]
     }
 ]
