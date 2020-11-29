@@ -963,7 +963,6 @@
             "#9467bd",
             "#c5b0d5"
         ],
-        "useOldStyle": false,
         "outputs": 1,
         "x": 1800,
         "y": 1080,
@@ -1091,7 +1090,6 @@
             "#9467bd",
             "#c5b0d5"
         ],
-        "useOldStyle": false,
         "outputs": 1,
         "x": 1130,
         "y": 300,
@@ -1219,7 +1217,6 @@
             "#9467bd",
             "#c5b0d5"
         ],
-        "useOldStyle": false,
         "outputs": 1,
         "x": 1120,
         "y": 680,
@@ -2469,7 +2466,6 @@
             "#9467bd",
             "#c5b0d5"
         ],
-        "useOldStyle": false,
         "outputs": 1,
         "x": 1070,
         "y": 480,
@@ -3538,7 +3534,6 @@
             "#9467bd",
             "#c5b0d5"
         ],
-        "useOldStyle": false,
         "outputs": 1,
         "x": 1140,
         "y": 880,
@@ -5923,6 +5918,290 @@
         "statusType": "auto",
         "x": 650,
         "y": 120,
+        "wires": []
+    },
+    {
+        "id": "14401b6a.886dad",
+        "type": "hubitat device",
+        "z": "25be3e23.1e5eb2",
+        "name": "Presence Someone Is Home",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "390",
+        "attribute": "presence",
+        "sendEvent": true,
+        "x": 300,
+        "y": 460,
+        "wires": [
+            [
+                "e898fb78.bb174"
+            ]
+        ]
+    },
+    {
+        "id": "e898fb78.bb174",
+        "type": "link out",
+        "z": "25be3e23.1e5eb2",
+        "name": "Occupied",
+        "links": [
+            "a8edb67e.fc78d8"
+        ],
+        "x": 475,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "a8edb67e.fc78d8",
+        "type": "link in",
+        "z": "f9337f21.0eab78",
+        "name": "",
+        "links": [
+            "e898fb78.bb174"
+        ],
+        "x": 125,
+        "y": 3000,
+        "wires": [
+            [
+                "64742e8c.eafdd"
+            ]
+        ]
+    },
+    {
+        "id": "64742e8c.eafdd",
+        "type": "switch",
+        "z": "f9337f21.0eab78",
+        "name": "Anyone home?",
+        "property": "payload.value",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "present",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 280,
+        "y": 3000,
+        "wires": [
+            [
+                "abd11f39.32b72"
+            ],
+            [
+                "363a9c66.018164"
+            ]
+        ]
+    },
+    {
+        "id": "abd11f39.32b72",
+        "type": "hubitat command",
+        "z": "f9337f21.0eab78",
+        "name": "Christmas Tree on",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "324",
+        "command": "on",
+        "commandArgs": "",
+        "x": 510,
+        "y": 2960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "363a9c66.018164",
+        "type": "hubitat command",
+        "z": "f9337f21.0eab78",
+        "name": "Christmas Tree off",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "324",
+        "command": "off",
+        "commandArgs": "",
+        "x": 510,
+        "y": 3020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4ce81eb7.3b5058",
+        "type": "time-inject",
+        "z": "f9337f21.0eab78",
+        "name": "",
+        "nameInt": "⏲ 11:45 = timestamp",
+        "positionConfig": "96c207ac.2237a8",
+        "props": [
+            {
+                "p": "",
+                "pt": "msgPayload",
+                "v": "",
+                "vt": "date",
+                "o": "",
+                "oT": "none",
+                "oM": "60000",
+                "f": 0,
+                "fS": 0,
+                "fT": "UNIX timestamp (ms)",
+                "fI": "0",
+                "next": true,
+                "days": ""
+            },
+            {
+                "p": "",
+                "pt": "msgTopic",
+                "v": "",
+                "vt": "str",
+                "o": "",
+                "oT": "none",
+                "oM": "60000",
+                "f": 0,
+                "fS": 0,
+                "fT": "UNIX timestamp (ms)",
+                "fI": "0",
+                "next": false,
+                "days": ""
+            }
+        ],
+        "injectTypeSelect": "time",
+        "intervalCount": 1,
+        "intervalCountType": "num",
+        "intervalCountMultiplier": 60000,
+        "time": "11:45",
+        "timeType": "entered",
+        "offset": 0,
+        "offsetType": "none",
+        "offsetMultiplier": 60000,
+        "timeEnd": "",
+        "timeEndType": "entered",
+        "timeEndOffset": 0,
+        "timeEndOffsetType": "none",
+        "timeEndOffsetMultiplier": 60000,
+        "timeDays": "*",
+        "timeOnlyOddDays": false,
+        "timeOnlyEvenDays": false,
+        "timeMonths": "*",
+        "timedatestart": "",
+        "timedateend": "",
+        "property": "",
+        "propertyType": "none",
+        "propertyCompare": "true",
+        "propertyThreshold": "",
+        "propertyThresholdType": "num",
+        "timeAlt": "",
+        "timeAltType": "entered",
+        "timeAltDays": "*",
+        "timeAltOnlyOddDays": false,
+        "timeAltOnlyEvenDays": false,
+        "timeAltMonths": "*",
+        "timeAltOffset": 0,
+        "timeAltOffsetType": "none",
+        "timeAltOffsetMultiplier": 60000,
+        "once": false,
+        "onceDelay": 0.1,
+        "recalcTime": 2,
+        "x": 260,
+        "y": 3060,
+        "wires": [
+            [
+                "363a9c66.018164"
+            ]
+        ]
+    },
+    {
+        "id": "c596c921.6f231",
+        "type": "time-inject",
+        "z": "f9337f21.0eab78",
+        "name": "",
+        "nameInt": "⏲ 6:00 = timestamp",
+        "positionConfig": "96c207ac.2237a8",
+        "props": [
+            {
+                "p": "",
+                "pt": "msgPayload",
+                "v": "",
+                "vt": "date",
+                "o": "",
+                "oT": "none",
+                "oM": "60000",
+                "f": 0,
+                "fS": 0,
+                "fT": "UNIX timestamp (ms)",
+                "fI": "0",
+                "next": true,
+                "days": ""
+            },
+            {
+                "p": "",
+                "pt": "msgTopic",
+                "v": "",
+                "vt": "str",
+                "o": "",
+                "oT": "none",
+                "oM": "60000",
+                "f": 0,
+                "fS": 0,
+                "fT": "UNIX timestamp (ms)",
+                "fI": "0",
+                "next": false,
+                "days": ""
+            }
+        ],
+        "injectTypeSelect": "time",
+        "intervalCount": 1,
+        "intervalCountType": "num",
+        "intervalCountMultiplier": 60000,
+        "time": "6:00",
+        "timeType": "entered",
+        "offset": 0,
+        "offsetType": "none",
+        "offsetMultiplier": 60000,
+        "timeEnd": "",
+        "timeEndType": "entered",
+        "timeEndOffset": 0,
+        "timeEndOffsetType": "none",
+        "timeEndOffsetMultiplier": 60000,
+        "timeDays": "*",
+        "timeOnlyOddDays": false,
+        "timeOnlyEvenDays": false,
+        "timeMonths": "*",
+        "timedatestart": "",
+        "timedateend": "",
+        "property": "",
+        "propertyType": "none",
+        "propertyCompare": "true",
+        "propertyThreshold": "",
+        "propertyThresholdType": "num",
+        "timeAlt": "",
+        "timeAltType": "entered",
+        "timeAltDays": "*",
+        "timeAltOnlyOddDays": false,
+        "timeAltOnlyEvenDays": false,
+        "timeAltMonths": "*",
+        "timeAltOffset": 0,
+        "timeAltOffsetType": "none",
+        "timeAltOffsetMultiplier": 60000,
+        "once": false,
+        "onceDelay": 0.1,
+        "recalcTime": 2,
+        "x": 260,
+        "y": 2940,
+        "wires": [
+            [
+                "abd11f39.32b72"
+            ]
+        ]
+    },
+    {
+        "id": "2ef30931.bfae5e",
+        "type": "comment",
+        "z": "f9337f21.0eab78",
+        "name": "",
+        "info": "Christmas Tree",
+        "x": 130,
+        "y": 2900,
         "wires": []
     }
 ]
