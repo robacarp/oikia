@@ -3036,7 +3036,8 @@
         "name": "Sunset",
         "links": [
             "117f15c0.8b285a",
-            "89ce2107.6a1858"
+            "89ce2107.6a1858",
+            "13a205f.9848cfa"
         ],
         "x": 495,
         "y": 220,
@@ -5957,7 +5958,7 @@
         "links": [
             "e898fb78.bb174"
         ],
-        "x": 125,
+        "x": 135,
         "y": 3000,
         "wires": [
             [
@@ -6000,9 +6001,9 @@
         "id": "abd11f39.32b72",
         "type": "hubitat command",
         "z": "f9337f21.0eab78",
-        "name": "Christmas Tree on",
+        "name": "Christmas Tree On",
         "server": "252d4ef4.c14b6a",
-        "deviceId": "324",
+        "deviceId": "525",
         "command": "on",
         "commandArgs": "",
         "x": 510,
@@ -6015,9 +6016,9 @@
         "id": "363a9c66.018164",
         "type": "hubitat command",
         "z": "f9337f21.0eab78",
-        "name": "Christmas Tree off",
+        "name": "Christmas Tree Off",
         "server": "252d4ef4.c14b6a",
-        "deviceId": "324",
+        "deviceId": "525",
         "command": "off",
         "commandArgs": "",
         "x": 510,
@@ -6031,7 +6032,7 @@
         "type": "time-inject",
         "z": "f9337f21.0eab78",
         "name": "",
-        "nameInt": "⏲ 11:45 = timestamp",
+        "nameInt": "⏲ 23:45 = timestamp",
         "positionConfig": "96c207ac.2237a8",
         "props": [
             {
@@ -6069,7 +6070,7 @@
         "intervalCount": 1,
         "intervalCountType": "num",
         "intervalCountMultiplier": 60000,
-        "time": "11:45",
+        "time": "23:45",
         "timeType": "entered",
         "offset": 0,
         "offsetType": "none",
@@ -6198,10 +6199,224 @@
         "id": "2ef30931.bfae5e",
         "type": "comment",
         "z": "f9337f21.0eab78",
-        "name": "",
+        "name": "Christmas things",
         "info": "Christmas Tree",
-        "x": 130,
+        "x": 160,
         "y": 2900,
         "wires": []
+    },
+    {
+        "id": "4c8e959.ebe296c",
+        "type": "within-time-switch",
+        "z": "f9337f21.0eab78",
+        "name": "",
+        "positionConfig": "96c207ac.2237a8",
+        "startTime": "sunset",
+        "startTimeType": "pdsTime",
+        "startOffset": "-45",
+        "startOffsetType": "num",
+        "startOffsetMultiplier": 60000,
+        "endTime": "23:45",
+        "endTimeType": "entered",
+        "endOffset": 0,
+        "endOffsetType": "none",
+        "endOffsetMultiplier": 60000,
+        "timeDays": "*",
+        "timeOnlyOddDays": false,
+        "timeOnlyEvenDays": false,
+        "timeMonths": "*",
+        "timedatestart": "",
+        "timedateend": "",
+        "propertyStart": "",
+        "propertyStartType": "none",
+        "propertyStartCompare": "true",
+        "propertyStartThreshold": "",
+        "propertyStartThresholdType": "num",
+        "startTimeAlt": "",
+        "startTimeAltType": "entered",
+        "startOffsetAlt": 0,
+        "startOffsetAltType": "none",
+        "startOffsetAltMultiplier": 60000,
+        "propertyEnd": "",
+        "propertyEndType": "none",
+        "propertyEndCompare": "true",
+        "propertyEndThreshold": "",
+        "propertyEndThresholdType": "num",
+        "endTimeAlt": "",
+        "endTimeAltType": "entered",
+        "endOffsetAlt": 0,
+        "endOffsetAltType": "none",
+        "endOffsetAltMultiplier": 60000,
+        "tsCompare": "0",
+        "x": 260,
+        "y": 3220,
+        "wires": [
+            [
+                "22b6d01e.452a48"
+            ],
+            [
+                "103cf87a.abee18"
+            ]
+        ]
+    },
+    {
+        "id": "4b47917.4f0bb7",
+        "type": "inject",
+        "z": "f9337f21.0eab78",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 135,
+        "y": 3220,
+        "wires": [
+            [
+                "4c8e959.ebe296c"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "22b6d01e.452a48",
+        "type": "hubitat command",
+        "z": "f9337f21.0eab78",
+        "name": "Christmas outdoor lights On",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "324",
+        "command": "on",
+        "commandArgs": "",
+        "x": 500,
+        "y": 3180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "103cf87a.abee18",
+        "type": "hubitat command",
+        "z": "f9337f21.0eab78",
+        "name": "Outdoor Christmas lights Off",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "324",
+        "command": "off",
+        "commandArgs": "",
+        "x": 500,
+        "y": 3240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7bbb3a43.05164c",
+        "type": "time-inject",
+        "z": "f9337f21.0eab78",
+        "name": "",
+        "nameInt": "⏲ 22:00 = timestamp",
+        "positionConfig": "96c207ac.2237a8",
+        "props": [
+            {
+                "p": "",
+                "pt": "msgPayload",
+                "v": "",
+                "vt": "date",
+                "o": "",
+                "oT": "none",
+                "oM": "60000",
+                "f": 0,
+                "fS": 0,
+                "fT": "UNIX timestamp (ms)",
+                "fI": "0",
+                "next": true,
+                "days": ""
+            },
+            {
+                "p": "",
+                "pt": "msgTopic",
+                "v": "",
+                "vt": "str",
+                "o": "",
+                "oT": "none",
+                "oM": "60000",
+                "f": 0,
+                "fS": 0,
+                "fT": "UNIX timestamp (ms)",
+                "fI": "0",
+                "next": false,
+                "days": ""
+            }
+        ],
+        "injectTypeSelect": "time",
+        "intervalCount": 1,
+        "intervalCountType": "num",
+        "intervalCountMultiplier": 60000,
+        "time": "22:00",
+        "timeType": "entered",
+        "offset": 0,
+        "offsetType": "none",
+        "offsetMultiplier": 60000,
+        "timeEnd": "",
+        "timeEndType": "entered",
+        "timeEndOffset": 0,
+        "timeEndOffsetType": "none",
+        "timeEndOffsetMultiplier": 60000,
+        "timeDays": "*",
+        "timeOnlyOddDays": false,
+        "timeOnlyEvenDays": false,
+        "timeMonths": "*",
+        "timedatestart": "",
+        "timedateend": "",
+        "property": "",
+        "propertyType": "none",
+        "propertyCompare": "true",
+        "propertyThreshold": "",
+        "propertyThresholdType": "num",
+        "timeAlt": "",
+        "timeAltType": "entered",
+        "timeAltDays": "*",
+        "timeAltOnlyOddDays": false,
+        "timeAltOnlyEvenDays": false,
+        "timeAltMonths": "*",
+        "timeAltOffset": 0,
+        "timeAltOffsetType": "none",
+        "timeAltOffsetMultiplier": 60000,
+        "once": false,
+        "onceDelay": 0.1,
+        "recalcTime": 2,
+        "x": 240,
+        "y": 3280,
+        "wires": [
+            [
+                "103cf87a.abee18"
+            ]
+        ]
+    },
+    {
+        "id": "13a205f.9848cfa",
+        "type": "link in",
+        "z": "f9337f21.0eab78",
+        "name": "",
+        "links": [
+            "2837495c.ae2176"
+        ],
+        "x": 155,
+        "y": 3160,
+        "wires": [
+            [
+                "22b6d01e.452a48"
+            ]
+        ]
     }
 ]
