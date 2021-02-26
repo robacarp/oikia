@@ -853,23 +853,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 170,
+        "x": 190,
         "y": 860,
-        "wires": [
-            [
-                "7a1e014f.2d5688"
-            ]
-        ]
-    },
-    {
-        "id": "e19e918a.2851d",
-        "type": "hubitat mode",
-        "z": "f9337f21.0eab78",
-        "name": "",
-        "server": "252d4ef4.c14b6a",
-        "sendEvent": true,
-        "x": 130,
-        "y": 920,
         "wires": [
             [
                 "7a1e014f.2d5688"
@@ -1362,7 +1347,7 @@
             "de178a7c.7f5e38"
         ],
         "x": 95,
-        "y": 1020,
+        "y": 920,
         "wires": [
             [
                 "8fa8cca6.3c39b8"
@@ -1385,7 +1370,7 @@
         "randomUnits": "seconds",
         "drop": true,
         "x": 220,
-        "y": 1020,
+        "y": 920,
         "wires": [
             [
                 "7a1e014f.2d5688"
@@ -2856,22 +2841,6 @@
         "wires": [
             [
                 "9a110e75.82802"
-            ]
-        ]
-    },
-    {
-        "id": "c0cc2888.9c36f8",
-        "type": "link in",
-        "z": "f9337f21.0eab78",
-        "name": "",
-        "links": [
-            "24b1694e.8d6176"
-        ],
-        "x": 95,
-        "y": 980,
-        "wires": [
-            [
-                "7a1e014f.2d5688"
             ]
         ]
     },
@@ -7181,7 +7150,8 @@
         "y": 260,
         "wires": [
             [
-                "e473965f.8a5b68"
+                "e473965f.8a5b68",
+                "4087bdb8.b678d4"
             ]
         ]
     },
@@ -7273,7 +7243,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 200,
+        "x": 220,
         "y": 580,
         "wires": [
             [
@@ -7407,7 +7377,7 @@
         "y": 400,
         "wires": [
             [
-                "d820eb75.8fe88"
+                "65f9e584.babbf4"
             ]
         ]
     },
@@ -7419,7 +7389,7 @@
         "links": [
             "950cba8b.112ef8"
         ],
-        "x": 975,
+        "x": 1195,
         "y": 400,
         "wires": []
     },
@@ -7467,14 +7437,14 @@
         "pauseType": "rate",
         "timeout": "5",
         "timeoutUnits": "seconds",
-        "rate": "3",
+        "rate": "1",
         "nbRateUnits": "1",
         "rateUnits": "second",
         "randomFirst": "1",
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
-        "x": 850,
+        "x": 1050,
         "y": 400,
         "wires": [
             [
@@ -7501,7 +7471,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 735,
+        "x": 935,
         "y": 400,
         "wires": [
             [
@@ -7509,5 +7479,52 @@
             ]
         ],
         "l": false
+    },
+    {
+        "id": "4087bdb8.b678d4",
+        "type": "debug",
+        "z": "f9337f21.0eab78",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 870,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "65f9e584.babbf4",
+        "type": "switch",
+        "z": "f9337f21.0eab78",
+        "name": "CT is Wrong?",
+        "property": "payload.attributes.colorTemperature",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "btwn",
+                "v": "$flowContext(\"color_temperature\")-25",
+                "vt": "jsonata",
+                "v2": "$flowContext(\"color_temperature\")+25",
+                "v2t": "jsonata"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 800,
+        "y": 400,
+        "wires": [
+            [],
+            [
+                "d820eb75.8fe88"
+            ]
+        ]
     }
 ]
