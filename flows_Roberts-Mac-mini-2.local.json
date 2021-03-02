@@ -49,6 +49,13 @@
         "info": ""
     },
     {
+        "id": "27604b86.c51fe4",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "c1c7f362.7de41",
         "type": "subflow",
         "name": "Time Converter",
@@ -224,7 +231,7 @@
         "id": "4c7c8cd1.6a2a1c",
         "type": "subflow",
         "name": "My Zone Active",
-        "info": "",
+        "info": " Zone Active\n \nZA is a contact and motion sensor aggregator. \n\nIt will transmit the active message when a motion sensor goes active or when a contact sensor changes state. \n\n After a configurable delay, it will transmit a  deactivated message.\n \n Contact sensors are considered disabled after the \"sensor reset delay \" elapsed time passes. ",
         "category": "",
         "in": [
             {
@@ -249,8 +256,8 @@
                 ]
             },
             {
-                "x": 1120,
-                "y": 620,
+                "x": 1020,
+                "y": 600,
                 "wires": [
                     {
                         "id": "f9fb7202.670248",
@@ -298,16 +305,6 @@
         "webhookPath": "/hubitat/webhook",
         "autoRefresh": false,
         "useWebsocket": false
-    },
-    {
-        "id": "6bba6383.20c05c",
-        "type": "ui_group",
-        "name": "Default",
-        "tab": "7629deba.08a778",
-        "order": 1,
-        "disp": false,
-        "width": "6",
-        "collapse": false
     },
     {
         "id": "f5be1ade.4321f8",
@@ -454,354 +451,6 @@
         "name": "Robacarp"
     },
     {
-        "id": "40b66d76.695704",
-        "type": "hubitat device",
-        "z": "f9337f21.0eab78",
-        "name": "Basement - Couch Lamp",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "589",
-        "attribute": "switch",
-        "sendEvent": true,
-        "x": 2190,
-        "y": 120,
-        "wires": [
-            [
-                "3b895294.40fc1e"
-            ]
-        ]
-    },
-    {
-        "id": "f6feeac1.313c",
-        "type": "change",
-        "z": "f9337f21.0eab78",
-        "name": "Set Color Temp",
-        "rules": [
-            {
-                "t": "set",
-                "p": "arguments",
-                "pt": "msg",
-                "to": "color_temperature",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2720,
-        "y": 180,
-        "wires": [
-            [
-                "ae47bc91.90b9e8"
-            ]
-        ]
-    },
-    {
-        "id": "6254ac96.dbc23c",
-        "type": "hubitat device",
-        "z": "f9337f21.0eab78",
-        "name": "Main Floor Couch Lamp",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "537",
-        "attribute": "switch",
-        "sendEvent": true,
-        "x": 2190,
-        "y": 180,
-        "wires": [
-            [
-                "ca3a5b6c.8bcad"
-            ]
-        ]
-    },
-    {
-        "id": "ca3a5b6c.8bcad",
-        "type": "switch",
-        "z": "f9337f21.0eab78",
-        "name": "is on",
-        "property": "payload.value",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "on",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 2530,
-        "y": 180,
-        "wires": [
-            [
-                "f6feeac1.313c",
-                "b7421877.47f01"
-            ]
-        ]
-    },
-    {
-        "id": "ae47bc91.90b9e8",
-        "type": "hubitat command",
-        "z": "f9337f21.0eab78",
-        "d": true,
-        "deviceLabel": "",
-        "name": "Main Floor Couch Lamp",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "537",
-        "command": "setColorTemperature",
-        "commandArgs": "",
-        "x": 2990,
-        "y": 180,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "16e0e495.643b53",
-        "type": "change",
-        "z": "f9337f21.0eab78",
-        "name": "Set Color Temp",
-        "rules": [
-            {
-                "t": "set",
-                "p": "arguments",
-                "pt": "msg",
-                "to": "color_temperature",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2720,
-        "y": 240,
-        "wires": [
-            [
-                "ee7b994b.3d627"
-            ]
-        ]
-    },
-    {
-        "id": "d643e945.03fd68",
-        "type": "hubitat device",
-        "z": "f9337f21.0eab78",
-        "name": "Main Floor Chair Lamp.",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "536",
-        "attribute": "switch",
-        "sendEvent": true,
-        "x": 2190,
-        "y": 240,
-        "wires": [
-            [
-                "6626a7d5.bd4b9"
-            ]
-        ]
-    },
-    {
-        "id": "6626a7d5.bd4b9",
-        "type": "switch",
-        "z": "f9337f21.0eab78",
-        "name": "is on",
-        "property": "payload.value",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "on",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 2530,
-        "y": 240,
-        "wires": [
-            [
-                "16e0e495.643b53",
-                "b7421877.47f01"
-            ]
-        ]
-    },
-    {
-        "id": "ee7b994b.3d627",
-        "type": "hubitat command",
-        "z": "f9337f21.0eab78",
-        "d": true,
-        "deviceLabel": "",
-        "name": "Main Floor Chair Lamp",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "536",
-        "command": "setColorTemperature",
-        "commandArgs": "",
-        "x": 2980,
-        "y": 240,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "a33161c6.8749e8",
-        "type": "change",
-        "z": "f9337f21.0eab78",
-        "name": "Set Color Temp",
-        "rules": [
-            {
-                "t": "set",
-                "p": "arguments",
-                "pt": "msg",
-                "to": "color_temperature",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2720,
-        "y": 300,
-        "wires": [
-            [
-                "7b708ee2.c9e758"
-            ]
-        ]
-    },
-    {
-        "id": "48fe7158.3de628",
-        "type": "hubitat device",
-        "z": "f9337f21.0eab78",
-        "name": "Kitchen Table",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "538",
-        "attribute": "switch",
-        "sendEvent": true,
-        "x": 2160,
-        "y": 300,
-        "wires": [
-            [
-                "4e3c6812.be32d"
-            ]
-        ]
-    },
-    {
-        "id": "4e3c6812.be32d",
-        "type": "switch",
-        "z": "f9337f21.0eab78",
-        "name": "is on",
-        "property": "payload.value",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "on",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 2530,
-        "y": 300,
-        "wires": [
-            [
-                "a33161c6.8749e8",
-                "b7421877.47f01"
-            ]
-        ]
-    },
-    {
-        "id": "7b708ee2.c9e758",
-        "type": "hubitat command",
-        "z": "f9337f21.0eab78",
-        "d": true,
-        "deviceLabel": "",
-        "name": "Kitchen Table",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "538",
-        "command": "setColorTemperature",
-        "commandArgs": "",
-        "x": 2960,
-        "y": 300,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "784954e6.b11cdc",
-        "type": "change",
-        "z": "f9337f21.0eab78",
-        "name": "Set Color Temp",
-        "rules": [
-            {
-                "t": "set",
-                "p": "arguments",
-                "pt": "msg",
-                "to": "color_temperature",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2720,
-        "y": 120,
-        "wires": [
-            [
-                "2ac4b003.a7d4e8"
-            ]
-        ]
-    },
-    {
-        "id": "3b895294.40fc1e",
-        "type": "switch",
-        "z": "f9337f21.0eab78",
-        "name": "is on",
-        "property": "payload.value",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "on",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 2530,
-        "y": 120,
-        "wires": [
-            [
-                "784954e6.b11cdc",
-                "b7421877.47f01"
-            ]
-        ]
-    },
-    {
-        "id": "2ac4b003.a7d4e8",
-        "type": "hubitat command",
-        "z": "f9337f21.0eab78",
-        "d": true,
-        "deviceLabel": "",
-        "name": "Basement - Couch Lamp",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "589",
-        "command": "setColorTemperature",
-        "commandArgs": "",
-        "x": 2990,
-        "y": 120,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "78d27aa4.3a922c",
         "type": "change",
         "z": "f9337f21.0eab78",
@@ -824,7 +473,6 @@
         "y": 920,
         "wires": [
             [
-                "acfe6604.b0ebd",
                 "b0c8d31a.f0e56"
             ]
         ]
@@ -924,48 +572,6 @@
         "x": 410,
         "y": 440,
         "wires": []
-    },
-    {
-        "id": "acfe6604.b0ebd",
-        "type": "ui_chart",
-        "z": "f9337f21.0eab78",
-        "name": "",
-        "group": "6bba6383.20c05c",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "label": "Color Temperature (K)",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": true,
-        "ymin": "1500",
-        "ymax": "",
-        "removeOlder": "72",
-        "removeOlderPoints": "",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "x": 1820,
-        "y": 920,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "8e1ccd1c.423048",
@@ -1292,48 +898,8 @@
             "ac7411a0.a83e9",
             "dc311cbd.e678c8"
         ],
-        "x": 1715,
-        "y": 980,
-        "wires": []
-    },
-    {
-        "id": "ac7411a0.a83e9",
-        "type": "link in",
-        "z": "f9337f21.0eab78",
-        "name": "",
-        "links": [
-            "b0c8d31a.f0e56",
-            "910d19f9.d725e8",
-            "de178a7c.7f5e38"
-        ],
-        "x": 1915,
-        "y": 360,
-        "wires": [
-            [
-                "40b66d76.695704",
-                "6254ac96.dbc23c",
-                "d643e945.03fd68",
-                "48fe7158.3de628",
-                "254a074c.4530a",
-                "bbc83dbd.288978",
-                "fd0895f.9d12ae8",
-                "74547bc3.2e3004",
-                "191f8ef2.3fc1e9",
-                "d9452eae.e30818",
-                "c9da612b.1c684"
-            ]
-        ]
-    },
-    {
-        "id": "b7421877.47f01",
-        "type": "link out",
-        "z": "f9337f21.0eab78",
-        "name": "Request CT Update",
-        "links": [
-            "c5d2e3b6.bd6a4"
-        ],
-        "x": 2675,
-        "y": 60,
+        "x": 1735,
+        "y": 920,
         "wires": []
     },
     {
@@ -1401,7 +967,7 @@
         "minin": "0",
         "maxin": "100",
         "minout": "2500",
-        "maxout": "4200",
+        "maxout": "4500",
         "action": "clamp",
         "round": true,
         "property": "payload",
@@ -1519,6 +1085,8 @@
         "id": "341cca5d.7deafe",
         "type": "hubitat device",
         "z": "f9337f21.0eab78",
+        "d": true,
+        "deviceLabel": "",
         "name": "mZone-Main Floor",
         "server": "252d4ef4.c14b6a",
         "deviceId": "528",
@@ -1698,7 +1266,8 @@
         "y": 1640,
         "wires": [
             [
-                "f4196dc1.89ccd8"
+                "f4196dc1.89ccd8",
+                "596c6e6f.2128c"
             ]
         ],
         "l": false
@@ -1829,7 +1398,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1400,
+        "x": 1640,
         "y": 1700,
         "wires": [
             []
@@ -2188,7 +1757,7 @@
         "attribute": "motion",
         "sendEvent": true,
         "x": 480,
-        "y": 660,
+        "y": 780,
         "wires": [
             [
                 "3faf4ff8.21874"
@@ -2205,7 +1774,7 @@
         "attribute": "motion",
         "sendEvent": true,
         "x": 470,
-        "y": 600,
+        "y": 720,
         "wires": [
             [
                 "3faf4ff8.21874"
@@ -2222,7 +1791,7 @@
         "attribute": "motion",
         "sendEvent": true,
         "x": 520,
-        "y": 720,
+        "y": 840,
         "wires": [
             [
                 "3faf4ff8.21874"
@@ -2239,7 +1808,7 @@
         "attribute": "motion",
         "sendEvent": true,
         "x": 520,
-        "y": 780,
+        "y": 900,
         "wires": [
             [
                 "3faf4ff8.21874"
@@ -2256,7 +1825,7 @@
         "attribute": "motion",
         "sendEvent": true,
         "x": 540,
-        "y": 840,
+        "y": 960,
         "wires": [
             [
                 "3faf4ff8.21874"
@@ -2612,180 +2181,6 @@
             [
                 "9da61bd6.f74c6"
             ]
-        ]
-    },
-    {
-        "id": "e7f26b8c.a46ec8",
-        "type": "change",
-        "z": "f9337f21.0eab78",
-        "name": "Set Color Temp",
-        "rules": [
-            {
-                "t": "set",
-                "p": "arguments",
-                "pt": "msg",
-                "to": "color_temperature",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2720,
-        "y": 360,
-        "wires": [
-            [
-                "c945df01.dcad68"
-            ]
-        ]
-    },
-    {
-        "id": "254a074c.4530a",
-        "type": "hubitat device",
-        "z": "f9337f21.0eab78",
-        "name": "Main Floor Back Hallway",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "784",
-        "attribute": "switch",
-        "sendEvent": true,
-        "x": 2190,
-        "y": 360,
-        "wires": [
-            [
-                "8c065791.2df06"
-            ]
-        ]
-    },
-    {
-        "id": "8c065791.2df06",
-        "type": "switch",
-        "z": "f9337f21.0eab78",
-        "name": "is on",
-        "property": "payload.value",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "on",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 2530,
-        "y": 360,
-        "wires": [
-            [
-                "e7f26b8c.a46ec8",
-                "b7421877.47f01"
-            ]
-        ]
-    },
-    {
-        "id": "c945df01.dcad68",
-        "type": "hubitat command",
-        "z": "f9337f21.0eab78",
-        "d": true,
-        "deviceLabel": "",
-        "name": "Main Floor Back Hallway",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "784",
-        "command": "setColorTemperature",
-        "commandArgs": "",
-        "x": 2990,
-        "y": 360,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "43a2f1a.eac269",
-        "type": "change",
-        "z": "f9337f21.0eab78",
-        "name": "Set Color Temp",
-        "rules": [
-            {
-                "t": "set",
-                "p": "arguments",
-                "pt": "msg",
-                "to": "color_temperature",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2720,
-        "y": 420,
-        "wires": [
-            [
-                "cbb9409c.d982"
-            ]
-        ]
-    },
-    {
-        "id": "bbc83dbd.288978",
-        "type": "hubitat device",
-        "z": "f9337f21.0eab78",
-        "name": "Main Floor Top of Basement Stairs",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "785",
-        "attribute": "switch",
-        "sendEvent": true,
-        "x": 2220,
-        "y": 420,
-        "wires": [
-            [
-                "a4a5783f.ac2b9"
-            ]
-        ]
-    },
-    {
-        "id": "a4a5783f.ac2b9",
-        "type": "switch",
-        "z": "f9337f21.0eab78",
-        "name": "is on",
-        "property": "payload.value",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "on",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 2530,
-        "y": 420,
-        "wires": [
-            [
-                "43a2f1a.eac269",
-                "b7421877.47f01"
-            ]
-        ]
-    },
-    {
-        "id": "cbb9409c.d982",
-        "type": "hubitat command",
-        "z": "f9337f21.0eab78",
-        "d": true,
-        "deviceLabel": "",
-        "name": "Main Floor Top of Basement Stairs",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "785",
-        "command": "setColorTemperature",
-        "commandArgs": "",
-        "x": 3020,
-        "y": 420,
-        "wires": [
-            []
         ]
     },
     {
@@ -4235,180 +3630,6 @@
         "wires": []
     },
     {
-        "id": "fd0895f.9d12ae8",
-        "type": "hubitat device",
-        "z": "f9337f21.0eab78",
-        "name": "Basement - North end of hallway",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "787",
-        "attribute": "switch",
-        "sendEvent": true,
-        "x": 2220,
-        "y": 480,
-        "wires": [
-            [
-                "fb3389f6.deaa4"
-            ]
-        ]
-    },
-    {
-        "id": "fb3389f6.deaa4",
-        "type": "switch",
-        "z": "f9337f21.0eab78",
-        "name": "is on",
-        "property": "payload.value",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "on",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 2530,
-        "y": 480,
-        "wires": [
-            [
-                "b7421877.47f01",
-                "9daa6dcc.44afe8"
-            ]
-        ]
-    },
-    {
-        "id": "9daa6dcc.44afe8",
-        "type": "change",
-        "z": "f9337f21.0eab78",
-        "name": "Set Color Temp",
-        "rules": [
-            {
-                "t": "set",
-                "p": "arguments",
-                "pt": "msg",
-                "to": "color_temperature",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2720,
-        "y": 480,
-        "wires": [
-            [
-                "dfc06344.01436"
-            ]
-        ]
-    },
-    {
-        "id": "dfc06344.01436",
-        "type": "hubitat command",
-        "z": "f9337f21.0eab78",
-        "d": true,
-        "deviceLabel": "",
-        "name": "Basement - North end of hallway",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "787",
-        "command": "setColorTemperature",
-        "commandArgs": "",
-        "x": 3020,
-        "y": 480,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "74547bc3.2e3004",
-        "type": "hubitat device",
-        "z": "f9337f21.0eab78",
-        "name": "Basement - bottom of stairs",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "786",
-        "attribute": "switch",
-        "sendEvent": true,
-        "x": 2200,
-        "y": 540,
-        "wires": [
-            [
-                "1187bbf7.f876dc"
-            ]
-        ]
-    },
-    {
-        "id": "1187bbf7.f876dc",
-        "type": "switch",
-        "z": "f9337f21.0eab78",
-        "name": "is on",
-        "property": "payload.value",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "on",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 2530,
-        "y": 540,
-        "wires": [
-            [
-                "6c3cefc2.765798",
-                "b7421877.47f01"
-            ]
-        ]
-    },
-    {
-        "id": "6c3cefc2.765798",
-        "type": "change",
-        "z": "f9337f21.0eab78",
-        "name": "Set Color Temp",
-        "rules": [
-            {
-                "t": "set",
-                "p": "arguments",
-                "pt": "msg",
-                "to": "color_temperature",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2720,
-        "y": 540,
-        "wires": [
-            [
-                "5f24bec1.a6509"
-            ]
-        ]
-    },
-    {
-        "id": "5f24bec1.a6509",
-        "type": "hubitat command",
-        "z": "f9337f21.0eab78",
-        "d": true,
-        "deviceLabel": "",
-        "name": "Basement - bottom of stairs",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "786",
-        "command": "setColorTemperature",
-        "commandArgs": "",
-        "x": 3000,
-        "y": 540,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "18c4c630.4d6782",
         "type": "switch",
         "z": "25be3e23.1e5eb2",
@@ -4574,11 +3795,13 @@
         "type": "subflow:c79ec61c.5274a8",
         "z": "f9337f21.0eab78",
         "name": "",
-        "x": 380,
+        "env": [],
+        "x": 400,
         "y": 1640,
         "wires": [
             [
-                "bc068690.56656"
+                "bc068690.56656",
+                "ddda5240.3ab92"
             ]
         ]
     },
@@ -4950,7 +4173,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 120,
+        "x": 200,
         "y": 680,
         "wires": [
             [
@@ -4960,7 +4183,7 @@
                 "65fdba64.4f912c",
                 "a7c052.9af66fb",
                 "f426f0a.ee9109",
-                "b9ce4cb7.0417f8"
+                "85a18592.937b5"
             ]
         ]
     },
@@ -5300,7 +4523,7 @@
         "z": "58b64745.d5681",
         "name": "Main presence zone",
         "env": [],
-        "x": 1000,
+        "x": 1020,
         "y": 680,
         "wires": [
             [
@@ -5356,7 +4579,7 @@
         "id": "f9fb7202.670248",
         "type": "trigger",
         "z": "4c7c8cd1.6a2a1c",
-        "name": "Activity off delay",
+        "name": "Activity reset",
         "op1": "",
         "op2": "",
         "op1type": "nul",
@@ -5369,8 +4592,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 1000,
-        "y": 620,
+        "x": 910,
+        "y": 600,
         "wires": [
             []
         ]
@@ -5514,7 +4737,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 810,
+        "x": 750,
         "y": 580,
         "wires": [
             [
@@ -5576,9 +4799,11 @@
         "type": "link out",
         "z": "58b64745.d5681",
         "name": "Main motion start",
-        "links": [],
+        "links": [
+            "10fc02fd.252425"
+        ],
         "x": 1155,
-        "y": 660,
+        "y": 640,
         "wires": []
     },
     {
@@ -5586,7 +4811,9 @@
         "type": "link out",
         "z": "58b64745.d5681",
         "name": "Main motion stop",
-        "links": [],
+        "links": [
+            "10fc02fd.252425"
+        ],
         "x": 1155,
         "y": 720,
         "wires": []
@@ -5601,7 +4828,7 @@
         "attribute": "",
         "sendEvent": true,
         "x": 430,
-        "y": 560,
+        "y": 680,
         "wires": [
             [
                 "3faf4ff8.21874"
@@ -5646,7 +4873,7 @@
         "id": "ee67eca9.7c9548",
         "type": "change",
         "z": "4c7c8cd1.6a2a1c",
-        "name": "Active-true",
+        "name": "Set active",
         "rules": [
             {
                 "t": "set",
@@ -5661,7 +4888,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 970,
+        "x": 960,
         "y": 220,
         "wires": [
             [
@@ -5673,7 +4900,7 @@
         "id": "9dec185d.0fa0b",
         "type": "change",
         "z": "4c7c8cd1.6a2a1c",
-        "name": "Active-false",
+        "name": "Set inactive",
         "rules": [
             {
                 "t": "set",
@@ -5688,7 +4915,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1350,
+        "x": 1230,
         "y": 260,
         "wires": [
             [
@@ -5706,7 +4933,7 @@
             "c551054e.c3663",
             "db637502.ed7b1"
         ],
-        "x": 1535,
+        "x": 1455,
         "y": 220,
         "wires": []
     },
@@ -6315,7 +5542,7 @@
         "z": "4c7c8cd1.6a2a1c",
         "name": "Sensor event",
         "info": "",
-        "x": 1650,
+        "x": 1690,
         "y": 220,
         "wires": []
     },
@@ -6429,37 +5656,20 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 990,
+        "x": 915,
         "y": 260,
         "wires": [
             [
-                "b5799027.c31f78",
                 "1f831024.572ef8"
             ]
-        ]
-    },
-    {
-        "id": "b5799027.c31f78",
-        "type": "debug",
-        "z": "4c7c8cd1.6a2a1c",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1170,
-        "y": 320,
-        "wires": []
+        ],
+        "l": false
     },
     {
         "id": "1f831024.572ef8",
         "type": "trigger",
         "z": "4c7c8cd1.6a2a1c",
-        "name": "",
+        "name": "Sensor reset",
         "op1": "",
         "op2": "",
         "op1type": "nul",
@@ -6472,29 +5682,11 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 1180,
+        "x": 1050,
         "y": 260,
         "wires": [
             [
                 "9dec185d.0fa0b"
-            ]
-        ]
-    },
-    {
-        "id": "b9ce4cb7.0417f8",
-        "type": "hubitat device",
-        "z": "58b64745.d5681",
-        "deviceLabel": "",
-        "name": "Garage Door",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "685",
-        "attribute": "",
-        "sendEvent": true,
-        "x": 430,
-        "y": 520,
-        "wires": [
-            [
-                "3faf4ff8.21874"
             ]
         ]
     },
@@ -6531,8 +5723,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 910,
-        "y": 860,
+        "x": 830,
+        "y": 540,
         "wires": [
             [
                 "49c7b900.58bf28"
@@ -6560,8 +5752,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 680,
-        "y": 900,
+        "x": 580,
+        "y": 540,
         "wires": [
             [
                 "102142a.f33f0bd",
@@ -6593,7 +5785,7 @@
                 "t": "set",
                 "p": "payload.value",
                 "pt": "msg",
-                "to": "20",
+                "to": "12",
                 "tot": "num"
             }
         ],
@@ -6602,8 +5794,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 910,
-        "y": 900,
+        "x": 830,
+        "y": 580,
         "wires": [
             [
                 "49c7b900.58bf28"
@@ -6629,13 +5821,14 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 790,
+        "x": 715,
         "y": 620,
         "wires": [
             [
                 "f9fb7202.670248"
             ]
-        ]
+        ],
+        "l": false
     },
     {
         "id": "7a24866e.db567",
@@ -6653,8 +5846,8 @@
         "z": "4c7c8cd1.6a2a1c",
         "name": "Zone Inactive",
         "info": "",
-        "x": 1070,
-        "y": 560,
+        "x": 1130,
+        "y": 600,
         "wires": []
     },
     {
@@ -6667,7 +5860,7 @@
         "start": "",
         "inout": "out",
         "property": "payload",
-        "x": 1475,
+        "x": 1375,
         "y": 220,
         "wires": [
             [
@@ -6705,13 +5898,13 @@
         "propertyType": "flow",
         "rules": [
             {
-                "t": "else"
+                "t": "false"
             },
             {
-                "t": "false"
+                "t": "else"
             }
         ],
-        "checkall": "true",
+        "checkall": "false",
         "repair": false,
         "outputs": 2,
         "x": 470,
@@ -6735,8 +5928,8 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "\"Disabled\"",
-                "tot": "jsonata"
+                "to": "Zone disabled",
+                "tot": "str"
             }
         ],
         "action": "",
@@ -6784,18 +5977,22 @@
         "propertyType": "flow",
         "rules": [
             {
-                "t": "true"
+                "t": "else"
+            },
+            {
+                "t": "false"
             }
         ],
         "checkall": "false",
         "repair": false,
-        "outputs": 1,
+        "outputs": 2,
         "x": 440,
         "y": 600,
         "wires": [
             [
                 "f95fc416.12cdb8"
-            ]
+            ],
+            []
         ]
     },
     {
@@ -6809,280 +6006,18 @@
         "wires": []
     },
     {
-        "id": "191f8ef2.3fc1e9",
-        "type": "hubitat device",
-        "z": "f9337f21.0eab78",
-        "deviceLabel": "Basement Spot by Laundry",
-        "name": "",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "974",
-        "attribute": "switch",
-        "sendEvent": true,
-        "x": 2200,
-        "y": 600,
-        "wires": [
-            [
-                "62072259.7464b4"
-            ]
-        ]
-    },
-    {
-        "id": "62072259.7464b4",
-        "type": "switch",
-        "z": "f9337f21.0eab78",
-        "name": "is on",
-        "property": "payload.value",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "on",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 2530,
-        "y": 600,
-        "wires": [
-            [
-                "d1759804.ff84d",
-                "b7421877.47f01"
-            ]
-        ]
-    },
-    {
-        "id": "d1759804.ff84d",
-        "type": "change",
-        "z": "f9337f21.0eab78",
-        "name": "Set Color Temp",
-        "rules": [
-            {
-                "t": "set",
-                "p": "arguments",
-                "pt": "msg",
-                "to": "color_temperature",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2720,
-        "y": 600,
-        "wires": [
-            [
-                "a295e4fa.4cb7e8"
-            ]
-        ]
-    },
-    {
-        "id": "a295e4fa.4cb7e8",
-        "type": "hubitat command",
-        "z": "f9337f21.0eab78",
-        "d": true,
-        "deviceLabel": "Basement Spot by Laundry",
-        "name": "",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "974",
-        "command": "setColorTemperature",
-        "commandArgs": "",
-        "x": 3000,
-        "y": 600,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "d9452eae.e30818",
-        "type": "hubitat device",
-        "z": "f9337f21.0eab78",
-        "deviceLabel": "Basement Spot by Stairs",
-        "name": "",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "973",
-        "attribute": "switch",
-        "sendEvent": true,
-        "x": 2190,
-        "y": 660,
-        "wires": [
-            [
-                "3c12909c.b9ca9"
-            ]
-        ]
-    },
-    {
-        "id": "3c12909c.b9ca9",
-        "type": "switch",
-        "z": "f9337f21.0eab78",
-        "name": "is on",
-        "property": "payload.value",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "on",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 2530,
-        "y": 660,
-        "wires": [
-            [
-                "777dd8f7.45277",
-                "b7421877.47f01"
-            ]
-        ]
-    },
-    {
-        "id": "777dd8f7.45277",
-        "type": "change",
-        "z": "f9337f21.0eab78",
-        "name": "Set Color Temp",
-        "rules": [
-            {
-                "t": "set",
-                "p": "arguments",
-                "pt": "msg",
-                "to": "color_temperature",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2720,
-        "y": 660,
-        "wires": [
-            [
-                "ce65d16b.5822b"
-            ]
-        ]
-    },
-    {
-        "id": "ce65d16b.5822b",
-        "type": "hubitat command",
-        "z": "f9337f21.0eab78",
-        "d": true,
-        "deviceLabel": "Basement Spot by Stairs",
-        "name": "",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "973",
-        "command": "setColorTemperature",
-        "commandArgs": "",
-        "x": 2990,
-        "y": 660,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "c9da612b.1c684",
-        "type": "hubitat device",
-        "z": "f9337f21.0eab78",
-        "deviceLabel": "Basement Leah’s Desk Bulb",
-        "name": "",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "975",
-        "attribute": "switch",
-        "sendEvent": true,
-        "x": 2200,
-        "y": 720,
-        "wires": [
-            [
-                "eb0f249.606fed8"
-            ]
-        ]
-    },
-    {
-        "id": "eb0f249.606fed8",
-        "type": "switch",
-        "z": "f9337f21.0eab78",
-        "name": "is on",
-        "property": "payload.value",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "on",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 2530,
-        "y": 720,
-        "wires": [
-            [
-                "cec0412a.d090a",
-                "b7421877.47f01"
-            ]
-        ]
-    },
-    {
-        "id": "cec0412a.d090a",
-        "type": "change",
-        "z": "f9337f21.0eab78",
-        "name": "Set Color Temp",
-        "rules": [
-            {
-                "t": "set",
-                "p": "arguments",
-                "pt": "msg",
-                "to": "color_temperature",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2720,
-        "y": 720,
-        "wires": [
-            [
-                "dc56f27a.5d3da"
-            ]
-        ]
-    },
-    {
-        "id": "dc56f27a.5d3da",
-        "type": "hubitat command",
-        "z": "f9337f21.0eab78",
-        "d": true,
-        "deviceLabel": "Basement Leah’s Desk Bulb",
-        "name": "",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "975",
-        "command": "setColorTemperature",
-        "commandArgs": "",
-        "x": 3000,
-        "y": 720,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "58e0ec60.bafb94",
         "type": "hubitat event",
         "z": "f9337f21.0eab78",
-        "name": "",
+        "name": "All Events",
         "server": "252d4ef4.c14b6a",
-        "x": 130,
+        "x": 140,
         "y": 260,
         "wires": [
             [
-                "94dde739.518ef8"
+                "94dde739.518ef8",
+                "60828817.6454c8",
+                "a1da4be4.41525"
             ]
         ]
     },
@@ -7103,7 +6038,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 270,
+        "x": 280,
         "y": 260,
         "wires": [
             [
@@ -7128,7 +6063,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 400,
+        "x": 410,
         "y": 260,
         "wires": [
             [
@@ -7146,12 +6081,11 @@
         "deviceId": "",
         "attribute": "",
         "sendEvent": false,
-        "x": 720,
+        "x": 750,
         "y": 260,
         "wires": [
             [
-                "e473965f.8a5b68",
-                "4087bdb8.b678d4"
+                "e473965f.8a5b68"
             ]
         ]
     },
@@ -7174,7 +6108,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 560,
+        "x": 570,
         "y": 260,
         "wires": [
             [
@@ -7209,7 +6143,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 860,
+        "x": 890,
         "y": 260,
         "wires": [
             [
@@ -7244,7 +6178,7 @@
         "to": "",
         "reg": false,
         "x": 220,
-        "y": 580,
+        "y": 540,
         "wires": [
             [
                 "c1b27dbf.a11668"
@@ -7262,7 +6196,7 @@
         "command": "",
         "commandArgs": "",
         "x": 400,
-        "y": 580,
+        "y": 540,
         "wires": [
             []
         ]
@@ -7275,7 +6209,7 @@
         "links": [
             "950cba8b.112ef8"
         ],
-        "x": 955,
+        "x": 1035,
         "y": 260,
         "wires": []
     },
@@ -7288,8 +6222,8 @@
             "33ed496c.3b1f1e",
             "a197e4e7.48a7c"
         ],
-        "x": 75,
-        "y": 580,
+        "x": 95,
+        "y": 540,
         "wires": [
             [
                 "10420ba7.156514"
@@ -7426,7 +6360,7 @@
         "name": "Update a single bulb",
         "info": "",
         "x": 170,
-        "y": 500,
+        "y": 480,
         "wires": []
     },
     {
@@ -7481,22 +6415,6 @@
         "l": false
     },
     {
-        "id": "4087bdb8.b678d4",
-        "type": "debug",
-        "z": "f9337f21.0eab78",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 870,
-        "y": 320,
-        "wires": []
-    },
-    {
         "id": "65f9e584.babbf4",
         "type": "switch",
         "z": "f9337f21.0eab78",
@@ -7526,5 +6444,256 @@
                 "d820eb75.8fe88"
             ]
         ]
+    },
+    {
+        "id": "d38c5418.44b928",
+        "type": "comment",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "Count motion events and transmit both enabled and disabled messages",
+        "info": "",
+        "x": 1160,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "10fc02fd.252425",
+        "type": "link in",
+        "z": "f9337f21.0eab78",
+        "name": "",
+        "links": [
+            "37bd8cb0.ae0c2c",
+            "684700ac.14a9f8"
+        ],
+        "x": 55,
+        "y": 1700,
+        "wires": [
+            [
+                "356625e7.df9b9a"
+            ]
+        ]
+    },
+    {
+        "id": "596c6e6f.2128c",
+        "type": "debug",
+        "z": "f9337f21.0eab78",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 790,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "85a18592.937b5",
+        "type": "hubitat device",
+        "z": "58b64745.d5681",
+        "deviceLabel": "Mock Motion",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "979",
+        "attribute": "motion",
+        "sendEvent": true,
+        "x": 430,
+        "y": 620,
+        "wires": [
+            [
+                "3faf4ff8.21874"
+            ]
+        ]
+    },
+    {
+        "id": "ed000248.4c118",
+        "type": "inject",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 270,
+        "y": 900,
+        "wires": [
+            [
+                "2d4ae563.a0394a"
+            ]
+        ]
+    },
+    {
+        "id": "356625e7.df9b9a",
+        "type": "change",
+        "z": "f9337f21.0eab78",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "value",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "payload.value",
+                "pt": "msg",
+                "to": "value",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 200,
+        "y": 1700,
+        "wires": [
+            [
+                "3680fde5.c22a4a"
+            ]
+        ]
+    },
+    {
+        "id": "ddda5240.3ab92",
+        "type": "debug",
+        "z": "f9337f21.0eab78",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 590,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "cc21551a.92e4e8",
+        "type": "debug",
+        "z": "f9337f21.0eab78",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "60828817.6454c8",
+        "type": "switch",
+        "z": "f9337f21.0eab78",
+        "name": "== switch",
+        "property": "payload.displayName",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Upper Hallway Sconce",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Upper Hallway Overhead",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 280,
+        "y": 140,
+        "wires": [
+            [
+                "cc21551a.92e4e8"
+            ],
+            [
+                "cc21551a.92e4e8"
+            ]
+        ]
+    },
+    {
+        "id": "a1da4be4.41525",
+        "type": "debug",
+        "z": "f9337f21.0eab78",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload.displayName",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "e3c14f89.54619",
+        "type": "hubitat device",
+        "z": "f9337f21.0eab78",
+        "deviceLabel": "Spare Bulb",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "1006",
+        "attribute": "",
+        "sendEvent": true,
+        "x": 210,
+        "y": 80,
+        "wires": [
+            [
+                "65b5e2b3.aeec0c"
+            ]
+        ]
+    },
+    {
+        "id": "65b5e2b3.aeec0c",
+        "type": "debug",
+        "z": "f9337f21.0eab78",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 80,
+        "wires": []
     }
 ]
