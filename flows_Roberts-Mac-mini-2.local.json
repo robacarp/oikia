@@ -239,17 +239,17 @@
         ],
         "out": [
             {
-                "x": 700,
+                "x": 1340,
                 "y": 520,
                 "wires": [
                     {
-                        "id": "f95fc416.12cdb8",
-                        "port": "0"
+                        "id": "cfb39ab9.45346",
+                        "port": 0
                     }
                 ]
             },
             {
-                "x": 1040,
+                "x": 1340,
                 "y": 580,
                 "wires": [
                     {
@@ -266,20 +266,20 @@
                 "value": "Motion zone"
             },
             {
-                "name": "sensor reset delay",
+                "name": "sensor_reset_delay",
                 "type": "num",
                 "value": "30"
             },
             {
-                "name": "activity reset delay",
+                "name": "activity_reset_delay",
                 "type": "num",
-                "value": "3"
+                "value": "300"
             }
         ],
         "color": "#DDAA99",
         "status": {
-            "x": 1160,
-            "y": 840,
+            "x": 1240,
+            "y": 940,
             "wires": [
                 {
                     "id": "baa794b2.a49bd",
@@ -4531,6 +4531,11 @@
         "name": "Main presence zone",
         "env": [
             {
+                "name": "activity_reset_delay",
+                "value": "600",
+                "type": "num"
+            },
+            {
                 "name": "sensor reset delay",
                 "value": "20",
                 "type": "num"
@@ -4539,21 +4544,18 @@
                 "name": "activity reset delay",
                 "value": "600",
                 "type": "num"
-            },
-            {
-                "name": "activity_reset_delay",
-                "value": "5",
-                "type": "num"
             }
         ],
         "x": 980,
         "y": 680,
         "wires": [
             [
-                "684700ac.14a9f8"
+                "684700ac.14a9f8",
+                "4766dfdb.9edc6"
             ],
             [
-                "37bd8cb0.ae0c2c"
+                "37bd8cb0.ae0c2c",
+                "a5f88751.ae132"
             ]
         ]
     },
@@ -4593,7 +4595,7 @@
         "to": "",
         "reg": false,
         "x": 920,
-        "y": 880,
+        "y": 980,
         "wires": [
             []
         ]
@@ -4615,10 +4617,12 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 930,
+        "x": 1110,
         "y": 580,
         "wires": [
-            []
+            [
+                "10373673.0c7d0a"
+            ]
         ]
     },
     {
@@ -4647,7 +4651,8 @@
         "y": 600,
         "wires": [
             [
-                "bf8561c.27047a"
+                "bf8561c.27047a",
+                "cfb39ab9.45346"
             ],
             [
                 "4c35d83e.70c12"
@@ -4675,7 +4680,7 @@
         "repair": false,
         "outputs": 2,
         "x": 720,
-        "y": 860,
+        "y": 960,
         "wires": [
             [
                 "3adf6856.200d98"
@@ -4705,7 +4710,7 @@
         "to": "",
         "reg": false,
         "x": 880,
-        "y": 840,
+        "y": 940,
         "wires": [
             []
         ]
@@ -4733,7 +4738,8 @@
         "y": 580,
         "wires": [
             [
-                "f9fb7202.670248"
+                "f9fb7202.670248",
+                "d6e965c0.d24cd"
             ]
         ]
     },
@@ -4930,7 +4936,6 @@
         "name": "Switch Event",
         "links": [
             "b4f2e905.4ec488",
-            "c551054e.c3663",
             "db637502.ed7b1"
         ],
         "x": 1455,
@@ -4943,8 +4948,7 @@
         "z": "4c7c8cd1.6a2a1c",
         "name": "Motion Event",
         "links": [
-            "b4f2e905.4ec488",
-            "c551054e.c3663"
+            "b4f2e905.4ec488"
         ],
         "x": 1195,
         "y": 160,
@@ -4954,13 +4958,12 @@
         "id": "c551054e.c3663",
         "type": "link in",
         "z": "4c7c8cd1.6a2a1c",
-        "name": "",
+        "name": "Trigger Status Update",
         "links": [
-            "1135a6a5.8ffeb9",
-            "979d8215.69ba18"
+            "10373673.0c7d0a"
         ],
         "x": 295,
-        "y": 840,
+        "y": 940,
         "wires": [
             [
                 "2d4ae563.a0394a"
@@ -4971,7 +4974,7 @@
         "id": "b4f2e905.4ec488",
         "type": "link in",
         "z": "4c7c8cd1.6a2a1c",
-        "name": "",
+        "name": "Set Outputs",
         "links": [
             "1135a6a5.8ffeb9",
             "979d8215.69ba18"
@@ -5520,7 +5523,7 @@
                 "t": "set",
                 "p": "delay",
                 "pt": "msg",
-                "to": "sensor_reset_delay",
+                "to": "sensor reset delay",
                 "tot": "env"
             },
             {
@@ -5574,7 +5577,7 @@
         "id": "4c35d83e.70c12",
         "type": "change",
         "z": "4c7c8cd1.6a2a1c",
-        "name": "Activity reset delay",
+        "name": "Configure activity reset delay",
         "rules": [
             {
                 "t": "set",
@@ -5596,15 +5599,14 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 715,
+        "x": 820,
         "y": 620,
         "wires": [
             [
                 "f9fb7202.670248",
-                "febb9c0d.c5d6e8"
+                "6799e319.6e6d34"
             ]
-        ],
-        "l": false
+        ]
     },
     {
         "id": "7a24866e.db567",
@@ -5612,7 +5614,7 @@
         "z": "4c7c8cd1.6a2a1c",
         "name": "Zone Active",
         "info": "",
-        "x": 810,
+        "x": 1450,
         "y": 520,
         "wires": []
     },
@@ -5622,7 +5624,7 @@
         "z": "4c7c8cd1.6a2a1c",
         "name": "Zone Inactive",
         "info": "",
-        "x": 1150,
+        "x": 1450,
         "y": 580,
         "wires": []
     },
@@ -5652,7 +5654,7 @@
         "name": "Status text",
         "info": "",
         "x": 340,
-        "y": 780,
+        "y": 880,
         "wires": []
     },
     {
@@ -5674,7 +5676,7 @@
         "repair": false,
         "outputs": 2,
         "x": 470,
-        "y": 840,
+        "y": 940,
         "wires": [
             [
                 "6214c0ab.73eb08"
@@ -5704,7 +5706,7 @@
         "to": "",
         "reg": false,
         "x": 880,
-        "y": 800,
+        "y": 900,
         "wires": [
             []
         ]
@@ -6270,7 +6272,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 270,
-        "y": 900,
+        "y": 1000,
         "wires": [
             [
                 "2d4ae563.a0394a"
@@ -6442,14 +6444,21 @@
         "id": "febb9c0d.c5d6e8",
         "type": "change",
         "z": "4c7c8cd1.6a2a1c",
-        "name": "Status: Motion Cooldown",
+        "name": "Status: Cooldown x seconds",
         "rules": [
+            {
+                "t": "set",
+                "p": "delay",
+                "pt": "msg",
+                "to": "delay / 1000",
+                "tot": "jsonata"
+            },
             {
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "Motion Cooldown",
-                "tot": "str"
+                "to": "\"Cooldown \" & delay & \"s\"",
+                "tot": "jsonata"
             }
         ],
         "action": "",
@@ -6457,10 +6466,160 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 970,
-        "y": 640,
+        "x": 1400,
+        "y": 620,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "4766dfdb.9edc6",
+        "type": "debug",
+        "z": "58b64745.d5681",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1170,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "a5f88751.ae132",
+        "type": "debug",
+        "z": "58b64745.d5681",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1170,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "d6e965c0.d24cd",
+        "type": "trigger",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "1s delay",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "payl",
+        "duration": "1",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1180,
+        "y": 760,
+        "wires": [
+            [
+                "6799e319.6e6d34"
+            ]
+        ]
+    },
+    {
+        "id": "6799e319.6e6d34",
+        "type": "change",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "Decrement Delay",
+        "rules": [
+            {
+                "t": "set",
+                "p": "delay",
+                "pt": "msg",
+                "to": "delay - 1000",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1110,
+        "y": 620,
+        "wires": [
+            [
+                "febb9c0d.c5d6e8",
+                "4ee48e99.b05a9"
+            ]
+        ]
+    },
+    {
+        "id": "cfb39ab9.45346",
+        "type": "trigger",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "payl",
+        "duration": "1",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 715,
+        "y": 520,
+        "wires": [
+            [
+                "10373673.0c7d0a"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "10373673.0c7d0a",
+        "type": "link out",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "Activity State Change",
+        "links": [
+            "c551054e.c3663"
+        ],
+        "x": 1235,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "4ee48e99.b05a9",
+        "type": "switch",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "delay > 1",
+        "property": "delay",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "1",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "x": 940,
+        "y": 760,
+        "wires": [
+            [
+                "d6e965c0.d24cd"
+            ]
         ]
     }
 ]
