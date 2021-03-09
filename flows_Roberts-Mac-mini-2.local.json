@@ -267,12 +267,12 @@
             },
             {
                 "name": "sensor reset delay",
-                "type": "str",
+                "type": "num",
                 "value": "30"
             },
             {
                 "name": "activity reset delay",
-                "type": "str",
+                "type": "num",
                 "value": "3"
             }
         ],
@@ -4536,12 +4536,17 @@
                 "type": "num"
             },
             {
+                "name": "activity reset delay",
+                "value": "600",
+                "type": "num"
+            },
+            {
                 "name": "activity_reset_delay",
                 "value": "5",
                 "type": "num"
             }
         ],
-        "x": 1020,
+        "x": 980,
         "y": 680,
         "wires": [
             [
@@ -4740,7 +4745,7 @@
         "env": [
             {
                 "name": "activity reset delay",
-                "value": "5",
+                "value": "300",
                 "type": "str"
             }
         ],
