@@ -7,20 +7,6 @@
         "info": ""
     },
     {
-        "id": "511ba96f.a12658",
-        "type": "tab",
-        "label": "Temperature",
-        "disabled": false,
-        "info": ""
-    },
-    {
-        "id": "bfc5fec7.b4f73",
-        "type": "tab",
-        "label": "Batteries",
-        "disabled": false,
-        "info": ""
-    },
-    {
         "id": "25be3e23.1e5eb2",
         "type": "tab",
         "label": "Location",
@@ -412,24 +398,6 @@
         }
     },
     {
-        "id": "7629deba.08a778",
-        "type": "ui_tab",
-        "name": "Home",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "f1cd37ed.5808b",
-        "type": "ui_group",
-        "name": "Temperature",
-        "tab": "7629deba.08a778",
-        "order": 2,
-        "disp": true,
-        "width": "6",
-        "collapse": false
-    },
-    {
         "id": "96c207ac.2237a8",
         "type": "position-config",
         "name": "Home",
@@ -441,16 +409,6 @@
         "timeZoneDST": "0",
         "stateTimeFormat": "3",
         "stateDateFormat": "12"
-    },
-    {
-        "id": "e4e04d66.281c58",
-        "type": "ui_group",
-        "name": "Batteries",
-        "tab": "7629deba.08a778",
-        "order": 3,
-        "disp": true,
-        "width": "6",
-        "collapse": false
     },
     {
         "id": "d2fcc025.17ad7",
@@ -581,322 +539,6 @@
         "wires": []
     },
     {
-        "id": "8e1ccd1c.423048",
-        "type": "hubitat device",
-        "z": "511ba96f.a12658",
-        "name": "Main floor front door - 3/27",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "523",
-        "attribute": "temperature",
-        "sendEvent": true,
-        "x": 580,
-        "y": 180,
-        "wires": [
-            [
-                "7b1e2cc3.e43bd4"
-            ]
-        ]
-    },
-    {
-        "id": "9f4c3844.16bad",
-        "type": "hubitat device",
-        "z": "511ba96f.a12658",
-        "name": "Main floor hallway - 3/27",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "521",
-        "attribute": "temperature",
-        "sendEvent": true,
-        "x": 570,
-        "y": 240,
-        "wires": [
-            [
-                "7b1e2cc3.e43bd4"
-            ]
-        ]
-    },
-    {
-        "id": "8e8ef821.9d309",
-        "type": "hubitat device",
-        "z": "511ba96f.a12658",
-        "name": "Main floor hallway shelf by stairs - 3/27",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "522",
-        "attribute": "temperature",
-        "sendEvent": true,
-        "x": 620,
-        "y": 300,
-        "wires": [
-            [
-                "7b1e2cc3.e43bd4"
-            ]
-        ]
-    },
-    {
-        "id": "f31e698a.7b2ef8",
-        "type": "hubitat device",
-        "z": "511ba96f.a12658",
-        "name": "Main Floor Kitchen Island - Kitchen 3/29",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "530",
-        "attribute": "temperature",
-        "sendEvent": true,
-        "x": 620,
-        "y": 360,
-        "wires": [
-            [
-                "7b1e2cc3.e43bd4"
-            ]
-        ]
-    },
-    {
-        "id": "72f9eb20.131fdc",
-        "type": "hubitat device",
-        "z": "511ba96f.a12658",
-        "name": "Main Floor Kitchen Island - Living Room - 3/29",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "529",
-        "attribute": "temperature",
-        "sendEvent": true,
-        "x": 640,
-        "y": 420,
-        "wires": [
-            [
-                "7b1e2cc3.e43bd4"
-            ]
-        ]
-    },
-    {
-        "id": "2c6edddf.80305a",
-        "type": "ui_chart",
-        "z": "511ba96f.a12658",
-        "name": "",
-        "group": "f1cd37ed.5808b",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "label": "Main Floor",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
-        "nodata": "no data",
-        "dot": false,
-        "ymin": "60",
-        "ymax": "85",
-        "removeOlder": "24",
-        "removeOlderPoints": "",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "x": 1130,
-        "y": 300,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "bf1bb877.671918",
-        "type": "inject",
-        "z": "511ba96f.a12658",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 320,
-        "y": 300,
-        "wires": [
-            [
-                "8e1ccd1c.423048",
-                "9f4c3844.16bad",
-                "8e8ef821.9d309",
-                "f31e698a.7b2ef8",
-                "72f9eb20.131fdc"
-            ]
-        ]
-    },
-    {
-        "id": "7b1e2cc3.e43bd4",
-        "type": "change",
-        "z": "511ba96f.a12658",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.value",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 940,
-        "y": 300,
-        "wires": [
-            [
-                "2c6edddf.80305a"
-            ]
-        ]
-    },
-    {
-        "id": "ad8191f8.a11098",
-        "type": "hubitat device",
-        "z": "511ba96f.a12658",
-        "name": "Basement Under Screen - 4/1",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "534",
-        "attribute": "temperature",
-        "sendEvent": true,
-        "x": 610,
-        "y": 620,
-        "wires": [
-            [
-                "2583432e.abcc84"
-            ]
-        ]
-    },
-    {
-        "id": "1c8cf4fe.9ff3cb",
-        "type": "hubitat device",
-        "z": "511ba96f.a12658",
-        "name": "Basement Bottom of Stairs - 4/1",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "535",
-        "attribute": "temperature",
-        "sendEvent": true,
-        "x": 610,
-        "y": 680,
-        "wires": [
-            [
-                "2583432e.abcc84"
-            ]
-        ]
-    },
-    {
-        "id": "c10bb58.4d8ecc8",
-        "type": "ui_chart",
-        "z": "511ba96f.a12658",
-        "name": "",
-        "group": "f1cd37ed.5808b",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "label": "Basement",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
-        "nodata": "no data",
-        "dot": false,
-        "ymin": "60",
-        "ymax": "85",
-        "removeOlder": "24",
-        "removeOlderPoints": "",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "x": 1120,
-        "y": 680,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "1dc9e443.2f6bcc",
-        "type": "inject",
-        "z": "511ba96f.a12658",
-        "name": "",
-        "props": [
-            {
-                "p": "payload",
-                "v": "",
-                "vt": "date"
-            },
-            {
-                "p": "topic",
-                "v": "",
-                "vt": "string"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 320,
-        "y": 680,
-        "wires": [
-            [
-                "ad8191f8.a11098",
-                "1c8cf4fe.9ff3cb",
-                "9462833e.1d1b7"
-            ]
-        ]
-    },
-    {
-        "id": "2583432e.abcc84",
-        "type": "change",
-        "z": "511ba96f.a12658",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.value",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 920,
-        "y": 680,
-        "wires": [
-            [
-                "c10bb58.4d8ecc8",
-                "77376d6b.572b8c"
-            ]
-        ]
-    },
-    {
         "id": "b0c8d31a.f0e56",
         "type": "link out",
         "z": "f9337f21.0eab78",
@@ -947,23 +589,6 @@
         "wires": [
             [
                 "7a1e014f.2d5688"
-            ]
-        ]
-    },
-    {
-        "id": "9462833e.1d1b7",
-        "type": "hubitat device",
-        "z": "511ba96f.a12658",
-        "name": "Basement - Behind the couch - 4/10",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "621",
-        "attribute": "temperature",
-        "sendEvent": true,
-        "x": 630,
-        "y": 740,
-        "wires": [
-            [
-                "2583432e.abcc84"
             ]
         ]
     },
@@ -1953,137 +1578,6 @@
         "wires": []
     },
     {
-        "id": "dbf1d53a.74e1a",
-        "type": "hubitat event",
-        "z": "bfc5fec7.b4f73",
-        "name": "",
-        "server": "252d4ef4.c14b6a",
-        "x": 230,
-        "y": 400,
-        "wires": [
-            [
-                "9a65a55.84bf0d8",
-                "90be1ca4.d8ced"
-            ]
-        ]
-    },
-    {
-        "id": "90be1ca4.d8ced",
-        "type": "debug",
-        "z": "bfc5fec7.b4f73",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "x": 550,
-        "y": 360,
-        "wires": []
-    },
-    {
-        "id": "9a65a55.84bf0d8",
-        "type": "switch",
-        "z": "bfc5fec7.b4f73",
-        "name": "name == battery",
-        "property": "payload.name",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "battery",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 500,
-        "y": 460,
-        "wires": [
-            [
-                "90be1ca4.d8ced",
-                "a286e85e.95f9f8"
-            ]
-        ]
-    },
-    {
-        "id": "9da61bd6.f74c6",
-        "type": "ui_chart",
-        "z": "bfc5fec7.b4f73",
-        "name": "",
-        "group": "e4e04d66.281c58",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "label": "chart",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "20",
-        "ymax": "100",
-        "removeOlder": 1,
-        "removeOlderPoints": "",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "x": 1070,
-        "y": 480,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "a286e85e.95f9f8",
-        "type": "change",
-        "z": "bfc5fec7.b4f73",
-        "name": "battery name/level",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "payload.displayName",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.value",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 710,
-        "y": 480,
-        "wires": [
-            [
-                "b5c156c3.b212c8"
-            ]
-        ]
-    },
-    {
         "id": "30aade80.91cb42",
         "type": "within-time-switch",
         "z": "f9337f21.0eab78",
@@ -2166,29 +1660,6 @@
             ]
         ],
         "l": false
-    },
-    {
-        "id": "b5c156c3.b212c8",
-        "type": "delay",
-        "z": "bfc5fec7.b4f73",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "250",
-        "timeoutUnits": "milliseconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "x": 910,
-        "y": 480,
-        "wires": [
-            [
-                "9da61bd6.f74c6"
-            ]
-        ]
     },
     {
         "id": "82929842.1531",
@@ -2813,160 +2284,6 @@
         ]
     },
     {
-        "id": "65651153.eb91c8",
-        "type": "hubitat device",
-        "z": "511ba96f.a12658",
-        "name": "Bedroom - ec",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "304",
-        "attribute": "temperature",
-        "sendEvent": true,
-        "x": 580,
-        "y": 860,
-        "wires": [
-            [
-                "22a28a31.390dd6"
-            ]
-        ]
-    },
-    {
-        "id": "22a28a31.390dd6",
-        "type": "change",
-        "z": "511ba96f.a12658",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.value",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 960,
-        "y": 880,
-        "wires": [
-            [
-                "c023904c.fd8f8",
-                "77376d6b.572b8c"
-            ]
-        ]
-    },
-    {
-        "id": "89c09882.10eaf",
-        "type": "inject",
-        "z": "511ba96f.a12658",
-        "name": "",
-        "props": [
-            {
-                "p": "payload",
-                "v": "",
-                "vt": "date"
-            },
-            {
-                "p": "topic",
-                "v": "",
-                "vt": "string"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 300,
-        "y": 880,
-        "wires": [
-            [
-                "65651153.eb91c8",
-                "97ff630e.b13cf"
-            ]
-        ]
-    },
-    {
-        "id": "c023904c.fd8f8",
-        "type": "ui_chart",
-        "z": "511ba96f.a12658",
-        "name": "",
-        "group": "f1cd37ed.5808b",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "label": "2nd Floor",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
-        "nodata": "no data",
-        "dot": false,
-        "ymin": "60",
-        "ymax": "85",
-        "removeOlder": "24",
-        "removeOlderPoints": "",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "x": 1140,
-        "y": 880,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "77376d6b.572b8c",
-        "type": "debug",
-        "z": "511ba96f.a12658",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1150,
-        "y": 800,
-        "wires": []
-    },
-    {
-        "id": "97ff630e.b13cf",
-        "type": "hubitat device",
-        "z": "511ba96f.a12658",
-        "name": "Kid room - ec",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "301",
-        "attribute": "temperature",
-        "sendEvent": true,
-        "x": 580,
-        "y": 920,
-        "wires": [
-            [
-                "22a28a31.390dd6"
-            ]
-        ]
-    },
-    {
         "id": "de942ea8.fc96d8",
         "type": "delay",
         "z": "25be3e23.1e5eb2",
@@ -3194,23 +2511,6 @@
         ]
     },
     {
-        "id": "2933128c.4e1106",
-        "type": "debug",
-        "z": "402da1b5.446cd8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1450,
-        "y": 480,
-        "wires": []
-    },
-    {
         "id": "f5041739.0af4a",
         "type": "inject",
         "z": "402da1b5.446cd8",
@@ -3322,28 +2622,11 @@
         ]
     },
     {
-        "id": "5644d1f7.7c8a3",
-        "type": "debug",
-        "z": "402da1b5.446cd8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1290,
-        "y": 480,
-        "wires": []
-    },
-    {
         "id": "604183c.7dc6d7c",
         "type": "debug",
         "z": "402da1b5.446cd8",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -4042,9 +3325,10 @@
         "id": "47d65929.faec98",
         "type": "hubitat command",
         "z": "f9337f21.0eab78",
+        "deviceLabel": "",
         "name": "Basement Leahs Desk",
         "server": "252d4ef4.c14b6a",
-        "deviceId": "1",
+        "deviceId": "1007",
         "command": "off",
         "commandArgs": "",
         "x": 460,
@@ -4189,8 +3473,7 @@
                 "a09e1c18.134418",
                 "65fdba64.4f912c",
                 "a7c052.9af66fb",
-                "f426f0a.ee9109",
-                "85a18592.937b5"
+                "f426f0a.ee9109"
             ]
         ]
     },
@@ -5282,7 +4565,7 @@
         "d": true,
         "name": "",
         "positionConfig": "96c207ac.2237a8",
-        "startTime": "sunset",
+        "startTime": "sunsetEnd",
         "startTimeType": "pdsTime",
         "startOffset": "-45",
         "startOffsetType": "num",
@@ -5292,6 +4575,8 @@
         "endOffset": 0,
         "endOffsetType": "none",
         "endOffsetMultiplier": 60000,
+        "timeRestrictions": "",
+        "timeRestrictionsType": "none",
         "timeDays": "*",
         "timeOnlyOddDays": false,
         "timeOnlyEvenDays": false,
@@ -5969,7 +5254,8 @@
         "y": 540,
         "wires": [
             [
-                "10420ba7.156514"
+                "10420ba7.156514",
+                "2a10c8d6.2aaf58"
             ]
         ]
     },
@@ -6233,24 +5519,6 @@
         "wires": []
     },
     {
-        "id": "85a18592.937b5",
-        "type": "hubitat device",
-        "z": "58b64745.d5681",
-        "deviceLabel": "Mock Motion",
-        "name": "",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "979",
-        "attribute": "motion",
-        "sendEvent": true,
-        "x": 430,
-        "y": 620,
-        "wires": [
-            [
-                "3faf4ff8.21874"
-            ]
-        ]
-    },
-    {
         "id": "ed000248.4c118",
         "type": "inject",
         "z": "4c7c8cd1.6a2a1c",
@@ -6428,7 +5696,7 @@
         "type": "debug",
         "z": "f9337f21.0eab78",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -6593,8 +5861,8 @@
         "links": [
             "c551054e.c3663"
         ],
-        "x": 1235,
-        "y": 500,
+        "x": 1335,
+        "y": 460,
         "wires": []
     },
     {
@@ -6621,5 +5889,830 @@
                 "d6e965c0.d24cd"
             ]
         ]
+    },
+    {
+        "id": "2a10c8d6.2aaf58",
+        "type": "debug",
+        "z": "f9337f21.0eab78",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 250,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "b7e42782.1bb218",
+        "type": "hubitat device",
+        "z": "f9337f21.0eab78",
+        "deviceLabel": "Bedroom Pico",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "1079",
+        "attribute": "",
+        "sendEvent": true,
+        "x": 800,
+        "y": 2680,
+        "wires": [
+            [
+                "cd02a7f8.02c98"
+            ]
+        ]
+    },
+    {
+        "id": "6e37db50.dc5914",
+        "type": "hubitat command",
+        "z": "f9337f21.0eab78",
+        "deviceLabel": "Bedroom Leahs Lamp",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "258",
+        "command": "",
+        "commandArgs": "",
+        "x": 1540,
+        "y": 2620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cd02a7f8.02c98",
+        "type": "switch",
+        "z": "f9337f21.0eab78",
+        "name": "",
+        "property": "payload.name",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "pushed",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 935,
+        "y": 2680,
+        "wires": [
+            [
+                "17e73a23.f5bdf6"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "17e73a23.f5bdf6",
+        "type": "switch",
+        "z": "f9337f21.0eab78",
+        "name": "",
+        "property": "payload.value",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "3",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 4,
+        "x": 995,
+        "y": 2680,
+        "wires": [
+            [
+                "79f073d1.bfa29c"
+            ],
+            [
+                "cb9904d6.b07e58"
+            ],
+            [
+                "cb9904d6.b07e58"
+            ],
+            [
+                "85bda84a.5b9468"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "79f073d1.bfa29c",
+        "type": "change",
+        "z": "f9337f21.0eab78",
+        "name": "On",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "on",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1130,
+        "y": 2620,
+        "wires": [
+            [
+                "cabbddd7.3ee3d"
+            ]
+        ]
+    },
+    {
+        "id": "85bda84a.5b9468",
+        "type": "change",
+        "z": "f9337f21.0eab78",
+        "name": "Off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1130,
+        "y": 2740,
+        "wires": [
+            [
+                "cabbddd7.3ee3d"
+            ]
+        ]
+    },
+    {
+        "id": "cabbddd7.3ee3d",
+        "type": "delay",
+        "z": "f9337f21.0eab78",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 1355,
+        "y": 2680,
+        "wires": [
+            [
+                "6e37db50.dc5914",
+                "22c493f9.0bfe6c",
+                "6fe31150.9b91a",
+                "4abc4aa7.ee7284"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "22c493f9.0bfe6c",
+        "type": "hubitat command",
+        "z": "f9337f21.0eab78",
+        "deviceLabel": "Bedroom Robs Lamp",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "225",
+        "command": "",
+        "commandArgs": "",
+        "x": 1540,
+        "y": 2660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6fe31150.9b91a",
+        "type": "hubitat command",
+        "z": "f9337f21.0eab78",
+        "deviceLabel": "Bedroom Tall Lamp",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "257",
+        "command": "",
+        "commandArgs": "",
+        "x": 1530,
+        "y": 2700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4abc4aa7.ee7284",
+        "type": "hubitat command",
+        "z": "f9337f21.0eab78",
+        "deviceLabel": "Bedroom Lamp",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "98",
+        "command": "",
+        "commandArgs": "",
+        "x": 1520,
+        "y": 2740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2883e1c2.436ede",
+        "type": "change",
+        "z": "f9337f21.0eab78",
+        "name": "On",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "on",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1250,
+        "y": 2660,
+        "wires": [
+            [
+                "6e37db50.dc5914",
+                "22c493f9.0bfe6c"
+            ]
+        ]
+    },
+    {
+        "id": "154a48b2.b10447",
+        "type": "change",
+        "z": "f9337f21.0eab78",
+        "name": "Off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1250,
+        "y": 2700,
+        "wires": [
+            [
+                "6fe31150.9b91a",
+                "4abc4aa7.ee7284"
+            ]
+        ]
+    },
+    {
+        "id": "cb9904d6.b07e58",
+        "type": "delay",
+        "z": "f9337f21.0eab78",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 1095,
+        "y": 2680,
+        "wires": [
+            [
+                "2883e1c2.436ede",
+                "154a48b2.b10447"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "e3ec1abf.391d48",
+        "type": "hubitat device",
+        "z": "f9337f21.0eab78",
+        "deviceLabel": "Bedroom L Bedside Switch",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "526",
+        "attribute": "",
+        "sendEvent": true,
+        "x": 780,
+        "y": 3020,
+        "wires": [
+            [
+                "accc476c.02ce2"
+            ]
+        ]
+    },
+    {
+        "id": "accc476c.02ce2",
+        "type": "switch",
+        "z": "f9337f21.0eab78",
+        "name": "",
+        "property": "payload.name",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "pushed",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "held",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 995,
+        "y": 3020,
+        "wires": [
+            [
+                "2319354.da91f4a"
+            ],
+            [
+                "87e6d0a8.5ecc8"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "2319354.da91f4a",
+        "type": "switch",
+        "z": "f9337f21.0eab78",
+        "name": "",
+        "property": "payload.value",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "4",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1055,
+        "y": 3000,
+        "wires": [
+            [
+                "eee21efd.24f0f"
+            ],
+            [
+                "f8882392.63a658"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "f8882392.63a658",
+        "type": "change",
+        "z": "f9337f21.0eab78",
+        "name": "Off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1170,
+        "y": 3020,
+        "wires": [
+            [
+                "b448d918.5693f"
+            ]
+        ]
+    },
+    {
+        "id": "b448d918.5693f",
+        "type": "hubitat command",
+        "z": "f9337f21.0eab78",
+        "deviceLabel": "Bedroom Tall Lamp",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "257",
+        "command": "",
+        "commandArgs": "",
+        "x": 1470,
+        "y": 3020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "44cbaf0.923ee5",
+        "type": "change",
+        "z": "f9337f21.0eab78",
+        "name": "On Full",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "setLevel",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "arguments",
+                "pt": "msg",
+                "to": "70",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1180,
+        "y": 3060,
+        "wires": [
+            [
+                "b448d918.5693f"
+            ]
+        ]
+    },
+    {
+        "id": "31743d94.fd3462",
+        "type": "hubitat device",
+        "z": "f9337f21.0eab78",
+        "deviceLabel": "Bedroom Quad Switch",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "295",
+        "attribute": "",
+        "sendEvent": true,
+        "x": 780,
+        "y": 3280,
+        "wires": [
+            [
+                "c01b8b50.1490a8"
+            ]
+        ]
+    },
+    {
+        "id": "c01b8b50.1490a8",
+        "type": "switch",
+        "z": "f9337f21.0eab78",
+        "name": "",
+        "property": "payload.name",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "pushed",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 975,
+        "y": 3280,
+        "wires": [
+            [
+                "31fc75be.427232"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "31fc75be.427232",
+        "type": "switch",
+        "z": "f9337f21.0eab78",
+        "name": "",
+        "property": "payload.value",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "3",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 4,
+        "x": 1055,
+        "y": 3280,
+        "wires": [
+            [
+                "91e8ca3f.3f295"
+            ],
+            [
+                "9a4d93e3.9f5c3"
+            ],
+            [
+                "91e8ca3f.3f295"
+            ],
+            [
+                "9a4d93e3.9f5c3"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "9a4d93e3.9f5c3",
+        "type": "change",
+        "z": "f9337f21.0eab78",
+        "name": "Off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1170,
+        "y": 3300,
+        "wires": [
+            [
+                "2036fdbe.acda92"
+            ]
+        ]
+    },
+    {
+        "id": "91e8ca3f.3f295",
+        "type": "change",
+        "z": "f9337f21.0eab78",
+        "name": "On",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "on",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1170,
+        "y": 3260,
+        "wires": [
+            [
+                "93983053.42cca8"
+            ]
+        ]
+    },
+    {
+        "id": "a0f2d6e.daab828",
+        "type": "hubitat command",
+        "z": "f9337f21.0eab78",
+        "deviceLabel": "Bedroom Leahs Lamp",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "258",
+        "command": "",
+        "commandArgs": "",
+        "x": 1480,
+        "y": 3220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "407e2a78.c9971c",
+        "type": "hubitat command",
+        "z": "f9337f21.0eab78",
+        "deviceLabel": "Bedroom Robs Lamp",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "225",
+        "command": "",
+        "commandArgs": "",
+        "x": 1480,
+        "y": 3260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "72f48158.153f08",
+        "type": "hubitat command",
+        "z": "f9337f21.0eab78",
+        "deviceLabel": "Bedroom Tall Lamp",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "257",
+        "command": "",
+        "commandArgs": "",
+        "x": 1470,
+        "y": 3300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7371a601.f9ce3",
+        "type": "hubitat command",
+        "z": "f9337f21.0eab78",
+        "deviceLabel": "Bedroom Lamp",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "98",
+        "command": "",
+        "commandArgs": "",
+        "x": 1460,
+        "y": 3340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "93983053.42cca8",
+        "type": "delay",
+        "z": "f9337f21.0eab78",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 1275,
+        "y": 3260,
+        "wires": [
+            [
+                "a0f2d6e.daab828",
+                "407e2a78.c9971c",
+                "72f48158.153f08",
+                "7371a601.f9ce3"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "2036fdbe.acda92",
+        "type": "delay",
+        "z": "f9337f21.0eab78",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 1275,
+        "y": 3300,
+        "wires": [
+            [
+                "7371a601.f9ce3",
+                "72f48158.153f08",
+                "407e2a78.c9971c",
+                "a0f2d6e.daab828"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "eee21efd.24f0f",
+        "type": "change",
+        "z": "f9337f21.0eab78",
+        "name": "On Dim",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "setLevel",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "arguments",
+                "pt": "msg",
+                "to": "26",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1180,
+        "y": 2980,
+        "wires": [
+            [
+                "b448d918.5693f"
+            ]
+        ]
+    },
+    {
+        "id": "87e6d0a8.5ecc8",
+        "type": "switch",
+        "z": "f9337f21.0eab78",
+        "name": "",
+        "property": "payload.value",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1055,
+        "y": 3040,
+        "wires": [
+            [
+                "44cbaf0.923ee5"
+            ]
+        ],
+        "l": false
     }
 ]
