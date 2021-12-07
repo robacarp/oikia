@@ -249,8 +249,8 @@
         ],
         "out": [
             {
-                "x": 1380,
-                "y": 140,
+                "x": 1340,
+                "y": 100,
                 "wires": [
                     {
                         "id": "9332a190.b5b628",
@@ -299,12 +299,1612 @@
         "id": "f2d9c01d.62cb2",
         "type": "lutron-config",
         "name": "Caseta Hub",
-        "ipaddress": "172.16.0.69",
+        "ipaddress": "172.16.0.11",
         "deviceMap": {
-            "R Pico": "2",
-            "Pico 2": "3"
+            "pico": "0"
         },
         "timeout": "45000"
+    },
+    {
+        "id": "aa0d64a0.a2b408",
+        "type": "comment",
+        "z": "c1c7f362.7de41",
+        "name": "Time Zone Offset",
+        "info": "",
+        "x": 400,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "a0e70412.49cd3",
+        "type": "comment",
+        "z": "c1c7f362.7de41",
+        "name": "ms -> s",
+        "info": "",
+        "x": 370,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "f207fd86.a5521",
+        "type": "comment",
+        "z": "c1c7f362.7de41",
+        "name": "seconds since midnight",
+        "info": "",
+        "x": 420,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "ba6ff9d9.4f1458",
+        "type": "comment",
+        "z": "c1c7f362.7de41",
+        "name": "hours since midnight",
+        "info": "",
+        "x": 410,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "ae545d5b.975008",
+        "type": "change",
+        "z": "c1c7f362.7de41",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload / 1000",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload - (3600 * 6)",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload % 86400",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload / 3600",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 400,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c044ca5b.081a6",
+        "type": "change",
+        "z": "eaca82ad.4ed06",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "device",
+                "pt": "msg",
+                "to": "R",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 200,
+        "y": 80,
+        "wires": [
+            [
+                "43ed4749.b7752"
+            ]
+        ]
+    },
+    {
+        "id": "43ed4749.b7752",
+        "type": "pushover api",
+        "z": "eaca82ad.4ed06",
+        "keys": "d2fcc025.17ad7",
+        "title": "",
+        "name": "",
+        "x": 400,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "236b247f.af15c4",
+        "type": "change",
+        "z": "7435c4c5.81ec14",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "device",
+                "pt": "msg",
+                "to": "L,ipad",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 200,
+        "y": 80,
+        "wires": [
+            [
+                "f4a49bd9.f676f8"
+            ]
+        ]
+    },
+    {
+        "id": "f4a49bd9.f676f8",
+        "type": "pushover api",
+        "z": "7435c4c5.81ec14",
+        "keys": "d2fcc025.17ad7",
+        "title": "",
+        "name": "",
+        "x": 380,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "3cca5a12.e156b6",
+        "type": "switch",
+        "z": "c79ec61c.5274a8",
+        "name": "is enabled",
+        "property": "payload.currentValue",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "on",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 490,
+        "y": 200,
+        "wires": [
+            [
+                "fdbf5834.ae9ad8"
+            ]
+        ]
+    },
+    {
+        "id": "75cdf7ec.d90a48",
+        "type": "hubitat device",
+        "z": "c79ec61c.5274a8",
+        "name": "Main Floor Motion Master",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "877",
+        "attribute": "switch",
+        "sendEvent": false,
+        "x": 270,
+        "y": 200,
+        "wires": [
+            [
+                "3cca5a12.e156b6"
+            ]
+        ]
+    },
+    {
+        "id": "d1470657.61394",
+        "type": "change",
+        "z": "c79ec61c.5274a8",
+        "name": "Store payload",
+        "rules": [
+            {
+                "t": "set",
+                "p": "sent_payload",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 200,
+        "y": 120,
+        "wires": [
+            [
+                "75cdf7ec.d90a48"
+            ]
+        ]
+    },
+    {
+        "id": "fdbf5834.ae9ad8",
+        "type": "change",
+        "z": "c79ec61c.5274a8",
+        "name": "ReStore payload",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "sent_payload",
+                "tot": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "sent_payload",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 230,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "37082482.1d726c",
+        "type": "unsafe-function",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "Motion Aggregator",
+        "func": "let motionStatus = null;\nlet activeCount = 0;\n\nlet sensors = context.get(\"sensors\") || {};\nlet wasActive = context.get(\"active\") || false;\nlet deviceId\n\nif (typeof msg.payload != \"undefined\" && msg.payload !== null) {\n    deviceId = msg.payload.deviceId;\n}\n\nif (typeof deviceId != \"undefined\") {\n\n    // If we didn't receive an event, the process was triggered by something else (eg. enabling the automation)\n    motionStatus = msg.payload.value\n\n    if (typeof sensors[deviceId] == \"undefined\") {\n        sensors[deviceId] = {}\n    }\n\n    let deviceObject = sensors[deviceId]\n\n    deviceObject.state = motionStatus\n    deviceObject.displayName = msg.topic\n\n    context.set(\"sensors\", sensors)\n}\n\n\nfor (let [deviceId, values] of Object.entries(sensors)) {\n    if ( values.state == 'active' ) {\n        activeCount++\n    }\n}\n\nconst active = activeCount > 0\n\nnewMessage = {\n  topic: env.get(\"Zone Name\"),\n  payload: active ? \"active\" : \"inactive\",\n  count: activeCount\n}\n\n    context.set(\"active\", active)\n    return newMessage\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 990,
+        "y": 160,
+        "wires": [
+            [
+                "1135a6a5.8ffeb9"
+            ]
+        ]
+    },
+    {
+        "id": "baa794b2.a49bd",
+        "type": "change",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "Active sensor count",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "count  & \" \" & payload & \" sensors\"",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 920,
+        "y": 980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f9fb7202.670248",
+        "type": "trigger",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "Activity reset",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "payl",
+        "duration": "5",
+        "extend": true,
+        "overrideDelay": true,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1110,
+        "y": 580,
+        "wires": [
+            [
+                "10373673.0c7d0a"
+            ]
+        ]
+    },
+    {
+        "id": "f95fc416.12cdb8",
+        "type": "switch",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "is active?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "active",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "inactive",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 600,
+        "y": 600,
+        "wires": [
+            [
+                "bf8561c.27047a",
+                "cfb39ab9.45346"
+            ],
+            [
+                "4c35d83e.70c12"
+            ]
+        ]
+    },
+    {
+        "id": "d1fef5e9.1faa",
+        "type": "switch",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "is active?",
+        "property": "count",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 720,
+        "y": 960,
+        "wires": [
+            [
+                "3adf6856.200d98"
+            ],
+            [
+                "baa794b2.a49bd"
+            ]
+        ]
+    },
+    {
+        "id": "3adf6856.200d98",
+        "type": "change",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "Inactive",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "inactive",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bf8561c.27047a",
+        "type": "change",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "Reset",
+        "rules": [
+            {
+                "t": "set",
+                "p": "reset",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 750,
+        "y": 580,
+        "wires": [
+            [
+                "f9fb7202.670248",
+                "d6e965c0.d24cd"
+            ]
+        ]
+    },
+    {
+        "id": "5e909849.a5ede",
+        "type": "switch",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "Separate motion from contact",
+        "property": "payload.name",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "motion",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "contact",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 510,
+        "y": 200,
+        "wires": [
+            [
+                "37082482.1d726c"
+            ],
+            [
+                "ee67eca9.7c9548",
+                "83dac1a6.f49bb"
+            ]
+        ]
+    },
+    {
+        "id": "ee67eca9.7c9548",
+        "type": "change",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "Set active",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "active",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 960,
+        "y": 220,
+        "wires": [
+            [
+                "de4555d9.03c9f8"
+            ]
+        ]
+    },
+    {
+        "id": "9dec185d.0fa0b",
+        "type": "change",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "Set inactive",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "inactive",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1230,
+        "y": 260,
+        "wires": [
+            [
+                "de4555d9.03c9f8"
+            ]
+        ]
+    },
+    {
+        "id": "979d8215.69ba18",
+        "type": "link out",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "Switch Event",
+        "links": [
+            "b4f2e905.4ec488",
+            "db637502.ed7b1"
+        ],
+        "x": 1455,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "1135a6a5.8ffeb9",
+        "type": "link out",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "Motion Event",
+        "links": [
+            "b4f2e905.4ec488"
+        ],
+        "x": 1195,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "c551054e.c3663",
+        "type": "link in",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "Trigger Status Update",
+        "links": [
+            "10373673.0c7d0a"
+        ],
+        "x": 295,
+        "y": 940,
+        "wires": [
+            [
+                "2d4ae563.a0394a"
+            ]
+        ]
+    },
+    {
+        "id": "b4f2e905.4ec488",
+        "type": "link in",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "Set Outputs",
+        "links": [
+            "1135a6a5.8ffeb9",
+            "979d8215.69ba18"
+        ],
+        "x": 295,
+        "y": 600,
+        "wires": [
+            [
+                "a6ce7a5b.5718f8"
+            ]
+        ]
+    },
+    {
+        "id": "cb4ad9ea.ed3e38",
+        "type": "comment",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "Motion event",
+        "info": "",
+        "x": 1310,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "acfeb2ce.da0e98",
+        "type": "comment",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "Sensor event",
+        "info": "",
+        "x": 1570,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "83dac1a6.f49bb",
+        "type": "change",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "Sensor reset delay",
+        "rules": [
+            {
+                "t": "set",
+                "p": "delay",
+                "pt": "msg",
+                "to": "sensor reset delay",
+                "tot": "env"
+            },
+            {
+                "t": "set",
+                "p": "delay",
+                "pt": "msg",
+                "to": "delay * 1000",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 915,
+        "y": 260,
+        "wires": [
+            [
+                "1f831024.572ef8"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "1f831024.572ef8",
+        "type": "trigger",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "Sensor reset",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "payl",
+        "duration": "5",
+        "extend": true,
+        "overrideDelay": true,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1050,
+        "y": 260,
+        "wires": [
+            [
+                "9dec185d.0fa0b"
+            ]
+        ]
+    },
+    {
+        "id": "4c35d83e.70c12",
+        "type": "change",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "Configure activity reset delay",
+        "rules": [
+            {
+                "t": "set",
+                "p": "delay",
+                "pt": "msg",
+                "to": "activity_reset_delay",
+                "tot": "env"
+            },
+            {
+                "t": "set",
+                "p": "delay",
+                "pt": "msg",
+                "to": "delay * 1000",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 820,
+        "y": 620,
+        "wires": [
+            [
+                "f9fb7202.670248",
+                "6799e319.6e6d34"
+            ]
+        ]
+    },
+    {
+        "id": "7a24866e.db567",
+        "type": "comment",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "Zone Active",
+        "info": "",
+        "x": 1450,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "268891b5.f0e4f6",
+        "type": "comment",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "Zone Inactive",
+        "info": "",
+        "x": 1450,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "de4555d9.03c9f8",
+        "type": "rbe",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 1375,
+        "y": 220,
+        "wires": [
+            [
+                "979d8215.69ba18"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "28fb421d.2d7a2e",
+        "type": "comment",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "Status text",
+        "info": "",
+        "x": 340,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "2d4ae563.a0394a",
+        "type": "switch",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "Motion zone active",
+        "property": "zone_active",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "false"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 470,
+        "y": 940,
+        "wires": [
+            [
+                "6214c0ab.73eb08"
+            ],
+            [
+                "d1fef5e9.1faa"
+            ]
+        ]
+    },
+    {
+        "id": "6214c0ab.73eb08",
+        "type": "change",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "Disabled",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Zone disabled",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a6ce7a5b.5718f8",
+        "type": "switch",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "Zone enabled?",
+        "property": "zone_active",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "else"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 440,
+        "y": 600,
+        "wires": [
+            [
+                "f95fc416.12cdb8"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "c90679d.51c6188",
+        "type": "comment",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "Outputs",
+        "info": "",
+        "x": 330,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "d38c5418.44b928",
+        "type": "comment",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "Count motion events and transmit both enabled and disabled messages",
+        "info": "",
+        "x": 1160,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "ed000248.4c118",
+        "type": "inject",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 270,
+        "y": 1000,
+        "wires": [
+            [
+                "2d4ae563.a0394a"
+            ]
+        ]
+    },
+    {
+        "id": "febb9c0d.c5d6e8",
+        "type": "change",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "Status: Cooldown x seconds",
+        "rules": [
+            {
+                "t": "set",
+                "p": "delay",
+                "pt": "msg",
+                "to": "delay / 1000",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "\"Cooldown \" & delay & \"s\"",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1400,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d6e965c0.d24cd",
+        "type": "trigger",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "1s delay",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "payl",
+        "duration": "1",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1180,
+        "y": 760,
+        "wires": [
+            [
+                "6799e319.6e6d34"
+            ]
+        ]
+    },
+    {
+        "id": "6799e319.6e6d34",
+        "type": "change",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "Decrement Delay",
+        "rules": [
+            {
+                "t": "set",
+                "p": "delay",
+                "pt": "msg",
+                "to": "delay - 1000",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1110,
+        "y": 620,
+        "wires": [
+            [
+                "febb9c0d.c5d6e8",
+                "4ee48e99.b05a9"
+            ]
+        ]
+    },
+    {
+        "id": "cfb39ab9.45346",
+        "type": "trigger",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "payl",
+        "duration": "1",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 715,
+        "y": 520,
+        "wires": [
+            [
+                "10373673.0c7d0a"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "10373673.0c7d0a",
+        "type": "link out",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "Activity State Change",
+        "links": [
+            "c551054e.c3663"
+        ],
+        "x": 1335,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "4ee48e99.b05a9",
+        "type": "switch",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "delay > 1",
+        "property": "delay",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "1",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "x": 940,
+        "y": 760,
+        "wires": [
+            [
+                "d6e965c0.d24cd"
+            ]
+        ]
+    },
+    {
+        "id": "8cd11419.9fb37",
+        "type": "change",
+        "z": "30a7f92d.9fbe16",
+        "name": "Button 1",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.button",
+                "pt": "msg",
+                "to": "1",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 400,
+        "y": 40,
+        "wires": [
+            [
+                "9164c316.fa994"
+            ]
+        ]
+    },
+    {
+        "id": "632a01bf.d36c38",
+        "type": "switch",
+        "z": "30a7f92d.9fbe16",
+        "name": "action",
+        "property": "payload.button",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "8",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "9",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "10",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "11",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 5,
+        "x": 230,
+        "y": 100,
+        "wires": [
+            [
+                "8cd11419.9fb37"
+            ],
+            [
+                "4b2429c6.a69c88"
+            ],
+            [
+                "f1eef6f.1455c08"
+            ],
+            [
+                "6f2ca00a.40054"
+            ],
+            [
+                "9801b221.2dbe38"
+            ]
+        ]
+    },
+    {
+        "id": "69aa2139.1f936",
+        "type": "switch",
+        "z": "30a7f92d.9fbe16",
+        "name": "param",
+        "property": "payload.param",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "3",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 3,
+        "x": 910,
+        "y": 80,
+        "wires": [
+            [
+                "4cd16890.d6ee58"
+            ],
+            [
+                "31320711.4725b8"
+            ],
+            [
+                "9332a190.b5b628"
+            ]
+        ]
+    },
+    {
+        "id": "31320711.4725b8",
+        "type": "change",
+        "z": "30a7f92d.9fbe16",
+        "name": "Released",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.interaction",
+                "pt": "msg",
+                "to": "released",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1060,
+        "y": 140,
+        "wires": [
+            [
+                "9332a190.b5b628"
+            ]
+        ]
+    },
+    {
+        "id": "4cd16890.d6ee58",
+        "type": "change",
+        "z": "30a7f92d.9fbe16",
+        "name": "Pressed",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.interaction",
+                "pt": "msg",
+                "to": "pressed",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1060,
+        "y": 60,
+        "wires": [
+            [
+                "9332a190.b5b628"
+            ]
+        ]
+    },
+    {
+        "id": "9332a190.b5b628",
+        "type": "delay",
+        "z": "30a7f92d.9fbe16",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 1255,
+        "y": 100,
+        "wires": [
+            []
+        ],
+        "l": false
+    },
+    {
+        "id": "4b2429c6.a69c88",
+        "type": "change",
+        "z": "30a7f92d.9fbe16",
+        "name": "Button 2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.button",
+                "pt": "msg",
+                "to": "2",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 400,
+        "y": 80,
+        "wires": [
+            [
+                "9164c316.fa994"
+            ]
+        ]
+    },
+    {
+        "id": "9164c316.fa994",
+        "type": "delay",
+        "z": "30a7f92d.9fbe16",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 615,
+        "y": 100,
+        "wires": [
+            [
+                "69aa2139.1f936"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "f1eef6f.1455c08",
+        "type": "change",
+        "z": "30a7f92d.9fbe16",
+        "name": "Button 3",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.button",
+                "pt": "msg",
+                "to": "3",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 400,
+        "y": 120,
+        "wires": [
+            [
+                "9164c316.fa994"
+            ]
+        ]
+    },
+    {
+        "id": "6f2ca00a.40054",
+        "type": "change",
+        "z": "30a7f92d.9fbe16",
+        "name": "Button 4",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.button",
+                "pt": "msg",
+                "to": "4",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 400,
+        "y": 160,
+        "wires": [
+            [
+                "9164c316.fa994"
+            ]
+        ]
+    },
+    {
+        "id": "9801b221.2dbe38",
+        "type": "change",
+        "z": "30a7f92d.9fbe16",
+        "name": "Other btn ",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.button",
+                "pt": "msg",
+                "to": "payload.action",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 400,
+        "y": 200,
+        "wires": [
+            [
+                "9164c316.fa994"
+            ]
+        ]
+    },
+    {
+        "id": "2837495c.ae2176",
+        "type": "link out",
+        "z": "f30f9979.39f178",
+        "name": "Sunset",
+        "links": [
+            "117f15c0.8b285a",
+            "89ce2107.6a1858",
+            "13a205f.9848cfa"
+        ],
+        "x": 495,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "1031c284.48fd75",
+        "type": "time-inject",
+        "z": "f30f9979.39f178",
+        "name": "At Sunset",
+        "nameInt": "⏲ sunset start = timestamp",
+        "positionConfig": "96c207ac.2237a8",
+        "injectTypeSelect": "time",
+        "intervalCount": 1,
+        "intervalCountType": "num",
+        "intervalCountMultiplier": 60000,
+        "time": "sunsetStart",
+        "timeType": "pdsTime",
+        "offset": 0,
+        "offsetType": "none",
+        "offsetMultiplier": 60000,
+        "timeEnd": "",
+        "timeEndType": "entered",
+        "timeEndOffset": 0,
+        "timeEndOffsetType": "none",
+        "timeEndOffsetMultiplier": 60000,
+        "timeDays": "*",
+        "timeOnlyOddDays": false,
+        "timeOnlyEvenDays": false,
+        "timeMonths": "*",
+        "timedatestart": "",
+        "timedateend": "",
+        "property": "",
+        "propertyType": "none",
+        "propertyCompare": "true",
+        "propertyThreshold": "",
+        "propertyThresholdType": "num",
+        "timeAlt": "",
+        "timeAltType": "entered",
+        "timeAltDays": "*",
+        "timeAltOnlyOddDays": false,
+        "timeAltOnlyEvenDays": false,
+        "timeAltMonths": "*",
+        "timeAltOffset": 0,
+        "timeAltOffsetType": "none",
+        "timeAltOffsetMultiplier": 60000,
+        "once": false,
+        "onceDelay": 0.1,
+        "recalcTime": 2,
+        "payload": "",
+        "payloadType": "date",
+        "payloadTimeFormat": 0,
+        "payloadOffset": 0,
+        "payloadOffsetType": "none",
+        "payloadOffsetMultiplier": 60000,
+        "topic": "",
+        "addPayload1": "",
+        "addPayload2": "",
+        "addPayload3": "",
+        "addPayload1Type": "none",
+        "addPayload2Type": "none",
+        "addPayload3Type": "none",
+        "addPayload1Value": "",
+        "addPayload2Value": "",
+        "addPayload3Value": "",
+        "addPayload1ValueType": "date",
+        "addPayload2ValueType": "date",
+        "addPayload3ValueType": "date",
+        "addPayload1Format": "0",
+        "addPayload2Format": "0",
+        "addPayload3Format": "0",
+        "addPayload1Offset": 0,
+        "addPayload2Offset": 0,
+        "addPayload3Offset": 0,
+        "addPayload1OffsetType": "none",
+        "addPayload2OffsetType": "none",
+        "addPayload3OffsetType": "none",
+        "addPayload1OffsetMultiplier": 60000,
+        "addPayload2OffsetMultiplier": 60000,
+        "addPayload3OffsetMultiplier": 60000,
+        "addPayload1Next": true,
+        "addPayload2Next": true,
+        "addPayload3Next": true,
+        "addPayload1Days": "*",
+        "addPayload2Days": "*",
+        "addPayload3Days": "*",
+        "x": 340,
+        "y": 220,
+        "wires": [
+            [
+                "2837495c.ae2176"
+            ]
+        ]
+    },
+    {
+        "id": "4e636188.7f332",
+        "type": "link out",
+        "z": "f30f9979.39f178",
+        "name": "Sunrise",
+        "links": [
+            "35f56d8f.e1d64a",
+            "61f1a42.e969ddc"
+        ],
+        "x": 495,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "9beeb167.1d6b78",
+        "type": "time-inject",
+        "z": "f30f9979.39f178",
+        "name": "At Sunrise",
+        "nameInt": "⏲ sunrise end = timestamp",
+        "positionConfig": "96c207ac.2237a8",
+        "injectTypeSelect": "time",
+        "intervalCount": 1,
+        "intervalCountType": "num",
+        "intervalCountMultiplier": 60000,
+        "time": "sunriseEnd",
+        "timeType": "pdsTime",
+        "offset": 0,
+        "offsetType": "none",
+        "offsetMultiplier": 60000,
+        "timeEnd": "",
+        "timeEndType": "entered",
+        "timeEndOffset": 0,
+        "timeEndOffsetType": "none",
+        "timeEndOffsetMultiplier": 60000,
+        "timeDays": "*",
+        "timeOnlyOddDays": false,
+        "timeOnlyEvenDays": false,
+        "timeMonths": "*",
+        "timedatestart": "",
+        "timedateend": "",
+        "property": "",
+        "propertyType": "none",
+        "propertyCompare": "true",
+        "propertyThreshold": "",
+        "propertyThresholdType": "num",
+        "timeAlt": "",
+        "timeAltType": "entered",
+        "timeAltDays": "*",
+        "timeAltOnlyOddDays": false,
+        "timeAltOnlyEvenDays": false,
+        "timeAltMonths": "*",
+        "timeAltOffset": 0,
+        "timeAltOffsetType": "none",
+        "timeAltOffsetMultiplier": 60000,
+        "once": false,
+        "onceDelay": 0.1,
+        "recalcTime": 2,
+        "payload": "",
+        "payloadType": "date",
+        "payloadTimeFormat": 0,
+        "payloadOffset": 0,
+        "payloadOffsetType": "none",
+        "payloadOffsetMultiplier": 60000,
+        "topic": "",
+        "addPayload1": "",
+        "addPayload2": "",
+        "addPayload3": "",
+        "addPayload1Type": "none",
+        "addPayload2Type": "none",
+        "addPayload3Type": "none",
+        "addPayload1Value": "",
+        "addPayload2Value": "",
+        "addPayload3Value": "",
+        "addPayload1ValueType": "date",
+        "addPayload2ValueType": "date",
+        "addPayload3ValueType": "date",
+        "addPayload1Format": "0",
+        "addPayload2Format": "0",
+        "addPayload3Format": "0",
+        "addPayload1Offset": 0,
+        "addPayload2Offset": 0,
+        "addPayload3Offset": 0,
+        "addPayload1OffsetType": "none",
+        "addPayload2OffsetType": "none",
+        "addPayload3OffsetType": "none",
+        "addPayload1OffsetMultiplier": 60000,
+        "addPayload2OffsetMultiplier": 60000,
+        "addPayload3OffsetMultiplier": 60000,
+        "addPayload1Next": true,
+        "addPayload2Next": true,
+        "addPayload3Next": true,
+        "addPayload1Days": "*",
+        "addPayload2Days": "*",
+        "addPayload3Days": "*",
+        "x": 340,
+        "y": 300,
+        "wires": [
+            [
+                "4e636188.7f332"
+            ]
+        ]
+    },
+    {
+        "id": "ffc8dd8e.e001f",
+        "type": "change",
+        "z": "402da1b5.446cd8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Leah is coming home!",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "Home: Presence",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 296,
+        "y": 1246,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "78d27aa4.3a922c",
@@ -380,6 +1980,7 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
+        "outputs": 1,
         "x": 415,
         "y": 920,
         "wires": [
@@ -388,46 +1989,6 @@
             ]
         ],
         "l": false
-    },
-    {
-        "id": "aa0d64a0.a2b408",
-        "type": "comment",
-        "z": "c1c7f362.7de41",
-        "name": "Time Zone Offset",
-        "info": "",
-        "x": 400,
-        "y": 360,
-        "wires": []
-    },
-    {
-        "id": "a0e70412.49cd3",
-        "type": "comment",
-        "z": "c1c7f362.7de41",
-        "name": "ms -> s",
-        "info": "",
-        "x": 370,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "f207fd86.a5521",
-        "type": "comment",
-        "z": "c1c7f362.7de41",
-        "name": "seconds since midnight",
-        "info": "",
-        "x": 420,
-        "y": 400,
-        "wires": []
-    },
-    {
-        "id": "ba6ff9d9.4f1458",
-        "type": "comment",
-        "z": "c1c7f362.7de41",
-        "name": "hours since midnight",
-        "info": "",
-        "x": 410,
-        "y": 440,
-        "wires": []
     },
     {
         "id": "b0c8d31a.f0e56",
@@ -475,6 +2036,7 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": true,
+        "outputs": 1,
         "x": 220,
         "y": 920,
         "wires": [
@@ -556,52 +2118,6 @@
             [
                 "9a110e75.82802"
             ]
-        ]
-    },
-    {
-        "id": "ae545d5b.975008",
-        "type": "change",
-        "z": "c1c7f362.7de41",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload / 1000",
-                "tot": "jsonata"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload - (3600 * 6)",
-                "tot": "jsonata"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload % 86400",
-                "tot": "jsonata"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload / 3600",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 400,
-        "y": 480,
-        "wires": [
-            []
         ]
     },
     {
@@ -704,6 +2220,7 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
+        "outputs": 1,
         "x": 1715,
         "y": 1620,
         "wires": [
@@ -1053,6 +2570,7 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
+        "outputs": 1,
         "x": 1535,
         "y": 2020,
         "wires": [
@@ -1187,49 +2705,12 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
+        "outputs": 1,
         "x": 1990,
         "y": 1940,
         "wires": [
             [
                 "a0f93288.1af51"
-            ]
-        ]
-    },
-    {
-        "id": "faf6ad5a.34d9a8",
-        "type": "hubitat device",
-        "z": "58b64745.d5681",
-        "d": true,
-        "deviceLabel": "",
-        "name": "Basement Under Screen - 4/1",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "",
-        "attribute": "motion",
-        "sendEvent": true,
-        "x": 490,
-        "y": 360,
-        "wires": [
-            [
-                "9d0be0e6.f2626"
-            ]
-        ]
-    },
-    {
-        "id": "6529c919.7b8d08",
-        "type": "hubitat device",
-        "z": "58b64745.d5681",
-        "d": true,
-        "deviceLabel": "",
-        "name": "Main floor hallway - 3/27",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "",
-        "attribute": "motion",
-        "sendEvent": true,
-        "x": 470,
-        "y": 720,
-        "wires": [
-            [
-                "3faf4ff8.21874"
             ]
         ]
     },
@@ -1510,109 +2991,6 @@
         "wires": []
     },
     {
-        "id": "2837495c.ae2176",
-        "type": "link out",
-        "z": "f30f9979.39f178",
-        "name": "Sunset",
-        "links": [
-            "117f15c0.8b285a",
-            "89ce2107.6a1858",
-            "13a205f.9848cfa"
-        ],
-        "x": 495,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "1031c284.48fd75",
-        "type": "time-inject",
-        "z": "f30f9979.39f178",
-        "name": "At Sunset",
-        "nameInt": "⏲ sunset start = timestamp",
-        "positionConfig": "96c207ac.2237a8",
-        "injectTypeSelect": "time",
-        "intervalCount": 1,
-        "intervalCountType": "num",
-        "intervalCountMultiplier": 60000,
-        "time": "sunsetStart",
-        "timeType": "pdsTime",
-        "offset": 0,
-        "offsetType": "none",
-        "offsetMultiplier": 60000,
-        "timeEnd": "",
-        "timeEndType": "entered",
-        "timeEndOffset": 0,
-        "timeEndOffsetType": "none",
-        "timeEndOffsetMultiplier": 60000,
-        "timeDays": "*",
-        "timeOnlyOddDays": false,
-        "timeOnlyEvenDays": false,
-        "timeMonths": "*",
-        "timedatestart": "",
-        "timedateend": "",
-        "property": "",
-        "propertyType": "none",
-        "propertyCompare": "true",
-        "propertyThreshold": "",
-        "propertyThresholdType": "num",
-        "timeAlt": "",
-        "timeAltType": "entered",
-        "timeAltDays": "*",
-        "timeAltOnlyOddDays": false,
-        "timeAltOnlyEvenDays": false,
-        "timeAltMonths": "*",
-        "timeAltOffset": 0,
-        "timeAltOffsetType": "none",
-        "timeAltOffsetMultiplier": 60000,
-        "once": false,
-        "onceDelay": 0.1,
-        "recalcTime": 2,
-        "payload": "",
-        "payloadType": "date",
-        "payloadTimeFormat": 0,
-        "payloadOffset": 0,
-        "payloadOffsetType": "none",
-        "payloadOffsetMultiplier": 60000,
-        "topic": "",
-        "addPayload1": "",
-        "addPayload2": "",
-        "addPayload3": "",
-        "addPayload1Type": "none",
-        "addPayload2Type": "none",
-        "addPayload3Type": "none",
-        "addPayload1Value": "",
-        "addPayload2Value": "",
-        "addPayload3Value": "",
-        "addPayload1ValueType": "date",
-        "addPayload2ValueType": "date",
-        "addPayload3ValueType": "date",
-        "addPayload1Format": "0",
-        "addPayload2Format": "0",
-        "addPayload3Format": "0",
-        "addPayload1Offset": 0,
-        "addPayload2Offset": 0,
-        "addPayload3Offset": 0,
-        "addPayload1OffsetType": "none",
-        "addPayload2OffsetType": "none",
-        "addPayload3OffsetType": "none",
-        "addPayload1OffsetMultiplier": 60000,
-        "addPayload2OffsetMultiplier": 60000,
-        "addPayload3OffsetMultiplier": 60000,
-        "addPayload1Next": true,
-        "addPayload2Next": true,
-        "addPayload3Next": true,
-        "addPayload1Days": "*",
-        "addPayload2Days": "*",
-        "addPayload3Days": "*",
-        "x": 340,
-        "y": 220,
-        "wires": [
-            [
-                "2837495c.ae2176"
-            ]
-        ]
-    },
-    {
         "id": "117f15c0.8b285a",
         "type": "link in",
         "z": "f9337f21.0eab78",
@@ -1641,108 +3019,6 @@
         "wires": [
             [
                 "5c9841f.19b74c"
-            ]
-        ]
-    },
-    {
-        "id": "4e636188.7f332",
-        "type": "link out",
-        "z": "f30f9979.39f178",
-        "name": "Sunrise",
-        "links": [
-            "35f56d8f.e1d64a",
-            "61f1a42.e969ddc"
-        ],
-        "x": 495,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "9beeb167.1d6b78",
-        "type": "time-inject",
-        "z": "f30f9979.39f178",
-        "name": "At Sunrise",
-        "nameInt": "⏲ sunrise end = timestamp",
-        "positionConfig": "96c207ac.2237a8",
-        "injectTypeSelect": "time",
-        "intervalCount": 1,
-        "intervalCountType": "num",
-        "intervalCountMultiplier": 60000,
-        "time": "sunriseEnd",
-        "timeType": "pdsTime",
-        "offset": 0,
-        "offsetType": "none",
-        "offsetMultiplier": 60000,
-        "timeEnd": "",
-        "timeEndType": "entered",
-        "timeEndOffset": 0,
-        "timeEndOffsetType": "none",
-        "timeEndOffsetMultiplier": 60000,
-        "timeDays": "*",
-        "timeOnlyOddDays": false,
-        "timeOnlyEvenDays": false,
-        "timeMonths": "*",
-        "timedatestart": "",
-        "timedateend": "",
-        "property": "",
-        "propertyType": "none",
-        "propertyCompare": "true",
-        "propertyThreshold": "",
-        "propertyThresholdType": "num",
-        "timeAlt": "",
-        "timeAltType": "entered",
-        "timeAltDays": "*",
-        "timeAltOnlyOddDays": false,
-        "timeAltOnlyEvenDays": false,
-        "timeAltMonths": "*",
-        "timeAltOffset": 0,
-        "timeAltOffsetType": "none",
-        "timeAltOffsetMultiplier": 60000,
-        "once": false,
-        "onceDelay": 0.1,
-        "recalcTime": 2,
-        "payload": "",
-        "payloadType": "date",
-        "payloadTimeFormat": 0,
-        "payloadOffset": 0,
-        "payloadOffsetType": "none",
-        "payloadOffsetMultiplier": 60000,
-        "topic": "",
-        "addPayload1": "",
-        "addPayload2": "",
-        "addPayload3": "",
-        "addPayload1Type": "none",
-        "addPayload2Type": "none",
-        "addPayload3Type": "none",
-        "addPayload1Value": "",
-        "addPayload2Value": "",
-        "addPayload3Value": "",
-        "addPayload1ValueType": "date",
-        "addPayload2ValueType": "date",
-        "addPayload3ValueType": "date",
-        "addPayload1Format": "0",
-        "addPayload2Format": "0",
-        "addPayload3Format": "0",
-        "addPayload1Offset": 0,
-        "addPayload2Offset": 0,
-        "addPayload3Offset": 0,
-        "addPayload1OffsetType": "none",
-        "addPayload2OffsetType": "none",
-        "addPayload3OffsetType": "none",
-        "addPayload1OffsetMultiplier": 60000,
-        "addPayload2OffsetMultiplier": 60000,
-        "addPayload3OffsetMultiplier": 60000,
-        "addPayload1Next": true,
-        "addPayload2Next": true,
-        "addPayload3Next": true,
-        "addPayload1Days": "*",
-        "addPayload2Days": "*",
-        "addPayload3Days": "*",
-        "x": 340,
-        "y": 300,
-        "wires": [
-            [
-                "4e636188.7f332"
             ]
         ]
     },
@@ -1793,107 +3069,6 @@
         ]
     },
     {
-        "id": "c044ca5b.081a6",
-        "type": "change",
-        "z": "eaca82ad.4ed06",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "device",
-                "pt": "msg",
-                "to": "R",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 200,
-        "y": 80,
-        "wires": [
-            [
-                "43ed4749.b7752"
-            ]
-        ]
-    },
-    {
-        "id": "236b247f.af15c4",
-        "type": "change",
-        "z": "7435c4c5.81ec14",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "device",
-                "pt": "msg",
-                "to": "L,ipad",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 200,
-        "y": 80,
-        "wires": [
-            [
-                "f4a49bd9.f676f8"
-            ]
-        ]
-    },
-    {
-        "id": "43ed4749.b7752",
-        "type": "pushover api",
-        "z": "eaca82ad.4ed06",
-        "keys": "d2fcc025.17ad7",
-        "title": "",
-        "name": "",
-        "x": 400,
-        "y": 80,
-        "wires": []
-    },
-    {
-        "id": "f4a49bd9.f676f8",
-        "type": "pushover api",
-        "z": "7435c4c5.81ec14",
-        "keys": "d2fcc025.17ad7",
-        "title": "",
-        "name": "",
-        "x": 380,
-        "y": 80,
-        "wires": []
-    },
-    {
-        "id": "3cca5a12.e156b6",
-        "type": "switch",
-        "z": "c79ec61c.5274a8",
-        "name": "is enabled",
-        "property": "payload.currentValue",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "on",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 490,
-        "y": 200,
-        "wires": [
-            [
-                "fdbf5834.ae9ad8"
-            ]
-        ]
-    },
-    {
         "id": "3167159b.afdf82",
         "type": "subflow:c79ec61c.5274a8",
         "z": "f9337f21.0eab78",
@@ -1903,80 +3078,6 @@
             [
                 "6c06e8fb.71416"
             ]
-        ]
-    },
-    {
-        "id": "75cdf7ec.d90a48",
-        "type": "hubitat device",
-        "z": "c79ec61c.5274a8",
-        "name": "Main Floor Motion Master",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "877",
-        "attribute": "switch",
-        "sendEvent": false,
-        "x": 270,
-        "y": 200,
-        "wires": [
-            [
-                "3cca5a12.e156b6"
-            ]
-        ]
-    },
-    {
-        "id": "d1470657.61394",
-        "type": "change",
-        "z": "c79ec61c.5274a8",
-        "name": "Store payload",
-        "rules": [
-            {
-                "t": "set",
-                "p": "sent_payload",
-                "pt": "msg",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 200,
-        "y": 120,
-        "wires": [
-            [
-                "75cdf7ec.d90a48"
-            ]
-        ]
-    },
-    {
-        "id": "fdbf5834.ae9ad8",
-        "type": "change",
-        "z": "c79ec61c.5274a8",
-        "name": "ReStore payload",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "sent_payload",
-                "tot": "msg"
-            },
-            {
-                "t": "delete",
-                "p": "sent_payload",
-                "pt": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 230,
-        "y": 300,
-        "wires": [
-            []
         ]
     },
     {
@@ -2271,564 +3372,6 @@
         "x": 2115,
         "y": 1940,
         "wires": []
-    },
-    {
-        "id": "e6ca775d.fc4c58",
-        "type": "link out",
-        "z": "58b64745.d5681",
-        "name": "Basement motion start",
-        "links": [],
-        "x": 1115,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "c02b55b9.34f378",
-        "type": "link out",
-        "z": "58b64745.d5681",
-        "name": "Basement motion stop",
-        "links": [],
-        "x": 1115,
-        "y": 380,
-        "wires": []
-    },
-    {
-        "id": "9d0be0e6.f2626",
-        "type": "delay",
-        "z": "58b64745.d5681",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "5",
-        "timeoutUnits": "milliseconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "x": 755,
-        "y": 340,
-        "wires": [
-            [
-                "cc612b62.86f8f"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "3faf4ff8.21874",
-        "type": "delay",
-        "z": "58b64745.d5681",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "1",
-        "timeoutUnits": "milliseconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "x": 835,
-        "y": 680,
-        "wires": [
-            [
-                "49c7b900.58bf28"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "3782015.bd1617e",
-        "type": "inject",
-        "z": "58b64745.d5681",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 200,
-        "y": 680,
-        "wires": [
-            [
-                "6529c919.7b8d08",
-                "f426f0a.ee9109"
-            ]
-        ]
-    },
-    {
-        "id": "49c7b900.58bf28",
-        "type": "subflow:4c7c8cd1.6a2a1c",
-        "z": "58b64745.d5681",
-        "name": "Main presence zone",
-        "env": [
-            {
-                "name": "activity_reset_delay",
-                "value": "600",
-                "type": "num"
-            },
-            {
-                "name": "sensor reset delay",
-                "value": "20",
-                "type": "num"
-            },
-            {
-                "name": "activity reset delay",
-                "value": "600",
-                "type": "num"
-            }
-        ],
-        "x": 980,
-        "y": 680,
-        "wires": [
-            [
-                "684700ac.14a9f8",
-                "4766dfdb.9edc6"
-            ],
-            [
-                "37bd8cb0.ae0c2c",
-                "a5f88751.ae132"
-            ]
-        ]
-    },
-    {
-        "id": "37082482.1d726c",
-        "type": "unsafe-function",
-        "z": "4c7c8cd1.6a2a1c",
-        "name": "Motion Aggregator",
-        "func": "let motionStatus = null;\nlet activeCount = 0;\n\nlet sensors = context.get(\"sensors\") || {};\nlet wasActive = context.get(\"active\") || false;\nlet deviceId\n\nif (typeof msg.payload != \"undefined\" && msg.payload !== null) {\n    deviceId = msg.payload.deviceId;\n}\n\nif (typeof deviceId != \"undefined\") {\n\n    // If we didn't receive an event, the process was triggered by something else (eg. enabling the automation)\n    motionStatus = msg.payload.value\n\n    if (typeof sensors[deviceId] == \"undefined\") {\n        sensors[deviceId] = {}\n    }\n\n    let deviceObject = sensors[deviceId]\n\n    deviceObject.state = motionStatus\n    deviceObject.displayName = msg.topic\n\n    context.set(\"sensors\", sensors)\n}\n\n\nfor (let [deviceId, values] of Object.entries(sensors)) {\n    if ( values.state == 'active' ) {\n        activeCount++\n    }\n}\n\nconst active = activeCount > 0\n\nnewMessage = {\n  topic: env.get(\"Zone Name\"),\n  payload: active ? \"active\" : \"inactive\",\n  count: activeCount\n}\n\n    context.set(\"active\", active)\n    return newMessage\n",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 990,
-        "y": 160,
-        "wires": [
-            [
-                "1135a6a5.8ffeb9"
-            ]
-        ]
-    },
-    {
-        "id": "baa794b2.a49bd",
-        "type": "change",
-        "z": "4c7c8cd1.6a2a1c",
-        "name": "Active sensor count",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "count  & \" \" & payload & \" sensors\"",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 920,
-        "y": 980,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "f9fb7202.670248",
-        "type": "trigger",
-        "z": "4c7c8cd1.6a2a1c",
-        "name": "Activity reset",
-        "op1": "",
-        "op2": "",
-        "op1type": "nul",
-        "op2type": "payl",
-        "duration": "5",
-        "extend": true,
-        "overrideDelay": true,
-        "units": "min",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 1110,
-        "y": 580,
-        "wires": [
-            [
-                "10373673.0c7d0a"
-            ]
-        ]
-    },
-    {
-        "id": "f95fc416.12cdb8",
-        "type": "switch",
-        "z": "4c7c8cd1.6a2a1c",
-        "name": "is active?",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "active",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "inactive",
-                "vt": "str"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 600,
-        "y": 600,
-        "wires": [
-            [
-                "bf8561c.27047a",
-                "cfb39ab9.45346"
-            ],
-            [
-                "4c35d83e.70c12"
-            ]
-        ]
-    },
-    {
-        "id": "d1fef5e9.1faa",
-        "type": "switch",
-        "z": "4c7c8cd1.6a2a1c",
-        "name": "is active?",
-        "property": "count",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "0",
-                "vt": "str"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 720,
-        "y": 960,
-        "wires": [
-            [
-                "3adf6856.200d98"
-            ],
-            [
-                "baa794b2.a49bd"
-            ]
-        ]
-    },
-    {
-        "id": "3adf6856.200d98",
-        "type": "change",
-        "z": "4c7c8cd1.6a2a1c",
-        "name": "Inactive",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "inactive",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 880,
-        "y": 940,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "bf8561c.27047a",
-        "type": "change",
-        "z": "4c7c8cd1.6a2a1c",
-        "name": "Reset",
-        "rules": [
-            {
-                "t": "set",
-                "p": "reset",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 750,
-        "y": 580,
-        "wires": [
-            [
-                "f9fb7202.670248",
-                "d6e965c0.d24cd"
-            ]
-        ]
-    },
-    {
-        "id": "cc612b62.86f8f",
-        "type": "subflow:4c7c8cd1.6a2a1c",
-        "z": "58b64745.d5681",
-        "name": "Basement presence zone",
-        "env": [
-            {
-                "name": "activity reset delay",
-                "value": "300",
-                "type": "str"
-            }
-        ],
-        "x": 930,
-        "y": 340,
-        "wires": [
-            [
-                "e6ca775d.fc4c58"
-            ],
-            [
-                "c02b55b9.34f378"
-            ]
-        ]
-    },
-    {
-        "id": "ec6c5a0f.1deb78",
-        "type": "inject",
-        "z": "58b64745.d5681",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 170,
-        "y": 360,
-        "wires": [
-            [
-                "faf6ad5a.34d9a8"
-            ]
-        ]
-    },
-    {
-        "id": "684700ac.14a9f8",
-        "type": "link out",
-        "z": "58b64745.d5681",
-        "name": "Main motion start",
-        "links": [
-            "10fc02fd.252425"
-        ],
-        "x": 1155,
-        "y": 640,
-        "wires": []
-    },
-    {
-        "id": "37bd8cb0.ae0c2c",
-        "type": "link out",
-        "z": "58b64745.d5681",
-        "name": "Main motion stop",
-        "links": [
-            "10fc02fd.252425"
-        ],
-        "x": 1155,
-        "y": 720,
-        "wires": []
-    },
-    {
-        "id": "f426f0a.ee9109",
-        "type": "hubitat device",
-        "z": "58b64745.d5681",
-        "d": true,
-        "deviceLabel": "",
-        "name": "Front Door",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "293",
-        "attribute": "",
-        "sendEvent": true,
-        "x": 430,
-        "y": 680,
-        "wires": [
-            [
-                "3faf4ff8.21874"
-            ]
-        ]
-    },
-    {
-        "id": "5e909849.a5ede",
-        "type": "switch",
-        "z": "4c7c8cd1.6a2a1c",
-        "name": "Separate motion from contact",
-        "property": "payload.name",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "motion",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "contact",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 510,
-        "y": 200,
-        "wires": [
-            [
-                "37082482.1d726c"
-            ],
-            [
-                "ee67eca9.7c9548",
-                "83dac1a6.f49bb"
-            ]
-        ]
-    },
-    {
-        "id": "ee67eca9.7c9548",
-        "type": "change",
-        "z": "4c7c8cd1.6a2a1c",
-        "name": "Set active",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "active",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 960,
-        "y": 220,
-        "wires": [
-            [
-                "de4555d9.03c9f8"
-            ]
-        ]
-    },
-    {
-        "id": "9dec185d.0fa0b",
-        "type": "change",
-        "z": "4c7c8cd1.6a2a1c",
-        "name": "Set inactive",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "inactive",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1230,
-        "y": 260,
-        "wires": [
-            [
-                "de4555d9.03c9f8"
-            ]
-        ]
-    },
-    {
-        "id": "979d8215.69ba18",
-        "type": "link out",
-        "z": "4c7c8cd1.6a2a1c",
-        "name": "Switch Event",
-        "links": [
-            "b4f2e905.4ec488",
-            "db637502.ed7b1"
-        ],
-        "x": 1455,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "1135a6a5.8ffeb9",
-        "type": "link out",
-        "z": "4c7c8cd1.6a2a1c",
-        "name": "Motion Event",
-        "links": [
-            "b4f2e905.4ec488"
-        ],
-        "x": 1195,
-        "y": 160,
-        "wires": []
-    },
-    {
-        "id": "c551054e.c3663",
-        "type": "link in",
-        "z": "4c7c8cd1.6a2a1c",
-        "name": "Trigger Status Update",
-        "links": [
-            "10373673.0c7d0a"
-        ],
-        "x": 295,
-        "y": 940,
-        "wires": [
-            [
-                "2d4ae563.a0394a"
-            ]
-        ]
-    },
-    {
-        "id": "b4f2e905.4ec488",
-        "type": "link in",
-        "z": "4c7c8cd1.6a2a1c",
-        "name": "Set Outputs",
-        "links": [
-            "1135a6a5.8ffeb9",
-            "979d8215.69ba18"
-        ],
-        "x": 295,
-        "y": 600,
-        "wires": [
-            [
-                "a6ce7a5b.5718f8"
-            ]
-        ]
     },
     {
         "id": "363a9c66.018164",
@@ -3291,261 +3834,6 @@
         ]
     },
     {
-        "id": "cb4ad9ea.ed3e38",
-        "type": "comment",
-        "z": "4c7c8cd1.6a2a1c",
-        "name": "Motion event",
-        "info": "",
-        "x": 1310,
-        "y": 160,
-        "wires": []
-    },
-    {
-        "id": "acfeb2ce.da0e98",
-        "type": "comment",
-        "z": "4c7c8cd1.6a2a1c",
-        "name": "Sensor event",
-        "info": "",
-        "x": 1570,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "83dac1a6.f49bb",
-        "type": "change",
-        "z": "4c7c8cd1.6a2a1c",
-        "name": "Sensor reset delay",
-        "rules": [
-            {
-                "t": "set",
-                "p": "delay",
-                "pt": "msg",
-                "to": "sensor reset delay",
-                "tot": "env"
-            },
-            {
-                "t": "set",
-                "p": "delay",
-                "pt": "msg",
-                "to": "delay * 1000",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 915,
-        "y": 260,
-        "wires": [
-            [
-                "1f831024.572ef8"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "1f831024.572ef8",
-        "type": "trigger",
-        "z": "4c7c8cd1.6a2a1c",
-        "name": "Sensor reset",
-        "op1": "",
-        "op2": "",
-        "op1type": "nul",
-        "op2type": "payl",
-        "duration": "5",
-        "extend": true,
-        "overrideDelay": true,
-        "units": "s",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 1050,
-        "y": 260,
-        "wires": [
-            [
-                "9dec185d.0fa0b"
-            ]
-        ]
-    },
-    {
-        "id": "4c35d83e.70c12",
-        "type": "change",
-        "z": "4c7c8cd1.6a2a1c",
-        "name": "Configure activity reset delay",
-        "rules": [
-            {
-                "t": "set",
-                "p": "delay",
-                "pt": "msg",
-                "to": "activity_reset_delay",
-                "tot": "env"
-            },
-            {
-                "t": "set",
-                "p": "delay",
-                "pt": "msg",
-                "to": "delay * 1000",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 820,
-        "y": 620,
-        "wires": [
-            [
-                "f9fb7202.670248",
-                "6799e319.6e6d34"
-            ]
-        ]
-    },
-    {
-        "id": "7a24866e.db567",
-        "type": "comment",
-        "z": "4c7c8cd1.6a2a1c",
-        "name": "Zone Active",
-        "info": "",
-        "x": 1450,
-        "y": 520,
-        "wires": []
-    },
-    {
-        "id": "268891b5.f0e4f6",
-        "type": "comment",
-        "z": "4c7c8cd1.6a2a1c",
-        "name": "Zone Inactive",
-        "info": "",
-        "x": 1450,
-        "y": 580,
-        "wires": []
-    },
-    {
-        "id": "de4555d9.03c9f8",
-        "type": "rbe",
-        "z": "4c7c8cd1.6a2a1c",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "property": "payload",
-        "x": 1375,
-        "y": 220,
-        "wires": [
-            [
-                "979d8215.69ba18"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "28fb421d.2d7a2e",
-        "type": "comment",
-        "z": "4c7c8cd1.6a2a1c",
-        "name": "Status text",
-        "info": "",
-        "x": 340,
-        "y": 880,
-        "wires": []
-    },
-    {
-        "id": "2d4ae563.a0394a",
-        "type": "switch",
-        "z": "4c7c8cd1.6a2a1c",
-        "name": "Motion zone active",
-        "property": "zone_active",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "false"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 470,
-        "y": 940,
-        "wires": [
-            [
-                "6214c0ab.73eb08"
-            ],
-            [
-                "d1fef5e9.1faa"
-            ]
-        ]
-    },
-    {
-        "id": "6214c0ab.73eb08",
-        "type": "change",
-        "z": "4c7c8cd1.6a2a1c",
-        "name": "Disabled",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "Zone disabled",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 880,
-        "y": 900,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "a6ce7a5b.5718f8",
-        "type": "switch",
-        "z": "4c7c8cd1.6a2a1c",
-        "name": "Zone enabled?",
-        "property": "zone_active",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "else"
-            },
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 440,
-        "y": 600,
-        "wires": [
-            [
-                "f95fc416.12cdb8"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "c90679d.51c6188",
-        "type": "comment",
-        "z": "4c7c8cd1.6a2a1c",
-        "name": "Outputs",
-        "info": "",
-        "x": 330,
-        "y": 540,
-        "wires": []
-    },
-    {
         "id": "58e0ec60.bafb94",
         "type": "hubitat event",
         "z": "f9337f21.0eab78",
@@ -3921,6 +4209,7 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
+        "outputs": 1,
         "x": 1050,
         "y": 400,
         "wires": [
@@ -3985,45 +4274,6 @@
             [],
             [
                 "d820eb75.8fe88"
-            ]
-        ]
-    },
-    {
-        "id": "d38c5418.44b928",
-        "type": "comment",
-        "z": "4c7c8cd1.6a2a1c",
-        "name": "Count motion events and transmit both enabled and disabled messages",
-        "info": "",
-        "x": 1160,
-        "y": 80,
-        "wires": []
-    },
-    {
-        "id": "ed000248.4c118",
-        "type": "inject",
-        "z": "4c7c8cd1.6a2a1c",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 270,
-        "y": 1000,
-        "wires": [
-            [
-                "2d4ae563.a0394a"
             ]
         ]
     },
@@ -4170,188 +4420,6 @@
         "x": 490,
         "y": 80,
         "wires": []
-    },
-    {
-        "id": "febb9c0d.c5d6e8",
-        "type": "change",
-        "z": "4c7c8cd1.6a2a1c",
-        "name": "Status: Cooldown x seconds",
-        "rules": [
-            {
-                "t": "set",
-                "p": "delay",
-                "pt": "msg",
-                "to": "delay / 1000",
-                "tot": "jsonata"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "\"Cooldown \" & delay & \"s\"",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1400,
-        "y": 620,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "4766dfdb.9edc6",
-        "type": "debug",
-        "z": "58b64745.d5681",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1170,
-        "y": 540,
-        "wires": []
-    },
-    {
-        "id": "a5f88751.ae132",
-        "type": "debug",
-        "z": "58b64745.d5681",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1170,
-        "y": 840,
-        "wires": []
-    },
-    {
-        "id": "d6e965c0.d24cd",
-        "type": "trigger",
-        "z": "4c7c8cd1.6a2a1c",
-        "name": "1s delay",
-        "op1": "",
-        "op2": "",
-        "op1type": "nul",
-        "op2type": "payl",
-        "duration": "1",
-        "extend": false,
-        "overrideDelay": false,
-        "units": "s",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 1180,
-        "y": 760,
-        "wires": [
-            [
-                "6799e319.6e6d34"
-            ]
-        ]
-    },
-    {
-        "id": "6799e319.6e6d34",
-        "type": "change",
-        "z": "4c7c8cd1.6a2a1c",
-        "name": "Decrement Delay",
-        "rules": [
-            {
-                "t": "set",
-                "p": "delay",
-                "pt": "msg",
-                "to": "delay - 1000",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1110,
-        "y": 620,
-        "wires": [
-            [
-                "febb9c0d.c5d6e8",
-                "4ee48e99.b05a9"
-            ]
-        ]
-    },
-    {
-        "id": "cfb39ab9.45346",
-        "type": "trigger",
-        "z": "4c7c8cd1.6a2a1c",
-        "name": "",
-        "op1": "",
-        "op2": "",
-        "op1type": "nul",
-        "op2type": "payl",
-        "duration": "1",
-        "extend": false,
-        "overrideDelay": false,
-        "units": "ms",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 715,
-        "y": 520,
-        "wires": [
-            [
-                "10373673.0c7d0a"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "10373673.0c7d0a",
-        "type": "link out",
-        "z": "4c7c8cd1.6a2a1c",
-        "name": "Activity State Change",
-        "links": [
-            "c551054e.c3663"
-        ],
-        "x": 1335,
-        "y": 460,
-        "wires": []
-    },
-    {
-        "id": "4ee48e99.b05a9",
-        "type": "switch",
-        "z": "4c7c8cd1.6a2a1c",
-        "name": "delay > 1",
-        "property": "delay",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "gte",
-                "v": "1",
-                "vt": "str"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 1,
-        "x": 940,
-        "y": 760,
-        "wires": [
-            [
-                "d6e965c0.d24cd"
-            ]
-        ]
     },
     {
         "id": "2a10c8d6.2aaf58",
@@ -4549,6 +4617,7 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
+        "outputs": 1,
         "x": 1355,
         "y": 2680,
         "wires": [
@@ -4680,270 +4749,13 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
+        "outputs": 1,
         "x": 1095,
         "y": 2680,
         "wires": [
             [
                 "2883e1c2.436ede",
                 "154a48b2.b10447"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "e3ec1abf.391d48",
-        "type": "hubitat device",
-        "z": "f9337f21.0eab78",
-        "d": true,
-        "deviceLabel": "Bedroom L Bedside Switch",
-        "name": "",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "",
-        "attribute": "",
-        "sendEvent": true,
-        "x": 960,
-        "y": 3020,
-        "wires": [
-            [
-                "accc476c.02ce2"
-            ]
-        ]
-    },
-    {
-        "id": "accc476c.02ce2",
-        "type": "switch",
-        "z": "f9337f21.0eab78",
-        "name": "",
-        "property": "payload.name",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "pushed",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "held",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 1175,
-        "y": 3020,
-        "wires": [
-            [
-                "2319354.da91f4a"
-            ],
-            [
-                "87e6d0a8.5ecc8"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "2319354.da91f4a",
-        "type": "switch",
-        "z": "f9337f21.0eab78",
-        "name": "",
-        "property": "payload.value",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "1",
-                "vt": "num"
-            },
-            {
-                "t": "eq",
-                "v": "4",
-                "vt": "num"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 1235,
-        "y": 3000,
-        "wires": [
-            [
-                "eee21efd.24f0f"
-            ],
-            [
-                "f8882392.63a658"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "f8882392.63a658",
-        "type": "change",
-        "z": "f9337f21.0eab78",
-        "name": "Off",
-        "rules": [
-            {
-                "t": "set",
-                "p": "command",
-                "pt": "msg",
-                "to": "off",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1350,
-        "y": 3020,
-        "wires": [
-            [
-                "b448d918.5693f"
-            ]
-        ]
-    },
-    {
-        "id": "b448d918.5693f",
-        "type": "hubitat command",
-        "z": "f9337f21.0eab78",
-        "deviceLabel": "Bedroom Tall Lamp",
-        "name": "",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "257",
-        "command": "",
-        "commandArgs": "",
-        "x": 1650,
-        "y": 3020,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "44cbaf0.923ee5",
-        "type": "change",
-        "z": "f9337f21.0eab78",
-        "name": "On Full",
-        "rules": [
-            {
-                "t": "set",
-                "p": "command",
-                "pt": "msg",
-                "to": "setLevel",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "arguments",
-                "pt": "msg",
-                "to": "70",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1360,
-        "y": 3060,
-        "wires": [
-            [
-                "b448d918.5693f"
-            ]
-        ]
-    },
-    {
-        "id": "31743d94.fd3462",
-        "type": "hubitat device",
-        "z": "f9337f21.0eab78",
-        "deviceLabel": "Bedroom Quad Switch",
-        "name": "",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "295",
-        "attribute": "",
-        "sendEvent": true,
-        "x": 780,
-        "y": 3280,
-        "wires": [
-            [
-                "c01b8b50.1490a8"
-            ]
-        ]
-    },
-    {
-        "id": "c01b8b50.1490a8",
-        "type": "switch",
-        "z": "f9337f21.0eab78",
-        "name": "",
-        "property": "payload.name",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "pushed",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 975,
-        "y": 3280,
-        "wires": [
-            [
-                "31fc75be.427232"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "31fc75be.427232",
-        "type": "switch",
-        "z": "f9337f21.0eab78",
-        "name": "",
-        "property": "payload.value",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "1",
-                "vt": "num"
-            },
-            {
-                "t": "eq",
-                "v": "2",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "3",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "4",
-                "vt": "num"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 4,
-        "x": 1055,
-        "y": 3280,
-        "wires": [
-            [
-                "91e8ca3f.3f295"
-            ],
-            [
-                "9a4d93e3.9f5c3"
-            ],
-            [
-                "91e8ca3f.3f295"
-            ],
-            [
-                "9a4d93e3.9f5c3"
             ]
         ],
         "l": false
@@ -4967,8 +4779,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1170,
-        "y": 3300,
+        "x": 1830,
+        "y": 3100,
         "wires": [
             [
                 "2036fdbe.acda92"
@@ -4994,8 +4806,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1170,
-        "y": 3260,
+        "x": 1830,
+        "y": 3060,
         "wires": [
             [
                 "93983053.42cca8"
@@ -5006,14 +4818,14 @@
         "id": "a0f2d6e.daab828",
         "type": "hubitat command",
         "z": "f9337f21.0eab78",
-        "deviceLabel": "Bedroom Leahs Lamp",
+        "deviceLabel": "Leah’s Bedside",
         "name": "",
         "server": "252d4ef4.c14b6a",
-        "deviceId": "258",
+        "deviceId": "1",
         "command": "",
         "commandArgs": "",
-        "x": 1480,
-        "y": 3220,
+        "x": 2100,
+        "y": 3060,
         "wires": [
             []
         ]
@@ -5022,46 +4834,14 @@
         "id": "407e2a78.c9971c",
         "type": "hubitat command",
         "z": "f9337f21.0eab78",
-        "deviceLabel": "Bedroom Robs Lamp",
+        "deviceLabel": "Rob’s bedside",
         "name": "",
         "server": "252d4ef4.c14b6a",
-        "deviceId": "225",
+        "deviceId": "2",
         "command": "",
         "commandArgs": "",
-        "x": 1480,
-        "y": 3260,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "72f48158.153f08",
-        "type": "hubitat command",
-        "z": "f9337f21.0eab78",
-        "deviceLabel": "Bedroom Tall Lamp",
-        "name": "",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "257",
-        "command": "",
-        "commandArgs": "",
-        "x": 1470,
-        "y": 3300,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "7371a601.f9ce3",
-        "type": "hubitat command",
-        "z": "f9337f21.0eab78",
-        "deviceLabel": "Bedroom Lamp",
-        "name": "",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "98",
-        "command": "",
-        "commandArgs": "",
-        "x": 1460,
-        "y": 3340,
+        "x": 2100,
+        "y": 3100,
         "wires": [
             []
         ]
@@ -5081,14 +4861,13 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
-        "x": 1275,
-        "y": 3260,
+        "outputs": 1,
+        "x": 1935,
+        "y": 3060,
         "wires": [
             [
                 "a0f2d6e.daab828",
-                "407e2a78.c9971c",
-                "72f48158.153f08",
-                "7371a601.f9ce3"
+                "407e2a78.c9971c"
             ]
         ],
         "l": false
@@ -5108,12 +4887,11 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
-        "x": 1275,
-        "y": 3300,
+        "outputs": 1,
+        "x": 1935,
+        "y": 3100,
         "wires": [
             [
-                "7371a601.f9ce3",
-                "72f48158.153f08",
                 "407e2a78.c9971c",
                 "a0f2d6e.daab828"
             ]
@@ -5121,147 +4899,39 @@
         "l": false
     },
     {
-        "id": "eee21efd.24f0f",
-        "type": "change",
-        "z": "f9337f21.0eab78",
-        "name": "On Dim",
-        "rules": [
-            {
-                "t": "set",
-                "p": "command",
-                "pt": "msg",
-                "to": "setLevel",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "arguments",
-                "pt": "msg",
-                "to": "26",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1360,
-        "y": 2980,
-        "wires": [
-            [
-                "b448d918.5693f"
-            ]
-        ]
-    },
-    {
-        "id": "87e6d0a8.5ecc8",
-        "type": "switch",
-        "z": "f9337f21.0eab78",
-        "name": "",
-        "property": "payload.value",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "2",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1235,
-        "y": 3040,
-        "wires": [
-            [
-                "44cbaf0.923ee5"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "ffc8dd8e.e001f",
-        "type": "change",
-        "z": "402da1b5.446cd8",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "Leah is coming home!",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "Home: Presence",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 296,
-        "y": 1246,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "f3be4df3.08e528",
         "type": "lutron-status",
         "z": "f9337f21.0eab78",
-        "d": true,
         "confignode": "f2d9c01d.62cb2",
         "name": "R Pico",
         "x": 890,
         "y": 2840,
         "wires": [
             [
-                "2ad5b947.94d5f6"
+                "56178c721891bd45"
             ]
         ]
     },
     {
-        "id": "776ec079.ba808",
-        "type": "debug",
+        "id": "3a326fc0.24f35",
+        "type": "hubitat command",
         "z": "f9337f21.0eab78",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload.button",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1400,
-        "y": 2860,
-        "wires": []
-    },
-    {
-        "id": "2ad5b947.94d5f6",
-        "type": "subflow:30a7f92d.9fbe16",
-        "z": "f9337f21.0eab78",
-        "name": "",
-        "env": [],
-        "x": 1080,
-        "y": 2860,
+        "deviceLabel": "",
+        "name": "Christmas Tree On",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "9",
+        "command": "on",
+        "commandArgs": "",
+        "x": 490,
+        "y": 2940,
         "wires": [
-            [
-                "dcc0cc5d.bd1b28"
-            ]
+            []
         ]
     },
     {
-        "id": "8cd11419.9fb37",
+        "id": "84f932994c4d9b0e",
         "type": "change",
-        "z": "30a7f92d.9fbe16",
+        "z": "f9337f21.0eab78",
         "name": "Button 1",
         "rules": [
             {
@@ -5277,18 +4947,18 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 400,
-        "y": 40,
+        "x": 920,
+        "y": 3000,
         "wires": [
             [
-                "9164c316.fa994"
+                "a210b273a66c0675"
             ]
         ]
     },
     {
-        "id": "632a01bf.d36c38",
+        "id": "56178c721891bd45",
         "type": "switch",
-        "z": "30a7f92d.9fbe16",
+        "z": "f9337f21.0eab78",
         "name": "action",
         "property": "payload.action",
         "propertyType": "msg",
@@ -5320,30 +4990,30 @@
         "checkall": "false",
         "repair": false,
         "outputs": 5,
-        "x": 230,
-        "y": 100,
+        "x": 750,
+        "y": 3060,
         "wires": [
             [
-                "8cd11419.9fb37"
+                "84f932994c4d9b0e"
             ],
             [
-                "4b2429c6.a69c88"
+                "7a7baa4b0d8d96f6"
             ],
             [
-                "f1eef6f.1455c08"
+                "60d657c7179d9acd"
             ],
             [
-                "6f2ca00a.40054"
+                "91c8d55d2179c186"
             ],
             [
-                "9801b221.2dbe38"
+                "584965c3a3a872dc"
             ]
         ]
     },
     {
-        "id": "69aa2139.1f936",
+        "id": "16910248bf6af96e",
         "type": "switch",
-        "z": "30a7f92d.9fbe16",
+        "z": "f9337f21.0eab78",
         "name": "param",
         "property": "payload.param",
         "propertyType": "msg",
@@ -5365,24 +5035,22 @@
         "checkall": "false",
         "repair": false,
         "outputs": 3,
-        "x": 910,
-        "y": 80,
+        "x": 1270,
+        "y": 3060,
         "wires": [
             [
-                "4cd16890.d6ee58"
+                "a788d89aee1e0f93"
             ],
             [
-                "31320711.4725b8"
+                "aec8779c5e9b3213"
             ],
-            [
-                "9332a190.b5b628"
-            ]
+            []
         ]
     },
     {
-        "id": "31320711.4725b8",
+        "id": "aec8779c5e9b3213",
         "type": "change",
-        "z": "30a7f92d.9fbe16",
+        "z": "f9337f21.0eab78",
         "name": "Released",
         "rules": [
             {
@@ -5398,18 +5066,18 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1060,
-        "y": 100,
+        "x": 1420,
+        "y": 3120,
         "wires": [
             [
-                "9332a190.b5b628"
+                "b2f59f4fef3d8b86"
             ]
         ]
     },
     {
-        "id": "4cd16890.d6ee58",
+        "id": "a788d89aee1e0f93",
         "type": "change",
-        "z": "30a7f92d.9fbe16",
+        "z": "f9337f21.0eab78",
         "name": "Pressed",
         "rules": [
             {
@@ -5425,40 +5093,16 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1060,
-        "y": 60,
+        "x": 1420,
+        "y": 3040,
         "wires": [
-            [
-                "9332a190.b5b628"
-            ]
+            []
         ]
     },
     {
-        "id": "9332a190.b5b628",
-        "type": "delay",
-        "z": "30a7f92d.9fbe16",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "1",
-        "timeoutUnits": "milliseconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "x": 1255,
-        "y": 120,
-        "wires": [
-            []
-        ],
-        "l": false
-    },
-    {
-        "id": "4b2429c6.a69c88",
+        "id": "7a7baa4b0d8d96f6",
         "type": "change",
-        "z": "30a7f92d.9fbe16",
+        "z": "f9337f21.0eab78",
         "name": "Button 2",
         "rules": [
             {
@@ -5474,18 +5118,18 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 400,
-        "y": 80,
+        "x": 920,
+        "y": 3040,
         "wires": [
             [
-                "9164c316.fa994"
+                "a210b273a66c0675"
             ]
         ]
     },
     {
-        "id": "9164c316.fa994",
+        "id": "a210b273a66c0675",
         "type": "delay",
-        "z": "30a7f92d.9fbe16",
+        "z": "f9337f21.0eab78",
         "name": "",
         "pauseType": "delay",
         "timeout": "1",
@@ -5497,19 +5141,20 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
-        "x": 615,
-        "y": 100,
+        "outputs": 1,
+        "x": 1135,
+        "y": 3060,
         "wires": [
             [
-                "69aa2139.1f936"
+                "16910248bf6af96e"
             ]
         ],
         "l": false
     },
     {
-        "id": "f1eef6f.1455c08",
+        "id": "60d657c7179d9acd",
         "type": "change",
-        "z": "30a7f92d.9fbe16",
+        "z": "f9337f21.0eab78",
         "name": "Button 3",
         "rules": [
             {
@@ -5525,18 +5170,18 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 400,
-        "y": 120,
+        "x": 920,
+        "y": 3080,
         "wires": [
             [
-                "9164c316.fa994"
+                "a210b273a66c0675"
             ]
         ]
     },
     {
-        "id": "6f2ca00a.40054",
+        "id": "91c8d55d2179c186",
         "type": "change",
-        "z": "30a7f92d.9fbe16",
+        "z": "f9337f21.0eab78",
         "name": "Button 4",
         "rules": [
             {
@@ -5552,33 +5197,18 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 400,
-        "y": 160,
+        "x": 920,
+        "y": 3120,
         "wires": [
             [
-                "9164c316.fa994"
+                "a210b273a66c0675"
             ]
         ]
     },
     {
-        "id": "8df16f73.e7a368",
-        "type": "lutron-status",
-        "z": "f9337f21.0eab78",
-        "d": true,
-        "confignode": "f2d9c01d.62cb2",
-        "name": "Pico 2",
-        "x": 890,
-        "y": 2900,
-        "wires": [
-            [
-                "2ad5b947.94d5f6"
-            ]
-        ]
-    },
-    {
-        "id": "9801b221.2dbe38",
+        "id": "584965c3a3a872dc",
         "type": "change",
-        "z": "30a7f92d.9fbe16",
+        "z": "f9337f21.0eab78",
         "name": "Other btn ",
         "rules": [
             {
@@ -5594,53 +5224,347 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 400,
-        "y": 200,
+        "x": 920,
+        "y": 3160,
         "wires": [
             [
-                "9164c316.fa994"
+                "a210b273a66c0675"
             ]
         ]
     },
     {
-        "id": "dcc0cc5d.bd1b28",
+        "id": "b2f59f4fef3d8b86",
         "type": "switch",
         "z": "f9337f21.0eab78",
-        "name": "",
-        "property": "payload.interaction",
+        "name": "button 1/4",
+        "property": "payload.button",
         "propertyType": "msg",
         "rules": [
             {
                 "t": "eq",
-                "v": "pressed",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4",
                 "vt": "str"
             }
         ],
-        "checkall": "true",
+        "checkall": "false",
         "repair": false,
-        "outputs": 1,
-        "x": 1230,
-        "y": 2860,
+        "outputs": 2,
+        "x": 1650,
+        "y": 3080,
         "wires": [
             [
-                "776ec079.ba808"
+                "91e8ca3f.3f295"
+            ],
+            [
+                "9a4d93e3.9f5c3"
             ]
         ]
     },
     {
-        "id": "3a326fc0.24f35",
-        "type": "hubitat command",
-        "z": "f9337f21.0eab78",
+        "id": "faf6ad5a.34d9a8",
+        "type": "hubitat device",
+        "z": "58b64745.d5681",
+        "d": true,
         "deviceLabel": "",
-        "name": "Christmas Tree On",
+        "name": "Basement Under Screen - 4/1",
         "server": "252d4ef4.c14b6a",
-        "deviceId": "9",
-        "command": "on",
-        "commandArgs": "",
+        "deviceId": "",
+        "attribute": "motion",
+        "sendEvent": true,
         "x": 490,
-        "y": 2940,
+        "y": 360,
         "wires": [
-            []
+            [
+                "9d0be0e6.f2626"
+            ]
         ]
+    },
+    {
+        "id": "6529c919.7b8d08",
+        "type": "hubitat device",
+        "z": "58b64745.d5681",
+        "d": true,
+        "deviceLabel": "",
+        "name": "Main floor hallway - 3/27",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "",
+        "attribute": "motion",
+        "sendEvent": true,
+        "x": 470,
+        "y": 720,
+        "wires": [
+            [
+                "3faf4ff8.21874"
+            ]
+        ]
+    },
+    {
+        "id": "e6ca775d.fc4c58",
+        "type": "link out",
+        "z": "58b64745.d5681",
+        "name": "Basement motion start",
+        "links": [],
+        "x": 1115,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "c02b55b9.34f378",
+        "type": "link out",
+        "z": "58b64745.d5681",
+        "name": "Basement motion stop",
+        "links": [],
+        "x": 1115,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "9d0be0e6.f2626",
+        "type": "delay",
+        "z": "58b64745.d5681",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 755,
+        "y": 340,
+        "wires": [
+            [
+                "cc612b62.86f8f"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "3faf4ff8.21874",
+        "type": "delay",
+        "z": "58b64745.d5681",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 835,
+        "y": 680,
+        "wires": [
+            [
+                "49c7b900.58bf28"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "3782015.bd1617e",
+        "type": "inject",
+        "z": "58b64745.d5681",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 200,
+        "y": 680,
+        "wires": [
+            [
+                "6529c919.7b8d08",
+                "f426f0a.ee9109"
+            ]
+        ]
+    },
+    {
+        "id": "49c7b900.58bf28",
+        "type": "subflow:4c7c8cd1.6a2a1c",
+        "z": "58b64745.d5681",
+        "name": "Main presence zone",
+        "env": [
+            {
+                "name": "activity_reset_delay",
+                "value": "600",
+                "type": "num"
+            },
+            {
+                "name": "sensor reset delay",
+                "value": "20",
+                "type": "num"
+            },
+            {
+                "name": "activity reset delay",
+                "value": "600",
+                "type": "num"
+            }
+        ],
+        "x": 980,
+        "y": 680,
+        "wires": [
+            [
+                "684700ac.14a9f8",
+                "4766dfdb.9edc6"
+            ],
+            [
+                "37bd8cb0.ae0c2c",
+                "a5f88751.ae132"
+            ]
+        ]
+    },
+    {
+        "id": "cc612b62.86f8f",
+        "type": "subflow:4c7c8cd1.6a2a1c",
+        "z": "58b64745.d5681",
+        "name": "Basement presence zone",
+        "env": [
+            {
+                "name": "activity reset delay",
+                "value": "300",
+                "type": "str"
+            }
+        ],
+        "x": 930,
+        "y": 340,
+        "wires": [
+            [
+                "e6ca775d.fc4c58"
+            ],
+            [
+                "c02b55b9.34f378"
+            ]
+        ]
+    },
+    {
+        "id": "ec6c5a0f.1deb78",
+        "type": "inject",
+        "z": "58b64745.d5681",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 360,
+        "wires": [
+            [
+                "faf6ad5a.34d9a8"
+            ]
+        ]
+    },
+    {
+        "id": "684700ac.14a9f8",
+        "type": "link out",
+        "z": "58b64745.d5681",
+        "name": "Main motion start",
+        "links": [
+            "10fc02fd.252425"
+        ],
+        "x": 1155,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "37bd8cb0.ae0c2c",
+        "type": "link out",
+        "z": "58b64745.d5681",
+        "name": "Main motion stop",
+        "links": [
+            "10fc02fd.252425"
+        ],
+        "x": 1155,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "f426f0a.ee9109",
+        "type": "hubitat device",
+        "z": "58b64745.d5681",
+        "d": true,
+        "deviceLabel": "",
+        "name": "Front Door",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "293",
+        "attribute": "",
+        "sendEvent": true,
+        "x": 430,
+        "y": 680,
+        "wires": [
+            [
+                "3faf4ff8.21874"
+            ]
+        ]
+    },
+    {
+        "id": "4766dfdb.9edc6",
+        "type": "debug",
+        "z": "58b64745.d5681",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1170,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "a5f88751.ae132",
+        "type": "debug",
+        "z": "58b64745.d5681",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1170,
+        "y": 840,
+        "wires": []
     }
 ]
