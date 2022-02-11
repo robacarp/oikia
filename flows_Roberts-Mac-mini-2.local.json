@@ -14,6 +14,30 @@
         "info": ""
     },
     {
+        "id": "2984f0164b9bafb7",
+        "type": "tab",
+        "label": "Doors",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "5ea7da533109f7d2",
+        "type": "tab",
+        "label": "Temperature",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "3cee340729aa7e67",
+        "type": "tab",
+        "label": "Data Archival",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "c1c7f362.7de41",
         "type": "subflow",
         "name": "Time Converter",
@@ -251,25 +275,22 @@
             {
                 "x": 260,
                 "y": 200,
-                "wires": [
-                    {
-                        "id": "98ba09ad836e7c3e"
-                    }
-                ]
+                "wires": []
             }
         ],
         "out": [
             {
                 "x": 820,
                 "y": 200,
+                "wires": []
+            },
+            {
+                "x": 820,
+                "y": 120,
                 "wires": [
                     {
-                        "id": "f7f7dca3d7a44860",
-                        "port": 1
-                    },
-                    {
-                        "id": "98ba09ad836e7c3e",
-                        "port": 1
+                        "id": "4937c23770576172",
+                        "port": 0
                     }
                 ]
             }
@@ -322,39 +343,23 @@
         "timeout": "45000"
     },
     {
-        "id": "68d5add8.ad02a4",
-        "type": "ui_tab",
-        "name": "Home",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "9ad6e619.cdab7",
-        "type": "ui_group",
-        "name": "Default",
-        "tab": "68d5add8.ad02a4",
-        "order": 1,
-        "disp": true,
-        "width": "6",
-        "collapse": false
-    },
-    {
         "id": "b9350de11f714bc2",
         "type": "ui_base",
         "theme": {
-            "name": "theme-light",
+            "name": "theme-dark",
             "lightTheme": {
                 "default": "#0094CE",
-                "baseColor": "#0094CE",
+                "baseColor": "#cdcace",
                 "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": false
+                "edited": true,
+                "reset": false
             },
             "darkTheme": {
                 "default": "#097479",
                 "baseColor": "#097479",
                 "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": false
+                "edited": true,
+                "reset": false
             },
             "customTheme": {
                 "name": "Untitled Theme 1",
@@ -364,44 +369,44 @@
             },
             "themeState": {
                 "base-color": {
-                    "default": "#0094CE",
-                    "value": "#0094CE",
-                    "edited": false
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": true
                 },
                 "page-titlebar-backgroundColor": {
-                    "value": "#0094CE",
+                    "value": "#097479",
                     "edited": false
                 },
                 "page-backgroundColor": {
-                    "value": "#fafafa",
-                    "edited": false
-                },
-                "page-sidebar-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-textColor": {
-                    "value": "#1bbfff",
-                    "edited": false
-                },
-                "group-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "widget-textColor": {
                     "value": "#111111",
                     "edited": false
                 },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
                 "widget-backgroundColor": {
-                    "value": "#0094ce",
+                    "value": "#097479",
                     "edited": false
                 },
                 "widget-borderColor": {
-                    "value": "#ffffff",
+                    "value": "#333333",
                     "edited": false
                 },
                 "base-font": {
@@ -417,12 +422,12 @@
             }
         },
         "site": {
-            "name": "Node-RED Dashboard",
+            "name": "Oikia",
             "hideToolbar": "false",
             "allowSwipe": "false",
-            "lockMenu": "false",
+            "lockMenu": "true",
             "allowTempTheme": "true",
-            "dateFormat": "DD/MM/YYYY",
+            "dateFormat": "YYYY/MM/DD",
             "sizes": {
                 "sx": 48,
                 "sy": 48,
@@ -434,6 +439,68 @@
                 "py": 0
             }
         }
+    },
+    {
+        "id": "5c890404fb72eb59",
+        "type": "ui_tab",
+        "name": "Temperature",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "e735a89b7a9ee10c",
+        "type": "ui_group",
+        "name": "Bedrooms",
+        "tab": "5c890404fb72eb59",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "dae9231b5598e07b",
+        "type": "ui_tab",
+        "name": "Batteries",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "d0a30fbf02a8ceb5",
+        "type": "ui_spacer",
+        "z": "5ea7da533109f7d2",
+        "name": "spacer",
+        "group": "e735a89b7a9ee10c",
+        "order": 3,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "21b7c61d0303ac49",
+        "type": "postgreSQLConfig",
+        "name": "",
+        "host": "127.0.0.1",
+        "hostFieldType": "str",
+        "port": "5432",
+        "portFieldType": "num",
+        "database": "robert",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "max": "5",
+        "maxFieldType": "num",
+        "min": "1",
+        "minFieldType": "num",
+        "idle": "1000",
+        "idleFieldType": "num",
+        "connectionTimeout": "10000",
+        "connectionTimeoutFieldType": "num",
+        "user": "",
+        "userFieldType": "str",
+        "password": "",
+        "passwordFieldType": "str"
     },
     {
         "id": "aa0d64a0.a2b408",
@@ -1800,93 +1867,6 @@
         ]
     },
     {
-        "id": "98ba09ad836e7c3e",
-        "type": "switch",
-        "z": "4937c23770576172",
-        "name": "front porch?",
-        "property": "deviceId",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "66",
-                "vt": "str"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 410,
-        "y": 200,
-        "wires": [
-            [
-                "f7f7dca3d7a44860"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "f7f7dca3d7a44860",
-        "type": "within-time-switch",
-        "z": "4937c23770576172",
-        "name": "",
-        "positionConfig": "96c207ac.2237a8",
-        "startTime": "sunsetEnd",
-        "startTimeType": "pdsTime",
-        "startOffset": 0,
-        "startOffsetType": "none",
-        "startOffsetMultiplier": 60000,
-        "endTime": "23:00",
-        "endTimeType": "entered",
-        "endOffset": 0,
-        "endOffsetType": "none",
-        "endOffsetMultiplier": 60000,
-        "timeRestrictions": "",
-        "timeRestrictionsType": "none",
-        "timeDays": "*",
-        "timeOnlyOddDays": false,
-        "timeOnlyEvenDays": false,
-        "timeOnlyOddWeeks": false,
-        "timeOnlyEvenWeeks": false,
-        "timeMonths": "*",
-        "timedatestart": "",
-        "timedateend": "",
-        "propertyStart": "",
-        "propertyStartType": "none",
-        "propertyStartCompare": "true",
-        "propertyStartThreshold": "",
-        "propertyStartThresholdType": "num",
-        "startTimeAlt": "",
-        "startTimeAltType": "entered",
-        "startOffsetAlt": 0,
-        "startOffsetAltType": "none",
-        "startOffsetAltMultiplier": 60000,
-        "propertyEnd": "",
-        "propertyEndType": "none",
-        "propertyEndCompare": "true",
-        "propertyEndThreshold": "",
-        "propertyEndThresholdType": "num",
-        "endTimeAlt": "",
-        "endTimeAltType": "entered",
-        "endOffsetAlt": 0,
-        "endOffsetAltType": "none",
-        "endOffsetAltMultiplier": 60000,
-        "withinTimeValue": "",
-        "withinTimeValueType": "msgInput",
-        "outOfTimeValue": "",
-        "outOfTimeValueType": "msgInput",
-        "tsCompare": "0",
-        "x": 650,
-        "y": 140,
-        "wires": [
-            [],
-            []
-        ]
-    },
-    {
         "id": "2837495c.ae2176",
         "type": "link out",
         "z": "f30f9979.39f178",
@@ -2413,600 +2393,6 @@
         ]
     },
     {
-        "id": "f4196dc1.89ccd8",
-        "type": "switch",
-        "z": "f9337f21.0eab78",
-        "name": "active",
-        "property": "payload.value",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "active",
-                "vt": "str"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 830,
-        "y": 1640,
-        "wires": [
-            [
-                "1cd367a1.c73378"
-            ],
-            [
-                "f5b7b7f4.c342c8"
-            ]
-        ]
-    },
-    {
-        "id": "3e5c2df.f9db652",
-        "type": "change",
-        "z": "f9337f21.0eab78",
-        "name": "Turn On",
-        "rules": [
-            {
-                "t": "set",
-                "p": "command",
-                "pt": "msg",
-                "to": "on",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1600,
-        "y": 1600,
-        "wires": [
-            [
-                "7b90c309.66d214"
-            ]
-        ]
-    },
-    {
-        "id": "2c8106bb.e0c96a",
-        "type": "change",
-        "z": "f9337f21.0eab78",
-        "name": "Turn Off",
-        "rules": [
-            {
-                "t": "set",
-                "p": "command",
-                "pt": "msg",
-                "to": "off",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1600,
-        "y": 1660,
-        "wires": [
-            [
-                "7b90c309.66d214"
-            ]
-        ]
-    },
-    {
-        "id": "7b90c309.66d214",
-        "type": "delay",
-        "z": "f9337f21.0eab78",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "1",
-        "timeoutUnits": "milliseconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "outputs": 1,
-        "x": 1715,
-        "y": 1620,
-        "wires": [
-            [
-                "d56df784.c15a28",
-                "6724dcf8.57f25c"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "8bd51c18.0a3aa",
-        "type": "switch",
-        "z": "f9337f21.0eab78",
-        "name": "is off",
-        "property": "payload.value",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "off",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1210,
-        "y": 1600,
-        "wires": [
-            [
-                "d32f1d97.1bc99"
-            ]
-        ]
-    },
-    {
-        "id": "1cd367a1.c73378",
-        "type": "hubitat device",
-        "z": "f9337f21.0eab78",
-        "name": "Main Floor Couch Lamp",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "537",
-        "attribute": "switch",
-        "sendEvent": false,
-        "x": 1030,
-        "y": 1600,
-        "wires": [
-            [
-                "8bd51c18.0a3aa"
-            ]
-        ]
-    },
-    {
-        "id": "5c2386b3.633c78",
-        "type": "rbe",
-        "z": "f9337f21.0eab78",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "property": "payload.value",
-        "x": 735,
-        "y": 1640,
-        "wires": [
-            [
-                "f4196dc1.89ccd8"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "bc068690.56656",
-        "type": "within-time-switch",
-        "z": "f9337f21.0eab78",
-        "name": "(at night)",
-        "positionConfig": "96c207ac.2237a8",
-        "startTime": "sunsetStart",
-        "startTimeType": "pdsTime",
-        "startOffset": "-60",
-        "startOffsetType": "num",
-        "startOffsetMultiplier": 60000,
-        "endTime": "sunriseEnd",
-        "endTimeType": "pdsTime",
-        "endOffset": 0,
-        "endOffsetType": "none",
-        "endOffsetMultiplier": 60000,
-        "timeDays": "*",
-        "timeOnlyOddDays": false,
-        "timeOnlyEvenDays": false,
-        "timeMonths": "*",
-        "timedatestart": "",
-        "timedateend": "",
-        "propertyStart": "",
-        "propertyStartType": "none",
-        "propertyStartCompare": "true",
-        "propertyStartThreshold": "",
-        "propertyStartThresholdType": "num",
-        "startTimeAlt": "",
-        "startTimeAltType": "entered",
-        "startOffsetAlt": 0,
-        "startOffsetAltType": "none",
-        "startOffsetAltMultiplier": 60000,
-        "propertyEnd": "",
-        "propertyEndType": "none",
-        "propertyEndCompare": "true",
-        "propertyEndThreshold": "",
-        "propertyEndThresholdType": "num",
-        "endTimeAlt": "",
-        "endTimeAltType": "entered",
-        "endOffsetAlt": 0,
-        "endOffsetAltType": "none",
-        "endOffsetAltMultiplier": 60000,
-        "tsCompare": "0",
-        "x": 620,
-        "y": 1640,
-        "wires": [
-            [
-                "5c2386b3.633c78"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "d32f1d97.1bc99",
-        "type": "change",
-        "z": "f9337f21.0eab78",
-        "name": "enable auto shut-off",
-        "rules": [
-            {
-                "t": "set",
-                "p": "main_lights_auto_off",
-                "pt": "flow",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1400,
-        "y": 1600,
-        "wires": [
-            [
-                "3e5c2df.f9db652"
-            ]
-        ]
-    },
-    {
-        "id": "f5b7b7f4.c342c8",
-        "type": "switch",
-        "z": "f9337f21.0eab78",
-        "name": "was turned on by motion",
-        "property": "main_lights_auto_off",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1030,
-        "y": 1680,
-        "wires": [
-            [
-                "2c8106bb.e0c96a",
-                "f8f5da1.fc20a28"
-            ]
-        ]
-    },
-    {
-        "id": "f8f5da1.fc20a28",
-        "type": "change",
-        "z": "f9337f21.0eab78",
-        "name": "disable auto shut-off",
-        "rules": [
-            {
-                "t": "set",
-                "p": "main_lights_auto_off",
-                "pt": "flow",
-                "to": "false",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1640,
-        "y": 1700,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "d56df784.c15a28",
-        "type": "hubitat command",
-        "z": "f9337f21.0eab78",
-        "name": "Main Floor Couch Lamp",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "537",
-        "command": "",
-        "commandArgs": "",
-        "x": 1890,
-        "y": 1600,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "6724dcf8.57f25c",
-        "type": "hubitat command",
-        "z": "f9337f21.0eab78",
-        "name": "Main Floor Chair Lamp",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "536",
-        "command": "",
-        "commandArgs": "",
-        "x": 1880,
-        "y": 1660,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "6c06e8fb.71416",
-        "type": "hubitat device",
-        "z": "f9337f21.0eab78",
-        "name": "mZone-Main Floor",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "528",
-        "attribute": "motion",
-        "sendEvent": false,
-        "x": 930,
-        "y": 2000,
-        "wires": [
-            [
-                "c1ddc556.635c78"
-            ]
-        ]
-    },
-    {
-        "id": "c1ddc556.635c78",
-        "type": "switch",
-        "z": "f9337f21.0eab78",
-        "name": "is not active / active",
-        "property": "payload.value",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "else"
-            },
-            {
-                "t": "neq",
-                "v": "active",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 1140,
-        "y": 2000,
-        "wires": [
-            [
-                "769489af.fba268"
-            ],
-            [
-                "b56c9c93.da1378"
-            ]
-        ]
-    },
-    {
-        "id": "b6d68017.7f0ed",
-        "type": "hubitat command",
-        "z": "f9337f21.0eab78",
-        "name": "Main Floor Couch Lamp",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "537",
-        "command": "",
-        "commandArgs": "",
-        "x": 1810,
-        "y": 2020,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "f7385003.dbc5c8",
-        "type": "hubitat command",
-        "z": "f9337f21.0eab78",
-        "name": "Main Floor Chair Lamp",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "536",
-        "command": "",
-        "commandArgs": "",
-        "x": 1800,
-        "y": 2060,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "b56c9c93.da1378",
-        "type": "change",
-        "z": "f9337f21.0eab78",
-        "name": "Turn Off",
-        "rules": [
-            {
-                "t": "set",
-                "p": "command",
-                "pt": "msg",
-                "to": "off",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1400,
-        "y": 2020,
-        "wires": [
-            [
-                "98b41af4.02371"
-            ]
-        ]
-    },
-    {
-        "id": "98b41af4.02371",
-        "type": "delay",
-        "z": "f9337f21.0eab78",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "1",
-        "timeoutUnits": "milliseconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "outputs": 1,
-        "x": 1535,
-        "y": 2020,
-        "wires": [
-            [
-                "b6d68017.7f0ed",
-                "f7385003.dbc5c8",
-                "9bd699af.5487c8"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "769489af.fba268",
-        "type": "within-time-switch",
-        "z": "f9337f21.0eab78",
-        "name": "",
-        "positionConfig": "96c207ac.2237a8",
-        "startTime": "trigger_time",
-        "startTimeType": "msg",
-        "startOffset": 0,
-        "startOffsetType": "none",
-        "startOffsetMultiplier": 60000,
-        "endTime": "sunrise",
-        "endTimeType": "pdsTime",
-        "endOffset": 0,
-        "endOffsetType": "none",
-        "endOffsetMultiplier": 60000,
-        "timeDays": "*",
-        "timeOnlyOddDays": false,
-        "timeOnlyEvenDays": false,
-        "timeMonths": "*",
-        "timedatestart": "",
-        "timedateend": "",
-        "propertyStart": "",
-        "propertyStartType": "none",
-        "propertyStartCompare": "true",
-        "propertyStartThreshold": "",
-        "propertyStartThresholdType": "num",
-        "startTimeAlt": "",
-        "startTimeAltType": "entered",
-        "startOffsetAlt": 0,
-        "startOffsetAltType": "none",
-        "startOffsetAltMultiplier": 60000,
-        "propertyEnd": "",
-        "propertyEndType": "none",
-        "propertyEndCompare": "true",
-        "propertyEndThreshold": "",
-        "propertyEndThresholdType": "num",
-        "endTimeAlt": "",
-        "endTimeAltType": "entered",
-        "endOffsetAlt": 0,
-        "endOffsetAltType": "none",
-        "endOffsetAltMultiplier": 60000,
-        "tsCompare": "0",
-        "x": 1450,
-        "y": 1960,
-        "wires": [
-            [
-                "8366a27b.f4e078"
-            ],
-            [
-                "9bd699af.5487c8"
-            ]
-        ]
-    },
-    {
-        "id": "9bd699af.5487c8",
-        "type": "change",
-        "z": "f9337f21.0eab78",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "reset",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1780,
-        "y": 1980,
-        "wires": [
-            [
-                "8366a27b.f4e078"
-            ]
-        ]
-    },
-    {
-        "id": "32fa6bf1.ab3b1c",
-        "type": "change",
-        "z": "f9337f21.0eab78",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "trigger_time",
-                "pt": "msg",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 420,
-        "y": 2000,
-        "wires": [
-            [
-                "3167159b.afdf82"
-            ]
-        ]
-    },
-    {
-        "id": "8366a27b.f4e078",
-        "type": "delay",
-        "z": "f9337f21.0eab78",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "25",
-        "timeoutUnits": "minutes",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "outputs": 1,
-        "x": 1990,
-        "y": 1940,
-        "wires": [
-            [
-                "a0f93288.1af51"
-            ]
-        ]
-    },
-    {
         "id": "b8dd13b1.797cb",
         "type": "change",
         "z": "f9337f21.0eab78",
@@ -3025,8 +2411,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 460,
-        "y": 2380,
+        "x": 500,
+        "y": 1360,
         "wires": [
             [
                 "89753df20ca7d578"
@@ -3052,8 +2438,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 460,
-        "y": 2340,
+        "x": 500,
+        "y": 1320,
         "wires": [
             [
                 "89753df20ca7d578"
@@ -3066,8 +2452,8 @@
         "z": "f9337f21.0eab78",
         "name": "Porch light",
         "info": "",
-        "x": 100,
-        "y": 2140,
+        "x": 140,
+        "y": 1120,
         "wires": []
     },
     {
@@ -3121,8 +2507,8 @@
         "outOfTimeValue": "",
         "outOfTimeValueType": "msgInput",
         "tsCompare": "0",
-        "x": 240,
-        "y": 2360,
+        "x": 280,
+        "y": 1340,
         "wires": [
             [
                 "5c9841f.19b74c"
@@ -3153,8 +2539,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 95,
-        "y": 2360,
+        "x": 135,
+        "y": 1340,
         "wires": [
             [
                 "30aade80.91cb42"
@@ -3229,52 +2615,6 @@
         "wires": []
     },
     {
-        "id": "2537c3e7.bad0ac",
-        "type": "comment",
-        "z": "f9337f21.0eab78",
-        "name": "Motion activate main floor lights",
-        "info": "",
-        "x": 170,
-        "y": 1580,
-        "wires": []
-    },
-    {
-        "id": "4ffc18a5.75f8d",
-        "type": "comment",
-        "z": "f9337f21.0eab78",
-        "name": "auto shut off main floor lights",
-        "info": "",
-        "x": 160,
-        "y": 1900,
-        "wires": []
-    },
-    {
-        "id": "aed4e04c.0256a8",
-        "type": "comment",
-        "z": "f9337f21.0eab78",
-        "name": "if it's not between sunset and sunrise, abort and cancel any pending loops",
-        "info": "",
-        "x": 1560,
-        "y": 1900,
-        "wires": []
-    },
-    {
-        "id": "117f15c0.8b285a",
-        "type": "link in",
-        "z": "f9337f21.0eab78",
-        "name": "",
-        "links": [
-            "2837495c.ae2176"
-        ],
-        "x": 235,
-        "y": 2000,
-        "wires": [
-            [
-                "32fa6bf1.ab3b1c"
-            ]
-        ]
-    },
-    {
         "id": "89ce2107.6a1858",
         "type": "link in",
         "z": "f9337f21.0eab78",
@@ -3282,8 +2622,8 @@
         "links": [
             "2837495c.ae2176"
         ],
-        "x": 235,
-        "y": 2320,
+        "x": 275,
+        "y": 1300,
         "wires": [
             [
                 "5c9841f.19b74c"
@@ -3298,8 +2638,8 @@
         "links": [
             "4e636188.7f332"
         ],
-        "x": 235,
-        "y": 2400,
+        "x": 275,
+        "y": 1380,
         "wires": [
             [
                 "b8dd13b1.797cb"
@@ -3307,281 +2647,18 @@
         ]
     },
     {
-        "id": "3167159b.afdf82",
-        "type": "subflow:c79ec61c.5274a8",
-        "z": "f9337f21.0eab78",
-        "x": 680,
-        "y": 2000,
-        "wires": [
-            [
-                "6c06e8fb.71416"
-            ]
-        ]
-    },
-    {
-        "id": "3680fde5.c22a4a",
-        "type": "subflow:c79ec61c.5274a8",
-        "z": "f9337f21.0eab78",
-        "name": "",
-        "env": [],
-        "x": 400,
-        "y": 1640,
-        "wires": [
-            [
-                "bc068690.56656"
-            ]
-        ]
-    },
-    {
-        "id": "7fb77504.40d0cc",
-        "type": "time-inject",
-        "z": "f9337f21.0eab78",
-        "name": "",
-        "nameInt": "⏲ 1:00 = timestamp",
-        "positionConfig": "96c207ac.2237a8",
-        "props": [
-            {
-                "p": "",
-                "pt": "msgPayload",
-                "v": "",
-                "vt": "date",
-                "o": "",
-                "oT": "none",
-                "oM": "60000",
-                "f": 0,
-                "fS": 0,
-                "fT": "UNIX timestamp (ms)",
-                "fI": "0",
-                "next": true,
-                "days": ""
-            }
-        ],
-        "injectTypeSelect": "time",
-        "intervalCount": 1,
-        "intervalCountType": "num",
-        "intervalCountMultiplier": 60000,
-        "time": "1:00",
-        "timeType": "entered",
-        "offset": 0,
-        "offsetType": "none",
-        "offsetMultiplier": 60000,
-        "timeEnd": "",
-        "timeEndType": "entered",
-        "timeEndOffset": 0,
-        "timeEndOffsetType": "none",
-        "timeEndOffsetMultiplier": 60000,
-        "timeDays": "*",
-        "timeOnlyOddDays": false,
-        "timeOnlyEvenDays": false,
-        "timeMonths": "*",
-        "timedatestart": "",
-        "timedateend": "",
-        "property": "",
-        "propertyType": "none",
-        "propertyCompare": "true",
-        "propertyThreshold": "",
-        "propertyThresholdType": "num",
-        "timeAlt": "",
-        "timeAltType": "entered",
-        "timeAltDays": "*",
-        "timeAltOnlyOddDays": false,
-        "timeAltOnlyEvenDays": false,
-        "timeAltMonths": "*",
-        "timeAltOffset": 0,
-        "timeAltOffsetType": "none",
-        "timeAltOffsetMultiplier": 60000,
-        "once": false,
-        "onceDelay": 0.1,
-        "recalcTime": 2,
-        "x": 160,
-        "y": 1960,
-        "wires": [
-            [
-                "32fa6bf1.ab3b1c"
-            ]
-        ]
-    },
-    {
-        "id": "5c121b47.3e6bfc",
-        "type": "time-inject",
-        "z": "f9337f21.0eab78",
-        "d": true,
-        "name": "",
-        "nameInt": "⏲ 2:00 = timestamp",
-        "positionConfig": "96c207ac.2237a8",
-        "props": [
-            {
-                "p": "",
-                "pt": "msgPayload",
-                "v": "",
-                "vt": "date",
-                "o": "",
-                "oT": "none",
-                "oM": "60000",
-                "f": 0,
-                "fS": 0,
-                "fT": "UNIX timestamp (ms)",
-                "fI": "0",
-                "next": true,
-                "days": "",
-                "months": "*",
-                "onlyOddDays": false,
-                "onlyEvenDays": false,
-                "onlyOddWeeks": false,
-                "onlyEvenWeeks": false
-            },
-            {
-                "p": "",
-                "pt": "msgTopic",
-                "v": "",
-                "vt": "str",
-                "o": "",
-                "oT": "none",
-                "oM": "60000",
-                "f": 0,
-                "fS": 0,
-                "fT": "UNIX timestamp (ms)",
-                "fI": "0",
-                "next": false,
-                "days": "",
-                "months": "*",
-                "onlyOddDays": false,
-                "onlyEvenDays": false,
-                "onlyOddWeeks": false,
-                "onlyEvenWeeks": false
-            }
-        ],
-        "injectTypeSelect": "time",
-        "intervalCount": 1,
-        "intervalCountType": "num",
-        "intervalCountMultiplier": 60000,
-        "time": "2:00",
-        "timeType": "entered",
-        "offset": 0,
-        "offsetType": "none",
-        "offsetMultiplier": 60000,
-        "timeEnd": "",
-        "timeEndType": "entered",
-        "timeEndOffset": 0,
-        "timeEndOffsetType": "none",
-        "timeEndOffsetMultiplier": 60000,
-        "timeDays": "*",
-        "timeOnlyOddDays": false,
-        "timeOnlyEvenDays": false,
-        "timeOnlyOddWeeks": false,
-        "timeOnlyEvenWeeks": false,
-        "timeMonths": "*",
-        "timedatestart": "",
-        "timedateend": "",
-        "property": "",
-        "propertyType": "none",
-        "propertyCompare": "true",
-        "propertyThreshold": "",
-        "propertyThresholdType": "num",
-        "timeAlt": "",
-        "timeAltType": "entered",
-        "timeAltDays": "*",
-        "timeAltOnlyOddDays": false,
-        "timeAltOnlyEvenDays": false,
-        "timeAltOnlyOddWeeks": false,
-        "timeAltOnlyEvenWeeks": false,
-        "timeAltMonths": "*",
-        "timeAltOffset": 0,
-        "timeAltOffsetType": "none",
-        "timeAltOffsetMultiplier": 60000,
-        "once": false,
-        "onceDelay": 0.1,
-        "recalcTime": 2,
-        "x": 200,
-        "y": 2740,
-        "wires": [
-            [
-                "ee749310.3ea05",
-                "47d65929.faec98"
-            ]
-        ]
-    },
-    {
-        "id": "ee749310.3ea05",
-        "type": "hubitat command",
-        "z": "f9337f21.0eab78",
-        "name": "Basement Couch Lamp",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "97",
-        "command": "off",
-        "commandArgs": "",
-        "x": 470,
-        "y": 2740,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "47d65929.faec98",
-        "type": "hubitat command",
-        "z": "f9337f21.0eab78",
-        "deviceLabel": "",
-        "name": "Basement Leahs Desk",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "1007",
-        "command": "off",
-        "commandArgs": "",
-        "x": 460,
-        "y": 2800,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "cb67386e.a09cc8",
-        "type": "comment",
-        "z": "f9337f21.0eab78",
-        "name": "Turn off basement lights",
-        "info": "",
-        "x": 180,
-        "y": 2680,
-        "wires": []
-    },
-    {
-        "id": "ffae05f7.c055d8",
-        "type": "link in",
-        "z": "f9337f21.0eab78",
-        "name": "",
-        "links": [
-            "a0f93288.1af51"
-        ],
-        "x": 235,
-        "y": 2040,
-        "wires": [
-            [
-                "32fa6bf1.ab3b1c"
-            ]
-        ]
-    },
-    {
-        "id": "a0f93288.1af51",
-        "type": "link out",
-        "z": "f9337f21.0eab78",
-        "name": "Main Lights off",
-        "links": [
-            "ffae05f7.c055d8"
-        ],
-        "x": 2115,
-        "y": 1940,
-        "wires": []
-    },
-    {
         "id": "363a9c66.018164",
         "type": "hubitat command",
         "z": "f9337f21.0eab78",
+        "d": true,
         "deviceLabel": "",
         "name": "Christmas Tree Off",
         "server": "252d4ef4.c14b6a",
-        "deviceId": "9",
+        "deviceId": "",
         "command": "off",
         "commandArgs": "",
-        "x": 570,
-        "y": 3000,
+        "x": 590,
+        "y": 2000,
         "wires": [
             []
         ]
@@ -3590,6 +2667,7 @@
         "id": "4ce81eb7.3b5058",
         "type": "time-inject",
         "z": "f9337f21.0eab78",
+        "d": true,
         "name": "",
         "nameInt": "⏲ 23:45 = timestamp",
         "positionConfig": "96c207ac.2237a8",
@@ -3676,8 +2754,8 @@
         "once": false,
         "onceDelay": 0.1,
         "recalcTime": 2,
-        "x": 260,
-        "y": 3000,
+        "x": 280,
+        "y": 2000,
         "wires": [
             [
                 "43841e78d19b1e4f"
@@ -3688,6 +2766,7 @@
         "id": "c596c921.6f231",
         "type": "time-inject",
         "z": "f9337f21.0eab78",
+        "d": true,
         "name": "",
         "nameInt": "⏲ 6:00 = timestamp",
         "positionConfig": "96c207ac.2237a8",
@@ -3774,8 +2853,8 @@
         "once": false,
         "onceDelay": 0.1,
         "recalcTime": 2,
-        "x": 260,
-        "y": 2940,
+        "x": 280,
+        "y": 1940,
         "wires": [
             [
                 "659581e44aa2efdd"
@@ -3788,14 +2867,15 @@
         "z": "f9337f21.0eab78",
         "name": "Christmas things",
         "info": "Christmas Tree",
-        "x": 160,
-        "y": 2900,
+        "x": 240,
+        "y": 1840,
         "wires": []
     },
     {
         "id": "4c8e959.ebe296c",
         "type": "within-time-switch",
         "z": "f9337f21.0eab78",
+        "d": true,
         "name": "",
         "positionConfig": "96c207ac.2237a8",
         "startTime": "sunsetEnd",
@@ -3843,8 +2923,8 @@
         "outOfTimeValue": "",
         "outOfTimeValueType": "msgInput",
         "tsCompare": "0",
-        "x": 260,
-        "y": 3220,
+        "x": 320,
+        "y": 2140,
         "wires": [
             [
                 "22b6d01e.452a48"
@@ -3858,6 +2938,7 @@
         "id": "4b47917.4f0bb7",
         "type": "inject",
         "z": "f9337f21.0eab78",
+        "d": true,
         "name": "",
         "props": [
             {
@@ -3873,10 +2954,9 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "",
         "payloadType": "date",
-        "x": 135,
-        "y": 3220,
+        "x": 195,
+        "y": 2140,
         "wires": [
             [
                 "4c8e959.ebe296c"
@@ -3888,14 +2968,15 @@
         "id": "22b6d01e.452a48",
         "type": "hubitat command",
         "z": "f9337f21.0eab78",
+        "d": true,
         "deviceLabel": "",
         "name": "Christmas outdoor lights On",
         "server": "252d4ef4.c14b6a",
         "deviceId": "8",
         "command": "on",
         "commandArgs": "",
-        "x": 500,
-        "y": 3180,
+        "x": 560,
+        "y": 2100,
         "wires": [
             []
         ]
@@ -3904,14 +2985,15 @@
         "id": "103cf87a.abee18",
         "type": "hubitat command",
         "z": "f9337f21.0eab78",
+        "d": true,
         "deviceLabel": "",
         "name": "Outdoor Christmas lights Off",
         "server": "252d4ef4.c14b6a",
         "deviceId": "8",
         "command": "off",
         "commandArgs": "",
-        "x": 500,
-        "y": 3240,
+        "x": 560,
+        "y": 2160,
         "wires": [
             []
         ]
@@ -3920,6 +3002,7 @@
         "id": "7bbb3a43.05164c",
         "type": "time-inject",
         "z": "f9337f21.0eab78",
+        "d": true,
         "name": "",
         "nameInt": "⏲ 22:30 = timestamp",
         "positionConfig": "96c207ac.2237a8",
@@ -4006,8 +3089,8 @@
         "once": false,
         "onceDelay": 0.1,
         "recalcTime": 2,
-        "x": 240,
-        "y": 3280,
+        "x": 300,
+        "y": 2200,
         "wires": [
             [
                 "103cf87a.abee18"
@@ -4018,12 +3101,13 @@
         "id": "13a205f.9848cfa",
         "type": "link in",
         "z": "f9337f21.0eab78",
+        "d": true,
         "name": "",
         "links": [
             "2837495c.ae2176"
         ],
-        "x": 155,
-        "y": 3160,
+        "x": 215,
+        "y": 2080,
         "wires": [
             [
                 "22b6d01e.452a48"
@@ -4456,47 +3540,6 @@
         ]
     },
     {
-        "id": "356625e7.df9b9a",
-        "type": "change",
-        "z": "f9337f21.0eab78",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "value",
-                "pt": "msg",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{}",
-                "tot": "json"
-            },
-            {
-                "t": "set",
-                "p": "payload.value",
-                "pt": "msg",
-                "to": "value",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 180,
-        "y": 1640,
-        "wires": [
-            [
-                "3680fde5.c22a4a"
-            ]
-        ]
-    },
-    {
         "id": "9a4d93e3.9f5c3",
         "type": "change",
         "z": "f9337f21.0eab78",
@@ -4515,8 +3558,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1830,
-        "y": 3100,
+        "x": 1230,
+        "y": 1620,
         "wires": [
             [
                 "2036fdbe.acda92"
@@ -4542,8 +3585,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1830,
-        "y": 3060,
+        "x": 1230,
+        "y": 1580,
         "wires": [
             [
                 "93983053.42cca8"
@@ -4560,8 +3603,8 @@
         "deviceId": "1",
         "command": "",
         "commandArgs": "",
-        "x": 2100,
-        "y": 3060,
+        "x": 1500,
+        "y": 1580,
         "wires": [
             []
         ]
@@ -4576,8 +3619,8 @@
         "deviceId": "2",
         "command": "",
         "commandArgs": "",
-        "x": 2100,
-        "y": 3100,
+        "x": 1500,
+        "y": 1620,
         "wires": [
             []
         ]
@@ -4598,8 +3641,8 @@
         "randomUnits": "seconds",
         "drop": false,
         "outputs": 1,
-        "x": 1935,
-        "y": 3060,
+        "x": 1335,
+        "y": 1580,
         "wires": [
             [
                 "a0f2d6e.daab828",
@@ -4624,8 +3667,8 @@
         "randomUnits": "seconds",
         "drop": false,
         "outputs": 1,
-        "x": 1935,
-        "y": 3100,
+        "x": 1335,
+        "y": 1620,
         "wires": [
             [
                 "407e2a78.c9971c",
@@ -4640,8 +3683,8 @@
         "z": "f9337f21.0eab78",
         "confignode": "f2d9c01d.62cb2",
         "name": "R Pico",
-        "x": 890,
-        "y": 2840,
+        "x": 110,
+        "y": 1580,
         "wires": [
             [
                 "56178c721891bd45"
@@ -4652,14 +3695,15 @@
         "id": "3a326fc0.24f35",
         "type": "hubitat command",
         "z": "f9337f21.0eab78",
+        "d": true,
         "deviceLabel": "",
         "name": "Christmas Tree On",
         "server": "252d4ef4.c14b6a",
-        "deviceId": "97",
+        "deviceId": "",
         "command": "on",
         "commandArgs": "",
-        "x": 570,
-        "y": 2940,
+        "x": 590,
+        "y": 1940,
         "wires": [
             []
         ]
@@ -4683,8 +3727,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1040,
-        "y": 3000,
+        "x": 440,
+        "y": 1520,
         "wires": [
             [
                 "a210b273a66c0675"
@@ -4726,8 +3770,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 5,
-        "x": 870,
-        "y": 3060,
+        "x": 270,
+        "y": 1580,
         "wires": [
             [
                 "84f932994c4d9b0e"
@@ -4771,8 +3815,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 3,
-        "x": 1270,
-        "y": 3060,
+        "x": 670,
+        "y": 1580,
         "wires": [
             [
                 "a788d89aee1e0f93"
@@ -4802,8 +3846,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1420,
-        "y": 3120,
+        "x": 820,
+        "y": 1640,
         "wires": [
             [
                 "b2f59f4fef3d8b86"
@@ -4829,8 +3873,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1420,
-        "y": 3040,
+        "x": 820,
+        "y": 1560,
         "wires": [
             []
         ]
@@ -4854,8 +3898,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1040,
-        "y": 3040,
+        "x": 440,
+        "y": 1560,
         "wires": [
             [
                 "a210b273a66c0675"
@@ -4878,8 +3922,8 @@
         "randomUnits": "seconds",
         "drop": false,
         "outputs": 1,
-        "x": 1175,
-        "y": 3060,
+        "x": 575,
+        "y": 1580,
         "wires": [
             [
                 "16910248bf6af96e"
@@ -4906,8 +3950,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1040,
-        "y": 3080,
+        "x": 440,
+        "y": 1600,
         "wires": [
             [
                 "a210b273a66c0675"
@@ -4933,8 +3977,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1040,
-        "y": 3120,
+        "x": 440,
+        "y": 1640,
         "wires": [
             [
                 "a210b273a66c0675"
@@ -4960,8 +4004,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1040,
-        "y": 3160,
+        "x": 440,
+        "y": 1680,
         "wires": [
             [
                 "a210b273a66c0675"
@@ -4990,8 +4034,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 1650,
-        "y": 3080,
+        "x": 1050,
+        "y": 1600,
         "wires": [
             [
                 "91e8ca3f.3f295"
@@ -5008,11 +4052,11 @@
         "deviceLabel": "Porch Bulb",
         "name": "",
         "server": "252d4ef4.c14b6a",
-        "deviceId": "66",
+        "deviceId": "129",
         "command": "",
         "commandArgs": "",
-        "x": 690,
-        "y": 2360,
+        "x": 730,
+        "y": 1340,
         "wires": [
             []
         ]
@@ -5021,28 +4065,25 @@
         "id": "2c07bcd4127d212c",
         "type": "inject",
         "z": "f9337f21.0eab78",
+        "d": true,
         "name": "Every 15 minutes",
         "props": [
             {
-                "p": "payload",
-                "v": "",
-                "vt": "date"
+                "p": "payload"
             },
             {
                 "p": "topic",
-                "v": "",
-                "vt": "string"
+                "vt": "str"
             }
         ],
-        "repeat": "900",
+        "repeat": "180",
         "crontab": "",
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "",
         "payloadType": "date",
-        "x": 170,
-        "y": 2240,
+        "x": 210,
+        "y": 1220,
         "wires": [
             [
                 "ed59489e0b1aba05"
@@ -5066,8 +4107,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 575,
-        "y": 2360,
+        "x": 615,
+        "y": 1340,
         "wires": [
             [
                 "ba0630734df9353f"
@@ -5094,8 +4135,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 800,
-        "y": 2220,
+        "x": 940,
+        "y": 1200,
         "wires": [
             [
                 "42ed4e7930637962"
@@ -5120,8 +4161,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 620,
-        "y": 2240,
+        "x": 760,
+        "y": 1220,
         "wires": [
             [
                 "ee0bd27a6442d9c0"
@@ -5150,8 +4191,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 790,
-        "y": 2260,
+        "x": 930,
+        "y": 1240,
         "wires": [
             [
                 "4505442f74bfd3ab"
@@ -5184,8 +4225,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 990,
-        "y": 2220,
+        "x": 1130,
+        "y": 1200,
         "wires": [
             [
                 "338150d80eb38946"
@@ -5218,8 +4259,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 990,
-        "y": 2260,
+        "x": 1130,
+        "y": 1240,
         "wires": [
             [
                 "338150d80eb38946"
@@ -5243,8 +4284,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1115,
-        "y": 2240,
+        "x": 1255,
+        "y": 1220,
         "wires": [
             [
                 "4abace46d88d5d82"
@@ -5256,14 +4297,15 @@
         "id": "4abace46d88d5d82",
         "type": "hubitat command",
         "z": "f9337f21.0eab78",
+        "d": true,
         "deviceLabel": "Porch Bulb",
         "name": "",
         "server": "252d4ef4.c14b6a",
-        "deviceId": "66",
-        "command": "setColor",
+        "deviceId": "129",
+        "command": "",
         "commandArgs": "",
-        "x": 1230,
-        "y": 2240,
+        "x": 1370,
+        "y": 1220,
         "wires": [
             []
         ]
@@ -5289,8 +4331,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 895,
-        "y": 2160,
+        "x": 1035,
+        "y": 1140,
         "wires": [
             [
                 "42ed4e7930637962"
@@ -5319,8 +4361,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 895,
-        "y": 2320,
+        "x": 1035,
+        "y": 1300,
         "wires": [
             [
                 "4505442f74bfd3ab"
@@ -5332,6 +4374,7 @@
         "id": "ed59489e0b1aba05",
         "type": "within-time-switch",
         "z": "f9337f21.0eab78",
+        "d": true,
         "name": "",
         "positionConfig": "96c207ac.2237a8",
         "startTime": "sunsetEnd",
@@ -5379,11 +4422,11 @@
         "outOfTimeValue": "",
         "outOfTimeValueType": "msgInput",
         "tsCompare": "0",
-        "x": 390,
-        "y": 2240,
+        "x": 430,
+        "y": 1220,
         "wires": [
             [
-                "c63d476daa70e7fc"
+                "5c8d33eaa026ed22"
             ],
             []
         ]
@@ -5420,8 +4463,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 395,
-        "y": 2940,
+        "x": 415,
+        "y": 1940,
         "wires": [
             [
                 "3a326fc0.24f35",
@@ -5447,8 +4490,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 395,
-        "y": 3000,
+        "x": 415,
+        "y": 2000,
         "wires": [
             [
                 "363a9c66.018164",
@@ -5461,14 +4504,15 @@
         "id": "734464febd07fa6d",
         "type": "hubitat command",
         "z": "f9337f21.0eab78",
+        "d": true,
         "deviceLabel": "",
         "name": "Christmas Tree Off",
         "server": "252d4ef4.c14b6a",
-        "deviceId": "97",
+        "deviceId": "",
         "command": "off",
         "commandArgs": "",
-        "x": 570,
-        "y": 3040,
+        "x": 590,
+        "y": 2040,
         "wires": [
             []
         ]
@@ -5477,14 +4521,15 @@
         "id": "820b94d67933b2ef",
         "type": "hubitat command",
         "z": "f9337f21.0eab78",
+        "d": true,
         "deviceLabel": "",
         "name": "Christmas Tree On",
         "server": "252d4ef4.c14b6a",
-        "deviceId": "9",
+        "deviceId": "",
         "command": "on",
         "commandArgs": "",
-        "x": 570,
-        "y": 2900,
+        "x": 590,
+        "y": 1900,
         "wires": [
             []
         ]
@@ -5499,7 +4544,8 @@
         "wires": [
             [
                 "7bc998fc.ab71a"
-            ]
+            ],
+            []
         ]
     },
     {
@@ -5511,7 +4557,901 @@
         "y": 260,
         "wires": [
             [
-                "bccb5224.c91e6"
+                "bccb5224.c91e6",
+                "a6797f5f7e93c611"
+            ],
+            [
+                "f07d9b8e765b357e"
+            ]
+        ]
+    },
+    {
+        "id": "f07d9b8e765b357e",
+        "type": "debug",
+        "z": "f9337f21.0eab78",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1050,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "a6797f5f7e93c611",
+        "type": "debug",
+        "z": "f9337f21.0eab78",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1050,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "5c8d33eaa026ed22",
+        "type": "change",
+        "z": "f9337f21.0eab78",
+        "name": "Set Color",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "setColor",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 1220,
+        "wires": [
+            [
+                "c63d476daa70e7fc"
+            ]
+        ]
+    },
+    {
+        "id": "734f4b605d12eb34",
+        "type": "hubitat device",
+        "z": "2984f0164b9bafb7",
+        "deviceLabel": "Doorbell",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "195",
+        "attribute": "",
+        "sendEvent": true,
+        "x": 390,
+        "y": 400,
+        "wires": [
+            [
+                "ccb3166344080cad"
+            ]
+        ]
+    },
+    {
+        "id": "ccb3166344080cad",
+        "type": "debug",
+        "z": "2984f0164b9bafb7",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "8c649af674c27f6f",
+        "type": "hubitat device",
+        "z": "5ea7da533109f7d2",
+        "deviceLabel": "Nursery Motion",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "296",
+        "attribute": "temperature",
+        "sendEvent": true,
+        "x": 340,
+        "y": 360,
+        "wires": [
+            [
+                "9a9327868eb02b4e"
+            ]
+        ]
+    },
+    {
+        "id": "9a9327868eb02b4e",
+        "type": "switch",
+        "z": "5ea7da533109f7d2",
+        "name": "Temp Range",
+        "property": "payload.value",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lte",
+                "v": "nursery_target_termperature",
+                "vt": "flow"
+            },
+            {
+                "t": "gt",
+                "v": "nursery_target_termperature",
+                "vt": "flow"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 550,
+        "y": 360,
+        "wires": [
+            [
+                "6b912ff086e85cb7"
+            ],
+            [
+                "610b115f9dc3dc4e"
+            ]
+        ]
+    },
+    {
+        "id": "6b912ff086e85cb7",
+        "type": "change",
+        "z": "5ea7da533109f7d2",
+        "name": "Turn On",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "on",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 770,
+        "y": 340,
+        "wires": [
+            [
+                "6fbf8d22ddf073c3"
+            ]
+        ]
+    },
+    {
+        "id": "610b115f9dc3dc4e",
+        "type": "change",
+        "z": "5ea7da533109f7d2",
+        "name": "Turn Off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 770,
+        "y": 380,
+        "wires": [
+            [
+                "6fbf8d22ddf073c3"
+            ]
+        ]
+    },
+    {
+        "id": "6fbf8d22ddf073c3",
+        "type": "delay",
+        "z": "5ea7da533109f7d2",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 915,
+        "y": 360,
+        "wires": [
+            [
+                "5950004ab6e303e9"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "5950004ab6e303e9",
+        "type": "hubitat command",
+        "z": "5ea7da533109f7d2",
+        "deviceLabel": "Nursery heater",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "295",
+        "command": "",
+        "commandArgs": "",
+        "x": 1060,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6e0be4c71f6049f4",
+        "type": "ui_slider",
+        "z": "5ea7da533109f7d2",
+        "name": "",
+        "label": "Thermostat",
+        "tooltip": "",
+        "group": "e735a89b7a9ee10c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "65",
+        "max": "75",
+        "step": 1,
+        "className": "",
+        "x": 850,
+        "y": 500,
+        "wires": [
+            [
+                "c470b188781512b9",
+                "f3293b280b42ac31",
+                "0865e59e7b28b161",
+                "dac3b2962b26cf7c"
+            ]
+        ]
+    },
+    {
+        "id": "c470b188781512b9",
+        "type": "change",
+        "z": "5ea7da533109f7d2",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "nursery_target_termperature",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1110,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4ee65fdbab6e50c5",
+        "type": "within-time-switch",
+        "z": "5ea7da533109f7d2",
+        "name": "",
+        "nameInt": "",
+        "positionConfig": "96c207ac.2237a8",
+        "startTime": "18:00",
+        "startTimeType": "entered",
+        "startOffset": 0,
+        "startOffsetType": "none",
+        "startOffsetMultiplier": 60000,
+        "endTime": "7:00",
+        "endTimeType": "entered",
+        "endOffset": 0,
+        "endOffsetType": "none",
+        "endOffsetMultiplier": 60000,
+        "timeRestrictions": 0,
+        "timeRestrictionsType": "none",
+        "timeDays": "*",
+        "timeOnlyOddDays": false,
+        "timeOnlyEvenDays": false,
+        "timeOnlyOddWeeks": false,
+        "timeOnlyEvenWeeks": false,
+        "timeMonths": "*",
+        "timedatestart": "",
+        "timedateend": "",
+        "propertyStart": "",
+        "propertyStartType": "none",
+        "propertyStartCompare": "true",
+        "propertyStartThreshold": "",
+        "propertyStartThresholdType": "num",
+        "startTimeAlt": "",
+        "startTimeAltType": "entered",
+        "startOffsetAlt": 0,
+        "startOffsetAltType": "none",
+        "startOffsetAltMultiplier": 60000,
+        "propertyEnd": "",
+        "propertyEndType": "none",
+        "propertyEndCompare": "true",
+        "propertyEndThreshold": "",
+        "propertyEndThresholdType": "num",
+        "endTimeAlt": "",
+        "endTimeAltType": "entered",
+        "endOffsetAlt": 0,
+        "endOffsetAltType": "none",
+        "endOffsetAltMultiplier": 60000,
+        "withinTimeValue": "true",
+        "withinTimeValueType": "msgInput",
+        "outOfTimeValue": "false",
+        "outOfTimeValueType": "msgInput",
+        "tsCompare": "0",
+        "x": 470,
+        "y": 500,
+        "wires": [
+            [
+                "fd55ae8abe436dcc"
+            ],
+            [
+                "0ac01c7391c1fcaa"
+            ]
+        ]
+    },
+    {
+        "id": "e9fac1935eea4d4e",
+        "type": "link out",
+        "z": "5ea7da533109f7d2",
+        "name": "Temperature Target Changed",
+        "mode": "link",
+        "links": [
+            "0e981ff72b6531fa"
+        ],
+        "x": 1045,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "0e981ff72b6531fa",
+        "type": "link in",
+        "z": "5ea7da533109f7d2",
+        "name": "Nursery Thermostat",
+        "links": [
+            "e9fac1935eea4d4e"
+        ],
+        "x": 195,
+        "y": 360,
+        "wires": [
+            [
+                "8c649af674c27f6f"
+            ]
+        ]
+    },
+    {
+        "id": "f3293b280b42ac31",
+        "type": "delay",
+        "z": "5ea7da533109f7d2",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 975,
+        "y": 440,
+        "wires": [
+            [
+                "e9fac1935eea4d4e"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "fd55ae8abe436dcc",
+        "type": "change",
+        "z": "5ea7da533109f7d2",
+        "name": "Set to 71",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "71",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 480,
+        "wires": [
+            [
+                "6e0be4c71f6049f4"
+            ]
+        ]
+    },
+    {
+        "id": "0ac01c7391c1fcaa",
+        "type": "change",
+        "z": "5ea7da533109f7d2",
+        "name": "Set to 68",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "68",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 520,
+        "wires": [
+            [
+                "6e0be4c71f6049f4"
+            ]
+        ]
+    },
+    {
+        "id": "0865e59e7b28b161",
+        "type": "change",
+        "z": "5ea7da533109f7d2",
+        "name": "motion event",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\t\"displayName\": \"Nursery Thermostat\",\t    \"value\": payload,\t    \"unit\": \"ºF\",\t    \"name\": \"thermostat\"\t}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1030,
+        "y": 560,
+        "wires": [
+            [
+                "fe38ca3f817e9a37"
+            ]
+        ]
+    },
+    {
+        "id": "dac3b2962b26cf7c",
+        "type": "debug",
+        "z": "5ea7da533109f7d2",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1410,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "730554c739498cf7",
+        "type": "inject",
+        "z": "5ea7da533109f7d2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "600",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 250,
+        "y": 500,
+        "wires": [
+            [
+                "4ee65fdbab6e50c5"
+            ]
+        ]
+    },
+    {
+        "id": "fe38ca3f817e9a37",
+        "type": "link out",
+        "z": "5ea7da533109f7d2",
+        "name": "Nursury Thermostat Value",
+        "mode": "link",
+        "links": [
+            "343588e064736f74"
+        ],
+        "x": 1165,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "6657c34fc5526365",
+        "type": "hubitat event",
+        "z": "3cee340729aa7e67",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "x": 130,
+        "y": 240,
+        "wires": [
+            [
+                "bf11becc09f647d3"
+            ]
+        ]
+    },
+    {
+        "id": "7ab4d3bb0b23307a",
+        "type": "debug",
+        "z": "3cee340729aa7e67",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 610,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "bf11becc09f647d3",
+        "type": "switch",
+        "z": "3cee340729aa7e67",
+        "name": "event type",
+        "property": "payload.name",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "contact",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "temperature",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "battery",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "switch",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "motion",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "door",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 7,
+        "x": 290,
+        "y": 240,
+        "wires": [
+            [
+                "df02cf40df785a77"
+            ],
+            [
+                "f1c8f4a6feb195ee"
+            ],
+            [
+                "7873fe0b01890ad9"
+            ],
+            [
+                "f523d9b2f4ced5ec"
+            ],
+            [
+                "8da7f611fe3c89c7"
+            ],
+            [
+                "22968a10aeef5a92"
+            ],
+            [
+                "7ab4d3bb0b23307a"
+            ]
+        ]
+    },
+    {
+        "id": "8da7f611fe3c89c7",
+        "type": "change",
+        "z": "3cee340729aa7e67",
+        "name": "motion",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$merge([\tpayload,\t{\t    \"value\": payload.value = \"inactive\" ? 1 : 0,\t    \"unit\": \"active\"\t}])",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 360,
+        "wires": [
+            [
+                "39c19b82fe4bc292"
+            ]
+        ]
+    },
+    {
+        "id": "61c9a0d14daa9eb2",
+        "type": "postgresql",
+        "z": "3cee340729aa7e67",
+        "name": "-> metrics",
+        "query": "INSERT INTO \"public\".\"metric_data\"\n(\"name\", \"metric\", \"units\", \"type\")\nVALUES(\n  '{{{ msg.payload.displayName }}}',\n  {{{ msg.payload.value }}},\n  '{{{ msg.payload.unit }}}',\n  '{{{ msg.payload.name }}}'\n)",
+        "postgreSQLConfig": "21b7c61d0303ac49",
+        "split": true,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 530,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3cd5c1bf91804a74",
+        "type": "debug",
+        "z": "3cee340729aa7e67",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 230,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "7873fe0b01890ad9",
+        "type": "change",
+        "z": "3cee340729aa7e67",
+        "name": "battery",
+        "rules": [],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 280,
+        "wires": [
+            [
+                "39c19b82fe4bc292"
+            ]
+        ]
+    },
+    {
+        "id": "f1c8f4a6feb195ee",
+        "type": "change",
+        "z": "3cee340729aa7e67",
+        "name": "temperature",
+        "rules": [],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 240,
+        "wires": [
+            [
+                "39c19b82fe4bc292"
+            ]
+        ]
+    },
+    {
+        "id": "f523d9b2f4ced5ec",
+        "type": "change",
+        "z": "3cee340729aa7e67",
+        "name": "switch",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$merge([\tpayload,\t{\t    \"value\": payload.value = \"on\" ? 1 : 0,\t    \"unit\": \"power\"\t}])",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 320,
+        "wires": [
+            [
+                "39c19b82fe4bc292"
+            ]
+        ]
+    },
+    {
+        "id": "df02cf40df785a77",
+        "type": "change",
+        "z": "3cee340729aa7e67",
+        "name": "contact sensor",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$merge([\tpayload,\t{\t    \"value\": payload.value = \"open\" ? 1 : 0,\t    \"unit\": \"openness\",\t    \"type\": \"contact\"\t}])",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 200,
+        "wires": [
+            [
+                "39c19b82fe4bc292"
+            ]
+        ]
+    },
+    {
+        "id": "343588e064736f74",
+        "type": "link in",
+        "z": "3cee340729aa7e67",
+        "name": "Metric Insert",
+        "links": [
+            "39c19b82fe4bc292",
+            "fe38ca3f817e9a37"
+        ],
+        "x": 95,
+        "y": 620,
+        "wires": [
+            [
+                "3cd5c1bf91804a74",
+                "4dd1cf4a3b45aa71"
+            ]
+        ]
+    },
+    {
+        "id": "39c19b82fe4bc292",
+        "type": "link out",
+        "z": "3cee340729aa7e67",
+        "name": "Events from Hubitat",
+        "mode": "link",
+        "links": [
+            "343588e064736f74"
+        ],
+        "x": 995,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "4dd1cf4a3b45aa71",
+        "type": "delay",
+        "z": "3cee340729aa7e67",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 330,
+        "y": 640,
+        "wires": [
+            [
+                "61c9a0d14daa9eb2"
+            ]
+        ]
+    },
+    {
+        "id": "22968a10aeef5a92",
+        "type": "change",
+        "z": "3cee340729aa7e67",
+        "name": "door",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$merge([ payload, {\t    \"value\": payload.value = \"open\" ? 1 : 0,\t    \"unit\": \"openness\",\t    \"type\": \"contact\"\t}])",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 400,
+        "wires": [
+            [
+                "39c19b82fe4bc292"
             ]
         ]
     }
