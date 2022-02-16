@@ -4663,6 +4663,7 @@
         "id": "8c649af674c27f6f",
         "type": "hubitat device",
         "z": "5ea7da533109f7d2",
+        "d": true,
         "deviceLabel": "Nursery Motion",
         "name": "",
         "server": "252d4ef4.c14b6a",
@@ -4681,6 +4682,7 @@
         "id": "9a9327868eb02b4e",
         "type": "switch",
         "z": "5ea7da533109f7d2",
+        "d": true,
         "name": "",
         "property": "payload.value",
         "propertyType": "msg",
@@ -4713,6 +4715,7 @@
         "id": "6b912ff086e85cb7",
         "type": "change",
         "z": "5ea7da533109f7d2",
+        "d": true,
         "name": "Turn On",
         "rules": [
             {
@@ -4740,6 +4743,7 @@
         "id": "610b115f9dc3dc4e",
         "type": "change",
         "z": "5ea7da533109f7d2",
+        "d": true,
         "name": "Turn Off",
         "rules": [
             {
@@ -4767,6 +4771,7 @@
         "id": "6fbf8d22ddf073c3",
         "type": "delay",
         "z": "5ea7da533109f7d2",
+        "d": true,
         "name": "",
         "pauseType": "delay",
         "timeout": "1",
@@ -4793,6 +4798,7 @@
         "id": "5950004ab6e303e9",
         "type": "hubitat command",
         "z": "5ea7da533109f7d2",
+        "d": true,
         "deviceLabel": "Nursery heater",
         "name": "",
         "server": "252d4ef4.c14b6a",
@@ -4809,6 +4815,7 @@
         "id": "4ee65fdbab6e50c5",
         "type": "within-time-switch",
         "z": "5ea7da533109f7d2",
+        "d": true,
         "name": "",
         "nameInt": "",
         "positionConfig": "96c207ac.2237a8",
@@ -4872,6 +4879,7 @@
         "id": "fd55ae8abe436dcc",
         "type": "change",
         "z": "5ea7da533109f7d2",
+        "d": true,
         "name": "Set to 71",
         "rules": [
             {
@@ -4899,6 +4907,7 @@
         "id": "0ac01c7391c1fcaa",
         "type": "change",
         "z": "5ea7da533109f7d2",
+        "d": true,
         "name": "Set to 68",
         "rules": [
             {
@@ -4926,6 +4935,7 @@
         "id": "730554c739498cf7",
         "type": "inject",
         "z": "5ea7da533109f7d2",
+        "d": true,
         "name": "",
         "props": [
             {
@@ -4955,6 +4965,7 @@
         "id": "15e112896bba35a1",
         "type": "inject",
         "z": "5ea7da533109f7d2",
+        "d": true,
         "name": "",
         "props": [
             {
@@ -4984,6 +4995,7 @@
         "id": "cb173b3098147468",
         "type": "hubitat device",
         "z": "5ea7da533109f7d2",
+        "d": true,
         "deviceLabel": "Nursery Thermostat",
         "name": "",
         "server": "252d4ef4.c14b6a",
@@ -5002,6 +5014,7 @@
         "id": "2ead20e8deb4f948",
         "type": "inject",
         "z": "5ea7da533109f7d2",
+        "d": true,
         "name": "",
         "props": [
             {
@@ -5031,6 +5044,7 @@
         "id": "de7231c76864285d",
         "type": "hubitat device",
         "z": "5ea7da533109f7d2",
+        "d": true,
         "deviceLabel": "Nursery Heater",
         "name": "",
         "server": "252d4ef4.c14b6a",
@@ -5047,6 +5061,7 @@
         "id": "9515e75687db36b1",
         "type": "hubitat command",
         "z": "5ea7da533109f7d2",
+        "d": true,
         "deviceLabel": "Nursery Thermostat",
         "name": "",
         "server": "252d4ef4.c14b6a",
@@ -5063,6 +5078,7 @@
         "id": "7457eff1e3f141e1",
         "type": "change",
         "z": "5ea7da533109f7d2",
+        "d": true,
         "name": "Update Thermostat",
         "rules": [
             {
@@ -5090,6 +5106,7 @@
         "id": "0865e59e7b28b161",
         "type": "change",
         "z": "5ea7da533109f7d2",
+        "d": true,
         "name": "Prep for archive",
         "rules": [
             {
@@ -5118,6 +5135,7 @@
         "id": "fe38ca3f817e9a37",
         "type": "link out",
         "z": "5ea7da533109f7d2",
+        "d": true,
         "name": "Nursury Thermostat Value",
         "mode": "link",
         "links": [
@@ -5131,6 +5149,7 @@
         "id": "a26351b2bceb8b82",
         "type": "change",
         "z": "5ea7da533109f7d2",
+        "d": true,
         "name": "Extract Set Temperature",
         "rules": [
             {
@@ -5159,6 +5178,7 @@
         "id": "7770322aa3d56dd0",
         "type": "hubitat command",
         "z": "5ea7da533109f7d2",
+        "d": true,
         "deviceLabel": "Nursery Thermostat",
         "name": "",
         "server": "252d4ef4.c14b6a",
@@ -5175,6 +5195,7 @@
         "id": "5093877f31b387c2",
         "type": "change",
         "z": "5ea7da533109f7d2",
+        "d": true,
         "name": "Update Heat Target",
         "rules": [
             {
@@ -5202,6 +5223,7 @@
         "id": "87ef3751d2c45f40",
         "type": "inject",
         "z": "5ea7da533109f7d2",
+        "d": true,
         "name": "",
         "props": [
             {
@@ -5232,6 +5254,7 @@
         "id": "56433d65b046c482",
         "type": "inject",
         "z": "5ea7da533109f7d2",
+        "d": true,
         "name": "",
         "props": [
             {
@@ -5262,6 +5285,7 @@
         "id": "67f4a2025c19fee9",
         "type": "debug",
         "z": "5ea7da533109f7d2",
+        "d": true,
         "name": "",
         "active": true,
         "tosidebar": true,
@@ -5279,6 +5303,7 @@
         "id": "4d6ef013dd52486d",
         "type": "inject",
         "z": "5ea7da533109f7d2",
+        "d": true,
         "name": "",
         "props": [
             {
@@ -5308,6 +5333,7 @@
         "id": "f224da5a176c0ec2",
         "type": "hubitat device",
         "z": "5ea7da533109f7d2",
+        "d": true,
         "deviceLabel": "Nursery Thermostat",
         "name": "",
         "server": "252d4ef4.c14b6a",
@@ -5321,6 +5347,556 @@
                 "9a9327868eb02b4e"
             ]
         ]
+    },
+    {
+        "id": "46bc013146c44650",
+        "type": "hubitat device",
+        "z": "5ea7da533109f7d2",
+        "deviceLabel": "Nursery Motion",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "296",
+        "attribute": "temperature",
+        "sendEvent": true,
+        "x": 500,
+        "y": 1400,
+        "wires": [
+            [
+                "4674c01832c90331"
+            ]
+        ]
+    },
+    {
+        "id": "4674c01832c90331",
+        "type": "switch",
+        "z": "5ea7da533109f7d2",
+        "name": "",
+        "property": "payload.value",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lt",
+                "v": "thermostat_target_temperature",
+                "vt": "flow"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 665,
+        "y": 1400,
+        "wires": [
+            [
+                "77c40dc5323af6c7"
+            ],
+            [
+                "9de2725147fcc722"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "77c40dc5323af6c7",
+        "type": "change",
+        "z": "5ea7da533109f7d2",
+        "name": "Turn On",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "on",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 790,
+        "y": 1380,
+        "wires": [
+            [
+                "35102158e27a92cf"
+            ]
+        ]
+    },
+    {
+        "id": "9de2725147fcc722",
+        "type": "change",
+        "z": "5ea7da533109f7d2",
+        "name": "Turn Off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 790,
+        "y": 1420,
+        "wires": [
+            [
+                "35102158e27a92cf"
+            ]
+        ]
+    },
+    {
+        "id": "35102158e27a92cf",
+        "type": "delay",
+        "z": "5ea7da533109f7d2",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 935,
+        "y": 1400,
+        "wires": [
+            [
+                "91e44923b7e19f5d"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "91e44923b7e19f5d",
+        "type": "hubitat command",
+        "z": "5ea7da533109f7d2",
+        "deviceLabel": "Nursery heater",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "295",
+        "command": "",
+        "commandArgs": "",
+        "x": 1080,
+        "y": 1400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7dbce7ed9bea03d1",
+        "type": "within-time-switch",
+        "z": "5ea7da533109f7d2",
+        "name": "",
+        "nameInt": "",
+        "positionConfig": "96c207ac.2237a8",
+        "startTime": "18:00",
+        "startTimeType": "entered",
+        "startOffset": 0,
+        "startOffsetType": "none",
+        "startOffsetMultiplier": 60000,
+        "endTime": "7:00",
+        "endTimeType": "entered",
+        "endOffset": 0,
+        "endOffsetType": "none",
+        "endOffsetMultiplier": 60000,
+        "timeRestrictions": 0,
+        "timeRestrictionsType": "none",
+        "timeDays": "*",
+        "timeOnlyOddDays": false,
+        "timeOnlyEvenDays": false,
+        "timeOnlyOddWeeks": false,
+        "timeOnlyEvenWeeks": false,
+        "timeMonths": "*",
+        "timedatestart": "",
+        "timedateend": "",
+        "propertyStart": "",
+        "propertyStartType": "none",
+        "propertyStartCompare": "true",
+        "propertyStartThreshold": "",
+        "propertyStartThresholdType": "num",
+        "startTimeAlt": "",
+        "startTimeAltType": "entered",
+        "startOffsetAlt": 0,
+        "startOffsetAltType": "none",
+        "startOffsetAltMultiplier": 60000,
+        "propertyEnd": "",
+        "propertyEndType": "none",
+        "propertyEndCompare": "true",
+        "propertyEndThreshold": "",
+        "propertyEndThresholdType": "num",
+        "endTimeAlt": "",
+        "endTimeAltType": "entered",
+        "endOffsetAlt": 0,
+        "endOffsetAltType": "none",
+        "endOffsetAltMultiplier": 60000,
+        "withinTimeValue": "true",
+        "withinTimeValueType": "msgInput",
+        "outOfTimeValue": "false",
+        "outOfTimeValueType": "msgInput",
+        "tsCompare": "0",
+        "x": 550,
+        "y": 1680,
+        "wires": [
+            [
+                "d66bd7f80b103eba"
+            ],
+            [
+                "da76f260389255c8"
+            ]
+        ]
+    },
+    {
+        "id": "d66bd7f80b103eba",
+        "type": "change",
+        "z": "5ea7da533109f7d2",
+        "name": "Set to 71",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "71",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 740,
+        "y": 1660,
+        "wires": [
+            [
+                "df3c6eaa0f30f8af"
+            ]
+        ]
+    },
+    {
+        "id": "da76f260389255c8",
+        "type": "change",
+        "z": "5ea7da533109f7d2",
+        "name": "Set to 68",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "68",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 740,
+        "y": 1700,
+        "wires": [
+            [
+                "df3c6eaa0f30f8af"
+            ]
+        ]
+    },
+    {
+        "id": "44495fed1207cfa5",
+        "type": "inject",
+        "z": "5ea7da533109f7d2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "01 18 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 330,
+        "y": 1660,
+        "wires": [
+            [
+                "7dbce7ed9bea03d1"
+            ]
+        ]
+    },
+    {
+        "id": "7d820a4d4958c249",
+        "type": "inject",
+        "z": "5ea7da533109f7d2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "01 07 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 330,
+        "y": 1700,
+        "wires": [
+            [
+                "7dbce7ed9bea03d1"
+            ]
+        ]
+    },
+    {
+        "id": "3c79a306eb415abe",
+        "type": "inject",
+        "z": "5ea7da533109f7d2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 340,
+        "y": 1440,
+        "wires": [
+            [
+                "46bc013146c44650"
+            ]
+        ]
+    },
+    {
+        "id": "a17e265ca20976c9",
+        "type": "hubitat device",
+        "z": "5ea7da533109f7d2",
+        "deviceLabel": "Nursery Heater",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "295",
+        "attribute": "switch",
+        "sendEvent": true,
+        "x": 1080,
+        "y": 1440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7ce9a0908ad05466",
+        "type": "change",
+        "z": "5ea7da533109f7d2",
+        "name": "Prep for archive",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\t\"displayName\": \"Nursery Thermostat\",\t    \"value\": payload,\t    \"unit\": \"ºF\",\t    \"name\": \"thermostat\"\t}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 1660,
+        "wires": [
+            [
+                "5129b82d1a8558d7",
+                "5129b82d1a8558d7"
+            ]
+        ]
+    },
+    {
+        "id": "5129b82d1a8558d7",
+        "type": "link out",
+        "z": "5ea7da533109f7d2",
+        "name": "Nursury Thermostat Value",
+        "mode": "link",
+        "links": [
+            "343588e064736f74"
+        ],
+        "x": 1145,
+        "y": 1660,
+        "wires": []
+    },
+    {
+        "id": "cfd79f8c7eba4aa1",
+        "type": "change",
+        "z": "5ea7da533109f7d2",
+        "name": "Update Heat Target",
+        "rules": [
+            {
+                "t": "set",
+                "p": "thermostat_target_temperature",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1010,
+        "y": 1700,
+        "wires": [
+            [
+                "2f29260c2e9ecd70"
+            ]
+        ]
+    },
+    {
+        "id": "b86b80d8712cf2d5",
+        "type": "inject",
+        "z": "5ea7da533109f7d2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 605,
+        "y": 1640,
+        "wires": [
+            [
+                "d66bd7f80b103eba"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "87cbde9e7b68fd20",
+        "type": "inject",
+        "z": "5ea7da533109f7d2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 605,
+        "y": 1720,
+        "wires": [
+            [
+                "da76f260389255c8"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "2f29260c2e9ecd70",
+        "type": "link out",
+        "z": "5ea7da533109f7d2",
+        "name": "thermostat changed",
+        "mode": "link",
+        "links": [
+            "b1cf7509f4f69281"
+        ],
+        "x": 1165,
+        "y": 1700,
+        "wires": []
+    },
+    {
+        "id": "b1cf7509f4f69281",
+        "type": "link in",
+        "z": "5ea7da533109f7d2",
+        "name": "",
+        "links": [
+            "2f29260c2e9ecd70"
+        ],
+        "x": 375,
+        "y": 1400,
+        "wires": [
+            [
+                "46bc013146c44650"
+            ]
+        ]
+    },
+    {
+        "id": "df3c6eaa0f30f8af",
+        "type": "delay",
+        "z": "5ea7da533109f7d2",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 855,
+        "y": 1680,
+        "wires": [
+            [
+                "cfd79f8c7eba4aa1",
+                "7ce9a0908ad05466"
+            ]
+        ],
+        "l": false
     },
     {
         "id": "6657c34fc5526365",
@@ -5583,7 +6159,8 @@
         "name": "Metric Insert",
         "links": [
             "39c19b82fe4bc292",
-            "fe38ca3f817e9a37"
+            "fe38ca3f817e9a37",
+            "5129b82d1a8558d7"
         ],
         "x": 95,
         "y": 620,
