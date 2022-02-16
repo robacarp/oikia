@@ -4669,11 +4669,11 @@
         "deviceId": "296",
         "attribute": "temperature",
         "sendEvent": true,
-        "x": 340,
+        "x": 220,
         "y": 360,
         "wires": [
             [
-                "9a9327868eb02b4e"
+                "7457eff1e3f141e1"
             ]
         ]
     },
@@ -4681,26 +4681,24 @@
         "id": "9a9327868eb02b4e",
         "type": "switch",
         "z": "5ea7da533109f7d2",
-        "name": "Temp Range",
+        "name": "",
         "property": "payload.value",
         "propertyType": "msg",
         "rules": [
             {
-                "t": "lte",
-                "v": "nursery_target_termperature",
-                "vt": "flow"
+                "t": "eq",
+                "v": "heating",
+                "vt": "str"
             },
             {
-                "t": "gt",
-                "v": "nursery_target_termperature",
-                "vt": "flow"
+                "t": "else"
             }
         ],
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 550,
-        "y": 360,
+        "x": 565,
+        "y": 580,
         "wires": [
             [
                 "6b912ff086e85cb7"
@@ -4708,7 +4706,8 @@
             [
                 "610b115f9dc3dc4e"
             ]
-        ]
+        ],
+        "l": false
     },
     {
         "id": "6b912ff086e85cb7",
@@ -4729,8 +4728,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 770,
-        "y": 340,
+        "x": 690,
+        "y": 560,
         "wires": [
             [
                 "6fbf8d22ddf073c3"
@@ -4756,8 +4755,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 770,
-        "y": 380,
+        "x": 690,
+        "y": 600,
         "wires": [
             [
                 "6fbf8d22ddf073c3"
@@ -4781,8 +4780,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 915,
-        "y": 360,
+        "x": 835,
+        "y": 580,
         "wires": [
             [
                 "5950004ab6e303e9"
@@ -4800,63 +4799,8 @@
         "deviceId": "295",
         "command": "",
         "commandArgs": "",
-        "x": 1060,
-        "y": 360,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "6e0be4c71f6049f4",
-        "type": "ui_slider",
-        "z": "5ea7da533109f7d2",
-        "name": "",
-        "label": "Thermostat",
-        "tooltip": "",
-        "group": "e735a89b7a9ee10c",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "outs": "end",
-        "topic": "topic",
-        "topicType": "msg",
-        "min": "65",
-        "max": "75",
-        "step": 1,
-        "className": "",
-        "x": 850,
-        "y": 500,
-        "wires": [
-            [
-                "c470b188781512b9",
-                "f3293b280b42ac31",
-                "0865e59e7b28b161",
-                "dac3b2962b26cf7c"
-            ]
-        ]
-    },
-    {
-        "id": "c470b188781512b9",
-        "type": "change",
-        "z": "5ea7da533109f7d2",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "nursery_target_termperature",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1110,
-        "y": 500,
+        "x": 980,
+        "y": 580,
         "wires": [
             []
         ]
@@ -4913,8 +4857,8 @@
         "outOfTimeValue": "false",
         "outOfTimeValueType": "msgInput",
         "tsCompare": "0",
-        "x": 470,
-        "y": 500,
+        "x": 450,
+        "y": 860,
         "wires": [
             [
                 "fd55ae8abe436dcc"
@@ -4923,61 +4867,6 @@
                 "0ac01c7391c1fcaa"
             ]
         ]
-    },
-    {
-        "id": "e9fac1935eea4d4e",
-        "type": "link out",
-        "z": "5ea7da533109f7d2",
-        "name": "Temperature Target Changed",
-        "mode": "link",
-        "links": [
-            "0e981ff72b6531fa"
-        ],
-        "x": 1045,
-        "y": 440,
-        "wires": []
-    },
-    {
-        "id": "0e981ff72b6531fa",
-        "type": "link in",
-        "z": "5ea7da533109f7d2",
-        "name": "Nursery Thermostat",
-        "links": [
-            "e9fac1935eea4d4e"
-        ],
-        "x": 195,
-        "y": 360,
-        "wires": [
-            [
-                "8c649af674c27f6f"
-            ]
-        ]
-    },
-    {
-        "id": "f3293b280b42ac31",
-        "type": "delay",
-        "z": "5ea7da533109f7d2",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "1",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 975,
-        "y": 440,
-        "wires": [
-            [
-                "e9fac1935eea4d4e"
-            ]
-        ],
-        "l": false
     },
     {
         "id": "fd55ae8abe436dcc",
@@ -4998,11 +4887,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 660,
-        "y": 480,
+        "x": 640,
+        "y": 840,
         "wires": [
             [
-                "6e0be4c71f6049f4"
+                "5093877f31b387c2"
             ]
         ]
     },
@@ -5025,56 +4914,13 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 660,
-        "y": 520,
+        "x": 640,
+        "y": 880,
         "wires": [
             [
-                "6e0be4c71f6049f4"
+                "5093877f31b387c2"
             ]
         ]
-    },
-    {
-        "id": "0865e59e7b28b161",
-        "type": "change",
-        "z": "5ea7da533109f7d2",
-        "name": "motion event",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\t\"displayName\": \"Nursery Thermostat\",\t    \"value\": payload,\t    \"unit\": \"ºF\",\t    \"name\": \"thermostat\"\t}",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1030,
-        "y": 560,
-        "wires": [
-            [
-                "fe38ca3f817e9a37"
-            ]
-        ]
-    },
-    {
-        "id": "dac3b2962b26cf7c",
-        "type": "debug",
-        "z": "5ea7da533109f7d2",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1410,
-        "y": 440,
-        "wires": []
     },
     {
         "id": "730554c739498cf7",
@@ -5090,18 +4936,181 @@
                 "vt": "str"
             }
         ],
-        "repeat": "600",
+        "repeat": "",
+        "crontab": "01 18 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 230,
+        "y": 840,
+        "wires": [
+            [
+                "4ee65fdbab6e50c5"
+            ]
+        ]
+    },
+    {
+        "id": "15e112896bba35a1",
+        "type": "inject",
+        "z": "5ea7da533109f7d2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "01 07 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 230,
+        "y": 880,
+        "wires": [
+            [
+                "4ee65fdbab6e50c5"
+            ]
+        ]
+    },
+    {
+        "id": "cb173b3098147468",
+        "type": "hubitat device",
+        "z": "5ea7da533109f7d2",
+        "deviceLabel": "Nursery Thermostat",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "322",
+        "attribute": "heatingSetpoint",
+        "sendEvent": true,
+        "x": 440,
+        "y": 700,
+        "wires": [
+            [
+                "a26351b2bceb8b82"
+            ]
+        ]
+    },
+    {
+        "id": "2ead20e8deb4f948",
+        "type": "inject",
+        "z": "5ea7da533109f7d2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 250,
-        "y": 500,
+        "x": 220,
+        "y": 700,
         "wires": [
             [
-                "4ee65fdbab6e50c5"
+                "cb173b3098147468"
+            ]
+        ]
+    },
+    {
+        "id": "de7231c76864285d",
+        "type": "hubitat device",
+        "z": "5ea7da533109f7d2",
+        "deviceLabel": "Nursery Heater",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "295",
+        "attribute": "switch",
+        "sendEvent": true,
+        "x": 980,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9515e75687db36b1",
+        "type": "hubitat command",
+        "z": "5ea7da533109f7d2",
+        "deviceLabel": "Nursery Thermostat",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "322",
+        "command": "setTemperature",
+        "commandArgs": "",
+        "x": 660,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7457eff1e3f141e1",
+        "type": "change",
+        "z": "5ea7da533109f7d2",
+        "name": "Update Thermostat",
+        "rules": [
+            {
+                "t": "set",
+                "p": "arguments",
+                "pt": "msg",
+                "to": "payload.value",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 430,
+        "y": 360,
+        "wires": [
+            [
+                "9515e75687db36b1"
+            ]
+        ]
+    },
+    {
+        "id": "0865e59e7b28b161",
+        "type": "change",
+        "z": "5ea7da533109f7d2",
+        "name": "Prep for archive",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\t\"displayName\": \"Nursery Thermostat\",\t    \"value\": payload,\t    \"unit\": \"ºF\",\t    \"name\": \"thermostat\"\t}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 920,
+        "y": 700,
+        "wires": [
+            [
+                "fe38ca3f817e9a37",
+                "fe38ca3f817e9a37"
             ]
         ]
     },
@@ -5114,9 +5123,204 @@
         "links": [
             "343588e064736f74"
         ],
-        "x": 1165,
-        "y": 560,
+        "x": 1065,
+        "y": 700,
         "wires": []
+    },
+    {
+        "id": "a26351b2bceb8b82",
+        "type": "change",
+        "z": "5ea7da533109f7d2",
+        "name": "Extract Set Temperature",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.value",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 690,
+        "y": 700,
+        "wires": [
+            [
+                "0865e59e7b28b161",
+                "0865e59e7b28b161"
+            ]
+        ]
+    },
+    {
+        "id": "7770322aa3d56dd0",
+        "type": "hubitat command",
+        "z": "5ea7da533109f7d2",
+        "deviceLabel": "Nursery Thermostat",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "322",
+        "command": "setHeatingSetpoint",
+        "commandArgs": "",
+        "x": 1060,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5093877f31b387c2",
+        "type": "change",
+        "z": "5ea7da533109f7d2",
+        "name": "Update Heat Target",
+        "rules": [
+            {
+                "t": "set",
+                "p": "arguments",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 830,
+        "y": 860,
+        "wires": [
+            [
+                "7770322aa3d56dd0"
+            ]
+        ]
+    },
+    {
+        "id": "87ef3751d2c45f40",
+        "type": "inject",
+        "z": "5ea7da533109f7d2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 505,
+        "y": 820,
+        "wires": [
+            [
+                "fd55ae8abe436dcc"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "56433d65b046c482",
+        "type": "inject",
+        "z": "5ea7da533109f7d2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 505,
+        "y": 900,
+        "wires": [
+            [
+                "0ac01c7391c1fcaa"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "67f4a2025c19fee9",
+        "type": "debug",
+        "z": "5ea7da533109f7d2",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 450,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "4d6ef013dd52486d",
+        "type": "inject",
+        "z": "5ea7da533109f7d2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 200,
+        "y": 580,
+        "wires": [
+            [
+                "f224da5a176c0ec2"
+            ]
+        ]
+    },
+    {
+        "id": "f224da5a176c0ec2",
+        "type": "hubitat device",
+        "z": "5ea7da533109f7d2",
+        "deviceLabel": "Nursery Thermostat",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "322",
+        "attribute": "thermostatOperatingState",
+        "sendEvent": true,
+        "x": 390,
+        "y": 580,
+        "wires": [
+            [
+                "9a9327868eb02b4e"
+            ]
+        ]
     },
     {
         "id": "6657c34fc5526365",
