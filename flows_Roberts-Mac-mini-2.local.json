@@ -5291,7 +5291,6 @@
         "id": "4d6ef013dd52486d",
         "type": "inject",
         "z": "5ea7da533109f7d2",
-        "d": true,
         "name": "",
         "props": [
             {
@@ -5882,6 +5881,35 @@
         "x": 1190,
         "y": 1600,
         "wires": []
+    },
+    {
+        "id": "ad44fab0d747c90d",
+        "type": "inject",
+        "z": "5ea7da533109f7d2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 280,
+        "wires": [
+            [
+                "8c649af674c27f6f"
+            ]
+        ]
     },
     {
         "id": "bf11becc09f647d3",
