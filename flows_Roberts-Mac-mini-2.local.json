@@ -4661,8 +4661,8 @@
         "deviceId": "296",
         "attribute": "temperature",
         "sendEvent": true,
-        "x": 220,
-        "y": 360,
+        "x": 360,
+        "y": 440,
         "wires": [
             [
                 "7457eff1e3f141e1"
@@ -5058,8 +5058,8 @@
         "deviceId": "322",
         "command": "setTemperature",
         "commandArgs": "",
-        "x": 660,
-        "y": 360,
+        "x": 800,
+        "y": 440,
         "wires": [
             []
         ]
@@ -5083,8 +5083,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 430,
-        "y": 360,
+        "x": 570,
+        "y": 440,
         "wires": [
             [
                 "9515e75687db36b1"
@@ -5903,8 +5903,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 120,
-        "y": 280,
+        "x": 200,
+        "y": 440,
         "wires": [
             [
                 "8c649af674c27f6f"
