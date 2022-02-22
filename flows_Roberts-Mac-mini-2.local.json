@@ -460,14 +460,6 @@
         "className": ""
     },
     {
-        "id": "dae9231b5598e07b",
-        "type": "ui_tab",
-        "name": "Batteries",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
-    },
-    {
         "id": "d0a30fbf02a8ceb5",
         "type": "ui_spacer",
         "z": "5ea7da533109f7d2",
@@ -5002,8 +4994,8 @@
         "deviceId": "322",
         "attribute": "heatingSetpoint",
         "sendEvent": true,
-        "x": 440,
-        "y": 700,
+        "x": 480,
+        "y": 800,
         "wires": [
             [
                 "a26351b2bceb8b82"
@@ -5285,7 +5277,6 @@
         "id": "67f4a2025c19fee9",
         "type": "debug",
         "z": "5ea7da533109f7d2",
-        "d": true,
         "name": "",
         "active": true,
         "tosidebar": true,
@@ -5295,8 +5286,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 450,
-        "y": 460,
+        "x": 630,
+        "y": 1060,
         "wires": []
     },
     {
@@ -5482,7 +5473,7 @@
         "id": "91e44923b7e19f5d",
         "type": "hubitat command",
         "z": "5ea7da533109f7d2",
-        "deviceLabel": "Nursery heater",
+        "deviceLabel": "Nursery Heater",
         "name": "",
         "server": "252d4ef4.c14b6a",
         "deviceId": "295",
@@ -5495,79 +5486,16 @@
         ]
     },
     {
-        "id": "7dbce7ed9bea03d1",
-        "type": "within-time-switch",
-        "z": "5ea7da533109f7d2",
-        "name": "",
-        "nameInt": "",
-        "positionConfig": "96c207ac.2237a8",
-        "startTime": "18:00",
-        "startTimeType": "entered",
-        "startOffset": 0,
-        "startOffsetType": "none",
-        "startOffsetMultiplier": 60000,
-        "endTime": "7:00",
-        "endTimeType": "entered",
-        "endOffset": 0,
-        "endOffsetType": "none",
-        "endOffsetMultiplier": 60000,
-        "timeRestrictions": 0,
-        "timeRestrictionsType": "none",
-        "timeDays": "*",
-        "timeOnlyOddDays": false,
-        "timeOnlyEvenDays": false,
-        "timeOnlyOddWeeks": false,
-        "timeOnlyEvenWeeks": false,
-        "timeMonths": "*",
-        "timedatestart": "",
-        "timedateend": "",
-        "propertyStart": "",
-        "propertyStartType": "none",
-        "propertyStartCompare": "true",
-        "propertyStartThreshold": "",
-        "propertyStartThresholdType": "num",
-        "startTimeAlt": "",
-        "startTimeAltType": "entered",
-        "startOffsetAlt": 0,
-        "startOffsetAltType": "none",
-        "startOffsetAltMultiplier": 60000,
-        "propertyEnd": "",
-        "propertyEndType": "none",
-        "propertyEndCompare": "true",
-        "propertyEndThreshold": "",
-        "propertyEndThresholdType": "num",
-        "endTimeAlt": "",
-        "endTimeAltType": "entered",
-        "endOffsetAlt": 0,
-        "endOffsetAltType": "none",
-        "endOffsetAltMultiplier": 60000,
-        "withinTimeValue": "true",
-        "withinTimeValueType": "msgInput",
-        "outOfTimeValue": "false",
-        "outOfTimeValueType": "msgInput",
-        "tsCompare": "0",
-        "x": 550,
-        "y": 1680,
-        "wires": [
-            [
-                "d66bd7f80b103eba"
-            ],
-            [
-                "da76f260389255c8"
-            ]
-        ]
-    },
-    {
         "id": "d66bd7f80b103eba",
         "type": "change",
         "z": "5ea7da533109f7d2",
-        "name": "Set to 71",
+        "name": "Sleeping Temp",
         "rules": [
             {
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "71",
+                "to": "72",
                 "tot": "num"
             }
         ],
@@ -5576,8 +5504,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 740,
-        "y": 1660,
+        "x": 620,
+        "y": 1640,
         "wires": [
             [
                 "df3c6eaa0f30f8af"
@@ -5588,7 +5516,7 @@
         "id": "da76f260389255c8",
         "type": "change",
         "z": "5ea7da533109f7d2",
-        "name": "Set to 68",
+        "name": "Not Sleeping Temp",
         "rules": [
             {
                 "t": "set",
@@ -5603,8 +5531,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 740,
-        "y": 1700,
+        "x": 630,
+        "y": 1680,
         "wires": [
             [
                 "df3c6eaa0f30f8af"
@@ -5615,7 +5543,7 @@
         "id": "44495fed1207cfa5",
         "type": "inject",
         "z": "5ea7da533109f7d2",
-        "name": "",
+        "name": "6pm",
         "props": [
             {
                 "p": "payload"
@@ -5632,11 +5560,11 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 330,
-        "y": 1660,
+        "x": 290,
+        "y": 1720,
         "wires": [
             [
-                "7dbce7ed9bea03d1"
+                "d66bd7f80b103eba"
             ]
         ]
     },
@@ -5644,7 +5572,7 @@
         "id": "7d820a4d4958c249",
         "type": "inject",
         "z": "5ea7da533109f7d2",
-        "name": "",
+        "name": "7am",
         "props": [
             {
                 "p": "payload"
@@ -5661,11 +5589,11 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 330,
-        "y": 1700,
+        "x": 290,
+        "y": 1600,
         "wires": [
             [
-                "7dbce7ed9bea03d1"
+                "da76f260389255c8"
             ]
         ]
     },
@@ -5683,15 +5611,15 @@
                 "vt": "str"
             }
         ],
-        "repeat": "",
+        "repeat": "900",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 340,
-        "y": 1440,
+        "x": 310,
+        "y": 1360,
         "wires": [
             [
                 "46bc013146c44650"
@@ -5734,7 +5662,7 @@
         "to": "",
         "reg": false,
         "x": 1000,
-        "y": 1660,
+        "y": 1640,
         "wires": [
             [
                 "5129b82d1a8558d7",
@@ -5752,7 +5680,7 @@
             "343588e064736f74"
         ],
         "x": 1145,
-        "y": 1660,
+        "y": 1640,
         "wires": []
     },
     {
@@ -5775,72 +5703,12 @@
         "to": "",
         "reg": false,
         "x": 1010,
-        "y": 1700,
+        "y": 1680,
         "wires": [
             [
                 "2f29260c2e9ecd70"
             ]
         ]
-    },
-    {
-        "id": "b86b80d8712cf2d5",
-        "type": "inject",
-        "z": "5ea7da533109f7d2",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 605,
-        "y": 1640,
-        "wires": [
-            [
-                "d66bd7f80b103eba"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "87cbde9e7b68fd20",
-        "type": "inject",
-        "z": "5ea7da533109f7d2",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 605,
-        "y": 1720,
-        "wires": [
-            [
-                "da76f260389255c8"
-            ]
-        ],
-        "l": false
     },
     {
         "id": "2f29260c2e9ecd70",
@@ -5852,7 +5720,7 @@
             "b1cf7509f4f69281"
         ],
         "x": 1165,
-        "y": 1700,
+        "y": 1680,
         "wires": []
     },
     {
@@ -5888,45 +5756,135 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 855,
-        "y": 1680,
+        "x": 815,
+        "y": 1660,
         "wires": [
             [
                 "cfd79f8c7eba4aa1",
-                "7ce9a0908ad05466"
+                "7ce9a0908ad05466",
+                "a888436a6dd5841a"
             ]
         ],
         "l": false
     },
     {
-        "id": "6657c34fc5526365",
-        "type": "hubitat event",
-        "z": "3cee340729aa7e67",
-        "name": "",
-        "server": "252d4ef4.c14b6a",
-        "x": 130,
-        "y": 240,
+        "id": "5bf831122a6797c9",
+        "type": "inject",
+        "z": "5ea7da533109f7d2",
+        "name": "12pm",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "01 12 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 290,
+        "y": 1640,
         "wires": [
             [
-                "bf11becc09f647d3"
+                "d66bd7f80b103eba"
             ]
         ]
     },
     {
-        "id": "7ab4d3bb0b23307a",
+        "id": "a5bf5efb16b2c0dd",
+        "type": "inject",
+        "z": "5ea7da533109f7d2",
+        "name": "2pm",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "01 14 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 290,
+        "y": 1680,
+        "wires": [
+            [
+                "da76f260389255c8"
+            ]
+        ]
+    },
+    {
+        "id": "e430dbf41651211e",
+        "type": "hubitat device",
+        "z": "5ea7da533109f7d2",
+        "deviceLabel": "Nursery Thermostat",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "322",
+        "attribute": "heatingSetpoint",
+        "sendEvent": true,
+        "x": 440,
+        "y": 1060,
+        "wires": [
+            [
+                "67f4a2025c19fee9"
+            ]
+        ]
+    },
+    {
+        "id": "a888436a6dd5841a",
+        "type": "change",
+        "z": "5ea7da533109f7d2",
+        "name": "Prep for archive",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\t    \"name\": payload.displayName,\t    \"metric\": payloadue,\t    \"unit\": \"°F\",\t    \"type\": \"thermostat\"\t}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 1600,
+        "wires": [
+            [
+                "9bbce1b87d58d064"
+            ]
+        ]
+    },
+    {
+        "id": "9bbce1b87d58d064",
         "type": "debug",
-        "z": "3cee340729aa7e67",
+        "z": "5ea7da533109f7d2",
         "name": "",
         "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
+        "complete": "true",
+        "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 610,
-        "y": 460,
+        "x": 1190,
+        "y": 1600,
         "wires": []
     },
     {
@@ -5978,22 +5936,22 @@
         "y": 240,
         "wires": [
             [
-                "df02cf40df785a77"
+                "c56bc16fed4fd11e"
             ],
             [
-                "f1c8f4a6feb195ee"
+                "400956638eb16c17"
             ],
             [
-                "7873fe0b01890ad9"
+                "e5045ed819a795e7"
             ],
             [
-                "f523d9b2f4ced5ec"
+                "b1f93bc7bca948da"
             ],
             [
-                "8da7f611fe3c89c7"
+                "6a9fe7a6fd325567"
             ],
             [
-                "22968a10aeef5a92"
+                "7f80854d1d776741"
             ],
             [
                 "7ab4d3bb0b23307a"
@@ -6001,31 +5959,35 @@
         ]
     },
     {
-        "id": "8da7f611fe3c89c7",
-        "type": "change",
+        "id": "6657c34fc5526365",
+        "type": "hubitat event",
         "z": "3cee340729aa7e67",
-        "name": "motion",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "$merge([\tpayload,\t{\t    \"value\": payload.value = \"inactive\" ? 1 : 0,\t    \"unit\": \"active\"\t}])",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 590,
-        "y": 360,
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "x": 130,
+        "y": 240,
         "wires": [
             [
-                "39c19b82fe4bc292"
+                "bf11becc09f647d3"
             ]
         ]
+    },
+    {
+        "id": "7ab4d3bb0b23307a",
+        "type": "debug",
+        "z": "3cee340729aa7e67",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 610,
+        "y": 400,
+        "wires": []
     },
     {
         "id": "61c9a0d14daa9eb2",
@@ -6037,8 +5999,8 @@
         "split": true,
         "rowsPerMsg": 1,
         "outputs": 1,
-        "x": 530,
-        "y": 640,
+        "x": 790,
+        "y": 1240,
         "wires": [
             []
         ]
@@ -6056,101 +6018,9 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 230,
-        "y": 600,
+        "x": 410,
+        "y": 1200,
         "wires": []
-    },
-    {
-        "id": "7873fe0b01890ad9",
-        "type": "change",
-        "z": "3cee340729aa7e67",
-        "name": "battery",
-        "rules": [],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 600,
-        "y": 280,
-        "wires": [
-            [
-                "39c19b82fe4bc292"
-            ]
-        ]
-    },
-    {
-        "id": "f1c8f4a6feb195ee",
-        "type": "change",
-        "z": "3cee340729aa7e67",
-        "name": "temperature",
-        "rules": [],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 610,
-        "y": 240,
-        "wires": [
-            [
-                "39c19b82fe4bc292"
-            ]
-        ]
-    },
-    {
-        "id": "f523d9b2f4ced5ec",
-        "type": "change",
-        "z": "3cee340729aa7e67",
-        "name": "switch",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "$merge([\tpayload,\t{\t    \"value\": payload.value = \"on\" ? 1 : 0,\t    \"unit\": \"power\"\t}])",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 590,
-        "y": 320,
-        "wires": [
-            [
-                "39c19b82fe4bc292"
-            ]
-        ]
-    },
-    {
-        "id": "df02cf40df785a77",
-        "type": "change",
-        "z": "3cee340729aa7e67",
-        "name": "contact sensor",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "$merge([\tpayload,\t{\t    \"value\": payload.value = \"open\" ? 1 : 0,\t    \"unit\": \"openness\",\t    \"type\": \"contact\"\t}])",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 620,
-        "y": 200,
-        "wires": [
-            [
-                "39c19b82fe4bc292"
-            ]
-        ]
     },
     {
         "id": "343588e064736f74",
@@ -6162,27 +6032,14 @@
             "fe38ca3f817e9a37",
             "5129b82d1a8558d7"
         ],
-        "x": 95,
-        "y": 620,
+        "x": 275,
+        "y": 1220,
         "wires": [
             [
                 "3cd5c1bf91804a74",
                 "4dd1cf4a3b45aa71"
             ]
         ]
-    },
-    {
-        "id": "39c19b82fe4bc292",
-        "type": "link out",
-        "z": "3cee340729aa7e67",
-        "name": "Events from Hubitat",
-        "mode": "link",
-        "links": [
-            "343588e064736f74"
-        ],
-        "x": 995,
-        "y": 200,
-        "wires": []
     },
     {
         "id": "4dd1cf4a3b45aa71",
@@ -6201,8 +6058,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 330,
-        "y": 640,
+        "x": 510,
+        "y": 1240,
         "wires": [
             [
                 "61c9a0d14daa9eb2"
@@ -6210,16 +6067,185 @@
         ]
     },
     {
-        "id": "22968a10aeef5a92",
+        "id": "c7e8d0fe127ac669",
+        "type": "postgresql",
+        "z": "3cee340729aa7e67",
+        "name": "-> metrics",
+        "query": "INSERT INTO \"public\".\"metric_data\"\n(\"name\", \"metric\", \"units\", \"type\")\nVALUES(\n  '{{{ msg.payload.name }}}',\n  {{{ msg.payload.metric }}},\n  '{{{ msg.payload.unit }}}',\n  '{{{ msg.payload.type }}}'\n)",
+        "postgreSQLConfig": "21b7c61d0303ac49",
+        "split": true,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 610,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9b53e8934f167062",
+        "type": "delay",
+        "z": "3cee340729aa7e67",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 330,
+        "y": 600,
+        "wires": [
+            [
+                "c7e8d0fe127ac669"
+            ]
+        ]
+    },
+    {
+        "id": "20a270b73ce8e3eb",
+        "type": "link in",
+        "z": "3cee340729aa7e67",
+        "name": "New Metric Insert",
+        "links": [
+            "e16cf27bcb6da70f"
+        ],
+        "x": 95,
+        "y": 600,
+        "wires": [
+            [
+                "9b53e8934f167062",
+                "222cf76ed6febdf8"
+            ]
+        ]
+    },
+    {
+        "id": "c56bc16fed4fd11e",
         "type": "change",
         "z": "3cee340729aa7e67",
-        "name": "door",
+        "name": "contact sensor",
         "rules": [
             {
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "$merge([ payload, {\t    \"value\": payload.value = \"open\" ? 1 : 0,\t    \"unit\": \"openness\",\t    \"type\": \"contact\"\t}])",
+                "to": "{\t    \"name\": payload.displayName,\t    \"metric\": payload.value = \"open\" ? 1 : 0,\t    \"unit\": \"openness\",\t    \"type\": payload.name\t}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 160,
+        "wires": [
+            [
+                "e16cf27bcb6da70f"
+            ]
+        ]
+    },
+    {
+        "id": "e16cf27bcb6da70f",
+        "type": "link out",
+        "z": "3cee340729aa7e67",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "20a270b73ce8e3eb"
+        ],
+        "x": 745,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "222cf76ed6febdf8",
+        "type": "debug",
+        "z": "3cee340729aa7e67",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 230,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "400956638eb16c17",
+        "type": "change",
+        "z": "3cee340729aa7e67",
+        "name": "temperature",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\t    \"name\": payload.displayName,\t    \"metric\": payload.value,\t    \"unit\": payload.unit,\t    \"type\": payload.name\t}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 200,
+        "wires": [
+            [
+                "e16cf27bcb6da70f"
+            ]
+        ]
+    },
+    {
+        "id": "e5045ed819a795e7",
+        "type": "change",
+        "z": "3cee340729aa7e67",
+        "name": "battery",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\t    \"name\": payload.displayName,\t    \"metric\": payload.value,\t    \"unit\": payload.unit,\t    \"type\": payload.name\t}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 240,
+        "wires": [
+            [
+                "e16cf27bcb6da70f"
+            ]
+        ]
+    },
+    {
+        "id": "b1f93bc7bca948da",
+        "type": "change",
+        "z": "3cee340729aa7e67",
+        "name": "switch",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\t    \"name\": payload.displayName,\t    \"metric\": payload.value = \"on\" ? 1 : 0,\t    \"unit\": \"power\",\t    \"type\": payload.name\t}",
                 "tot": "jsonata"
             }
         ],
@@ -6229,10 +6255,64 @@
         "to": "",
         "reg": false,
         "x": 590,
-        "y": 400,
+        "y": 280,
         "wires": [
             [
-                "39c19b82fe4bc292"
+                "e16cf27bcb6da70f"
+            ]
+        ]
+    },
+    {
+        "id": "6a9fe7a6fd325567",
+        "type": "change",
+        "z": "3cee340729aa7e67",
+        "name": "motion",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\t    \"name\": payload.displayName,\t    \"metric\": payload.value = \"active\" ? 1 : 0,\t    \"unit\": \"activity\",\t    \"type\": payload.name\t}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 320,
+        "wires": [
+            [
+                "e16cf27bcb6da70f"
+            ]
+        ]
+    },
+    {
+        "id": "7f80854d1d776741",
+        "type": "change",
+        "z": "3cee340729aa7e67",
+        "name": "door",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\t    \"name\": payload.displayName,\t    \"metric\": payload.value = \"open\" ? 1 : 0,\t    \"unit\": \"openness\",\t    \"type\": payload.name\t}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 360,
+        "wires": [
+            [
+                "e16cf27bcb6da70f"
             ]
         ]
     }
