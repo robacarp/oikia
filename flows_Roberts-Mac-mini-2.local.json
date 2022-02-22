@@ -5167,7 +5167,6 @@
         "id": "7770322aa3d56dd0",
         "type": "hubitat command",
         "z": "5ea7da533109f7d2",
-        "d": true,
         "deviceLabel": "Nursery Thermostat",
         "name": "",
         "server": "252d4ef4.c14b6a",
