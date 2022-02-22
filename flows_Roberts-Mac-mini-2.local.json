@@ -4806,7 +4806,6 @@
         "id": "4ee65fdbab6e50c5",
         "type": "within-time-switch",
         "z": "5ea7da533109f7d2",
-        "d": true,
         "name": "",
         "nameInt": "",
         "positionConfig": "96c207ac.2237a8",
@@ -4870,7 +4869,6 @@
         "id": "fd55ae8abe436dcc",
         "type": "change",
         "z": "5ea7da533109f7d2",
-        "d": true,
         "name": "Set to 71",
         "rules": [
             {
@@ -4898,7 +4896,6 @@
         "id": "0ac01c7391c1fcaa",
         "type": "change",
         "z": "5ea7da533109f7d2",
-        "d": true,
         "name": "Set to 68",
         "rules": [
             {
@@ -4926,7 +4923,6 @@
         "id": "730554c739498cf7",
         "type": "inject",
         "z": "5ea7da533109f7d2",
-        "d": true,
         "name": "",
         "props": [
             {
@@ -4956,7 +4952,6 @@
         "id": "15e112896bba35a1",
         "type": "inject",
         "z": "5ea7da533109f7d2",
-        "d": true,
         "name": "",
         "props": [
             {
@@ -4986,15 +4981,14 @@
         "id": "cb173b3098147468",
         "type": "hubitat device",
         "z": "5ea7da533109f7d2",
-        "d": true,
         "deviceLabel": "Nursery Thermostat",
         "name": "",
         "server": "252d4ef4.c14b6a",
         "deviceId": "322",
         "attribute": "heatingSetpoint",
         "sendEvent": true,
-        "x": 480,
-        "y": 800,
+        "x": 420,
+        "y": 700,
         "wires": [
             [
                 "a26351b2bceb8b82"
@@ -5005,7 +4999,6 @@
         "id": "2ead20e8deb4f948",
         "type": "inject",
         "z": "5ea7da533109f7d2",
-        "d": true,
         "name": "",
         "props": [
             {
@@ -5095,7 +5088,6 @@
         "id": "0865e59e7b28b161",
         "type": "change",
         "z": "5ea7da533109f7d2",
-        "d": true,
         "name": "Prep for archive",
         "rules": [
             {
@@ -5124,7 +5116,6 @@
         "id": "fe38ca3f817e9a37",
         "type": "link out",
         "z": "5ea7da533109f7d2",
-        "d": true,
         "name": "Nursury Thermostat Value",
         "mode": "link",
         "links": [
@@ -5138,7 +5129,6 @@
         "id": "a26351b2bceb8b82",
         "type": "change",
         "z": "5ea7da533109f7d2",
-        "d": true,
         "name": "Extract Set Temperature",
         "rules": [
             {
@@ -5167,7 +5157,6 @@
         "id": "7770322aa3d56dd0",
         "type": "hubitat command",
         "z": "5ea7da533109f7d2",
-        "d": true,
         "deviceLabel": "Nursery Thermostat",
         "name": "",
         "server": "252d4ef4.c14b6a",
@@ -5184,7 +5173,6 @@
         "id": "5093877f31b387c2",
         "type": "change",
         "z": "5ea7da533109f7d2",
-        "d": true,
         "name": "Update Heat Target",
         "rules": [
             {
@@ -5212,7 +5200,6 @@
         "id": "87ef3751d2c45f40",
         "type": "inject",
         "z": "5ea7da533109f7d2",
-        "d": true,
         "name": "",
         "props": [
             {
@@ -5243,7 +5230,6 @@
         "id": "56433d65b046c482",
         "type": "inject",
         "z": "5ea7da533109f7d2",
-        "d": true,
         "name": "",
         "props": [
             {
