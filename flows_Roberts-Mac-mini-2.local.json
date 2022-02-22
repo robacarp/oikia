@@ -5325,7 +5325,7 @@
         "name": "",
         "server": "252d4ef4.c14b6a",
         "deviceId": "322",
-        "attribute": "thermostatOperatingState",
+        "attribute": "temperature",
         "sendEvent": true,
         "x": 390,
         "y": 580,
