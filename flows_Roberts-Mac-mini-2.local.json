@@ -4655,7 +4655,6 @@
         "id": "8c649af674c27f6f",
         "type": "hubitat device",
         "z": "5ea7da533109f7d2",
-        "d": true,
         "deviceLabel": "Nursery Motion",
         "name": "",
         "server": "252d4ef4.c14b6a",
@@ -5053,7 +5052,6 @@
         "id": "9515e75687db36b1",
         "type": "hubitat command",
         "z": "5ea7da533109f7d2",
-        "d": true,
         "deviceLabel": "Nursery Thermostat",
         "name": "",
         "server": "252d4ef4.c14b6a",
@@ -5070,7 +5068,6 @@
         "id": "7457eff1e3f141e1",
         "type": "change",
         "z": "5ea7da533109f7d2",
-        "d": true,
         "name": "Update Thermostat",
         "rules": [
             {
