@@ -4661,8 +4661,8 @@
         "deviceId": "296",
         "attribute": "temperature",
         "sendEvent": true,
-        "x": 360,
-        "y": 440,
+        "x": 400,
+        "y": 480,
         "wires": [
             [
                 "7457eff1e3f141e1"
@@ -4689,7 +4689,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 565,
+        "x": 595,
         "y": 580,
         "wires": [
             [
@@ -4720,7 +4720,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 690,
+        "x": 700,
         "y": 560,
         "wires": [
             [
@@ -4747,7 +4747,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 690,
+        "x": 700,
         "y": 600,
         "wires": [
             [
@@ -4760,26 +4760,25 @@
         "type": "delay",
         "z": "5ea7da533109f7d2",
         "name": "",
-        "pauseType": "delay",
+        "pauseType": "rate",
         "timeout": "1",
         "timeoutUnits": "milliseconds",
         "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
+        "nbRateUnits": "5",
+        "rateUnits": "minute",
         "randomFirst": "1",
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 835,
+        "x": 920,
         "y": 580,
         "wires": [
             [
                 "5950004ab6e303e9"
             ]
-        ],
-        "l": false
+        ]
     },
     {
         "id": "5950004ab6e303e9",
@@ -4791,7 +4790,7 @@
         "deviceId": "295",
         "command": "",
         "commandArgs": "",
-        "x": 980,
+        "x": 1130,
         "y": 580,
         "wires": [
             []
@@ -4854,7 +4853,7 @@
         "deviceId": "295",
         "attribute": "switch",
         "sendEvent": true,
-        "x": 980,
+        "x": 1130,
         "y": 620,
         "wires": [
             []
@@ -4870,8 +4869,8 @@
         "deviceId": "322",
         "command": "setTemperature",
         "commandArgs": "",
-        "x": 800,
-        "y": 440,
+        "x": 940,
+        "y": 480,
         "wires": [
             []
         ]
@@ -4895,8 +4894,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 570,
-        "y": 440,
+        "x": 670,
+        "y": 480,
         "wires": [
             [
                 "9515e75687db36b1"
@@ -4940,7 +4939,7 @@
         "deviceId": "322",
         "command": "setHeatingSetpoint",
         "commandArgs": "",
-        "x": 1060,
+        "x": 940,
         "y": 860,
         "wires": [
             []
@@ -4965,7 +4964,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 830,
+        "x": 730,
         "y": 860,
         "wires": [
             [
@@ -5012,7 +5011,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 200,
+        "x": 220,
         "y": 580,
         "wires": [
             [
@@ -5030,7 +5029,7 @@
         "deviceId": "322",
         "attribute": "thermostatOperatingState",
         "sendEvent": true,
-        "x": 390,
+        "x": 420,
         "y": 580,
         "wires": [
             [
@@ -5609,8 +5608,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 200,
-        "y": 440,
+        "x": 220,
+        "y": 480,
         "wires": [
             [
                 "8c649af674c27f6f"
@@ -5786,7 +5785,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 655,
+        "x": 595,
         "y": 860,
         "wires": [
             [
