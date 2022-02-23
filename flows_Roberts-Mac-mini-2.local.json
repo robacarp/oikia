@@ -5943,8 +5943,8 @@
         "split": true,
         "rowsPerMsg": 1,
         "outputs": 1,
-        "x": 790,
-        "y": 1240,
+        "x": 630,
+        "y": 1000,
         "wires": [
             []
         ]
@@ -5962,8 +5962,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 410,
-        "y": 1200,
+        "x": 250,
+        "y": 960,
         "wires": []
     },
     {
@@ -5976,8 +5976,8 @@
             "fe38ca3f817e9a37",
             "5129b82d1a8558d7"
         ],
-        "x": 275,
-        "y": 1220,
+        "x": 115,
+        "y": 980,
         "wires": [
             [
                 "3cd5c1bf91804a74",
@@ -6002,8 +6002,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 510,
-        "y": 1240,
+        "x": 350,
+        "y": 1000,
         "wires": [
             [
                 "61c9a0d14daa9eb2"
