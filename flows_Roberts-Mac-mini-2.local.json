@@ -5085,47 +5085,6 @@
         ]
     },
     {
-        "id": "0865e59e7b28b161",
-        "type": "change",
-        "z": "5ea7da533109f7d2",
-        "name": "Prep for archive",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\t\"displayName\": \"Nursery Thermostat\",\t    \"value\": payload,\t    \"unit\": \"ºF\",\t    \"name\": \"thermostat\"\t}",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 920,
-        "y": 700,
-        "wires": [
-            [
-                "fe38ca3f817e9a37",
-                "fe38ca3f817e9a37"
-            ]
-        ]
-    },
-    {
-        "id": "fe38ca3f817e9a37",
-        "type": "link out",
-        "z": "5ea7da533109f7d2",
-        "name": "Nursury Thermostat Value",
-        "mode": "link",
-        "links": [
-            "343588e064736f74"
-        ],
-        "x": 1065,
-        "y": 700,
-        "wires": []
-    },
-    {
         "id": "a26351b2bceb8b82",
         "type": "change",
         "z": "5ea7da533109f7d2",
@@ -5148,8 +5107,7 @@
         "y": 700,
         "wires": [
             [
-                "0865e59e7b28b161",
-                "0865e59e7b28b161"
+                "b8a1a63fb158b24f"
             ]
         ]
     },
@@ -5900,6 +5858,46 @@
         ]
     },
     {
+        "id": "b8a1a63fb158b24f",
+        "type": "change",
+        "z": "5ea7da533109f7d2",
+        "name": "Prep for archive",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\t    \"name\": \"Nursery Thermostat\",\t    \"metric\": payload,\t    \"unit\": \"ºF\",\t    \"type\": \"thermostat\"\t}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 920,
+        "y": 700,
+        "wires": [
+            [
+                "47f6d47525adeb9b"
+            ]
+        ]
+    },
+    {
+        "id": "47f6d47525adeb9b",
+        "type": "link out",
+        "z": "5ea7da533109f7d2",
+        "name": "Nursury Thermostat Value",
+        "mode": "link",
+        "links": [
+            "20a270b73ce8e3eb"
+        ],
+        "x": 1065,
+        "y": 700,
+        "wires": []
+    },
+    {
         "id": "bf11becc09f647d3",
         "type": "switch",
         "z": "3cee340729aa7e67",
@@ -6125,7 +6123,8 @@
         "z": "3cee340729aa7e67",
         "name": "New Metric Insert",
         "links": [
-            "e16cf27bcb6da70f"
+            "e16cf27bcb6da70f",
+            "47f6d47525adeb9b"
         ],
         "x": 95,
         "y": 600,
