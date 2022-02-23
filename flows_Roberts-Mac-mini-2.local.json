@@ -4673,7 +4673,6 @@
         "id": "9a9327868eb02b4e",
         "type": "switch",
         "z": "5ea7da533109f7d2",
-        "d": true,
         "name": "",
         "property": "payload.value",
         "propertyType": "msg",
@@ -4706,7 +4705,6 @@
         "id": "6b912ff086e85cb7",
         "type": "change",
         "z": "5ea7da533109f7d2",
-        "d": true,
         "name": "Turn On",
         "rules": [
             {
@@ -4734,7 +4732,6 @@
         "id": "610b115f9dc3dc4e",
         "type": "change",
         "z": "5ea7da533109f7d2",
-        "d": true,
         "name": "Turn Off",
         "rules": [
             {
@@ -4762,7 +4759,6 @@
         "id": "6fbf8d22ddf073c3",
         "type": "delay",
         "z": "5ea7da533109f7d2",
-        "d": true,
         "name": "",
         "pauseType": "delay",
         "timeout": "1",
@@ -4789,7 +4785,6 @@
         "id": "5950004ab6e303e9",
         "type": "hubitat command",
         "z": "5ea7da533109f7d2",
-        "d": true,
         "deviceLabel": "Nursery heater",
         "name": "",
         "server": "252d4ef4.c14b6a",
@@ -4800,181 +4795,6 @@
         "y": 580,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "4ee65fdbab6e50c5",
-        "type": "within-time-switch",
-        "z": "5ea7da533109f7d2",
-        "name": "",
-        "nameInt": "",
-        "positionConfig": "96c207ac.2237a8",
-        "startTime": "18:00",
-        "startTimeType": "entered",
-        "startOffset": 0,
-        "startOffsetType": "none",
-        "startOffsetMultiplier": 60000,
-        "endTime": "7:00",
-        "endTimeType": "entered",
-        "endOffset": 0,
-        "endOffsetType": "none",
-        "endOffsetMultiplier": 60000,
-        "timeRestrictions": 0,
-        "timeRestrictionsType": "none",
-        "timeDays": "*",
-        "timeOnlyOddDays": false,
-        "timeOnlyEvenDays": false,
-        "timeOnlyOddWeeks": false,
-        "timeOnlyEvenWeeks": false,
-        "timeMonths": "*",
-        "timedatestart": "",
-        "timedateend": "",
-        "propertyStart": "",
-        "propertyStartType": "none",
-        "propertyStartCompare": "true",
-        "propertyStartThreshold": "",
-        "propertyStartThresholdType": "num",
-        "startTimeAlt": "",
-        "startTimeAltType": "entered",
-        "startOffsetAlt": 0,
-        "startOffsetAltType": "none",
-        "startOffsetAltMultiplier": 60000,
-        "propertyEnd": "",
-        "propertyEndType": "none",
-        "propertyEndCompare": "true",
-        "propertyEndThreshold": "",
-        "propertyEndThresholdType": "num",
-        "endTimeAlt": "",
-        "endTimeAltType": "entered",
-        "endOffsetAlt": 0,
-        "endOffsetAltType": "none",
-        "endOffsetAltMultiplier": 60000,
-        "withinTimeValue": "true",
-        "withinTimeValueType": "msgInput",
-        "outOfTimeValue": "false",
-        "outOfTimeValueType": "msgInput",
-        "tsCompare": "0",
-        "x": 450,
-        "y": 860,
-        "wires": [
-            [
-                "fd55ae8abe436dcc"
-            ],
-            [
-                "0ac01c7391c1fcaa"
-            ]
-        ]
-    },
-    {
-        "id": "fd55ae8abe436dcc",
-        "type": "change",
-        "z": "5ea7da533109f7d2",
-        "name": "Set to 71",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "71",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 640,
-        "y": 840,
-        "wires": [
-            [
-                "5093877f31b387c2"
-            ]
-        ]
-    },
-    {
-        "id": "0ac01c7391c1fcaa",
-        "type": "change",
-        "z": "5ea7da533109f7d2",
-        "name": "Set to 68",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "68",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 640,
-        "y": 880,
-        "wires": [
-            [
-                "5093877f31b387c2"
-            ]
-        ]
-    },
-    {
-        "id": "730554c739498cf7",
-        "type": "inject",
-        "z": "5ea7da533109f7d2",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "01 18 * * *",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 230,
-        "y": 840,
-        "wires": [
-            [
-                "4ee65fdbab6e50c5"
-            ]
-        ]
-    },
-    {
-        "id": "15e112896bba35a1",
-        "type": "inject",
-        "z": "5ea7da533109f7d2",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "01 07 * * *",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 230,
-        "y": 880,
-        "wires": [
-            [
-                "4ee65fdbab6e50c5"
-            ]
         ]
     },
     {
@@ -5028,7 +4848,6 @@
         "id": "de7231c76864285d",
         "type": "hubitat device",
         "z": "5ea7da533109f7d2",
-        "d": true,
         "deviceLabel": "Nursery Heater",
         "name": "",
         "server": "252d4ef4.c14b6a",
@@ -5155,66 +4974,6 @@
         ]
     },
     {
-        "id": "87ef3751d2c45f40",
-        "type": "inject",
-        "z": "5ea7da533109f7d2",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 505,
-        "y": 820,
-        "wires": [
-            [
-                "fd55ae8abe436dcc"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "56433d65b046c482",
-        "type": "inject",
-        "z": "5ea7da533109f7d2",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 505,
-        "y": 900,
-        "wires": [
-            [
-                "0ac01c7391c1fcaa"
-            ]
-        ],
-        "l": false
-    },
-    {
         "id": "67f4a2025c19fee9",
         "type": "debug",
         "z": "5ea7da533109f7d2",
@@ -5269,7 +5028,7 @@
         "name": "",
         "server": "252d4ef4.c14b6a",
         "deviceId": "322",
-        "attribute": "temperature",
+        "attribute": "thermostatOperatingState",
         "sendEvent": true,
         "x": 390,
         "y": 580,
@@ -5413,6 +5172,7 @@
         "id": "91e44923b7e19f5d",
         "type": "hubitat command",
         "z": "5ea7da533109f7d2",
+        "d": true,
         "deviceLabel": "Nursery Heater",
         "name": "",
         "server": "252d4ef4.c14b6a",
@@ -5659,7 +5419,7 @@
         "links": [
             "b1cf7509f4f69281"
         ],
-        "x": 1165,
+        "x": 1145,
         "y": 1680,
         "wires": []
     },
@@ -5896,6 +5656,202 @@
         "x": 1065,
         "y": 700,
         "wires": []
+    },
+    {
+        "id": "be1037b9c1870d79",
+        "type": "change",
+        "z": "5ea7da533109f7d2",
+        "name": "Sleeping Temp",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "72",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 840,
+        "wires": [
+            [
+                "91d7dd6669a87914"
+            ]
+        ]
+    },
+    {
+        "id": "2c57a01f74bab1f0",
+        "type": "change",
+        "z": "5ea7da533109f7d2",
+        "name": "Not Sleeping Temp",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "68",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 880,
+        "wires": [
+            [
+                "91d7dd6669a87914"
+            ]
+        ]
+    },
+    {
+        "id": "232041863af5cfc3",
+        "type": "inject",
+        "z": "5ea7da533109f7d2",
+        "name": "6pm",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "01 18 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 230,
+        "y": 920,
+        "wires": [
+            [
+                "be1037b9c1870d79"
+            ]
+        ]
+    },
+    {
+        "id": "ccb5e1e2fde4b6dc",
+        "type": "inject",
+        "z": "5ea7da533109f7d2",
+        "name": "7am",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "01 07 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 230,
+        "y": 800,
+        "wires": [
+            [
+                "2c57a01f74bab1f0"
+            ]
+        ]
+    },
+    {
+        "id": "91d7dd6669a87914",
+        "type": "delay",
+        "z": "5ea7da533109f7d2",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 695,
+        "y": 860,
+        "wires": [
+            [
+                "5093877f31b387c2"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "72cb13cdf3e1e3f9",
+        "type": "inject",
+        "z": "5ea7da533109f7d2",
+        "name": "12pm",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "01 12 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 230,
+        "y": 840,
+        "wires": [
+            [
+                "be1037b9c1870d79"
+            ]
+        ]
+    },
+    {
+        "id": "9dd3f75063831e96",
+        "type": "inject",
+        "z": "5ea7da533109f7d2",
+        "name": "2pm",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "01 14 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 230,
+        "y": 880,
+        "wires": [
+            [
+                "2c57a01f74bab1f0"
+            ]
+        ]
     },
     {
         "id": "bf11becc09f647d3",
