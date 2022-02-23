@@ -5676,7 +5676,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 500,
+        "x": 460,
         "y": 840,
         "wires": [
             [
@@ -5703,7 +5703,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 510,
+        "x": 470,
         "y": 880,
         "wires": [
             [
@@ -5786,7 +5786,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 695,
+        "x": 655,
         "y": 860,
         "wires": [
             [
