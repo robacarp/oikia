@@ -4853,8 +4853,8 @@
         "deviceId": "295",
         "attribute": "switch",
         "sendEvent": true,
-        "x": 1130,
-        "y": 620,
+        "x": 1140,
+        "y": 640,
         "wires": [
             []
         ]
@@ -4939,7 +4939,7 @@
         "deviceId": "322",
         "command": "setHeatingSetpoint",
         "commandArgs": "",
-        "x": 940,
+        "x": 1140,
         "y": 860,
         "wires": [
             []
@@ -4964,7 +4964,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 730,
+        "x": 910,
         "y": 860,
         "wires": [
             [
@@ -4986,14 +4986,14 @@
                 "vt": "str"
             }
         ],
-        "repeat": "300",
+        "repeat": "",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 230,
+        "x": 220,
         "y": 580,
         "wires": [
             [
@@ -5638,7 +5638,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 460,
+        "x": 640,
         "y": 840,
         "wires": [
             [
@@ -5665,69 +5665,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 470,
+        "x": 650,
         "y": 880,
         "wires": [
             [
                 "91d7dd6669a87914"
-            ]
-        ]
-    },
-    {
-        "id": "232041863af5cfc3",
-        "type": "inject",
-        "z": "5ea7da533109f7d2",
-        "name": "6pm",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "01 18 * * *",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 230,
-        "y": 920,
-        "wires": [
-            [
-                "be1037b9c1870d79"
-            ]
-        ]
-    },
-    {
-        "id": "ccb5e1e2fde4b6dc",
-        "type": "inject",
-        "z": "5ea7da533109f7d2",
-        "name": "7am",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "01 07 * * *",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 230,
-        "y": 800,
-        "wires": [
-            [
-                "2c57a01f74bab1f0"
             ]
         ]
     },
@@ -5748,7 +5690,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 595,
+        "x": 775,
         "y": 860,
         "wires": [
             [
@@ -5758,10 +5700,71 @@
         "l": false
     },
     {
-        "id": "72cb13cdf3e1e3f9",
+        "id": "f5678ecdd5485f20",
+        "type": "within-time-switch",
+        "z": "5ea7da533109f7d2",
+        "name": "",
+        "nameInt": "",
+        "positionConfig": "96c207ac.2237a8",
+        "startTime": "18:00",
+        "startTimeType": "entered",
+        "startOffset": 0,
+        "startOffsetType": "none",
+        "startOffsetMultiplier": 60000,
+        "endTime": "7:00",
+        "endTimeType": "entered",
+        "endOffset": 0,
+        "endOffsetType": "none",
+        "endOffsetMultiplier": 60000,
+        "timeRestrictions": 0,
+        "timeRestrictionsType": "none",
+        "timeDays": "*",
+        "timeOnlyOddDays": false,
+        "timeOnlyEvenDays": false,
+        "timeOnlyOddWeeks": false,
+        "timeOnlyEvenWeeks": false,
+        "timeMonths": "*",
+        "timedatestart": "",
+        "timedateend": "",
+        "propertyStart": "",
+        "propertyStartType": "none",
+        "propertyStartCompare": "true",
+        "propertyStartThreshold": "",
+        "propertyStartThresholdType": "num",
+        "startTimeAlt": "",
+        "startTimeAltType": "entered",
+        "startOffsetAlt": 0,
+        "startOffsetAltType": "none",
+        "startOffsetAltMultiplier": 60000,
+        "propertyEnd": "",
+        "propertyEndType": "none",
+        "propertyEndCompare": "true",
+        "propertyEndThreshold": "",
+        "propertyEndThresholdType": "num",
+        "endTimeAlt": "",
+        "endTimeAltType": "entered",
+        "endOffsetAlt": 0,
+        "endOffsetAltType": "none",
+        "endOffsetAltMultiplier": 60000,
+        "withinTimeValue": "true",
+        "withinTimeValueType": "msgInput",
+        "outOfTimeValue": "false",
+        "outOfTimeValueType": "msgInput",
+        "tsCompare": "0",
+        "x": 430,
+        "y": 800,
+        "wires": [
+            [
+                "be1037b9c1870d79"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "207b3028d768f770",
         "type": "inject",
         "z": "5ea7da533109f7d2",
-        "name": "12pm",
+        "name": "",
         "props": [
             {
                 "p": "payload"
@@ -5771,48 +5774,231 @@
                 "vt": "str"
             }
         ],
-        "repeat": "",
-        "crontab": "01 12 * * *",
-        "once": false,
+        "repeat": "300",
+        "crontab": "",
+        "once": true,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 220,
-        "y": 840,
+        "x": 170,
+        "y": 860,
         "wires": [
             [
-                "be1037b9c1870d79"
+                "cf2f830a031481ed"
             ]
         ]
     },
     {
-        "id": "9dd3f75063831e96",
-        "type": "inject",
+        "id": "cf2f830a031481ed",
+        "type": "delay",
         "z": "5ea7da533109f7d2",
-        "name": "2pm",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 295,
+        "y": 860,
+        "wires": [
+            [
+                "f5678ecdd5485f20",
+                "866b6a36ffb6fe3b",
+                "c05a83ef8e072485",
+                "21b8df838d261e07"
+            ]
         ],
-        "repeat": "",
-        "crontab": "01 14 * * *",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 230,
+        "l": false
+    },
+    {
+        "id": "866b6a36ffb6fe3b",
+        "type": "within-time-switch",
+        "z": "5ea7da533109f7d2",
+        "name": "",
+        "nameInt": "",
+        "positionConfig": "96c207ac.2237a8",
+        "startTime": "12:00",
+        "startTimeType": "entered",
+        "startOffset": 0,
+        "startOffsetType": "none",
+        "startOffsetMultiplier": 60000,
+        "endTime": "14:00",
+        "endTimeType": "entered",
+        "endOffset": 0,
+        "endOffsetType": "none",
+        "endOffsetMultiplier": 60000,
+        "timeRestrictions": 0,
+        "timeRestrictionsType": "none",
+        "timeDays": "*",
+        "timeOnlyOddDays": false,
+        "timeOnlyEvenDays": false,
+        "timeOnlyOddWeeks": false,
+        "timeOnlyEvenWeeks": false,
+        "timeMonths": "*",
+        "timedatestart": "",
+        "timedateend": "",
+        "propertyStart": "",
+        "propertyStartType": "none",
+        "propertyStartCompare": "true",
+        "propertyStartThreshold": "",
+        "propertyStartThresholdType": "num",
+        "startTimeAlt": "",
+        "startTimeAltType": "entered",
+        "startOffsetAlt": 0,
+        "startOffsetAltType": "none",
+        "startOffsetAltMultiplier": 60000,
+        "propertyEnd": "",
+        "propertyEndType": "none",
+        "propertyEndCompare": "true",
+        "propertyEndThreshold": "",
+        "propertyEndThresholdType": "num",
+        "endTimeAlt": "",
+        "endTimeAltType": "entered",
+        "endOffsetAlt": 0,
+        "endOffsetAltType": "none",
+        "endOffsetAltMultiplier": 60000,
+        "withinTimeValue": "true",
+        "withinTimeValueType": "msgInput",
+        "outOfTimeValue": "false",
+        "outOfTimeValueType": "msgInput",
+        "tsCompare": "0",
+        "x": 430,
         "y": 880,
         "wires": [
             [
+                "be1037b9c1870d79"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "c05a83ef8e072485",
+        "type": "within-time-switch",
+        "z": "5ea7da533109f7d2",
+        "name": "",
+        "nameInt": "",
+        "positionConfig": "96c207ac.2237a8",
+        "startTime": "14:00",
+        "startTimeType": "entered",
+        "startOffset": 0,
+        "startOffsetType": "none",
+        "startOffsetMultiplier": 60000,
+        "endTime": "18:00",
+        "endTimeType": "entered",
+        "endOffset": 0,
+        "endOffsetType": "none",
+        "endOffsetMultiplier": 60000,
+        "timeRestrictions": 0,
+        "timeRestrictionsType": "none",
+        "timeDays": "*",
+        "timeOnlyOddDays": false,
+        "timeOnlyEvenDays": false,
+        "timeOnlyOddWeeks": false,
+        "timeOnlyEvenWeeks": false,
+        "timeMonths": "*",
+        "timedatestart": "",
+        "timedateend": "",
+        "propertyStart": "",
+        "propertyStartType": "none",
+        "propertyStartCompare": "true",
+        "propertyStartThreshold": "",
+        "propertyStartThresholdType": "num",
+        "startTimeAlt": "",
+        "startTimeAltType": "entered",
+        "startOffsetAlt": 0,
+        "startOffsetAltType": "none",
+        "startOffsetAltMultiplier": 60000,
+        "propertyEnd": "",
+        "propertyEndType": "none",
+        "propertyEndCompare": "true",
+        "propertyEndThreshold": "",
+        "propertyEndThresholdType": "num",
+        "endTimeAlt": "",
+        "endTimeAltType": "entered",
+        "endOffsetAlt": 0,
+        "endOffsetAltType": "none",
+        "endOffsetAltMultiplier": 60000,
+        "withinTimeValue": "true",
+        "withinTimeValueType": "msgInput",
+        "outOfTimeValue": "false",
+        "outOfTimeValueType": "msgInput",
+        "tsCompare": "0",
+        "x": 430,
+        "y": 920,
+        "wires": [
+            [
                 "2c57a01f74bab1f0"
-            ]
+            ],
+            []
+        ]
+    },
+    {
+        "id": "21b8df838d261e07",
+        "type": "within-time-switch",
+        "z": "5ea7da533109f7d2",
+        "name": "",
+        "nameInt": "",
+        "positionConfig": "96c207ac.2237a8",
+        "startTime": "7:00",
+        "startTimeType": "entered",
+        "startOffset": 0,
+        "startOffsetType": "none",
+        "startOffsetMultiplier": 60000,
+        "endTime": "12:00",
+        "endTimeType": "entered",
+        "endOffset": 0,
+        "endOffsetType": "none",
+        "endOffsetMultiplier": 60000,
+        "timeRestrictions": 0,
+        "timeRestrictionsType": "none",
+        "timeDays": "*",
+        "timeOnlyOddDays": false,
+        "timeOnlyEvenDays": false,
+        "timeOnlyOddWeeks": false,
+        "timeOnlyEvenWeeks": false,
+        "timeMonths": "*",
+        "timedatestart": "",
+        "timedateend": "",
+        "propertyStart": "",
+        "propertyStartType": "none",
+        "propertyStartCompare": "true",
+        "propertyStartThreshold": "",
+        "propertyStartThresholdType": "num",
+        "startTimeAlt": "",
+        "startTimeAltType": "entered",
+        "startOffsetAlt": 0,
+        "startOffsetAltType": "none",
+        "startOffsetAltMultiplier": 60000,
+        "propertyEnd": "",
+        "propertyEndType": "none",
+        "propertyEndCompare": "true",
+        "propertyEndThreshold": "",
+        "propertyEndThresholdType": "num",
+        "endTimeAlt": "",
+        "endTimeAltType": "entered",
+        "endOffsetAlt": 0,
+        "endOffsetAltType": "none",
+        "endOffsetAltMultiplier": 60000,
+        "withinTimeValue": "true",
+        "withinTimeValueType": "msgInput",
+        "outOfTimeValue": "false",
+        "outOfTimeValueType": "msgInput",
+        "tsCompare": "0",
+        "x": 430,
+        "y": 840,
+        "wires": [
+            [
+                "2c57a01f74bab1f0"
+            ],
+            []
         ]
     },
     {
