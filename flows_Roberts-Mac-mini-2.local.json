@@ -4939,8 +4939,8 @@
         "deviceId": "322",
         "command": "setHeatingSetpoint",
         "commandArgs": "",
-        "x": 1180,
-        "y": 860,
+        "x": 1160,
+        "y": 880,
         "wires": [
             []
         ]
@@ -4964,8 +4964,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 950,
-        "y": 860,
+        "x": 930,
+        "y": 880,
         "wires": [
             [
                 "7770322aa3d56dd0"
@@ -5638,8 +5638,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 680,
-        "y": 840,
+        "x": 660,
+        "y": 860,
         "wires": [
             [
                 "91d7dd6669a87914"
@@ -5665,8 +5665,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 690,
-        "y": 880,
+        "x": 670,
+        "y": 920,
         "wires": [
             [
                 "91d7dd6669a87914"
@@ -5690,8 +5690,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 815,
-        "y": 860,
+        "x": 795,
+        "y": 880,
         "wires": [
             [
                 "5093877f31b387c2"
@@ -5751,7 +5751,7 @@
         "outOfTimeValue": "false",
         "outOfTimeValueType": "msgInput",
         "tsCompare": "0",
-        "x": 470,
+        "x": 410,
         "y": 800,
         "wires": [
             [
@@ -5781,8 +5781,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 210,
-        "y": 860,
+        "x": 150,
+        "y": 900,
         "wires": [
             [
                 "cf2f830a031481ed"
@@ -5806,8 +5806,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 335,
-        "y": 860,
+        "x": 275,
+        "y": 900,
         "wires": [
             [
                 "f5678ecdd5485f20",
@@ -5870,8 +5870,8 @@
         "outOfTimeValue": "false",
         "outOfTimeValueType": "msgInput",
         "tsCompare": "0",
-        "x": 470,
-        "y": 880,
+        "x": 410,
+        "y": 920,
         "wires": [
             [
                 "be1037b9c1870d79"
@@ -5931,8 +5931,8 @@
         "outOfTimeValue": "false",
         "outOfTimeValueType": "msgInput",
         "tsCompare": "0",
-        "x": 470,
-        "y": 920,
+        "x": 410,
+        "y": 980,
         "wires": [
             [
                 "2c57a01f74bab1f0"
@@ -5992,8 +5992,8 @@
         "outOfTimeValue": "false",
         "outOfTimeValueType": "msgInput",
         "tsCompare": "0",
-        "x": 470,
-        "y": 840,
+        "x": 410,
+        "y": 860,
         "wires": [
             [
                 "2c57a01f74bab1f0"
