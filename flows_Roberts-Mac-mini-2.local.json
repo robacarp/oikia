@@ -3676,7 +3676,7 @@
         "confignode": "f2d9c01d.62cb2",
         "name": "R Pico",
         "x": 150,
-        "y": 1580,
+        "y": 1600,
         "wires": [
             [
                 "56178c721891bd45"
@@ -3763,7 +3763,7 @@
         "repair": false,
         "outputs": 5,
         "x": 270,
-        "y": 1580,
+        "y": 1600,
         "wires": [
             [
                 "84f932994c4d9b0e"
