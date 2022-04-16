@@ -4939,7 +4939,7 @@
         "deviceId": "322",
         "command": "setHeatingSetpoint",
         "commandArgs": "",
-        "x": 1140,
+        "x": 1180,
         "y": 860,
         "wires": [
             []
@@ -4964,7 +4964,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 910,
+        "x": 950,
         "y": 860,
         "wires": [
             [
@@ -5638,7 +5638,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 640,
+        "x": 680,
         "y": 840,
         "wires": [
             [
@@ -5665,7 +5665,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 650,
+        "x": 690,
         "y": 880,
         "wires": [
             [
@@ -5690,7 +5690,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 775,
+        "x": 815,
         "y": 860,
         "wires": [
             [
@@ -5751,7 +5751,7 @@
         "outOfTimeValue": "false",
         "outOfTimeValueType": "msgInput",
         "tsCompare": "0",
-        "x": 430,
+        "x": 470,
         "y": 800,
         "wires": [
             [
@@ -5781,7 +5781,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 170,
+        "x": 210,
         "y": 860,
         "wires": [
             [
@@ -5806,7 +5806,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 295,
+        "x": 335,
         "y": 860,
         "wires": [
             [
@@ -5870,7 +5870,7 @@
         "outOfTimeValue": "false",
         "outOfTimeValueType": "msgInput",
         "tsCompare": "0",
-        "x": 430,
+        "x": 470,
         "y": 880,
         "wires": [
             [
@@ -5931,7 +5931,7 @@
         "outOfTimeValue": "false",
         "outOfTimeValueType": "msgInput",
         "tsCompare": "0",
-        "x": 430,
+        "x": 470,
         "y": 920,
         "wires": [
             [
@@ -5992,7 +5992,7 @@
         "outOfTimeValue": "false",
         "outOfTimeValueType": "msgInput",
         "tsCompare": "0",
-        "x": 430,
+        "x": 470,
         "y": 840,
         "wires": [
             [
