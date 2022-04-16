@@ -2967,7 +2967,7 @@
         "deviceId": "8",
         "command": "on",
         "commandArgs": "",
-        "x": 560,
+        "x": 620,
         "y": 2100,
         "wires": [
             []
@@ -2984,7 +2984,7 @@
         "deviceId": "8",
         "command": "off",
         "commandArgs": "",
-        "x": 560,
+        "x": 620,
         "y": 2160,
         "wires": [
             []
@@ -3081,7 +3081,7 @@
         "once": false,
         "onceDelay": 0.1,
         "recalcTime": 2,
-        "x": 300,
+        "x": 320,
         "y": 2200,
         "wires": [
             [
@@ -3098,8 +3098,8 @@
         "links": [
             "2837495c.ae2176"
         ],
-        "x": 215,
-        "y": 2080,
+        "x": 195,
+        "y": 2100,
         "wires": [
             [
                 "22b6d01e.452a48"
@@ -3550,7 +3550,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1230,
+        "x": 1170,
         "y": 1620,
         "wires": [
             [
@@ -3577,7 +3577,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1230,
+        "x": 1170,
         "y": 1580,
         "wires": [
             [
@@ -3595,7 +3595,7 @@
         "deviceId": "1",
         "command": "",
         "commandArgs": "",
-        "x": 1500,
+        "x": 1440,
         "y": 1580,
         "wires": [
             []
@@ -3611,7 +3611,7 @@
         "deviceId": "2",
         "command": "",
         "commandArgs": "",
-        "x": 1500,
+        "x": 1440,
         "y": 1620,
         "wires": [
             []
@@ -3633,7 +3633,7 @@
         "randomUnits": "seconds",
         "drop": false,
         "outputs": 1,
-        "x": 1335,
+        "x": 1275,
         "y": 1580,
         "wires": [
             [
@@ -3659,7 +3659,7 @@
         "randomUnits": "seconds",
         "drop": false,
         "outputs": 1,
-        "x": 1335,
+        "x": 1275,
         "y": 1620,
         "wires": [
             [
@@ -3675,7 +3675,7 @@
         "z": "f9337f21.0eab78",
         "confignode": "f2d9c01d.62cb2",
         "name": "R Pico",
-        "x": 110,
+        "x": 150,
         "y": 1580,
         "wires": [
             [
@@ -3839,7 +3839,7 @@
         "to": "",
         "reg": false,
         "x": 820,
-        "y": 1640,
+        "y": 1600,
         "wires": [
             [
                 "b2f59f4fef3d8b86"
@@ -3866,7 +3866,7 @@
         "to": "",
         "reg": false,
         "x": 820,
-        "y": 1560,
+        "y": 1540,
         "wires": [
             []
         ]
@@ -4026,7 +4026,7 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 1050,
+        "x": 990,
         "y": 1600,
         "wires": [
             [
