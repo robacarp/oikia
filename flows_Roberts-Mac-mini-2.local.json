@@ -4763,7 +4763,7 @@
         "pauseType": "rate",
         "timeout": "1",
         "timeoutUnits": "milliseconds",
-        "rate": "1",
+        "rate": "2",
         "nbRateUnits": "20",
         "rateUnits": "second",
         "randomFirst": "1",
@@ -4854,7 +4854,7 @@
         "attribute": "switch",
         "sendEvent": true,
         "x": 1140,
-        "y": 640,
+        "y": 620,
         "wires": [
             []
         ]
