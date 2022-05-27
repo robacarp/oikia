@@ -756,22 +756,6 @@
         ]
     },
     {
-        "id": "37082482.1d726c",
-        "type": "unsafe-function",
-        "z": "4c7c8cd1.6a2a1c",
-        "name": "Motion Aggregator",
-        "func": "let motionStatus = null;\nlet activeCount = 0;\n\nlet sensors = context.get(\"sensors\") || {};\nlet wasActive = context.get(\"active\") || false;\nlet deviceId\n\nif (typeof msg.payload != \"undefined\" && msg.payload !== null) {\n    deviceId = msg.payload.deviceId;\n}\n\nif (typeof deviceId != \"undefined\") {\n\n    // If we didn't receive an event, the process was triggered by something else (eg. enabling the automation)\n    motionStatus = msg.payload.value\n\n    if (typeof sensors[deviceId] == \"undefined\") {\n        sensors[deviceId] = {}\n    }\n\n    let deviceObject = sensors[deviceId]\n\n    deviceObject.state = motionStatus\n    deviceObject.displayName = msg.topic\n\n    context.set(\"sensors\", sensors)\n}\n\n\nfor (let [deviceId, values] of Object.entries(sensors)) {\n    if ( values.state == 'active' ) {\n        activeCount++\n    }\n}\n\nconst active = activeCount > 0\n\nnewMessage = {\n  topic: env.get(\"Zone Name\"),\n  payload: active ? \"active\" : \"inactive\",\n  count: activeCount\n}\n\n    context.set(\"active\", active)\n    return newMessage\n",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 990,
-        "y": 160,
-        "wires": [
-            [
-                "1135a6a5.8ffeb9"
-            ]
-        ]
-    },
-    {
         "id": "baa794b2.a49bd",
         "type": "change",
         "z": "4c7c8cd1.6a2a1c",
@@ -965,7 +949,7 @@
         "y": 200,
         "wires": [
             [
-                "37082482.1d726c"
+                "b265ec76b07bf2e6"
             ],
             [
                 "ee67eca9.7c9548",
@@ -1524,6 +1508,25 @@
         "wires": [
             [
                 "d6e965c0.d24cd"
+            ]
+        ]
+    },
+    {
+        "id": "b265ec76b07bf2e6",
+        "type": "function",
+        "z": "4c7c8cd1.6a2a1c",
+        "name": "",
+        "func": "let motionStatus = null;\nlet activeCount = 0;\n\nlet sensors = context.get(\"sensors\") || {};\nlet wasActive = context.get(\"active\") || false;\nlet deviceId\n\nif (typeof msg.payload != \"undefined\" && msg.payload !== null) {\n    deviceId = msg.payload.deviceId;\n}\n\nif (typeof deviceId != \"undefined\") {\n\n    // If we didn't receive an event, the process was triggered by something else (eg. enabling the automation)\n    motionStatus = msg.payload.value\n\n    if (typeof sensors[deviceId] == \"undefined\") {\n        sensors[deviceId] = {}\n    }\n\n    let deviceObject = sensors[deviceId]\n\n    deviceObject.state = motionStatus\n    deviceObject.displayName = msg.topic\n\n    context.set(\"sensors\", sensors)\n}\n\n\nfor (let [deviceId, values] of Object.entries(sensors)) {\n    if ( values.state == 'active' ) {\n        activeCount++\n    }\n}\n\nconst active = activeCount > 0\n\nnewMessage = {\n  topic: env.get(\"Zone Name\"),\n  payload: active ? \"active\" : \"inactive\",\n  count: activeCount\n}\n\n    context.set(\"active\", active)\n    return newMessage\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 160,
+        "wires": [
+            [
+                "1135a6a5.8ffeb9"
             ]
         ]
     },
