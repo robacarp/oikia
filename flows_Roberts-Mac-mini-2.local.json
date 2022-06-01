@@ -499,7 +499,7 @@
         "host": "localhost",
         "protocol": "http",
         "port": "1880",
-        "baseurl": "/",
+        "baseurl": "/dashboard",
         "instancehash": "mb81yqi4wrlqk5vysc3uyg6ajm2rf2wli7kmhdn8gh6j42dzfsxcloiufjlrxj0l",
         "server": "nodered02.remote-red.com",
         "region": "us"
@@ -4951,7 +4951,8 @@
         "y": 700,
         "wires": [
             [
-                "b8a1a63fb158b24f"
+                "b8a1a63fb158b24f",
+                "d794772e8a432660"
             ]
         ]
     },
@@ -6141,6 +6142,50 @@
             [
                 "cf2f830a031481ed"
             ]
+        ]
+    },
+    {
+        "id": "d794772e8a432660",
+        "type": "ui_chart",
+        "z": "5ea7da533109f7d2",
+        "name": "",
+        "group": "e735a89b7a9ee10c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 890,
+        "y": 760,
+        "wires": [
+            []
         ]
     },
     {
