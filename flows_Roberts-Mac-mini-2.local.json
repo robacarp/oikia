@@ -483,8 +483,6 @@
         "sslFieldType": "bool",
         "max": "5",
         "maxFieldType": "num",
-        "min": "1",
-        "minFieldType": "num",
         "idle": "1000",
         "idleFieldType": "num",
         "connectionTimeout": "10000",
@@ -493,6 +491,18 @@
         "userFieldType": "str",
         "password": "",
         "passwordFieldType": "str"
+    },
+    {
+        "id": "597936f356caf1a4",
+        "type": "remote-config",
+        "name": "Node-RED UI",
+        "host": "localhost",
+        "protocol": "http",
+        "port": "1880",
+        "baseurl": "/",
+        "instancehash": "mb81yqi4wrlqk5vysc3uyg6ajm2rf2wli7kmhdn8gh6j42dzfsxcloiufjlrxj0l",
+        "server": "nodered02.remote-red.com",
+        "region": "us"
     },
     {
         "id": "aa0d64a0.a2b408",
@@ -2174,6 +2184,19 @@
         "x": 495,
         "y": 380,
         "wires": []
+    },
+    {
+        "id": "f8bc38b130fcf685",
+        "type": "remote-access",
+        "z": "f30f9979.39f178",
+        "confignode": "597936f356caf1a4",
+        "name": "",
+        "verbose": 0,
+        "x": 320,
+        "y": 580,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "78d27aa4.3a922c",
