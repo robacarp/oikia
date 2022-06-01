@@ -499,7 +499,7 @@
         "host": "localhost",
         "protocol": "http",
         "port": "1880",
-        "baseurl": "/dashboard",
+        "baseurl": "/ui",
         "instancehash": "mb81yqi4wrlqk5vysc3uyg6ajm2rf2wli7kmhdn8gh6j42dzfsxcloiufjlrxj0l",
         "server": "nodered02.remote-red.com",
         "region": "us"
