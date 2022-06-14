@@ -493,18 +493,6 @@
         "passwordFieldType": "str"
     },
     {
-        "id": "597936f356caf1a4",
-        "type": "remote-config",
-        "name": "Node-RED UI",
-        "host": "localhost",
-        "protocol": "http",
-        "port": "1880",
-        "baseurl": "/ui",
-        "instancehash": "mb81yqi4wrlqk5vysc3uyg6ajm2rf2wli7kmhdn8gh6j42dzfsxcloiufjlrxj0l",
-        "server": "nodered02.remote-red.com",
-        "region": "us"
-    },
-    {
         "id": "aa0d64a0.a2b408",
         "type": "comment",
         "z": "c1c7f362.7de41",
