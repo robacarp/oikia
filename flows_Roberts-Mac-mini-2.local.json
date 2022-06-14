@@ -2186,19 +2186,6 @@
         "wires": []
     },
     {
-        "id": "f8bc38b130fcf685",
-        "type": "remote-access",
-        "z": "f30f9979.39f178",
-        "confignode": "597936f356caf1a4",
-        "name": "",
-        "verbose": 0,
-        "x": 320,
-        "y": 580,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "78d27aa4.3a922c",
         "type": "change",
         "z": "f9337f21.0eab78",
