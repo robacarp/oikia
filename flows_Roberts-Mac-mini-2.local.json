@@ -300,6 +300,44 @@
         "color": "#DDAA99"
     },
     {
+        "id": "c6f15bd3bae34137",
+        "type": "junction",
+        "z": "f9337f21.0eab78",
+        "x": 360,
+        "y": 920,
+        "wires": [
+            [
+                "82929842.1531"
+            ]
+        ]
+    },
+    {
+        "id": "47da418e46484c84",
+        "type": "junction",
+        "z": "5ea7da533109f7d2",
+        "x": 800,
+        "y": 1660,
+        "wires": [
+            [
+                "1593e7bbc55cb2aa"
+            ]
+        ]
+    },
+    {
+        "id": "1593e7bbc55cb2aa",
+        "type": "junction",
+        "z": "5ea7da533109f7d2",
+        "x": 860,
+        "y": 1660,
+        "wires": [
+            [
+                "a888436a6dd5841a",
+                "7ce9a0908ad05466",
+                "cfd79f8c7eba4aa1"
+            ]
+        ]
+    },
+    {
         "id": "252d4ef4.c14b6a",
         "type": "hubitat config",
         "name": "Hubitat",
@@ -2228,34 +2266,9 @@
         "y": 860,
         "wires": [
             [
-                "7a1e014f.2d5688"
+                "c6f15bd3bae34137"
             ]
         ]
-    },
-    {
-        "id": "7a1e014f.2d5688",
-        "type": "delay",
-        "z": "f9337f21.0eab78",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "1",
-        "timeoutUnits": "milliseconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "outputs": 1,
-        "x": 415,
-        "y": 920,
-        "wires": [
-            [
-                "82929842.1531"
-            ]
-        ],
-        "l": false
     },
     {
         "id": "b0c8d31a.f0e56",
@@ -2306,7 +2319,7 @@
         "y": 920,
         "wires": [
             [
-                "7a1e014f.2d5688"
+                "c6f15bd3bae34137"
             ]
         ]
     },
@@ -2751,7 +2764,8 @@
         "y": 2000,
         "wires": [
             [
-                "43841e78d19b1e4f"
+                "363a9c66.018164",
+                "734464febd07fa6d"
             ]
         ]
     },
@@ -2850,7 +2864,8 @@
         "y": 1940,
         "wires": [
             [
-                "659581e44aa2efdd"
+                "3a326fc0.24f35",
+                "820b94d67933b2ef"
             ]
         ]
     },
@@ -3555,7 +3570,8 @@
         "y": 1620,
         "wires": [
             [
-                "2036fdbe.acda92"
+                "407e2a78.c9971c",
+                "a0f2d6e.daab828"
             ]
         ]
     },
@@ -3582,7 +3598,8 @@
         "y": 1580,
         "wires": [
             [
-                "93983053.42cca8"
+                "a0f2d6e.daab828",
+                "407e2a78.c9971c"
             ]
         ]
     },
@@ -3596,7 +3613,7 @@
         "deviceId": "1",
         "command": "",
         "commandArgs": "",
-        "x": 1440,
+        "x": 1380,
         "y": 1580,
         "wires": [
             []
@@ -3612,63 +3629,11 @@
         "deviceId": "2",
         "command": "",
         "commandArgs": "",
-        "x": 1440,
+        "x": 1380,
         "y": 1620,
         "wires": [
             []
         ]
-    },
-    {
-        "id": "93983053.42cca8",
-        "type": "delay",
-        "z": "f9337f21.0eab78",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "1",
-        "timeoutUnits": "milliseconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "outputs": 1,
-        "x": 1275,
-        "y": 1580,
-        "wires": [
-            [
-                "a0f2d6e.daab828",
-                "407e2a78.c9971c"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "2036fdbe.acda92",
-        "type": "delay",
-        "z": "f9337f21.0eab78",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "1",
-        "timeoutUnits": "milliseconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "outputs": 1,
-        "x": 1275,
-        "y": 1620,
-        "wires": [
-            [
-                "407e2a78.c9971c",
-                "a0f2d6e.daab828"
-            ]
-        ],
-        "l": false
     },
     {
         "id": "f3be4df3.08e528",
@@ -3724,7 +3689,7 @@
         "y": 1520,
         "wires": [
             [
-                "a210b273a66c0675"
+                "16910248bf6af96e"
             ]
         ]
     },
@@ -3895,34 +3860,9 @@
         "y": 1560,
         "wires": [
             [
-                "a210b273a66c0675"
-            ]
-        ]
-    },
-    {
-        "id": "a210b273a66c0675",
-        "type": "delay",
-        "z": "f9337f21.0eab78",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "1",
-        "timeoutUnits": "milliseconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "outputs": 1,
-        "x": 575,
-        "y": 1580,
-        "wires": [
-            [
                 "16910248bf6af96e"
             ]
-        ],
-        "l": false
+        ]
     },
     {
         "id": "60d657c7179d9acd",
@@ -3947,7 +3887,7 @@
         "y": 1600,
         "wires": [
             [
-                "a210b273a66c0675"
+                "16910248bf6af96e"
             ]
         ]
     },
@@ -3974,7 +3914,7 @@
         "y": 1640,
         "wires": [
             [
-                "a210b273a66c0675"
+                "16910248bf6af96e"
             ]
         ]
     },
@@ -4001,7 +3941,7 @@
         "y": 1680,
         "wires": [
             [
-                "a210b273a66c0675"
+                "16910248bf6af96e"
             ]
         ]
     },
@@ -4438,60 +4378,6 @@
                 "21b8a5fd.7a31d2"
             ]
         ]
-    },
-    {
-        "id": "659581e44aa2efdd",
-        "type": "delay",
-        "z": "f9337f21.0eab78",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "5",
-        "timeoutUnits": "milliseconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 415,
-        "y": 1940,
-        "wires": [
-            [
-                "3a326fc0.24f35",
-                "820b94d67933b2ef"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "43841e78d19b1e4f",
-        "type": "delay",
-        "z": "f9337f21.0eab78",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "5",
-        "timeoutUnits": "milliseconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 415,
-        "y": 2000,
-        "wires": [
-            [
-                "363a9c66.018164",
-                "734464febd07fa6d"
-            ]
-        ],
-        "l": false
     },
     {
         "id": "734464febd07fa6d",
@@ -5031,7 +4917,7 @@
         "y": 1380,
         "wires": [
             [
-                "35102158e27a92cf"
+                "91e44923b7e19f5d"
             ]
         ]
     },
@@ -5058,35 +4944,9 @@
         "y": 1420,
         "wires": [
             [
-                "35102158e27a92cf"
-            ]
-        ]
-    },
-    {
-        "id": "35102158e27a92cf",
-        "type": "delay",
-        "z": "5ea7da533109f7d2",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "1",
-        "timeoutUnits": "milliseconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 935,
-        "y": 1400,
-        "wires": [
-            [
                 "91e44923b7e19f5d"
             ]
-        ],
-        "l": false
+        ]
     },
     {
         "id": "91e44923b7e19f5d",
@@ -5128,7 +4988,7 @@
         "y": 1640,
         "wires": [
             [
-                "df3c6eaa0f30f8af"
+                "47da418e46484c84"
             ]
         ]
     },
@@ -5155,7 +5015,7 @@
         "y": 1680,
         "wires": [
             [
-                "df3c6eaa0f30f8af"
+                "47da418e46484c84"
             ]
         ]
     },
@@ -5285,7 +5145,6 @@
         "y": 1640,
         "wires": [
             [
-                "5129b82d1a8558d7",
                 "5129b82d1a8558d7"
             ]
         ]
@@ -5358,34 +5217,6 @@
                 "46bc013146c44650"
             ]
         ]
-    },
-    {
-        "id": "df3c6eaa0f30f8af",
-        "type": "delay",
-        "z": "5ea7da533109f7d2",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "5",
-        "timeoutUnits": "milliseconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 815,
-        "y": 1660,
-        "wires": [
-            [
-                "cfd79f8c7eba4aa1",
-                "7ce9a0908ad05466",
-                "a888436a6dd5841a"
-            ]
-        ],
-        "l": false
     },
     {
         "id": "5bf831122a6797c9",
@@ -5581,7 +5412,7 @@
         "y": 860,
         "wires": [
             [
-                "91d7dd6669a87914"
+                "5093877f31b387c2"
             ]
         ]
     },
@@ -5608,35 +5439,9 @@
         "y": 920,
         "wires": [
             [
-                "91d7dd6669a87914"
-            ]
-        ]
-    },
-    {
-        "id": "91d7dd6669a87914",
-        "type": "delay",
-        "z": "5ea7da533109f7d2",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "5",
-        "timeoutUnits": "milliseconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 795,
-        "y": 880,
-        "wires": [
-            [
                 "5093877f31b387c2"
             ]
-        ],
-        "l": false
+        ]
     },
     {
         "id": "f5678ecdd5485f20",
