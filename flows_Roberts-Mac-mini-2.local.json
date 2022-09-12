@@ -6024,93 +6024,16 @@
         "wires": []
     },
     {
-        "id": "61c9a0d14daa9eb2",
-        "type": "postgresql",
-        "z": "3cee340729aa7e67",
-        "name": "-> metrics",
-        "query": "INSERT INTO \"public\".\"metric_data\"\n(\"name\", \"metric\", \"units\", \"type\")\nVALUES(\n  '{{{ msg.payload.displayName }}}',\n  {{{ msg.payload.value }}},\n  '{{{ msg.payload.unit }}}',\n  '{{{ msg.payload.name }}}'\n)",
-        "postgreSQLConfig": "21b7c61d0303ac49",
-        "split": true,
-        "rowsPerMsg": 1,
-        "outputs": 1,
-        "x": 630,
-        "y": 1000,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "3cd5c1bf91804a74",
-        "type": "debug",
-        "z": "3cee340729aa7e67",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 250,
-        "y": 960,
-        "wires": []
-    },
-    {
-        "id": "343588e064736f74",
-        "type": "link in",
-        "z": "3cee340729aa7e67",
-        "name": "Metric Insert",
-        "links": [
-            "39c19b82fe4bc292",
-            "fe38ca3f817e9a37",
-            "5129b82d1a8558d7"
-        ],
-        "x": 115,
-        "y": 980,
-        "wires": [
-            [
-                "3cd5c1bf91804a74",
-                "4dd1cf4a3b45aa71"
-            ]
-        ]
-    },
-    {
-        "id": "4dd1cf4a3b45aa71",
-        "type": "delay",
-        "z": "3cee340729aa7e67",
-        "name": "",
-        "pauseType": "rate",
-        "timeout": "5",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 350,
-        "y": 1000,
-        "wires": [
-            [
-                "61c9a0d14daa9eb2"
-            ]
-        ]
-    },
-    {
         "id": "c7e8d0fe127ac669",
         "type": "postgresql",
         "z": "3cee340729aa7e67",
         "name": "-> metrics",
-        "query": "INSERT INTO \"public\".\"metric_data\"\n(\"name\", \"metric\", \"units\", \"type\")\nVALUES(\n  '{{{ msg.payload.name }}}',\n  {{{ msg.payload.metric }}},\n  '{{{ msg.payload.unit }}}',\n  '{{{ msg.payload.type }}}'\n)",
+        "query": "INSERT INTO \"public\".\"historical_metrics\"\n(\"name\", \"metric\", \"units\", \"type\")\nVALUES(\n  '{{{ msg.payload.name }}}',\n  {{{ msg.payload.metric }}},\n  '{{{ msg.payload.unit }}}',\n  '{{{ msg.payload.type }}}'\n)",
         "postgreSQLConfig": "21b7c61d0303ac49",
         "split": true,
         "rowsPerMsg": 1,
         "outputs": 1,
-        "x": 630,
+        "x": 750,
         "y": 900,
         "wires": [
             []
@@ -6133,7 +6056,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 350,
+        "x": 470,
         "y": 900,
         "wires": [
             [
@@ -6150,7 +6073,7 @@
             "e16cf27bcb6da70f",
             "47f6d47525adeb9b"
         ],
-        "x": 115,
+        "x": 235,
         "y": 900,
         "wires": [
             [
@@ -6190,7 +6113,7 @@
         "id": "e16cf27bcb6da70f",
         "type": "link out",
         "z": "3cee340729aa7e67",
-        "name": "",
+        "name": "Bulk Sensor Aggregate",
         "mode": "link",
         "links": [
             "20a270b73ce8e3eb"
@@ -6212,7 +6135,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 250,
+        "x": 370,
         "y": 860,
         "wires": []
     },
