@@ -5359,7 +5359,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "{\t    \"name\": \"Nursery Thermostat\",\t    \"metric\": payload,\t    \"unit\": \"ºF\",\t    \"type\": \"thermostat\"\t}",
+                "to": "{\t    \"name\": \"Nursery Thermostat\",\t    \"data\": payload,\t    \"unit\": \"ºF\",\t    \"metric\": \"thermostat\"\t}",
                 "tot": "jsonata"
             }
         ],
@@ -6028,12 +6028,12 @@
         "type": "postgresql",
         "z": "3cee340729aa7e67",
         "name": "-> metrics",
-        "query": "INSERT INTO \"public\".\"historical_metrics\"\n(\"name\", \"metric\", \"units\", \"data\")\nVALUES(\n  '{{{ msg.payload.name }}}',\n  '{{{ msg.payload.type }}}',\n  '{{{ msg.payload.unit }}}',\n  {{{ msg.payload.metric }}}\n)",
+        "query": "INSERT INTO \"public\".\"historical_metrics\"\n(\"name\", \"metric\", \"units\", \"data\")\nVALUES(\n  '{{{ msg.payload.name }}}',\n  '{{{ msg.payload.metric }}}',\n  '{{{ msg.payload.unit }}}',\n  {{{ msg.payload.data }}}\n)",
         "postgreSQLConfig": "21b7c61d0303ac49",
         "split": true,
         "rowsPerMsg": 1,
         "outputs": 1,
-        "x": 750,
+        "x": 650,
         "y": 900,
         "wires": [
             []
@@ -6092,7 +6092,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "{\t    \"name\": payload.displayName,\t    \"metric\": payload.value = \"open\" ? 1 : 0,\t    \"unit\": \"openness\",\t    \"type\": payload.name\t}",
+                "to": "{\t    \"name\": payload.displayName,\t    \"data\": payload.value = \"open\" ? 1 : 0,\t    \"unit\": \"openness\",\t    \"metric\": payload.name\t}",
                 "tot": "jsonata"
             }
         ],
@@ -6149,7 +6149,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "{\t    \"name\": payload.displayName,\t    \"metric\": payload.value,\t    \"unit\": payload.unit,\t    \"type\": payload.name\t}",
+                "to": "{\t    \"name\": payload.displayName,\t    \"data\": payload.value,\t    \"unit\": payload.unit,\t    \"metric\": payload.name\t}",
                 "tot": "jsonata"
             }
         ],
@@ -6177,7 +6177,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "{\t    \"name\": payload.displayName,\t    \"metric\": payload.value,\t    \"unit\": payload.unit,\t    \"type\": payload.name\t}",
+                "to": "{\t    \"name\": payload.displayName,\t    \"data\": payload.value,\t    \"unit\": payload.unit,\t    \"metric\": payload.name\t}",
                 "tot": "jsonata"
             }
         ],
@@ -6204,7 +6204,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "{\t    \"name\": payload.displayName,\t    \"metric\": payload.value = \"on\" ? 1 : 0,\t    \"unit\": \"power\",\t    \"type\": payload.name\t}",
+                "to": "{\t    \"name\": payload.displayName,\t    \"data\": payload.value = \"on\" ? 1 : 0,\t    \"unit\": \"power\",\t    \"metric\": payload.name\t}",
                 "tot": "jsonata"
             }
         ],
@@ -6231,7 +6231,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "{\t    \"name\": payload.displayName,\t    \"metric\": payload.value = \"active\" ? 1 : 0,\t    \"unit\": \"activity\",\t    \"type\": payload.name\t}",
+                "to": "{\t    \"name\": payload.displayName,\t    \"data\": payload.value = \"active\" ? 1 : 0,\t    \"unit\": \"activity\",\t    \"metric\": payload.name\t}",
                 "tot": "jsonata"
             }
         ],
@@ -6258,7 +6258,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "{\t    \"name\": payload.displayName,\t    \"metric\": payload.value = \"open\" ? 1 : 0,\t    \"unit\": \"openness\",\t    \"type\": payload.name\t}",
+                "to": "{\t    \"name\": payload.displayName,\t    \"data\": payload.value = \"open\" ? 1 : 0,\t    \"unit\": \"openness\",\t    \"metric\": payload.name\t}",
                 "tot": "jsonata"
             }
         ],
@@ -6285,7 +6285,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "{\t    \"name\": payload.displayName,\t    \"metric\": payload.value,\t    \"unit\": \"ºF\",\t    \"type\": payload.name\t}",
+                "to": "{\t    \"name\": payload.displayName,\t    \"data\": payload.value,\t    \"unit\": \"ºF\",\t    \"metric\": payload.name\t}",
                 "tot": "jsonata"
             }
         ],
@@ -6312,7 +6312,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "/* 1 = heating\t * 2 = cooling\t * 0 = doing nonthing\t */\t{\t    \"name\": payload.displayName,\t    \"metric\": payload.value = \"heating\" ? 1 : 0,\t    \"unit\": \"hvac_activity\",\t    \"type\": payload.name\t}",
+                "to": "/* 1 = heating\t * 2 = cooling\t * 0 = doing nonthing\t */\t{\t    \"name\": payload.displayName,\t    \"data\": payload.value = \"heating\" ? 1 : 0,\t    \"unit\": \"hvac_activity\",\t    \"metric\": payload.name\t}",
                 "tot": "jsonata"
             }
         ],
