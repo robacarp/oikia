@@ -6028,7 +6028,7 @@
         "type": "postgresql",
         "z": "3cee340729aa7e67",
         "name": "-> metrics",
-        "query": "INSERT INTO \"public\".\"historical_metrics\"\n(\"name\", \"metric\", \"units\", \"type\")\nVALUES(\n  '{{{ msg.payload.name }}}',\n  {{{ msg.payload.metric }}},\n  '{{{ msg.payload.unit }}}',\n  '{{{ msg.payload.type }}}'\n)",
+        "query": "INSERT INTO \"public\".\"historical_metrics\"\n(\"name\", \"metric\", \"units\", \"data\")\nVALUES(\n  '{{{ msg.payload.name }}}',\n  '{{{ msg.payload.type }}}',\n  '{{{ msg.payload.unit }}}',\n  {{{ msg.payload.metric }}}\n)",
         "postgreSQLConfig": "21b7c61d0303ac49",
         "split": true,
         "rowsPerMsg": 1,
