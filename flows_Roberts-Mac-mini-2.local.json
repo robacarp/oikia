@@ -5525,6 +5525,7 @@
         "id": "c7e8d0fe127ac669",
         "type": "postgresql",
         "z": "3cee340729aa7e67",
+        "d": true,
         "name": "-> metrics",
         "query": "INSERT INTO \"public\".\"historical_metrics\"\n(\"name\", \"metric\", \"units\", \"data\")\nVALUES(\n  '{{{ msg.payload.name }}}',\n  '{{{ msg.payload.metric }}}',\n  '{{{ msg.payload.unit }}}',\n  {{{ msg.payload.data }}}\n)",
         "postgreSQLConfig": "21b7c61d0303ac49",
