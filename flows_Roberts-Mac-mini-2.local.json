@@ -5452,12 +5452,22 @@
                 "vt": "str"
             },
             {
+                "t": "eq",
+                "v": "colorTemperature",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "colorName",
+                "vt": "str"
+            },
+            {
                 "t": "else"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 9,
+        "outputs": 11,
         "x": 290,
         "y": 240,
         "wires": [
@@ -5484,6 +5494,12 @@
             ],
             [
                 "559425603edc131c"
+            ],
+            [
+                "94dab35dcc9b2e8e"
+            ],
+            [
+                "7c0145dfeba3639c"
             ],
             [
                 "7ab4d3bb0b23307a"
@@ -5844,5 +5860,57 @@
         "x": 870,
         "y": 120,
         "wires": []
+    },
+    {
+        "id": "94dab35dcc9b2e8e",
+        "type": "change",
+        "z": "3cee340729aa7e67",
+        "d": true,
+        "name": "Color Temperature",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "/* 1 = heating\t * 2 = cooling\t * 0 = doing nonthing\t */\t{\t    \"name\": payload.displayName,\t    \"data\": payload.value = \"heating\" ? 1 : 0,\t    \"unit\": \"hvac_activity\",\t    \"metric\": payload.name\t}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 630,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7c0145dfeba3639c",
+        "type": "change",
+        "z": "3cee340729aa7e67",
+        "d": true,
+        "name": "Color Name",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "/* 1 = heating\t * 2 = cooling\t * 0 = doing nonthing\t */\t{\t    \"name\": payload.displayName,\t    \"data\": payload.value = \"heating\" ? 1 : 0,\t    \"unit\": \"hvac_activity\",\t    \"metric\": payload.name\t}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 520,
+        "wires": [
+            []
+        ]
     }
 ]
