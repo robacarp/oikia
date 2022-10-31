@@ -3285,7 +3285,7 @@
         "deviceId": "",
         "command": "",
         "commandArgs": "",
-        "x": 400,
+        "x": 700,
         "y": 600,
         "wires": [
             []
@@ -4431,6 +4431,29 @@
         "x": 400,
         "y": 660,
         "wires": []
+    },
+    {
+        "id": "277db169152d7597",
+        "type": "switch",
+        "z": "f9337f21.0eab78",
+        "name": "Exclude Porch Light",
+        "property": "deviceId",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "\"129\"",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 600,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "734f4b605d12eb34",
