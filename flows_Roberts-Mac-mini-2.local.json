@@ -312,6 +312,19 @@
         ]
     },
     {
+        "id": "56b115c016a61db4",
+        "type": "junction",
+        "z": "f9337f21.0eab78",
+        "x": 1100,
+        "y": 1660,
+        "wires": [
+            [
+                "ad06d2e528474b01",
+                "1ebe7fe71271b214"
+            ]
+        ]
+    },
+    {
         "id": "252d4ef4.c14b6a",
         "type": "hubitat config",
         "name": "Hubitat",
@@ -3959,9 +3972,11 @@
                 "91e8ca3f.3f295"
             ],
             [
-                "65ceb91375e54ebc"
+                "56b115c016a61db4"
             ],
-            [],
+            [
+                "56b115c016a61db4"
+            ],
             [
                 "9a4d93e3.9f5c3"
             ]
@@ -4453,22 +4468,6 @@
         ]
     },
     {
-        "id": "65ceb91375e54ebc",
-        "type": "debug",
-        "z": "f9337f21.0eab78",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1200,
-        "y": 1700,
-        "wires": []
-    },
-    {
         "id": "f79733c6356b553b",
         "type": "debug",
         "z": "f9337f21.0eab78",
@@ -4484,6 +4483,99 @@
         "x": 280,
         "y": 1520,
         "wires": []
+    },
+    {
+        "id": "ad06d2e528474b01",
+        "type": "change",
+        "z": "f9337f21.0eab78",
+        "name": "20%",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "setLevel",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "arguments",
+                "pt": "msg",
+                "to": "20",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1210,
+        "y": 1700,
+        "wires": [
+            [
+                "d52d8310f3f1401c"
+            ]
+        ]
+    },
+    {
+        "id": "d52d8310f3f1401c",
+        "type": "hubitat command",
+        "z": "f9337f21.0eab78",
+        "deviceLabel": "Leah’s Bedside",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "1",
+        "command": "",
+        "commandArgs": "",
+        "x": 1380,
+        "y": 1700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "909304f270670f74",
+        "type": "hubitat command",
+        "z": "f9337f21.0eab78",
+        "deviceLabel": "Rob’s bedside",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "2",
+        "command": "",
+        "commandArgs": "",
+        "x": 1380,
+        "y": 1740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1ebe7fe71271b214",
+        "type": "change",
+        "z": "f9337f21.0eab78",
+        "name": "off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1210,
+        "y": 1740,
+        "wires": [
+            [
+                "909304f270670f74"
+            ]
+        ]
     },
     {
         "id": "734f4b605d12eb34",
