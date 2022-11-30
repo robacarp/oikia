@@ -325,6 +325,32 @@
         ]
     },
     {
+        "id": "3d10086a6a0f415f",
+        "type": "junction",
+        "z": "f9337f21.0eab78",
+        "x": 1700,
+        "y": 1580,
+        "wires": [
+            [
+                "a0f2d6e.daab828",
+                "407e2a78.c9971c"
+            ]
+        ]
+    },
+    {
+        "id": "9708140dd46c678d",
+        "type": "junction",
+        "z": "f9337f21.0eab78",
+        "x": 1700,
+        "y": 1620,
+        "wires": [
+            [
+                "a0f2d6e.daab828",
+                "407e2a78.c9971c"
+            ]
+        ]
+    },
+    {
         "id": "252d4ef4.c14b6a",
         "type": "hubitat config",
         "name": "Hubitat",
@@ -3557,8 +3583,7 @@
         "y": 1620,
         "wires": [
             [
-                "407e2a78.c9971c",
-                "a0f2d6e.daab828"
+                "9708140dd46c678d"
             ]
         ]
     },
@@ -3566,21 +3591,14 @@
         "id": "91e8ca3f.3f295",
         "type": "change",
         "z": "f9337f21.0eab78",
-        "name": "On",
+        "name": "Turn On",
         "rules": [
             {
                 "t": "set",
                 "p": "command",
                 "pt": "msg",
-                "to": "setLevel",
+                "to": "on",
                 "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "attribute",
-                "pt": "msg",
-                "to": "100",
-                "tot": "num"
             }
         ],
         "action": "",
@@ -3588,12 +3606,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1170,
-        "y": 1580,
+        "x": 1520,
+        "y": 1560,
         "wires": [
             [
-                "a0f2d6e.daab828",
-                "407e2a78.c9971c"
+                "3d10086a6a0f415f"
             ]
         ]
     },
@@ -3607,7 +3624,7 @@
         "deviceId": "1",
         "command": "",
         "commandArgs": "",
-        "x": 1380,
+        "x": 1860,
         "y": 1580,
         "wires": [
             []
@@ -3623,7 +3640,7 @@
         "deviceId": "2",
         "command": "",
         "commandArgs": "",
-        "x": 1380,
+        "x": 1860,
         "y": 1620,
         "wires": [
             []
@@ -3976,7 +3993,7 @@
         "y": 1600,
         "wires": [
             [
-                "91e8ca3f.3f295"
+                "c5b379fdf2f7a65f"
             ],
             [
                 "56b115c016a61db4"
@@ -4581,6 +4598,89 @@
         "wires": [
             [
                 "909304f270670f74"
+            ]
+        ]
+    },
+    {
+        "id": "c5b379fdf2f7a65f",
+        "type": "hubitat device",
+        "z": "f9337f21.0eab78",
+        "deviceLabel": "Leah’s Bedside",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "1",
+        "attribute": "switch",
+        "sendEvent": false,
+        "x": 1200,
+        "y": 1580,
+        "wires": [
+            [
+                "d806568fcaba0728"
+            ]
+        ]
+    },
+    {
+        "id": "d806568fcaba0728",
+        "type": "switch",
+        "z": "f9337f21.0eab78",
+        "name": "is on",
+        "property": "payload.button",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "on",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 1350,
+        "y": 1580,
+        "wires": [
+            [
+                "91e8ca3f.3f295"
+            ],
+            [
+                "fff71a09e63a6fe9"
+            ]
+        ]
+    },
+    {
+        "id": "fff71a09e63a6fe9",
+        "type": "change",
+        "z": "f9337f21.0eab78",
+        "name": "Set to 100%",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "setLevel",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "arguments",
+                "pt": "msg",
+                "to": "100",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1530,
+        "y": 1600,
+        "wires": [
+            [
+                "3d10086a6a0f415f"
             ]
         ]
     },
