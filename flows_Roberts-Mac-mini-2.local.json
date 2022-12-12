@@ -2483,8 +2483,8 @@
         "z": "f9337f21.0eab78",
         "name": "Porch light",
         "info": "",
-        "x": 140,
-        "y": 1120,
+        "x": 220,
+        "y": 2060,
         "wires": []
     },
     {
@@ -2936,7 +2936,7 @@
         "outOfTimeValueType": "msgInput",
         "tsCompare": "0",
         "x": 300,
-        "y": 2260,
+        "y": 2360,
         "wires": [
             [
                 "22b6d01e.452a48"
@@ -2968,7 +2968,7 @@
         "topic": "",
         "payloadType": "date",
         "x": 175,
-        "y": 2260,
+        "y": 2360,
         "wires": [
             [
                 "4c8e959.ebe296c"
@@ -2988,7 +2988,7 @@
         "command": "on",
         "commandArgs": "",
         "x": 600,
-        "y": 2220,
+        "y": 2320,
         "wires": [
             []
         ]
@@ -3005,7 +3005,7 @@
         "command": "off",
         "commandArgs": "",
         "x": 600,
-        "y": 2280,
+        "y": 2380,
         "wires": [
             []
         ]
@@ -3102,7 +3102,7 @@
         "onceDelay": 0.1,
         "recalcTime": 2,
         "x": 300,
-        "y": 2320,
+        "y": 2420,
         "wires": [
             [
                 "103cf87a.abee18"
@@ -3119,7 +3119,7 @@
             "2837495c.ae2176"
         ],
         "x": 175,
-        "y": 2220,
+        "y": 2320,
         "wires": [
             [
                 "22b6d01e.452a48"
@@ -3999,7 +3999,6 @@
         "id": "2c07bcd4127d212c",
         "type": "inject",
         "z": "f9337f21.0eab78",
-        "d": true,
         "name": "Every 15 minutes",
         "props": [
             {
@@ -4016,8 +4015,8 @@
         "onceDelay": 0.1,
         "topic": "",
         "payloadType": "date",
-        "x": 210,
-        "y": 1220,
+        "x": 290,
+        "y": 2160,
         "wires": [
             [
                 "ed59489e0b1aba05"
@@ -4069,8 +4068,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 940,
-        "y": 1200,
+        "x": 1020,
+        "y": 2140,
         "wires": [
             [
                 "42ed4e7930637962"
@@ -4095,8 +4094,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 760,
-        "y": 1220,
+        "x": 840,
+        "y": 2160,
         "wires": [
             [
                 "ee0bd27a6442d9c0"
@@ -4125,8 +4124,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 930,
-        "y": 1240,
+        "x": 1010,
+        "y": 2180,
         "wires": [
             [
                 "4505442f74bfd3ab"
@@ -4159,8 +4158,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1130,
-        "y": 1200,
+        "x": 1210,
+        "y": 2140,
         "wires": [
             [
                 "338150d80eb38946"
@@ -4193,8 +4192,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1130,
-        "y": 1240,
+        "x": 1210,
+        "y": 2180,
         "wires": [
             [
                 "338150d80eb38946"
@@ -4218,8 +4217,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1255,
-        "y": 1220,
+        "x": 1335,
+        "y": 2160,
         "wires": [
             [
                 "4abace46d88d5d82"
@@ -4238,8 +4237,8 @@
         "deviceId": "129",
         "command": "",
         "commandArgs": "",
-        "x": 1370,
-        "y": 1220,
+        "x": 1450,
+        "y": 2160,
         "wires": [
             []
         ]
@@ -4265,8 +4264,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1035,
-        "y": 1140,
+        "x": 1115,
+        "y": 2080,
         "wires": [
             [
                 "42ed4e7930637962"
@@ -4295,8 +4294,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1035,
-        "y": 1300,
+        "x": 1115,
+        "y": 2240,
         "wires": [
             [
                 "4505442f74bfd3ab"
@@ -4308,7 +4307,6 @@
         "id": "ed59489e0b1aba05",
         "type": "within-time-switch",
         "z": "f9337f21.0eab78",
-        "d": true,
         "name": "",
         "positionConfig": "96c207ac.2237a8",
         "startTime": "sunsetEnd",
@@ -4356,8 +4354,8 @@
         "outOfTimeValue": "",
         "outOfTimeValueType": "msgInput",
         "tsCompare": "0",
-        "x": 430,
-        "y": 1220,
+        "x": 510,
+        "y": 2160,
         "wires": [
             [
                 "5c8d33eaa026ed22"
@@ -4415,8 +4413,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 620,
-        "y": 1220,
+        "x": 700,
+        "y": 2160,
         "wires": [
             [
                 "c63d476daa70e7fc"
