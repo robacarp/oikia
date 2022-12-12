@@ -4727,7 +4727,7 @@
         "type": "function",
         "z": "f9337f21.0eab78",
         "name": "function 1",
-        "func": "let now = new Date()\nlet christmas_day = new Date(now.getFullYear(), 11, 25)\nlet seconds_between_now_and_christmas = Math.floor((christmas_day - now) / 1000)\n// x = seconds between now and christmas\n// y = interval between switching colors between red and green, in seconds\n// y = (x/59450)^2 + 1\nlet interval = Math.pow(seconds_between_now_and_christmas / 59450, 2) + 1\nlet last_switch = new Date(flow.get(\"last_switch\") || 0)\n\n// console.log(now - last_switch > interval)\n\nif (now - last_switch > interval) {\n    flow.set(\"last_switch\", now.getTime())\n    return {\n        payload: {\n            interval: interval,\n            last_switch: last_switch\n        }\n    }\n} else {\n    return null\n}",
+        "func": "let now = new Date()\nlet christmas_day = new Date(now.getFullYear(), 11, 25)\nlet seconds_between_now_and_christmas = Math.floor((christmas_day - now) / 1000)\n// x = seconds between now and christmas\n// y = interval between switching colors between red and green, in seconds\n// y = (x/59450)^2 + 1\nlet interval = Math.pow(seconds_between_now_and_christmas / 59450, 2) + 1\nlet last_switch = new Date(flow.get(\"last_switch\") || 0)\n\n// console.log(now - last_switch > interval)\n\nif (now - last_switch > interval) {\n    flow.set(\"last_switch\", now.getTime())\n    return {\n        payload: {\n            \"interval\": interval,\n            \"last_switch\": last_switch\n        }\n    }\n} else {\n    return null\n}",
         "outputs": 1,
         "noerr": 4,
         "initialize": "",
