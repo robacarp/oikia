@@ -2935,8 +2935,8 @@
         "outOfTimeValue": "",
         "outOfTimeValueType": "msgInput",
         "tsCompare": "0",
-        "x": 320,
-        "y": 2140,
+        "x": 300,
+        "y": 2260,
         "wires": [
             [
                 "22b6d01e.452a48"
@@ -2967,8 +2967,8 @@
         "onceDelay": 0.1,
         "topic": "",
         "payloadType": "date",
-        "x": 195,
-        "y": 2140,
+        "x": 175,
+        "y": 2260,
         "wires": [
             [
                 "4c8e959.ebe296c"
@@ -2987,8 +2987,8 @@
         "deviceId": "8",
         "command": "on",
         "commandArgs": "",
-        "x": 620,
-        "y": 2100,
+        "x": 600,
+        "y": 2220,
         "wires": [
             []
         ]
@@ -3004,8 +3004,8 @@
         "deviceId": "8",
         "command": "off",
         "commandArgs": "",
-        "x": 620,
-        "y": 2160,
+        "x": 600,
+        "y": 2280,
         "wires": [
             []
         ]
@@ -3101,8 +3101,8 @@
         "once": false,
         "onceDelay": 0.1,
         "recalcTime": 2,
-        "x": 320,
-        "y": 2200,
+        "x": 300,
+        "y": 2320,
         "wires": [
             [
                 "103cf87a.abee18"
@@ -3118,8 +3118,8 @@
         "links": [
             "2837495c.ae2176"
         ],
-        "x": 195,
-        "y": 2100,
+        "x": 175,
+        "y": 2220,
         "wires": [
             [
                 "22b6d01e.452a48"
@@ -4659,7 +4659,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 630,
+        "x": 490,
         "y": 1940,
         "wires": [
             [
@@ -4686,7 +4686,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 630,
+        "x": 490,
         "y": 1980,
         "wires": [
             [
