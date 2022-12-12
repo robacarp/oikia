@@ -4726,18 +4726,18 @@
         "id": "954db6bb63031efc",
         "type": "function",
         "z": "f9337f21.0eab78",
-        "name": "function 1",
+        "name": "only pass once messages at the calculated interval",
         "func": "let now = new Date()\nlet christmas_day = new Date(now.getFullYear(), 11, 25)\nlet seconds_between_now_and_christmas = Math.abs(Math.floor((christmas_day.getTime() - now.getTime()) / 1000))\n// x = seconds between now and christmas\n// y = interval between switching colors between red and green, in seconds\n// y = (x/59450)^2 + 1\nlet interval = Math.pow(seconds_between_now_and_christmas / 59450, 2) + 1\nlet last_switch = new Date(flow.get(\"last_switch\") || 0)\n\n// console.log(now - last_switch > interval)\n\nif ((now.getTime() - last_switch.getTime()) / 1000 > interval) {\n    flow.set(\"last_switch\", now.getTime())\n    return ({\n        payload: {\n            \"interval\": interval,\n            \"last_switch\": last_switch\n        }\n    })\n} else {\n    return null\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 520,
+        "x": 650,
         "y": 2300,
         "wires": [
             [
-                "d25c4d1af31f994d"
+                "14902b5db3baacc0"
             ]
         ]
     },
@@ -4755,6 +4755,22 @@
         "statusType": "auto",
         "x": 620,
         "y": 2220,
+        "wires": []
+    },
+    {
+        "id": "14902b5db3baacc0",
+        "type": "debug",
+        "z": "f9337f21.0eab78",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 2300,
         "wires": []
     },
     {
