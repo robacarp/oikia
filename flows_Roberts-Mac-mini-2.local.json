@@ -363,6 +363,18 @@
         ]
     },
     {
+        "id": "a82371ccd38f40e5",
+        "type": "junction",
+        "z": "f9337f21.0eab78",
+        "x": 900,
+        "y": 2300,
+        "wires": [
+            [
+                "4abace46d88d5d82"
+            ]
+        ]
+    },
+    {
         "id": "252d4ef4.c14b6a",
         "type": "hubitat config",
         "name": "Hubitat",
@@ -4134,7 +4146,7 @@
         "y": 2280,
         "wires": [
             [
-                "338150d80eb38946"
+                "a82371ccd38f40e5"
             ]
         ]
     },
@@ -4168,35 +4180,9 @@
         "y": 2320,
         "wires": [
             [
-                "338150d80eb38946"
+                "a82371ccd38f40e5"
             ]
         ]
-    },
-    {
-        "id": "338150d80eb38946",
-        "type": "delay",
-        "z": "f9337f21.0eab78",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "1",
-        "timeoutUnits": "milliseconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 895,
-        "y": 2300,
-        "wires": [
-            [
-                "4abace46d88d5d82"
-            ]
-        ],
-        "l": false
     },
     {
         "id": "4abace46d88d5d82",
