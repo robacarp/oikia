@@ -4040,8 +4040,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1220,
-        "y": 2140,
+        "x": 580,
+        "y": 2280,
         "wires": [
             [
                 "42ed4e7930637962"
@@ -4066,8 +4066,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1040,
-        "y": 2160,
+        "x": 400,
+        "y": 2300,
         "wires": [
             [
                 "ee0bd27a6442d9c0"
@@ -4096,8 +4096,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1210,
-        "y": 2180,
+        "x": 570,
+        "y": 2320,
         "wires": [
             [
                 "4505442f74bfd3ab"
@@ -4130,8 +4130,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1410,
-        "y": 2140,
+        "x": 770,
+        "y": 2280,
         "wires": [
             [
                 "338150d80eb38946"
@@ -4164,8 +4164,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1410,
-        "y": 2180,
+        "x": 770,
+        "y": 2320,
         "wires": [
             [
                 "338150d80eb38946"
@@ -4189,8 +4189,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1535,
-        "y": 2160,
+        "x": 895,
+        "y": 2300,
         "wires": [
             [
                 "4abace46d88d5d82"
@@ -4208,8 +4208,8 @@
         "deviceId": "129",
         "command": "setColor",
         "commandArgs": "",
-        "x": 1650,
-        "y": 2160,
+        "x": 1010,
+        "y": 2300,
         "wires": [
             []
         ]
@@ -4235,8 +4235,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1315,
-        "y": 2080,
+        "x": 675,
+        "y": 2220,
         "wires": [
             [
                 "42ed4e7930637962"
@@ -4265,8 +4265,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1315,
-        "y": 2240,
+        "x": 675,
+        "y": 2380,
         "wires": [
             [
                 "4505442f74bfd3ab"
@@ -4384,8 +4384,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 900,
-        "y": 2160,
+        "x": 260,
+        "y": 2300,
         "wires": [
             [
                 "c63d476daa70e7fc"
@@ -4717,15 +4717,15 @@
         "type": "debug",
         "z": "f9337f21.0eab78",
         "name": "debug 4",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 800,
-        "y": 2380,
+        "x": 680,
+        "y": 2120,
         "wires": []
     },
     {
