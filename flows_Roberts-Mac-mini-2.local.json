@@ -4230,7 +4230,6 @@
         "id": "4abace46d88d5d82",
         "type": "hubitat command",
         "z": "f9337f21.0eab78",
-        "d": true,
         "deviceLabel": "Porch Bulb",
         "name": "",
         "server": "252d4ef4.c14b6a",
