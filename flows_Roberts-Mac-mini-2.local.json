@@ -351,6 +351,18 @@
         ]
     },
     {
+        "id": "cdce099a16e20aab",
+        "type": "junction",
+        "z": "f9337f21.0eab78",
+        "x": 740,
+        "y": 1940,
+        "wires": [
+            [
+                "820b94d67933b2ef"
+            ]
+        ]
+    },
+    {
         "id": "252d4ef4.c14b6a",
         "type": "hubitat config",
         "name": "Hubitat",
@@ -2666,27 +2678,9 @@
         ]
     },
     {
-        "id": "363a9c66.018164",
-        "type": "hubitat command",
-        "z": "f9337f21.0eab78",
-        "d": true,
-        "deviceLabel": "",
-        "name": "Christmas Tree Off",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "",
-        "command": "off",
-        "commandArgs": "",
-        "x": 590,
-        "y": 2000,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "4ce81eb7.3b5058",
         "type": "time-inject",
         "z": "f9337f21.0eab78",
-        "d": true,
         "name": "",
         "nameInt": "⏲ 23:45 = timestamp",
         "positionConfig": "96c207ac.2237a8",
@@ -2774,11 +2768,10 @@
         "onceDelay": 0.1,
         "recalcTime": 2,
         "x": 280,
-        "y": 2000,
+        "y": 1980,
         "wires": [
             [
-                "363a9c66.018164",
-                "734464febd07fa6d"
+                "aa36796c3a751774"
             ]
         ]
     },
@@ -2786,7 +2779,6 @@
         "id": "c596c921.6f231",
         "type": "time-inject",
         "z": "f9337f21.0eab78",
-        "d": true,
         "name": "",
         "nameInt": "⏲ 6:00 = timestamp",
         "positionConfig": "96c207ac.2237a8",
@@ -2877,8 +2869,7 @@
         "y": 1940,
         "wires": [
             [
-                "3a326fc0.24f35",
-                "820b94d67933b2ef"
+                "056f0cd790053f1f"
             ]
         ]
     },
@@ -3661,23 +3652,6 @@
         ]
     },
     {
-        "id": "3a326fc0.24f35",
-        "type": "hubitat command",
-        "z": "f9337f21.0eab78",
-        "d": true,
-        "deviceLabel": "",
-        "name": "Christmas Tree On",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "",
-        "command": "on",
-        "commandArgs": "",
-        "x": 590,
-        "y": 1940,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "84f932994c4d9b0e",
         "type": "change",
         "z": "f9337f21.0eab78",
@@ -4407,35 +4381,17 @@
         ]
     },
     {
-        "id": "734464febd07fa6d",
-        "type": "hubitat command",
-        "z": "f9337f21.0eab78",
-        "d": true,
-        "deviceLabel": "",
-        "name": "Christmas Tree Off",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "",
-        "command": "off",
-        "commandArgs": "",
-        "x": 590,
-        "y": 2040,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "820b94d67933b2ef",
         "type": "hubitat command",
         "z": "f9337f21.0eab78",
-        "d": true,
-        "deviceLabel": "",
-        "name": "Christmas Tree On",
+        "deviceLabel": "Christmas Tree",
+        "name": "",
         "server": "252d4ef4.c14b6a",
-        "deviceId": "",
-        "command": "on",
+        "deviceId": "225",
+        "command": "",
         "commandArgs": "",
-        "x": 590,
-        "y": 1900,
+        "x": 880,
+        "y": 1940,
         "wires": [
             []
         ]
@@ -4683,6 +4639,60 @@
         "x": 1440,
         "y": 1400,
         "wires": []
+    },
+    {
+        "id": "056f0cd790053f1f",
+        "type": "change",
+        "z": "f9337f21.0eab78",
+        "name": "off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "on",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 630,
+        "y": 1940,
+        "wires": [
+            [
+                "cdce099a16e20aab"
+            ]
+        ]
+    },
+    {
+        "id": "aa36796c3a751774",
+        "type": "change",
+        "z": "f9337f21.0eab78",
+        "name": "off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 630,
+        "y": 1980,
+        "wires": [
+            [
+                "cdce099a16e20aab"
+            ]
+        ]
     },
     {
         "id": "734f4b605d12eb34",
