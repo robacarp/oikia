@@ -3999,6 +3999,7 @@
         "id": "2c07bcd4127d212c",
         "type": "inject",
         "z": "f9337f21.0eab78",
+        "d": true,
         "name": "Every 15 minutes",
         "props": [
             {
@@ -4717,8 +4718,7 @@
         "y": 2300,
         "wires": [
             [
-                "954db6bb63031efc",
-                "d25c4d1af31f994d"
+                "954db6bb63031efc"
             ]
         ]
     },
@@ -4733,45 +4733,13 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 650,
+        "x": 570,
         "y": 2300,
         "wires": [
             [
-                "14902b5db3baacc0"
+                "ed59489e0b1aba05"
             ]
         ]
-    },
-    {
-        "id": "d25c4d1af31f994d",
-        "type": "debug",
-        "z": "f9337f21.0eab78",
-        "name": "debug 4",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 520,
-        "y": 2240,
-        "wires": []
-    },
-    {
-        "id": "14902b5db3baacc0",
-        "type": "debug",
-        "z": "f9337f21.0eab78",
-        "name": "debug 5",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 940,
-        "y": 2240,
-        "wires": []
     },
     {
         "id": "734f4b605d12eb34",
