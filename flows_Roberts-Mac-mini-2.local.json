@@ -2936,7 +2936,7 @@
         "outOfTimeValueType": "msgInput",
         "tsCompare": "0",
         "x": 300,
-        "y": 2360,
+        "y": 2560,
         "wires": [
             [
                 "22b6d01e.452a48"
@@ -2968,7 +2968,7 @@
         "topic": "",
         "payloadType": "date",
         "x": 175,
-        "y": 2360,
+        "y": 2560,
         "wires": [
             [
                 "4c8e959.ebe296c"
@@ -2988,7 +2988,7 @@
         "command": "on",
         "commandArgs": "",
         "x": 600,
-        "y": 2320,
+        "y": 2520,
         "wires": [
             []
         ]
@@ -3005,7 +3005,7 @@
         "command": "off",
         "commandArgs": "",
         "x": 600,
-        "y": 2380,
+        "y": 2580,
         "wires": [
             []
         ]
@@ -3102,7 +3102,7 @@
         "onceDelay": 0.1,
         "recalcTime": 2,
         "x": 300,
-        "y": 2420,
+        "y": 2620,
         "wires": [
             [
                 "103cf87a.abee18"
@@ -3119,7 +3119,7 @@
             "2837495c.ae2176"
         ],
         "x": 175,
-        "y": 2320,
+        "y": 2520,
         "wires": [
             [
                 "22b6d01e.452a48"
@@ -4009,11 +4009,12 @@
                 "vt": "str"
             }
         ],
-        "repeat": "180",
+        "repeat": "900",
         "crontab": "",
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
+        "payload": "",
         "payloadType": "date",
         "x": 290,
         "y": 2160,
@@ -4689,6 +4690,33 @@
             [
                 "cdce099a16e20aab"
             ]
+        ]
+    },
+    {
+        "id": "7a4fd7484e0b4127",
+        "type": "inject",
+        "z": "f9337f21.0eab78",
+        "name": "Every 15 minutes",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 270,
+        "y": 2300,
+        "wires": [
+            []
         ]
     },
     {
