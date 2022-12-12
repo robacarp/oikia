@@ -4234,7 +4234,7 @@
         "name": "",
         "server": "252d4ef4.c14b6a",
         "deviceId": "129",
-        "command": "",
+        "command": "setColor",
         "commandArgs": "",
         "x": 1450,
         "y": 2160,
