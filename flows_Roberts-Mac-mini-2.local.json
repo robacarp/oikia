@@ -4693,7 +4693,7 @@
         "server": "252d4ef4.c14b6a",
         "deviceId": "545",
         "attribute": "switch",
-        "sendEvent": true,
+        "sendEvent": false,
         "x": 280,
         "y": 2280,
         "wires": [
