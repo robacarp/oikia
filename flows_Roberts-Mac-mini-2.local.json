@@ -4737,15 +4737,23 @@
         "type": "switch",
         "z": "f9337f21.0eab78",
         "name": "is_red?",
-        "property": "statusCode",
+        "property": "value",
         "propertyType": "msg",
-        "rules": [],
+        "rules": [
+            {
+                "t": "eq",
+                "v": "\"on\"",
+                "vt": "str"
+            }
+        ],
         "checkall": "true",
         "repair": false,
-        "outputs": 0,
+        "outputs": 1,
         "x": 1160,
         "y": 2160,
-        "wires": []
+        "wires": [
+            []
+        ]
     },
     {
         "id": "2338271acda71fee",
