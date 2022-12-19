@@ -4315,7 +4315,7 @@
         "y": 2160,
         "wires": [
             [
-                "5c8d33eaa026ed22"
+                "528696556a205fc9"
             ],
             []
         ]
@@ -4693,8 +4693,7 @@
         "y": 2160,
         "wires": [
             [
-                "ed59489e0b1aba05",
-                "445a9590b1dbebc2"
+                "ed59489e0b1aba05"
             ]
         ]
     },
@@ -4703,16 +4702,79 @@
         "type": "debug",
         "z": "f9337f21.0eab78",
         "name": "debug 4",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 680,
-        "y": 2120,
+        "x": 1180,
+        "y": 2100,
         "wires": []
+    },
+    {
+        "id": "528696556a205fc9",
+        "type": "hubitat device",
+        "z": "f9337f21.0eab78",
+        "deviceLabel": "Porch Rainbow Toggle",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "545",
+        "attribute": "switch",
+        "sendEvent": true,
+        "x": 960,
+        "y": 2160,
+        "wires": [
+            [
+                "5d3933e8fba9abec",
+                "445a9590b1dbebc2"
+            ]
+        ]
+    },
+    {
+        "id": "5d3933e8fba9abec",
+        "type": "switch",
+        "z": "f9337f21.0eab78",
+        "name": "is_red?",
+        "property": "statusCode",
+        "propertyType": "msg",
+        "rules": [],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 0,
+        "x": 1160,
+        "y": 2160,
+        "wires": []
+    },
+    {
+        "id": "2338271acda71fee",
+        "type": "inject",
+        "z": "f9337f21.0eab78",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 800,
+        "y": 2080,
+        "wires": [
+            [
+                "528696556a205fc9"
+            ]
+        ]
     },
     {
         "id": "734f4b605d12eb34",
