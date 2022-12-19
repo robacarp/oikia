@@ -2792,7 +2792,7 @@
         "type": "time-inject",
         "z": "f9337f21.0eab78",
         "name": "",
-        "nameInt": "⏲ 6:00 = timestamp",
+        "nameInt": "⏲ 7:05 = timestamp",
         "positionConfig": "96c207ac.2237a8",
         "props": [
             {
@@ -2840,7 +2840,7 @@
         "intervalCount": 1,
         "intervalCountType": "num",
         "intervalCountMultiplier": 60000,
-        "time": "6:00",
+        "time": "7:05",
         "timeType": "entered",
         "offset": 0,
         "offsetType": "none",
@@ -4703,7 +4703,7 @@
         "type": "debug",
         "z": "f9337f21.0eab78",
         "name": "debug 4",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
