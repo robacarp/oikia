@@ -4730,35 +4730,6 @@
         ]
     },
     {
-        "id": "2ba239a7c8b09630",
-        "type": "inject",
-        "z": "f9337f21.0eab78",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 580,
-        "y": 2060,
-        "wires": [
-            [
-                "ed59489e0b1aba05"
-            ]
-        ]
-    },
-    {
         "id": "115a5f6176d9706f",
         "type": "switch",
         "z": "f9337f21.0eab78",
@@ -4837,64 +4808,6 @@
         "y": 2300,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "50d2c0bc6e4218f5",
-        "type": "inject",
-        "z": "f9337f21.0eab78",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 560,
-        "y": 2220,
-        "wires": [
-            [
-                "7c87933da75f30c9"
-            ]
-        ]
-    },
-    {
-        "id": "5736a63e99f40e03",
-        "type": "inject",
-        "z": "f9337f21.0eab78",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 560,
-        "y": 2340,
-        "wires": [
-            [
-                "c95a82f5f9f4a570"
-            ]
         ]
     },
     {
