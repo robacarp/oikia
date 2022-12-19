@@ -4669,14 +4669,14 @@
         "id": "954db6bb63031efc",
         "type": "function",
         "z": "f9337f21.0eab78",
-        "name": "y = (x/59450)^2 + 1",
-        "func": "let now = new Date()\nlet christmas_day = new Date(now.getFullYear(), 11, 25)\nlet seconds_between_now_and_christmas = Math.abs(Math.floor((christmas_day.getTime() - now.getTime()) / 1000))\n// x = seconds between now and christmas\n// y = interval between switching colors between red and green, in seconds\n// y = (x/59450)^2 + 1\nlet interval = Math.pow(seconds_between_now_and_christmas / 59450, 2) + 1\nlet last_switch = new Date(flow.get(\"last_switch\") || 0)\nlet seconds_since_switch = (now.getTime() - last_switch.getTime()) / 1000\nlet should_tick = seconds_since_switch > interval\nlet seconds_until_switch = Math.floor(interval - seconds_since_switch)\n\nnode.status({ fill: \"green\", shape: \"ring\", text: `${seconds_until_switch}s until switch` });\n\nif (should_tick) {\n    flow.set(\"last_switch\", now.getTime())\n    console.log({\n        payload: {\n            \"should_tick\": should_tick,\n            \"interval\": interval,\n            \"last_switch\": last_switch\n        }\n    })\n\n    return msg\n} else {\n    return null\n}",
+        "name": "y = (x/59450)^2 + 0.5",
+        "func": "let now = new Date()\nlet christmas_day = new Date(now.getFullYear(), 11, 25)\nlet seconds_between_now_and_christmas = Math.abs(Math.floor((christmas_day.getTime() - now.getTime()) / 1000))\n// x = seconds between now and christmas\n// y = interval between switching colors between red and green, in seconds\n// y = (x/59450)^2 + 1\nlet interval = Math.pow(seconds_between_now_and_christmas / 59450, 2) + 0.5\nlet last_switch = new Date(flow.get(\"last_switch\") || 0)\nlet seconds_since_switch = (now.getTime() - last_switch.getTime()) / 1000\nlet should_tick = seconds_since_switch > interval\nlet seconds_until_switch = Math.floor(interval - seconds_since_switch)\n\nnode.status({ fill: \"green\", shape: \"ring\", text: `${seconds_until_switch}s until switch` });\n\nif (should_tick) {\n    flow.set(\"last_switch\", now.getTime())\n    console.log({\n        payload: {\n            \"should_tick\": should_tick,\n            \"interval\": interval,\n            \"last_switch\": last_switch\n        }\n    })\n\n    return msg\n} else {\n    return null\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 490,
+        "x": 500,
         "y": 2160,
         "wires": [
             [
