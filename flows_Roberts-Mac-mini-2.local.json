@@ -4708,7 +4708,7 @@
         "type": "switch",
         "z": "f9337f21.0eab78",
         "name": "is rainbow mode enabled?",
-        "property": "value",
+        "property": "payload.value",
         "propertyType": "msg",
         "rules": [
             {
