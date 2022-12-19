@@ -366,7 +366,7 @@
         "id": "a82371ccd38f40e5",
         "type": "junction",
         "z": "f9337f21.0eab78",
-        "x": 1700,
+        "x": 1600,
         "y": 2160,
         "wires": [
             [
@@ -4052,7 +4052,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1380,
+        "x": 1280,
         "y": 2140,
         "wires": [
             [
@@ -4078,7 +4078,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1200,
+        "x": 1100,
         "y": 2160,
         "wires": [
             [
@@ -4108,7 +4108,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1370,
+        "x": 1270,
         "y": 2180,
         "wires": [
             [
@@ -4149,7 +4149,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1570,
+        "x": 1470,
         "y": 2140,
         "wires": [
             [
@@ -4190,7 +4190,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1570,
+        "x": 1470,
         "y": 2180,
         "wires": [
             [
@@ -4208,7 +4208,7 @@
         "deviceId": "129",
         "command": "setColor",
         "commandArgs": "",
-        "x": 1810,
+        "x": 1710,
         "y": 2160,
         "wires": [
             []
@@ -4235,7 +4235,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1475,
+        "x": 1375,
         "y": 2080,
         "wires": [
             [
@@ -4265,7 +4265,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1475,
+        "x": 1375,
         "y": 2240,
         "wires": [
             [
@@ -4325,7 +4325,7 @@
         "outOfTimeValue": "",
         "outOfTimeValueType": "msgInput",
         "tsCompare": "0",
-        "x": 710,
+        "x": 630,
         "y": 2160,
         "wires": [
             [
@@ -4657,7 +4657,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 250,
+        "x": 230,
         "y": 2160,
         "wires": [
             [
@@ -4676,7 +4676,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 500,
+        "x": 400,
         "y": 2160,
         "wires": [
             [
@@ -4720,7 +4720,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 980,
+        "x": 880,
         "y": 2160,
         "wires": [
             [
