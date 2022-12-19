@@ -4746,6 +4746,35 @@
         "wires": []
     },
     {
+        "id": "2ba239a7c8b09630",
+        "type": "inject",
+        "z": "f9337f21.0eab78",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 780,
+        "y": 2060,
+        "wires": [
+            [
+                "528696556a205fc9"
+            ]
+        ]
+    },
+    {
         "id": "734f4b605d12eb34",
         "type": "hubitat device",
         "z": "2984f0164b9bafb7",
