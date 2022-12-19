@@ -4640,7 +4640,7 @@
         "id": "7a4fd7484e0b4127",
         "type": "inject",
         "z": "f9337f21.0eab78",
-        "name": "Every 1 minute",
+        "name": "*/30s",
         "props": [
             {
                 "p": "payload"
@@ -4657,7 +4657,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 280,
+        "x": 250,
         "y": 2160,
         "wires": [
             [
