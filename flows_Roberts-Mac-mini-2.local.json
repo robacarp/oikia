@@ -5341,6 +5341,7 @@
         "id": "f5678ecdd5485f20",
         "type": "within-time-switch",
         "z": "5ea7da533109f7d2",
+        "d": true,
         "name": "",
         "nameInt": "",
         "positionConfig": "96c207ac.2237a8",
@@ -5402,6 +5403,7 @@
         "id": "207b3028d768f770",
         "type": "inject",
         "z": "5ea7da533109f7d2",
+        "d": true,
         "name": "12pm",
         "props": [
             {
@@ -5431,6 +5433,7 @@
         "id": "cf2f830a031481ed",
         "type": "delay",
         "z": "5ea7da533109f7d2",
+        "d": true,
         "name": "",
         "pauseType": "delay",
         "timeout": "5",
@@ -5460,6 +5463,7 @@
         "id": "866b6a36ffb6fe3b",
         "type": "within-time-switch",
         "z": "5ea7da533109f7d2",
+        "d": true,
         "name": "",
         "nameInt": "",
         "positionConfig": "96c207ac.2237a8",
@@ -5521,6 +5525,7 @@
         "id": "c05a83ef8e072485",
         "type": "within-time-switch",
         "z": "5ea7da533109f7d2",
+        "d": true,
         "name": "",
         "nameInt": "",
         "positionConfig": "96c207ac.2237a8",
@@ -5582,6 +5587,7 @@
         "id": "21b8df838d261e07",
         "type": "within-time-switch",
         "z": "5ea7da533109f7d2",
+        "d": true,
         "name": "",
         "nameInt": "",
         "positionConfig": "96c207ac.2237a8",
@@ -5643,6 +5649,7 @@
         "id": "7aa9def8d34a3e64",
         "type": "inject",
         "z": "5ea7da533109f7d2",
+        "d": true,
         "name": "7am",
         "props": [
             {
@@ -5672,6 +5679,7 @@
         "id": "2d781397117ae518",
         "type": "inject",
         "z": "5ea7da533109f7d2",
+        "d": true,
         "name": "6pm",
         "props": [
             {
@@ -5701,6 +5709,7 @@
         "id": "5e46a0effa23ad0b",
         "type": "inject",
         "z": "5ea7da533109f7d2",
+        "d": true,
         "name": "2pm",
         "props": [
             {
@@ -5720,36 +5729,6 @@
         "payloadType": "date",
         "x": 130,
         "y": 900,
-        "wires": [
-            [
-                "cf2f830a031481ed"
-            ]
-        ]
-    },
-    {
-        "id": "02a2bac3024417b2",
-        "type": "inject",
-        "z": "5ea7da533109f7d2",
-        "d": true,
-        "name": "*/30min",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "1800",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 120,
-        "y": 780,
         "wires": [
             [
                 "cf2f830a031481ed"
