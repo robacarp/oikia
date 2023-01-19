@@ -366,6 +366,7 @@
         "id": "a82371ccd38f40e5",
         "type": "junction",
         "z": "f9337f21.0eab78",
+        "d": true,
         "x": 1600,
         "y": 2160,
         "wires": [
@@ -4037,6 +4038,7 @@
         "id": "ee0bd27a6442d9c0",
         "type": "change",
         "z": "f9337f21.0eab78",
+        "d": true,
         "name": "is_red := false",
         "rules": [
             {
@@ -4064,6 +4066,7 @@
         "id": "c63d476daa70e7fc",
         "type": "switch",
         "z": "f9337f21.0eab78",
+        "d": true,
         "name": "is_red?",
         "property": "is_red",
         "propertyType": "flow",
@@ -4093,6 +4096,7 @@
         "id": "1657120c75a44639",
         "type": "change",
         "z": "f9337f21.0eab78",
+        "d": true,
         "name": "is_red := true",
         "rules": [
             {
@@ -4120,6 +4124,7 @@
         "id": "42ed4e7930637962",
         "type": "change",
         "z": "f9337f21.0eab78",
+        "d": true,
         "name": "Make Green",
         "rules": [
             {
@@ -4161,6 +4166,7 @@
         "id": "4505442f74bfd3ab",
         "type": "change",
         "z": "f9337f21.0eab78",
+        "d": true,
         "name": "Make Red",
         "rules": [
             {
@@ -4202,6 +4208,7 @@
         "id": "4abace46d88d5d82",
         "type": "hubitat command",
         "z": "f9337f21.0eab78",
+        "d": true,
         "deviceLabel": "Porch Bulb",
         "name": "",
         "server": "252d4ef4.c14b6a",
@@ -4278,6 +4285,7 @@
         "id": "ed59489e0b1aba05",
         "type": "within-time-switch",
         "z": "f9337f21.0eab78",
+        "d": true,
         "name": "",
         "positionConfig": "96c207ac.2237a8",
         "startTime": "sunsetEnd",
@@ -4640,6 +4648,7 @@
         "id": "7a4fd7484e0b4127",
         "type": "inject",
         "z": "f9337f21.0eab78",
+        "d": true,
         "name": "*/30s",
         "props": [
             {
@@ -4669,6 +4678,7 @@
         "id": "954db6bb63031efc",
         "type": "function",
         "z": "f9337f21.0eab78",
+        "d": true,
         "name": "y = (x/59450)^2 + 0.5",
         "func": "let now = new Date()\nlet christmas_day = new Date(now.getFullYear(), 11, 25)\nlet seconds_between_now_and_christmas = Math.abs(Math.floor((christmas_day.getTime() - now.getTime()) / 1000))\n// x = seconds between now and christmas\n// y = interval between switching colors between red and green, in seconds\n// y = (x/59450)^2 + 1\nlet interval = Math.pow(seconds_between_now_and_christmas / 59450, 2) + 0.5\nlet last_switch = new Date(flow.get(\"last_switch\") || 0)\nlet seconds_since_switch = (now.getTime() - last_switch.getTime()) / 1000\nlet should_tick = seconds_since_switch > interval\nlet seconds_until_switch = Math.floor(interval - seconds_since_switch)\n\nnode.status({ fill: \"green\", shape: \"ring\", text: `${seconds_until_switch}s until switch` });\n\nif (should_tick) {\n    flow.set(\"last_switch\", now.getTime())\n    console.log({\n        payload: {\n            \"should_tick\": should_tick,\n            \"interval\": interval,\n            \"last_switch\": last_switch\n        }\n    })\n\n    return msg\n} else {\n    return null\n}",
         "outputs": 1,
@@ -4706,6 +4716,7 @@
         "id": "5d3933e8fba9abec",
         "type": "switch",
         "z": "f9337f21.0eab78",
+        "d": true,
         "name": "is rainbow mode enabled?",
         "property": "rainbow_enabled",
         "propertyType": "flow",
