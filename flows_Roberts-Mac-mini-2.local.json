@@ -354,6 +354,7 @@
         "id": "cdce099a16e20aab",
         "type": "junction",
         "z": "f9337f21.0eab78",
+        "d": true,
         "x": 740,
         "y": 1940,
         "wires": [
@@ -2694,6 +2695,7 @@
         "id": "4ce81eb7.3b5058",
         "type": "time-inject",
         "z": "f9337f21.0eab78",
+        "d": true,
         "name": "",
         "nameInt": "⏲ 23:45 = timestamp",
         "positionConfig": "96c207ac.2237a8",
@@ -2792,6 +2794,7 @@
         "id": "c596c921.6f231",
         "type": "time-inject",
         "z": "f9337f21.0eab78",
+        "d": true,
         "name": "",
         "nameInt": "⏲ 7:05 = timestamp",
         "positionConfig": "96c207ac.2237a8",
@@ -4361,6 +4364,7 @@
         "id": "820b94d67933b2ef",
         "type": "hubitat command",
         "z": "f9337f21.0eab78",
+        "d": true,
         "deviceLabel": "Christmas Tree",
         "name": "",
         "server": "252d4ef4.c14b6a",
@@ -4594,6 +4598,7 @@
         "id": "056f0cd790053f1f",
         "type": "change",
         "z": "f9337f21.0eab78",
+        "d": true,
         "name": "on",
         "rules": [
             {
@@ -4621,6 +4626,7 @@
         "id": "aa36796c3a751774",
         "type": "change",
         "z": "f9337f21.0eab78",
+        "d": true,
         "name": "off",
         "rules": [
             {
