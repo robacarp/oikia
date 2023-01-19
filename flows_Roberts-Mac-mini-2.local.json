@@ -4704,6 +4704,7 @@
         "id": "528696556a205fc9",
         "type": "hubitat device",
         "z": "f9337f21.0eab78",
+        "d": true,
         "deviceLabel": "Porch Rainbow Toggle",
         "name": "",
         "server": "252d4ef4.c14b6a",
@@ -4750,6 +4751,7 @@
         "id": "115a5f6176d9706f",
         "type": "switch",
         "z": "f9337f21.0eab78",
+        "d": true,
         "name": "is rainbow mode enabled?",
         "property": "payload.value",
         "propertyType": "msg",
@@ -4781,6 +4783,7 @@
         "id": "7c87933da75f30c9",
         "type": "change",
         "z": "f9337f21.0eab78",
+        "d": true,
         "name": "Enable Flow Rainbow",
         "rules": [
             {
@@ -4806,6 +4809,7 @@
         "id": "c95a82f5f9f4a570",
         "type": "change",
         "z": "f9337f21.0eab78",
+        "d": true,
         "name": "Disable Flow Rainbow",
         "rules": [
             {
