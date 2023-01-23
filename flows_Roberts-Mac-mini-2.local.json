@@ -5859,12 +5859,17 @@
                 "vt": "str"
             },
             {
+                "t": "eq",
+                "v": "power",
+                "vt": "str"
+            },
+            {
                 "t": "else"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 11,
+        "outputs": 12,
         "x": 290,
         "y": 240,
         "wires": [
@@ -5878,8 +5883,7 @@
                 "e5045ed819a795e7"
             ],
             [
-                "b1f93bc7bca948da",
-                "6dcee357469bde7e"
+                "b1f93bc7bca948da"
             ],
             [
                 "6a9fe7a6fd325567"
@@ -5898,6 +5902,9 @@
             ],
             [
                 "7c0145dfeba3639c"
+            ],
+            [
+                "fcbb2333d4396516"
             ],
             [
                 "7ab4d3bb0b23307a"
@@ -6309,5 +6316,30 @@
         "x": 590,
         "y": 120,
         "wires": []
+    },
+    {
+        "id": "fcbb2333d4396516",
+        "type": "change",
+        "z": "3cee340729aa7e67",
+        "name": "Energy report",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "/* \t *\t\t{\t   \"name\":\"power\",\t   \"value\":\"1406\",\t   \"displayName\":\"Shoffice Repeater Plug\",\t   \"deviceId\":\"546\",\t   \"descriptionText\":\"Shoffice Repeater Plug power is 1406W\",\t   \"unit\":\"W\",\t   \"type\":null,\t   \"data\":null\t}\t*/\t{\t   \"name\": payload.displayName,\t   \"data\": payload.value,\t   \"unit\": \"watts\",\t   \"metric\": payload.name\t}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 560,
+        "wires": [
+            []
+        ]
     }
 ]
