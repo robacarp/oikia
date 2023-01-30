@@ -5864,12 +5864,17 @@
                 "vt": "str"
             },
             {
+                "t": "eq",
+                "v": "level",
+                "vt": "str"
+            },
+            {
                 "t": "else"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 12,
+        "outputs": 13,
         "x": 290,
         "y": 240,
         "wires": [
@@ -5905,6 +5910,9 @@
             ],
             [
                 "fcbb2333d4396516"
+            ],
+            [
+                "9f7670ebd87c5f63"
             ],
             [
                 "7ab4d3bb0b23307a"
@@ -6342,6 +6350,32 @@
             [
                 "e16cf27bcb6da70f"
             ]
+        ]
+    },
+    {
+        "id": "9f7670ebd87c5f63",
+        "type": "change",
+        "z": "3cee340729aa7e67",
+        "d": true,
+        "name": "Light Level",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "/* TODO: {\t   \"name\":\"level\",\t   \"value\":\"1\",\t   \"displayName\":\"Rob’s bedside\",\t   \"deviceId\":\"2\",\t   \"descriptionText\":\"Rob’s bedside was set to 1% [digital]\",\t   \"unit\":\"%\",\t   \"type\":\"digital\",\t   \"data\":null\t} */",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 600,
+        "wires": [
+            []
         ]
     }
 ]
