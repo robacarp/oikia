@@ -1949,11 +1949,10 @@
         "type": "link out",
         "z": "f30f9979.39f178",
         "name": "Sunset",
+        "mode": "link",
         "links": [
-            "117f15c0.8b285a",
-            "89ce2107.6a1858",
             "13a205f.9848cfa",
-            "4f6c459db4701abf",
+            "89ce2107.6a1858",
             "ea9de46ea03554d1"
         ],
         "x": 495,
@@ -2364,7 +2363,9 @@
         "z": "f30f9979.39f178",
         "name": "First Light",
         "mode": "link",
-        "links": [],
+        "links": [
+            "4f6c459db4701abf"
+        ],
         "x": 495,
         "y": 260,
         "wires": []
@@ -2445,7 +2446,7 @@
         "id": "c5d2e3b6.bd6a4",
         "type": "link in",
         "z": "f9337f21.0eab78",
-        "name": "",
+        "name": "Calculate CT Target",
         "links": [
             "33ed496c.3b1f1e"
         ],
@@ -2782,7 +2783,7 @@
         "id": "89ce2107.6a1858",
         "type": "link in",
         "z": "f9337f21.0eab78",
-        "name": "",
+        "name": "Porch Bulb On",
         "links": [
             "2837495c.ae2176"
         ],
@@ -2798,7 +2799,7 @@
         "id": "35f56d8f.e1d64a",
         "type": "link in",
         "z": "f9337f21.0eab78",
-        "name": "",
+        "name": "Porch Bulb Off",
         "links": [
             "4e636188.7f332"
         ],
@@ -3249,7 +3250,7 @@
         "type": "link in",
         "z": "f9337f21.0eab78",
         "d": true,
-        "name": "",
+        "name": "Christmas lights on",
         "links": [
             "2837495c.ae2176"
         ],
@@ -4954,9 +4955,9 @@
         "id": "4f6c459db4701abf",
         "type": "link in",
         "z": "3602fa877f6615d5",
-        "name": "link in 1",
+        "name": "Open Blinds",
         "links": [
-            "2837495c.ae2176"
+            "e8c98c64072325d3"
         ],
         "x": 275,
         "y": 280,
@@ -4970,7 +4971,7 @@
         "id": "ea9de46ea03554d1",
         "type": "link in",
         "z": "3602fa877f6615d5",
-        "name": "link in 2",
+        "name": "Close Blinds",
         "links": [
             "2837495c.ae2176"
         ],
