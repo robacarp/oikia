@@ -4868,20 +4868,22 @@
         "x": 275,
         "y": 340,
         "wires": [
-            []
+            [
+                "83e94dbe61034f40"
+            ]
         ]
     },
     {
         "id": "94a19515bbb8a544",
         "type": "change",
         "z": "3602fa877f6615d5",
-        "name": "cmd=>close",
+        "name": "cmd=>open",
         "rules": [
             {
                 "t": "set",
                 "p": "command",
                 "pt": "msg",
-                "to": "close",
+                "to": "open",
                 "tot": "str"
             }
         ],
@@ -4941,6 +4943,33 @@
         "y": 320,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "83e94dbe61034f40",
+        "type": "change",
+        "z": "3602fa877f6615d5",
+        "name": "cmd=>close",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "close",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 390,
+        "y": 340,
+        "wires": [
+            [
+                "9e51c160dd7d64db"
+            ]
         ]
     },
     {
