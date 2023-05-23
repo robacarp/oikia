@@ -2053,9 +2053,9 @@
         "type": "link out",
         "z": "f30f9979.39f178",
         "name": "Sunrise",
+        "mode": "link",
         "links": [
-            "35f56d8f.e1d64a",
-            "61f1a42.e969ddc"
+            "35f56d8f.e1d64a"
         ],
         "x": 495,
         "y": 320,
