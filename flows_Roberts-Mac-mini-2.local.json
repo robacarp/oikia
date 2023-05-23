@@ -1957,7 +1957,7 @@
             "ea9de46ea03554d1"
         ],
         "x": 495,
-        "y": 220,
+        "y": 380,
         "wires": []
     },
     {
@@ -2042,7 +2042,7 @@
         "addPayload2Days": "*",
         "addPayload3Days": "*",
         "x": 340,
-        "y": 220,
+        "y": 380,
         "wires": [
             [
                 "2837495c.ae2176"
@@ -2059,7 +2059,7 @@
             "61f1a42.e969ddc"
         ],
         "x": 495,
-        "y": 300,
+        "y": 320,
         "wires": []
     },
     {
@@ -2144,7 +2144,7 @@
         "addPayload2Days": "*",
         "addPayload3Days": "*",
         "x": 340,
-        "y": 300,
+        "y": 320,
         "wires": [
             [
                 "4e636188.7f332"
@@ -2242,7 +2242,7 @@
         "onceDelay": 0.1,
         "recalcTime": 2,
         "x": 330,
-        "y": 380,
+        "y": 440,
         "wires": [
             [
                 "6eb44101bb0fa836"
@@ -2257,7 +2257,116 @@
         "mode": "link",
         "links": [],
         "x": 495,
-        "y": 380,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "b641be1c756b0a68",
+        "type": "time-inject",
+        "z": "f30f9979.39f178",
+        "name": "First Light",
+        "nameInt": "⏲ astronomical dawn = timestamp",
+        "positionConfig": "96c207ac.2237a8",
+        "props": [
+            {
+                "p": "",
+                "pt": "msgPayload",
+                "v": "",
+                "vt": "date",
+                "o": "1",
+                "oT": "none",
+                "oM": "60000",
+                "f": 0,
+                "fS": 0,
+                "fT": "UNIX timestamp (ms)",
+                "fI": "0",
+                "next": true,
+                "days": "*",
+                "months": "*",
+                "onlyOddDays": false,
+                "onlyEvenDays": false,
+                "onlyOddWeeks": false,
+                "onlyEvenWeeks": false
+            },
+            {
+                "p": "",
+                "pt": "msgTopic",
+                "v": "",
+                "vt": "str",
+                "o": "1",
+                "oT": "none",
+                "oM": "60000",
+                "f": 0,
+                "fS": 0,
+                "fT": "UNIX timestamp (ms)",
+                "fI": "0",
+                "next": false,
+                "days": "*",
+                "months": "*",
+                "onlyOddDays": false,
+                "onlyEvenDays": false,
+                "onlyOddWeeks": false,
+                "onlyEvenWeeks": false
+            }
+        ],
+        "injectTypeSelect": "time",
+        "intervalCount": 1,
+        "intervalCountType": "num",
+        "intervalCountMultiplier": 60000,
+        "time": "astronomicalDawn",
+        "timeType": "pdsTime",
+        "offset": 0,
+        "offsetType": "none",
+        "offsetMultiplier": 60000,
+        "timeEnd": "",
+        "timeEndType": "entered",
+        "timeEndOffset": 0,
+        "timeEndOffsetType": "none",
+        "timeEndOffsetMultiplier": 60000,
+        "timeDays": "*",
+        "timeOnlyOddDays": false,
+        "timeOnlyEvenDays": false,
+        "timeOnlyOddWeeks": false,
+        "timeOnlyEvenWeeks": false,
+        "timeMonths": "*",
+        "timedatestart": "",
+        "timedateend": "",
+        "property": "",
+        "propertyType": "none",
+        "propertyCompare": "true",
+        "propertyThreshold": "",
+        "propertyThresholdType": "num",
+        "timeAlt": "",
+        "timeAltType": "entered",
+        "timeAltDays": "*",
+        "timeAltOnlyOddDays": false,
+        "timeAltOnlyEvenDays": false,
+        "timeAltOnlyOddWeeks": false,
+        "timeAltOnlyEvenWeeks": false,
+        "timeAltMonths": "*",
+        "timeAltOffset": 0,
+        "timeAltOffsetType": "none",
+        "timeAltOffsetMultiplier": 60000,
+        "once": false,
+        "onceDelay": 0.1,
+        "recalcTime": 2,
+        "x": 340,
+        "y": 260,
+        "wires": [
+            [
+                "e8c98c64072325d3"
+            ]
+        ]
+    },
+    {
+        "id": "e8c98c64072325d3",
+        "type": "link out",
+        "z": "f30f9979.39f178",
+        "name": "First Light",
+        "mode": "link",
+        "links": [],
+        "x": 495,
+        "y": 260,
         "wires": []
     },
     {
