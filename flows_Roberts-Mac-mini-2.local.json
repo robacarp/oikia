@@ -2264,7 +2264,7 @@
         "type": "time-inject",
         "z": "f30f9979.39f178",
         "name": "First Light",
-        "nameInt": "⏲ nautical dawn = timestamp",
+        "nameInt": "⏲ blue hour dawn start = timestamp",
         "positionConfig": "96c207ac.2237a8",
         "props": [
             {
@@ -2312,7 +2312,7 @@
         "intervalCount": 1,
         "intervalCountType": "num",
         "intervalCountMultiplier": 60000,
-        "time": "nauticalDawn",
+        "time": "blueHourDawnStart",
         "timeType": "pdsTime",
         "offset": 0,
         "offsetType": "none",
