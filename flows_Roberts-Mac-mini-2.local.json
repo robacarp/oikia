@@ -5208,7 +5208,7 @@
         "deviceId": "548",
         "attribute": "position",
         "sendEvent": true,
-        "x": 620,
+        "x": 600,
         "y": 240,
         "wires": [
             []
