@@ -5118,40 +5118,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 390,
+        "x": 490,
         "y": 280,
         "wires": [
             [
                 "9e51c160dd7d64db"
-            ]
-        ]
-    },
-    {
-        "id": "1ac53e2d1409af97",
-        "type": "inject",
-        "z": "3602fa877f6615d5",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 220,
-        "y": 200,
-        "wires": [
-            [
-                "94a19515bbb8a544"
             ]
         ]
     },
@@ -5165,7 +5136,7 @@
         "deviceId": "548",
         "command": "",
         "commandArgs": "",
-        "x": 600,
+        "x": 700,
         "y": 340,
         "wires": [
             []
@@ -5190,7 +5161,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 390,
+        "x": 490,
         "y": 400,
         "wires": [
             [
@@ -5208,11 +5179,103 @@
         "deviceId": "548",
         "attribute": "position",
         "sendEvent": true,
-        "x": 600,
+        "x": 700,
         "y": 240,
         "wires": [
             []
         ]
+    },
+    {
+        "id": "07921dc9e7ae4f38",
+        "type": "within-time-switch",
+        "z": "3602fa877f6615d5",
+        "name": "sunset - sunrise",
+        "positionConfig": "96c207ac.2237a8",
+        "startTime": "blueHourDawnStart",
+        "startTimeType": "pdsTime",
+        "startOffset": 0,
+        "startOffsetType": "none",
+        "startOffsetMultiplier": 60000,
+        "endTime": "blueHourDuskEnd",
+        "endTimeType": "pdsTime",
+        "endOffset": 0,
+        "endOffsetType": "none",
+        "endOffsetMultiplier": 60000,
+        "timeRestrictions": "",
+        "timeRestrictionsType": "none",
+        "timeDays": "*",
+        "timeOnlyOddDays": false,
+        "timeOnlyEvenDays": false,
+        "timeOnlyOddWeeks": false,
+        "timeOnlyEvenWeeks": false,
+        "timeMonths": "*",
+        "timedatestart": "",
+        "timedateend": "",
+        "propertyStart": "",
+        "propertyStartType": "none",
+        "propertyStartCompare": "true",
+        "propertyStartThreshold": "",
+        "propertyStartThresholdType": "num",
+        "startTimeAlt": "",
+        "startTimeAltType": "entered",
+        "startOffsetAlt": 0,
+        "startOffsetAltType": "none",
+        "startOffsetAltMultiplier": 60000,
+        "propertyEnd": "",
+        "propertyEndType": "none",
+        "propertyEndCompare": "true",
+        "propertyEndThreshold": "",
+        "propertyEndThresholdType": "num",
+        "endTimeAlt": "",
+        "endTimeAltType": "entered",
+        "endOffsetAlt": 0,
+        "endOffsetAltType": "none",
+        "endOffsetAltMultiplier": 60000,
+        "withinTimeValue": "",
+        "withinTimeValueType": "msgInput",
+        "outOfTimeValue": "",
+        "outOfTimeValueType": "msgInput",
+        "tsCompare": "0",
+        "x": 260,
+        "y": 340,
+        "wires": [
+            [
+                "94a19515bbb8a544"
+            ],
+            [
+                "83e94dbe61034f40"
+            ]
+        ]
+    },
+    {
+        "id": "aecb7e12e2a56cca",
+        "type": "inject",
+        "z": "3602fa877f6615d5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 125,
+        "y": 340,
+        "wires": [
+            [
+                "07921dc9e7ae4f38"
+            ]
+        ],
+        "l": false
     },
     {
         "id": "734f4b605d12eb34",
