@@ -5199,6 +5199,22 @@
         ]
     },
     {
+        "id": "adbc0c1456d77f31",
+        "type": "hubitat device",
+        "z": "3602fa877f6615d5",
+        "deviceLabel": "Laundry Blinds",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "548",
+        "attribute": "position",
+        "sendEvent": true,
+        "x": 620,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "734f4b605d12eb34",
         "type": "hubitat device",
         "z": "2984f0164b9bafb7",
