@@ -5107,6 +5107,13 @@
         "rules": [
             {
                 "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
                 "p": "command",
                 "pt": "msg",
                 "to": "open",
@@ -5276,6 +5283,64 @@
             ]
         ],
         "l": false
+    },
+    {
+        "id": "3514d0120bbc789b",
+        "type": "inject",
+        "z": "3602fa877f6615d5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 440,
+        "wires": [
+            [
+                "83e94dbe61034f40"
+            ]
+        ]
+    },
+    {
+        "id": "03480f078910e76d",
+        "type": "inject",
+        "z": "3602fa877f6615d5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 240,
+        "wires": [
+            [
+                "94a19515bbb8a544"
+            ]
+        ]
     },
     {
         "id": "734f4b605d12eb34",
