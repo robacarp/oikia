@@ -5380,6 +5380,78 @@
         "wires": []
     },
     {
+        "id": "5f66bdf9a5df378e",
+        "type": "hubitat device",
+        "z": "2984f0164b9bafb7",
+        "deviceLabel": "Front Door Contact",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "162",
+        "attribute": "contact",
+        "sendEvent": true,
+        "x": 330,
+        "y": 500,
+        "wires": [
+            [
+                "ccc007c9c6a678ac"
+            ]
+        ]
+    },
+    {
+        "id": "fcf3fde3acde20c4",
+        "type": "hubitat device",
+        "z": "2984f0164b9bafb7",
+        "deviceLabel": "Sunroom-Inside Door",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "196",
+        "attribute": "contact",
+        "sendEvent": true,
+        "x": 340,
+        "y": 540,
+        "wires": [
+            [
+                "ccc007c9c6a678ac"
+            ]
+        ]
+    },
+    {
+        "id": "ccc007c9c6a678ac",
+        "type": "function",
+        "z": "2984f0164b9bafb7",
+        "name": "open door tally",
+        "func": "let status = null;\nlet activeCount = 0;\n\nlet sensors = context.get(\"sensors\") || {};\nlet wasActive = context.get(\"active\") || false;\nlet deviceId\n\nif (typeof msg.payload != \"undefined\" && msg.payload !== null) {\n    deviceId = msg.payload.deviceId;\n}\n\nif (typeof deviceId != \"undefined\") {\n\n    // If we didn't receive an event, the process was triggered by something else (eg. enabling the automation)\n    status = msg.payload.value\n\n    if (typeof sensors[deviceId] == \"undefined\") {\n        sensors[deviceId] = {}\n    }\n\n    let deviceObject = sensors[deviceId]\n\n    deviceObject.state = status\n    deviceObject.displayName = msg.topic\n\n    context.set(\"sensors\", sensors)\n}\n\n\nfor (let [deviceId, values] of Object.entries(sensors)) {\n    if (values.state == 'active') {\n        activeCount++\n    }\n}\n\nconst active = activeCount > 0\n\nlet newMessage = {\n    topic: env.get(\"Zone Name\"),\n    payload: active ? \"active\" : \"inactive\",\n    count: activeCount\n}\n\ncontext.set(\"active\", active)\nreturn newMessage\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 520,
+        "wires": [
+            [
+                "ce2566a3695ea5db"
+            ]
+        ]
+    },
+    {
+        "id": "ce2566a3695ea5db",
+        "type": "debug",
+        "z": "2984f0164b9bafb7",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 520,
+        "wires": []
+    },
+    {
         "id": "8c649af674c27f6f",
         "type": "hubitat device",
         "z": "5ea7da533109f7d2",
