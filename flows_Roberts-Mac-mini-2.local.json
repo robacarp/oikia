@@ -5178,7 +5178,7 @@
         "start": "",
         "inout": "out",
         "septopics": true,
-        "property": "payload.open",
+        "property": "payload",
         "topi": "topic",
         "x": 790,
         "y": 520,
