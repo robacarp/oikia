@@ -5152,7 +5152,7 @@
         "y": 520,
         "wires": [
             [
-                "14a29f24f119cbfd"
+                "5fd3d630479d46fe"
             ]
         ]
     },
@@ -5160,12 +5160,32 @@
         "id": "14a29f24f119cbfd",
         "type": "link out",
         "z": "2984f0164b9bafb7",
-        "name": "link out 1",
+        "name": "Exterior Door Cumulative Status",
         "mode": "link",
         "links": [],
-        "x": 775,
+        "x": 935,
         "y": 520,
         "wires": []
+    },
+    {
+        "id": "5fd3d630479d46fe",
+        "type": "rbe",
+        "z": "2984f0164b9bafb7",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload.open",
+        "topi": "topic",
+        "x": 790,
+        "y": 520,
+        "wires": [
+            [
+                "14a29f24f119cbfd"
+            ]
+        ]
     },
     {
         "id": "8c649af674c27f6f",
@@ -6097,6 +6117,18 @@
         "className": "",
         "x": 890,
         "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0143764a4fa79a37",
+        "type": "link in",
+        "z": "5ea7da533109f7d2",
+        "name": "link in 1",
+        "links": [],
+        "x": 615,
+        "y": 1120,
         "wires": [
             []
         ]
