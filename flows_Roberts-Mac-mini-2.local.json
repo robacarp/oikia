@@ -6397,7 +6397,7 @@
         "name": "",
         "pauseType": "delay",
         "timeout": "5",
-        "timeoutUnits": "minutes",
+        "timeoutUnits": "seconds",
         "rate": "1",
         "nbRateUnits": "1",
         "rateUnits": "second",
