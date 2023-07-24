@@ -6195,9 +6195,10 @@
         "y": 1120,
         "wires": [
             [
-                "ec8c43b734b488bd"
+                "cdcebad23752ae23"
             ],
             [
+                "7752bf1acef47bed",
                 "d0beae73fc634098"
             ]
         ]
@@ -6221,8 +6222,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1010,
-        "y": 1140,
+        "x": 1350,
+        "y": 1240,
         "wires": [
             [
                 "63a4250f7ea57a4c"
@@ -6248,7 +6249,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1010,
+        "x": 1350,
         "y": 1100,
         "wires": [
             [
@@ -6266,7 +6267,7 @@
         "deviceId": "552",
         "command": "",
         "commandArgs": "",
-        "x": 1340,
+        "x": 1700,
         "y": 1120,
         "wires": [
             []
@@ -6327,6 +6328,58 @@
         "wires": [
             [
                 "d0beae73fc634098"
+            ]
+        ]
+    },
+    {
+        "id": "cdcebad23752ae23",
+        "type": "delay",
+        "z": "5ea7da533109f7d2",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1080,
+        "y": 1100,
+        "wires": [
+            [
+                "ec8c43b734b488bd"
+            ]
+        ]
+    },
+    {
+        "id": "7752bf1acef47bed",
+        "type": "change",
+        "z": "5ea7da533109f7d2",
+        "name": "abort delay!",
+        "rules": [
+            {
+                "t": "set",
+                "p": "reset",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1090,
+        "y": 1140,
+        "wires": [
+            [
+                "cdcebad23752ae23"
             ]
         ]
     },
