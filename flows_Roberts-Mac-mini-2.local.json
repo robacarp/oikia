@@ -6166,7 +6166,168 @@
         "x": 615,
         "y": 1120,
         "wires": [
+            [
+                "522ca8033f93cc49"
+            ]
+        ]
+    },
+    {
+        "id": "522ca8033f93cc49",
+        "type": "switch",
+        "z": "5ea7da533109f7d2",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "active",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 770,
+        "y": 1120,
+        "wires": [
+            [
+                "ec8c43b734b488bd"
+            ],
+            [
+                "d0beae73fc634098"
+            ]
+        ]
+    },
+    {
+        "id": "d0beae73fc634098",
+        "type": "change",
+        "z": "5ea7da533109f7d2",
+        "name": "Turn everything back on",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "on",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1010,
+        "y": 1140,
+        "wires": [
+            [
+                "63a4250f7ea57a4c"
+            ]
+        ]
+    },
+    {
+        "id": "ec8c43b734b488bd",
+        "type": "change",
+        "z": "5ea7da533109f7d2",
+        "name": "Turn everything off, mate",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1010,
+        "y": 1100,
+        "wires": [
+            [
+                "63a4250f7ea57a4c"
+            ]
+        ]
+    },
+    {
+        "id": "63a4250f7ea57a4c",
+        "type": "hubitat command",
+        "z": "5ea7da533109f7d2",
+        "deviceLabel": "EcobeeTherm: My ecobee",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "552",
+        "command": "",
+        "commandArgs": "",
+        "x": 1340,
+        "y": 1120,
+        "wires": [
             []
+        ]
+    },
+    {
+        "id": "14f0cde26c936f8c",
+        "type": "inject",
+        "z": "5ea7da533109f7d2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 820,
+        "y": 1020,
+        "wires": [
+            [
+                "ec8c43b734b488bd"
+            ]
+        ]
+    },
+    {
+        "id": "89a094886fec2498",
+        "type": "inject",
+        "z": "5ea7da533109f7d2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 820,
+        "y": 1220,
+        "wires": [
+            [
+                "d0beae73fc634098"
+            ]
         ]
     },
     {
