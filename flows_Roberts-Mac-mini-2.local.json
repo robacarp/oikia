@@ -5142,7 +5142,7 @@
         "type": "function",
         "z": "2984f0164b9bafb7",
         "name": "open door tally",
-        "func": "let status = null;\nlet openCount = 0;\n\nlet sensors = context.get(\"sensors\") || {};\nlet wasActive = context.get(\"active\") || false;\nlet deviceId\n\nif (typeof msg.payload != \"undefined\" && msg.payload !== null) {\n    deviceId = msg.payload.deviceId;\n}\n\nif (typeof deviceId != \"undefined\") {\n\n    // If we didn't receive an event, the process was triggered by something else (eg. enabling the automation)\n    status = msg.payload.value\n\n    if (typeof sensors[deviceId] == \"undefined\") {\n        sensors[deviceId] = {}\n    }\n\n    let deviceObject = sensors[deviceId]\n\n    deviceObject.state = status\n    deviceObject.displayName = msg.topic\n\n    context.set(\"sensors\", sensors)\n}\n\n\nfor (let [deviceId, values] of Object.entries(sensors)) {\n    if (values.state == 'open') {\n        openCount++\n    }\n}\n\nconst open = openCount > 0\n\nlet newMessage = {\n    topic: env.get(\"Zone Name\"),\n    payload: open ? \"active\" : \"inactive\",\n    count: openCount\n}\n\ncontext.set(\"open\", open)\nreturn newMessage\n",
+        "func": "let status = null;\nlet openCount = 0;\n\nlet sensors = context.get(\"sensors\") || {};\nlet wasActive = context.get(\"active\") || false;\nlet deviceId\n\nif (typeof msg.payload != \"undefined\" && msg.payload !== null) {\n    deviceId = msg.payload.deviceId;\n}\n\nif (typeof deviceId != \"undefined\") {\n\n    // If we didn't receive an event, the process was triggered by something else (eg. enabling the automation)\n    status = msg.payload.value\n\n    if (typeof sensors[deviceId] == \"undefined\") {\n        sensors[deviceId] = {}\n    }\n\n    let deviceObject = sensors[deviceId]\n\n    deviceObject.state = status\n    deviceObject.displayName = msg.topic\n\n    context.set(\"sensors\", sensors)\n}\n\n\nfor (let [deviceId, values] of Object.entries(sensors)) {\n    if (values.state == 'open') {\n        openCount++\n    }\n}\n\nif (openCount > 0) {\nnode.status({ text: `${openCount}/${Object.entries(sensors).length} open` });\n} else {\n    node.status({ text: 'all closed' });\n}\n\nconst open = openCount > 0\n\nlet newMessage = {\n    topic: env.get(\"Zone Name\"),\n    payload: open ? \"active\" : \"inactive\",\n    count: openCount\n}\n\ncontext.set(\"open\", open)\nreturn newMessage\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -5262,8 +5262,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 160,
-        "y": 600,
+        "x": 120,
+        "y": 620,
         "wires": [
             [
                 "d299fec1ad370dfe"
