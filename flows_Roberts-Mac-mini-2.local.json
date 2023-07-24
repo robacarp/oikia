@@ -385,6 +385,19 @@
         ]
     },
     {
+        "id": "17055fb592980387",
+        "type": "junction",
+        "z": "5ea7da533109f7d2",
+        "x": 1540,
+        "y": 1160,
+        "wires": [
+            [
+                "63a4250f7ea57a4c",
+                "be08985bac81bcb1"
+            ]
+        ]
+    },
+    {
         "id": "252d4ef4.c14b6a",
         "type": "hubitat config",
         "name": "Hubitat",
@@ -5179,7 +5192,7 @@
         "gap": "",
         "start": "",
         "inout": "out",
-        "septopics": true,
+        "septopics": false,
         "property": "payload",
         "topi": "topic",
         "x": 790,
@@ -5213,7 +5226,7 @@
         "type": "debug",
         "z": "2984f0164b9bafb7",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -6288,8 +6301,7 @@
         "y": 1240,
         "wires": [
             [
-                "63a4250f7ea57a4c",
-                "76c22263217d3308"
+                "17055fb592980387"
             ]
         ]
     },
@@ -6323,8 +6335,7 @@
         "y": 1100,
         "wires": [
             [
-                "63a4250f7ea57a4c",
-                "76c22263217d3308"
+                "17055fb592980387"
             ]
         ]
     },
@@ -6332,15 +6343,14 @@
         "id": "63a4250f7ea57a4c",
         "type": "hubitat command",
         "z": "5ea7da533109f7d2",
-        "d": true,
         "deviceLabel": "EcobeeTherm: My ecobee",
         "name": "",
         "server": "252d4ef4.c14b6a",
         "deviceId": "552",
         "command": "",
         "commandArgs": "",
-        "x": 1700,
-        "y": 1120,
+        "x": 1720,
+        "y": 1100,
         "wires": [
             []
         ]
@@ -6456,11 +6466,11 @@
         ]
     },
     {
-        "id": "76c22263217d3308",
+        "id": "be08985bac81bcb1",
         "type": "debug",
         "z": "5ea7da533109f7d2",
         "name": "debug 4",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -6468,8 +6478,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1560,
-        "y": 1160,
+        "x": 1660,
+        "y": 1200,
         "wires": []
     },
     {
