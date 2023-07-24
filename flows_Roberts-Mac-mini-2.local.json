@@ -5224,53 +5224,6 @@
         "wires": []
     },
     {
-        "id": "d299fec1ad370dfe",
-        "type": "hubitat device",
-        "z": "2984f0164b9bafb7",
-        "deviceLabel": "Virtual Contact",
-        "name": "",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "553",
-        "attribute": "contact",
-        "sendEvent": true,
-        "x": 320,
-        "y": 620,
-        "wires": [
-            [
-                "ccc007c9c6a678ac"
-            ]
-        ]
-    },
-    {
-        "id": "40eca4a9962a2924",
-        "type": "inject",
-        "z": "2984f0164b9bafb7",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 130,
-        "y": 620,
-        "wires": [
-            [
-                "d299fec1ad370dfe"
-            ]
-        ]
-    },
-    {
         "id": "e2885b21e7ad6cd8",
         "type": "inject",
         "z": "2984f0164b9bafb7",
@@ -5291,8 +5244,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 113,
-        "y": 563,
+        "x": 110,
+        "y": 560,
         "wires": [
             [
                 "fcf3fde3acde20c4"
