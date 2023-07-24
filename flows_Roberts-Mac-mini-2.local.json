@@ -5271,6 +5271,64 @@
         ]
     },
     {
+        "id": "e2885b21e7ad6cd8",
+        "type": "inject",
+        "z": "2984f0164b9bafb7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 103,
+        "y": 563,
+        "wires": [
+            [
+                "fcf3fde3acde20c4"
+            ]
+        ]
+    },
+    {
+        "id": "1988a394294549f4",
+        "type": "inject",
+        "z": "2984f0164b9bafb7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 500,
+        "wires": [
+            [
+                "5f66bdf9a5df378e"
+            ]
+        ]
+    },
+    {
         "id": "8c649af674c27f6f",
         "type": "hubitat device",
         "z": "5ea7da533109f7d2",
