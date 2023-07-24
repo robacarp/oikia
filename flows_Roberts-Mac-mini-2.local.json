@@ -5163,7 +5163,9 @@
         "z": "2984f0164b9bafb7",
         "name": "Exterior Door Cumulative Status",
         "mode": "link",
-        "links": [],
+        "links": [
+            "0143764a4fa79a37"
+        ],
         "x": 935,
         "y": 520,
         "wires": []
@@ -6220,7 +6222,9 @@
         "type": "link in",
         "z": "5ea7da533109f7d2",
         "name": "link in 1",
-        "links": [],
+        "links": [
+            "14a29f24f119cbfd"
+        ],
         "x": 615,
         "y": 1120,
         "wires": [
