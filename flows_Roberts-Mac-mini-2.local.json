@@ -6301,6 +6301,13 @@
         "rules": [
             {
                 "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
                 "p": "command",
                 "pt": "msg",
                 "to": "off",
