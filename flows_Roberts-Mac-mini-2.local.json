@@ -5224,6 +5224,24 @@
         "wires": []
     },
     {
+        "id": "d299fec1ad370dfe",
+        "type": "hubitat device",
+        "z": "2984f0164b9bafb7",
+        "deviceLabel": "Virtual Contact",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "553",
+        "attribute": "contact",
+        "sendEvent": true,
+        "x": 320,
+        "y": 620,
+        "wires": [
+            [
+                "ccc007c9c6a678ac"
+            ]
+        ]
+    },
+    {
         "id": "8c649af674c27f6f",
         "type": "hubitat device",
         "z": "5ea7da533109f7d2",
