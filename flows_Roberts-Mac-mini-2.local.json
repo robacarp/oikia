@@ -3843,7 +3843,7 @@
         "id": "9a4d93e3.9f5c3",
         "type": "change",
         "z": "f9337f21.0eab78",
-        "name": "Off",
+        "name": "off",
         "rules": [
             {
                 "t": "set",
