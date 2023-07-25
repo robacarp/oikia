@@ -836,7 +836,7 @@
                 "t": "set",
                 "p": "title",
                 "pt": "msg",
-                "to": "topic ? topic : \"Frontier Pl\"",
+                "to": "topic and topic != \"\" ? topic : \"Frontier Pl\"",
                 "tot": "jsonata"
             }
         ],
