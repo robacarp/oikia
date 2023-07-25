@@ -834,7 +834,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "title",
+                "p": "topic",
                 "pt": "msg",
                 "to": "topic and topic != \"\" ? topic : \"Frontier Pl\"",
                 "tot": "jsonata"
