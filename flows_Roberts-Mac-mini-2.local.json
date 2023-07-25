@@ -364,7 +364,7 @@
         "z": "f9337f21.0eab78",
         "d": true,
         "x": 740,
-        "y": 1940,
+        "y": 2360,
         "wires": [
             [
                 "820b94d67933b2ef"
@@ -377,7 +377,7 @@
         "z": "f9337f21.0eab78",
         "d": true,
         "x": 1600,
-        "y": 2160,
+        "y": 2580,
         "wires": [
             [
                 "4abace46d88d5d82"
@@ -418,6 +418,45 @@
         "wires": [
             [
                 "d0beae73fc634098"
+            ]
+        ]
+    },
+    {
+        "id": "24bb8f272f701383",
+        "type": "junction",
+        "z": "f9337f21.0eab78",
+        "x": 540,
+        "y": 1900,
+        "wires": [
+            [
+                "84150709b87b217b",
+                "6e8c902afa929ee3"
+            ]
+        ]
+    },
+    {
+        "id": "1e3f611957300a48",
+        "type": "junction",
+        "z": "f9337f21.0eab78",
+        "x": 1120,
+        "y": 1880,
+        "wires": [
+            [
+                "5ae6d9c9a3efb51b",
+                "69d03cb9650a7a36"
+            ]
+        ]
+    },
+    {
+        "id": "1f64cf98b7b984de",
+        "type": "junction",
+        "z": "f9337f21.0eab78",
+        "x": 1120,
+        "y": 1980,
+        "wires": [
+            [
+                "5ae6d9c9a3efb51b",
+                "69d03cb9650a7a36"
             ]
         ]
     },
@@ -2768,7 +2807,7 @@
         "name": "Porch light",
         "info": "",
         "x": 220,
-        "y": 2060,
+        "y": 2480,
         "wires": []
     },
     {
@@ -3054,7 +3093,7 @@
         "onceDelay": 0.1,
         "recalcTime": 2,
         "x": 280,
-        "y": 1980,
+        "y": 2400,
         "wires": [
             [
                 "aa36796c3a751774"
@@ -3153,7 +3192,7 @@
         "onceDelay": 0.1,
         "recalcTime": 2,
         "x": 280,
-        "y": 1940,
+        "y": 2360,
         "wires": [
             [
                 "056f0cd790053f1f"
@@ -3167,7 +3206,7 @@
         "name": "Christmas things",
         "info": "Christmas Tree",
         "x": 240,
-        "y": 1840,
+        "y": 2260,
         "wires": []
     },
     {
@@ -3223,7 +3262,7 @@
         "outOfTimeValueType": "msgInput",
         "tsCompare": "0",
         "x": 300,
-        "y": 2560,
+        "y": 2980,
         "wires": [
             [
                 "22b6d01e.452a48"
@@ -3255,7 +3294,7 @@
         "topic": "",
         "payloadType": "date",
         "x": 175,
-        "y": 2560,
+        "y": 2980,
         "wires": [
             [
                 "4c8e959.ebe296c"
@@ -3275,7 +3314,7 @@
         "command": "on",
         "commandArgs": "",
         "x": 600,
-        "y": 2520,
+        "y": 2940,
         "wires": [
             []
         ]
@@ -3292,7 +3331,7 @@
         "command": "off",
         "commandArgs": "",
         "x": 600,
-        "y": 2580,
+        "y": 3000,
         "wires": [
             []
         ]
@@ -3389,7 +3428,7 @@
         "onceDelay": 0.1,
         "recalcTime": 2,
         "x": 300,
-        "y": 2620,
+        "y": 3040,
         "wires": [
             [
                 "103cf87a.abee18"
@@ -3407,7 +3446,7 @@
             "e73c6eb3b4677b6b"
         ],
         "x": 175,
-        "y": 2520,
+        "y": 2940,
         "wires": [
             [
                 "22b6d01e.452a48"
@@ -3959,7 +3998,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 440,
+        "x": 500,
         "y": 1520,
         "wires": [
             [
@@ -3971,7 +4010,7 @@
         "id": "56178c721891bd45",
         "type": "switch",
         "z": "f9337f21.0eab78",
-        "name": "action",
+        "name": "decode lutron",
         "property": "payload.action",
         "propertyType": "msg",
         "rules": [
@@ -4002,7 +4041,7 @@
         "checkall": "false",
         "repair": false,
         "outputs": 5,
-        "x": 270,
+        "x": 300,
         "y": 1600,
         "wires": [
             [
@@ -4130,7 +4169,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 440,
+        "x": 500,
         "y": 1560,
         "wires": [
             [
@@ -4157,7 +4196,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 440,
+        "x": 500,
         "y": 1600,
         "wires": [
             [
@@ -4184,7 +4223,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 440,
+        "x": 500,
         "y": 1640,
         "wires": [
             [
@@ -4211,7 +4250,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 440,
+        "x": 500,
         "y": 1680,
         "wires": [
             [
@@ -4223,7 +4262,7 @@
         "id": "b2f59f4fef3d8b86",
         "type": "switch",
         "z": "f9337f21.0eab78",
-        "name": "button 1/4",
+        "name": "which button",
         "property": "payload.button",
         "propertyType": "msg",
         "rules": [
@@ -4305,7 +4344,7 @@
         "to": "",
         "reg": false,
         "x": 1280,
-        "y": 2140,
+        "y": 2560,
         "wires": [
             [
                 "42ed4e7930637962"
@@ -4332,7 +4371,7 @@
         "repair": false,
         "outputs": 2,
         "x": 1100,
-        "y": 2160,
+        "y": 2580,
         "wires": [
             [
                 "ee0bd27a6442d9c0"
@@ -4363,7 +4402,7 @@
         "to": "",
         "reg": false,
         "x": 1270,
-        "y": 2180,
+        "y": 2600,
         "wires": [
             [
                 "4505442f74bfd3ab"
@@ -4405,7 +4444,7 @@
         "to": "",
         "reg": false,
         "x": 1470,
-        "y": 2140,
+        "y": 2560,
         "wires": [
             [
                 "a82371ccd38f40e5"
@@ -4447,7 +4486,7 @@
         "to": "",
         "reg": false,
         "x": 1470,
-        "y": 2180,
+        "y": 2600,
         "wires": [
             [
                 "a82371ccd38f40e5"
@@ -4466,7 +4505,7 @@
         "command": "setColor",
         "commandArgs": "",
         "x": 1710,
-        "y": 2160,
+        "y": 2580,
         "wires": [
             []
         ]
@@ -4493,7 +4532,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 1375,
-        "y": 2080,
+        "y": 2500,
         "wires": [
             [
                 "42ed4e7930637962"
@@ -4523,7 +4562,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 1375,
-        "y": 2240,
+        "y": 2660,
         "wires": [
             [
                 "4505442f74bfd3ab"
@@ -4584,7 +4623,7 @@
         "outOfTimeValueType": "msgInput",
         "tsCompare": "0",
         "x": 630,
-        "y": 2160,
+        "y": 2580,
         "wires": [
             [
                 "5d3933e8fba9abec"
@@ -4619,7 +4658,7 @@
         "command": "",
         "commandArgs": "",
         "x": 880,
-        "y": 1940,
+        "y": 2360,
         "wires": [
             []
         ]
@@ -4846,7 +4885,7 @@
         "to": "",
         "reg": false,
         "x": 490,
-        "y": 1940,
+        "y": 2360,
         "wires": [
             [
                 "cdce099a16e20aab"
@@ -4874,7 +4913,7 @@
         "to": "",
         "reg": false,
         "x": 490,
-        "y": 1980,
+        "y": 2400,
         "wires": [
             [
                 "cdce099a16e20aab"
@@ -4904,7 +4943,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 230,
-        "y": 2160,
+        "y": 2580,
         "wires": [
             [
                 "954db6bb63031efc"
@@ -4924,7 +4963,7 @@
         "finalize": "",
         "libs": [],
         "x": 400,
-        "y": 2160,
+        "y": 2580,
         "wires": [
             [
                 "ed59489e0b1aba05"
@@ -4943,7 +4982,7 @@
         "attribute": "switch",
         "sendEvent": true,
         "x": 280,
-        "y": 2280,
+        "y": 2700,
         "wires": [
             [
                 "115a5f6176d9706f"
@@ -4970,7 +5009,7 @@
         "repair": false,
         "outputs": 2,
         "x": 880,
-        "y": 2160,
+        "y": 2580,
         "wires": [
             [
                 "c63d476daa70e7fc"
@@ -5000,7 +5039,7 @@
         "repair": false,
         "outputs": 2,
         "x": 540,
-        "y": 2280,
+        "y": 2700,
         "wires": [
             [
                 "7c87933da75f30c9"
@@ -5031,7 +5070,7 @@
         "to": "",
         "reg": false,
         "x": 800,
-        "y": 2260,
+        "y": 2680,
         "wires": [
             []
         ]
@@ -5057,7 +5096,7 @@
         "to": "",
         "reg": false,
         "x": 800,
-        "y": 2300,
+        "y": 2720,
         "wires": [
             []
         ]
@@ -5090,15 +5129,327 @@
         "attribute": "",
         "sendEvent": true,
         "x": 190,
-        "y": 1760,
+        "y": 1900,
         "wires": [
             [
-                "e2011e2c0a021a66"
+                "6bdfa9b9923cae13"
             ]
         ]
     },
     {
-        "id": "e2011e2c0a021a66",
+        "id": "3a013e0170fbeff0",
+        "type": "change",
+        "z": "f9337f21.0eab78",
+        "name": "off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 630,
+        "y": 1980,
+        "wires": [
+            [
+                "1f64cf98b7b984de",
+                "6b9ddb6cc7f0190e"
+            ]
+        ]
+    },
+    {
+        "id": "06f5cc186eb094f4",
+        "type": "change",
+        "z": "f9337f21.0eab78",
+        "name": "Turn On",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "on",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 980,
+        "y": 1820,
+        "wires": [
+            [
+                "1e3f611957300a48"
+            ]
+        ]
+    },
+    {
+        "id": "5ae6d9c9a3efb51b",
+        "type": "hubitat command",
+        "z": "f9337f21.0eab78",
+        "deviceLabel": "Rob’s bedside",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "2",
+        "command": "",
+        "commandArgs": "",
+        "x": 1280,
+        "y": 1880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "69d03cb9650a7a36",
+        "type": "hubitat command",
+        "z": "f9337f21.0eab78",
+        "deviceLabel": "Leah’s Bedside",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "1",
+        "command": "",
+        "commandArgs": "",
+        "x": 1280,
+        "y": 1920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6bdfa9b9923cae13",
+        "type": "switch",
+        "z": "f9337f21.0eab78",
+        "name": "which button",
+        "property": "payload.value",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "3",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 4,
+        "x": 410,
+        "y": 1900,
+        "wires": [
+            [
+                "4403b6bd78189a08"
+            ],
+            [
+                "24bb8f272f701383"
+            ],
+            [
+                "24bb8f272f701383"
+            ],
+            [
+                "3a013e0170fbeff0"
+            ]
+        ]
+    },
+    {
+        "id": "84150709b87b217b",
+        "type": "change",
+        "z": "f9337f21.0eab78",
+        "name": "20%",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "setLevel",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "arguments",
+                "pt": "msg",
+                "to": "40",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 630,
+        "y": 1880,
+        "wires": [
+            [
+                "4ea8f66c15b0c2e6"
+            ]
+        ]
+    },
+    {
+        "id": "29f54d13e765e267",
+        "type": "hubitat command",
+        "z": "f9337f21.0eab78",
+        "deviceLabel": "Leah’s Bedside",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "1",
+        "command": "",
+        "commandArgs": "",
+        "x": 800,
+        "y": 1920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4ea8f66c15b0c2e6",
+        "type": "hubitat command",
+        "z": "f9337f21.0eab78",
+        "deviceLabel": "Rob’s bedside",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "2",
+        "command": "",
+        "commandArgs": "",
+        "x": 800,
+        "y": 1880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6e8c902afa929ee3",
+        "type": "change",
+        "z": "f9337f21.0eab78",
+        "name": "off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 630,
+        "y": 1920,
+        "wires": [
+            [
+                "29f54d13e765e267"
+            ]
+        ]
+    },
+    {
+        "id": "4403b6bd78189a08",
+        "type": "hubitat device",
+        "z": "f9337f21.0eab78",
+        "deviceLabel": "Rob’s bedside",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "2",
+        "attribute": "switch",
+        "sendEvent": false,
+        "x": 660,
+        "y": 1800,
+        "wires": [
+            [
+                "63876624b5451920"
+            ]
+        ]
+    },
+    {
+        "id": "63876624b5451920",
+        "type": "switch",
+        "z": "f9337f21.0eab78",
+        "name": "is on",
+        "property": "payload.value",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "on",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 810,
+        "y": 1800,
+        "wires": [
+            [
+                "9d83d170a863c812"
+            ],
+            [
+                "06f5cc186eb094f4"
+            ]
+        ]
+    },
+    {
+        "id": "9d83d170a863c812",
+        "type": "change",
+        "z": "f9337f21.0eab78",
+        "name": "Set to 100%",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "setLevel",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "arguments",
+                "pt": "msg",
+                "to": "100",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 990,
+        "y": 1780,
+        "wires": [
+            [
+                "1e3f611957300a48"
+            ]
+        ]
+    },
+    {
+        "id": "6b9ddb6cc7f0190e",
         "type": "debug",
         "z": "f9337f21.0eab78",
         "name": "debug 6",
@@ -5106,12 +5457,12 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "payload.value",
-        "targetType": "msg",
+        "complete": "true",
+        "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 400,
-        "y": 1760,
+        "x": 760,
+        "y": 2020,
         "wires": []
     },
     {
