@@ -6833,8 +6833,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 855,
-        "y": 1280,
+        "x": 835,
+        "y": 1360,
         "wires": [
             [
                 "ec8c43b734b488bd"
@@ -6863,8 +6863,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 855,
-        "y": 1460,
+        "x": 835,
+        "y": 1400,
         "wires": [
             [
                 "d0beae73fc634098"
