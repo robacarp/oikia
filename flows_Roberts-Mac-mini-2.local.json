@@ -410,6 +410,18 @@
         ]
     },
     {
+        "id": "3eb370d603c80f68",
+        "type": "junction",
+        "z": "5ea7da533109f7d2",
+        "x": 880,
+        "y": 1240,
+        "wires": [
+            [
+                "d0beae73fc634098"
+            ]
+        ]
+    },
+    {
         "id": "252d4ef4.c14b6a",
         "type": "hubitat config",
         "name": "Hubitat",
@@ -6283,7 +6295,7 @@
             ],
             [
                 "7752bf1acef47bed",
-                "d0beae73fc634098"
+                "3eb370d603c80f68"
             ]
         ]
     },
@@ -6291,7 +6303,7 @@
         "id": "d0beae73fc634098",
         "type": "change",
         "z": "5ea7da533109f7d2",
-        "name": "Turn everything back on",
+        "name": "Turn on HVAC",
         "rules": [
             {
                 "t": "set",
@@ -6306,7 +6318,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1350,
+        "x": 1380,
         "y": 1240,
         "wires": [
             [
@@ -6318,7 +6330,7 @@
         "id": "ec8c43b734b488bd",
         "type": "change",
         "z": "5ea7da533109f7d2",
-        "name": "Turn everything off, mate",
+        "name": "Turn off HVAC",
         "rules": [
             {
                 "t": "set",
@@ -6340,8 +6352,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1350,
-        "y": 1100,
+        "x": 1380,
+        "y": 1080,
         "wires": [
             [
                 "17055fb592980387"
@@ -6386,8 +6398,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 820,
-        "y": 1020,
+        "x": 1200,
+        "y": 1040,
         "wires": [
             [
                 "ec8c43b734b488bd"
@@ -6415,8 +6427,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 820,
-        "y": 1220,
+        "x": 1200,
+        "y": 1280,
         "wires": [
             [
                 "d0beae73fc634098"
@@ -6440,8 +6452,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1080,
-        "y": 1100,
+        "x": 1020,
+        "y": 1080,
         "wires": [
             [
                 "ec8c43b734b488bd"
@@ -6467,8 +6479,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1090,
-        "y": 1160,
+        "x": 1010,
+        "y": 1140,
         "wires": [
             [
                 "cdcebad23752ae23"
