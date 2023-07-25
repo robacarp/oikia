@@ -3833,9 +3833,7 @@
         "x": 800,
         "y": 400,
         "wires": [
-            [
-                "d820eb75.8fe88"
-            ],
+            [],
             [
                 "d820eb75.8fe88"
             ]
@@ -5234,7 +5232,7 @@
         "type": "debug",
         "z": "2984f0164b9bafb7",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -5251,7 +5249,7 @@
         "type": "debug",
         "z": "2984f0164b9bafb7",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -6494,7 +6492,7 @@
         "type": "debug",
         "z": "5ea7da533109f7d2",
         "name": "debug 4",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
