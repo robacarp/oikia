@@ -530,6 +530,18 @@
         ]
     },
     {
+        "id": "fc570f7299eb205c",
+        "type": "junction",
+        "z": "5ea7da533109f7d2",
+        "x": 460,
+        "y": 1320,
+        "wires": [
+            [
+                "cdcebad23752ae23"
+            ]
+        ]
+    },
+    {
         "id": "252d4ef4.c14b6a",
         "type": "hubitat config",
         "name": "Hubitat",
@@ -6755,7 +6767,7 @@
         "id": "522ca8033f93cc49",
         "type": "switch",
         "z": "5ea7da533109f7d2",
-        "name": "",
+        "name": "are any doors open?",
         "property": "payload.anyOpen",
         "propertyType": "msg",
         "rules": [
@@ -6769,16 +6781,20 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 290,
+        "x": 300,
         "y": 1360,
         "wires": [
             [
-                "cdcebad23752ae23"
+                "fc570f7299eb205c"
             ],
             [
                 "7752bf1acef47bed",
                 "3eb370d603c80f68"
             ]
+        ],
+        "outputLabels": [
+            "Yes",
+            "No"
         ]
     },
     {
