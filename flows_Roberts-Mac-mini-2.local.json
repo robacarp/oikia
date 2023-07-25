@@ -856,7 +856,7 @@
                 "t": "set",
                 "p": "device",
                 "pt": "msg",
-                "to": "L,ipad",
+                "to": "Leahs-Phone",
                 "tot": "str"
             }
         ],
