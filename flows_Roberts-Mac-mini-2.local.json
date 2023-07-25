@@ -5080,6 +5080,41 @@
         "wires": []
     },
     {
+        "id": "402a7d3deb06c496",
+        "type": "hubitat device",
+        "z": "f9337f21.0eab78",
+        "deviceLabel": "Rob’s bedside",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "2",
+        "attribute": "",
+        "sendEvent": true,
+        "x": 180,
+        "y": 1760,
+        "wires": [
+            [
+                "e2011e2c0a021a66"
+            ]
+        ]
+    },
+    {
+        "id": "e2011e2c0a021a66",
+        "type": "debug",
+        "z": "f9337f21.0eab78",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 400,
+        "y": 1760,
+        "wires": []
+    },
+    {
         "id": "734f4b605d12eb34",
         "type": "hubitat device",
         "z": "2984f0164b9bafb7",
