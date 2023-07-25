@@ -6989,6 +6989,13 @@
                 "pt": "msg",
                 "to": "The doors are open! HVAC will shut off in 10 minutes.",
                 "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "sound",
+                "pt": "msg",
+                "to": "tugboat",
+                "tot": "str"
             }
         ],
         "action": "",
