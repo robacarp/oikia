@@ -5083,13 +5083,13 @@
         "id": "402a7d3deb06c496",
         "type": "hubitat device",
         "z": "f9337f21.0eab78",
-        "deviceLabel": "Rob’s bedside",
+        "deviceLabel": "Bedside Dimmer",
         "name": "",
         "server": "252d4ef4.c14b6a",
-        "deviceId": "2",
+        "deviceId": "3",
         "attribute": "",
         "sendEvent": true,
-        "x": 180,
+        "x": 190,
         "y": 1760,
         "wires": [
             [
