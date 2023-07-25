@@ -105,7 +105,13 @@
             }
         ],
         "out": [],
-        "env": [],
+        "env": [
+            {
+                "name": "device",
+                "type": "str",
+                "value": "Robs-Phone"
+            }
+        ],
         "meta": {},
         "color": "#3FADB5",
         "icon": "font-awesome/fa-mobile-phone"
@@ -824,15 +830,8 @@
         "id": "c044ca5b.081a6",
         "type": "change",
         "z": "eaca82ad.4ed06",
-        "name": "",
+        "name": "Default Title",
         "rules": [
-            {
-                "t": "set",
-                "p": "device",
-                "pt": "msg",
-                "to": "Robs-Phone",
-                "tot": "str"
-            },
             {
                 "t": "set",
                 "p": "title",
@@ -846,11 +845,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 200,
+        "x": 190,
         "y": 80,
         "wires": [
             [
-                "43ed4749.b7752"
+                "6649cfa664feeb1f"
             ]
         ]
     },
@@ -861,9 +860,36 @@
         "keys": "d2fcc025.17ad7",
         "title": "",
         "name": "",
-        "x": 400,
+        "x": 540,
         "y": 80,
         "wires": []
+    },
+    {
+        "id": "6649cfa664feeb1f",
+        "type": "change",
+        "z": "eaca82ad.4ed06",
+        "name": "Set Robs Phone",
+        "rules": [
+            {
+                "t": "set",
+                "p": "device",
+                "pt": "msg",
+                "to": "device",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 80,
+        "wires": [
+            [
+                "43ed4749.b7752"
+            ]
+        ]
     },
     {
         "id": "f4a49bd9.f676f8",
