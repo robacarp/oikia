@@ -4765,7 +4765,7 @@
         "type": "switch",
         "z": "f9337f21.0eab78",
         "name": "is on",
-        "property": "payload.button",
+        "property": "payload.value",
         "propertyType": "msg",
         "rules": [
             {
