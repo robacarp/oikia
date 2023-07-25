@@ -7159,13 +7159,6 @@
                 "pt": "msg",
                 "to": "falling",
                 "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "Frontier Place",
-                "tot": "str"
             }
         ],
         "action": "",
