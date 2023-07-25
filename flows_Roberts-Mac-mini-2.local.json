@@ -405,7 +405,7 @@
         "id": "17055fb592980387",
         "type": "junction",
         "z": "5ea7da533109f7d2",
-        "x": 1130,
+        "x": 1080,
         "y": 1340,
         "wires": [
             [
@@ -430,7 +430,7 @@
         "id": "3eb370d603c80f68",
         "type": "junction",
         "z": "5ea7da533109f7d2",
-        "x": 470,
+        "x": 420,
         "y": 1420,
         "wires": [
             [
@@ -520,7 +520,7 @@
         "id": "bd0d74f29ece1dcd",
         "type": "junction",
         "z": "5ea7da533109f7d2",
-        "x": 590,
+        "x": 540,
         "y": 1360,
         "wires": [
             [
@@ -6743,7 +6743,7 @@
         "links": [
             "14a29f24f119cbfd"
         ],
-        "x": 195,
+        "x": 145,
         "y": 1360,
         "wires": [
             [
@@ -6769,7 +6769,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 340,
+        "x": 290,
         "y": 1360,
         "wires": [
             [
@@ -6800,7 +6800,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 970,
+        "x": 920,
         "y": 1420,
         "wires": [
             [
@@ -6834,7 +6834,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 970,
+        "x": 920,
         "y": 1320,
         "wires": [
             [
@@ -6852,7 +6852,7 @@
         "deviceId": "552",
         "command": "",
         "commandArgs": "",
-        "x": 1310,
+        "x": 1260,
         "y": 1280,
         "wires": [
             []
@@ -6879,7 +6879,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 835,
+        "x": 785,
         "y": 1360,
         "wires": [
             [
@@ -6909,7 +6909,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 835,
+        "x": 785,
         "y": 1400,
         "wires": [
             [
@@ -6935,7 +6935,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 760,
+        "x": 710,
         "y": 1320,
         "wires": [
             [
@@ -6963,7 +6963,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 580,
+        "x": 530,
         "y": 1360,
         "wires": [
             [
@@ -6984,7 +6984,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1250,
+        "x": 1200,
         "y": 1380,
         "wires": []
     },
@@ -7005,7 +7005,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 770,
+        "x": 720,
         "y": 1180,
         "wires": [
             [
@@ -7039,7 +7039,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 920,
+        "x": 870,
         "y": 1180,
         "wires": [
             [
@@ -7073,7 +7073,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 910,
+        "x": 860,
         "y": 1220,
         "wires": [
             [
@@ -7087,7 +7087,7 @@
         "z": "5ea7da533109f7d2",
         "name": "Disables the HVAC when the doors are left open.",
         "info": "",
-        "x": 360,
+        "x": 310,
         "y": 1280,
         "wires": []
     },
@@ -7096,7 +7096,7 @@
         "type": "subflow:1090998370659d02",
         "z": "5ea7da533109f7d2",
         "name": "",
-        "x": 1090,
+        "x": 1040,
         "y": 1200,
         "wires": []
     },
