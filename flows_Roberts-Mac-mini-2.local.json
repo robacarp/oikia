@@ -7178,8 +7178,7 @@
         "wires": [
             [
                 "9d69d3c23bb92695",
-                "e38b9f6e0c03178f",
-                "655463c1850c417e"
+                "e38b9f6e0c03178f"
             ]
         ]
     },
@@ -7216,26 +7215,9 @@
         "id": "e38b9f6e0c03178f",
         "type": "subflow:eaca82ad.4ed06",
         "z": "5ea7da533109f7d2",
-        "d": true,
         "name": "",
-        "x": 1130,
+        "x": 1110,
         "y": 1100,
-        "wires": []
-    },
-    {
-        "id": "655463c1850c417e",
-        "type": "pushover",
-        "z": "5ea7da533109f7d2",
-        "name": "",
-        "device": "Robs-Phone",
-        "title": "Frontier Pl",
-        "priority": 0,
-        "sound": "tugboat",
-        "url": "",
-        "url_title": "",
-        "html": false,
-        "x": 1130,
-        "y": 1140,
         "wires": []
     },
     {
