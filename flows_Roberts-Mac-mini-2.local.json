@@ -6469,7 +6469,7 @@
         "type": "debug",
         "z": "5ea7da533109f7d2",
         "name": "debug 4",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
