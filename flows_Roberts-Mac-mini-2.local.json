@@ -128,7 +128,7 @@
                 "y": 80,
                 "wires": [
                     {
-                        "id": "d97f61592ef01109"
+                        "id": "e188e99ef579210b"
                     }
                 ]
             }
@@ -898,7 +898,7 @@
         "keys": "d2fcc025.17ad7",
         "title": "",
         "name": "",
-        "x": 380,
+        "x": 600,
         "y": 80,
         "wires": []
     },
@@ -906,7 +906,7 @@
         "id": "d97f61592ef01109",
         "type": "change",
         "z": "7435c4c5.81ec14",
-        "name": "",
+        "name": "Target Leahs Phone",
         "rules": [
             {
                 "t": "set",
@@ -914,12 +914,32 @@
                 "pt": "msg",
                 "to": "Leahs-Phone",
                 "tot": "str"
-            },
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 440,
+        "y": 80,
+        "wires": [
+            [
+                "f4a49bd9.f676f8"
+            ]
+        ]
+    },
+    {
+        "id": "e188e99ef579210b",
+        "type": "change",
+        "z": "7435c4c5.81ec14",
+        "name": "Default Title",
+        "rules": [
             {
                 "t": "set",
-                "p": "title",
+                "p": "topic",
                 "pt": "msg",
-                "to": "topic ? topic : \"Frontier Pl\"",
+                "to": "topic and topic != \"\" ? topic : \"Frontier Pl\"",
                 "tot": "jsonata"
             }
         ],
@@ -928,11 +948,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 200,
+        "x": 210,
         "y": 80,
         "wires": [
             [
-                "f4a49bd9.f676f8"
+                "d97f61592ef01109"
             ]
         ]
     },
