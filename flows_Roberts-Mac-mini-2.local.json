@@ -3901,8 +3901,7 @@
         "y": 1680,
         "wires": [
             [
-                "9708140dd46c678d",
-                "d684cfae3f7e1936"
+                "9708140dd46c678d"
             ]
         ]
     },
@@ -5102,23 +5101,6 @@
         ]
     },
     {
-        "id": "d684cfae3f7e1936",
-        "type": "debug",
-        "z": "f9337f21.0eab78",
-        "name": "debug 5",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1340,
-        "y": 1720,
-        "wires": []
-    },
-    {
         "id": "402a7d3deb06c496",
         "type": "hubitat device",
         "z": "f9337f21.0eab78",
@@ -5159,8 +5141,7 @@
         "y": 1980,
         "wires": [
             [
-                "1f64cf98b7b984de",
-                "6b9ddb6cc7f0190e"
+                "1f64cf98b7b984de"
             ]
         ]
     },
@@ -5447,23 +5428,6 @@
                 "1e3f611957300a48"
             ]
         ]
-    },
-    {
-        "id": "6b9ddb6cc7f0190e",
-        "type": "debug",
-        "z": "f9337f21.0eab78",
-        "name": "debug 6",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 760,
-        "y": 2020,
-        "wires": []
     },
     {
         "id": "734f4b605d12eb34",
