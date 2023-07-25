@@ -7033,6 +7033,13 @@
                 "pt": "msg",
                 "to": "HVAC auto-shut-off",
                 "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "sound",
+                "pt": "msg",
+                "to": "falling",
+                "tot": "str"
             }
         ],
         "action": "",
