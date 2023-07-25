@@ -90,8 +90,8 @@
     {
         "id": "eaca82ad.4ed06",
         "type": "subflow",
-        "name": "Push Rob",
-        "info": "",
+        "name": "Notify Rob",
+        "info": "\n## Required Inputs\n\n- `msg.payload`\n    The message of the notification, supports a few html tags\n\n## Optional Inputs\n\n- `msg.topic`\n    This will be used as the title of the notifcation if Title is not set\n- `msg.image`\n    The URL of the image in notification. Local file path or http(s) url\n- `msg.url`\n    Can add an url to your notification\n- `msg.url_title`\n    Can set the title of the url\n- `msg.priority`\n    -2/-1/1/2. Default: 0 (normal)\n    If the priority is 2 (emergency), you should provide msg.retry and msg.expire.\n    see explains\n- `msg.device`\n    Default for all device if not provided. Seprated by a comma\n- `msg.sound`\n    Name of the notification sound, see the list\n- `msg.timestamp`\n    An unix timestamp to specific the date time of your notification ",
         "category": "",
         "in": [
             {
@@ -6894,7 +6894,8 @@
         "y": 1140,
         "wires": [
             [
-                "ec8c43b734b488bd"
+                "ec8c43b734b488bd",
+                "31512695eb7f1654"
             ]
         ]
     },
@@ -6917,8 +6918,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1010,
-        "y": 1200,
+        "x": 990,
+        "y": 1180,
         "wires": [
             [
                 "bd0d74f29ece1dcd"
@@ -6962,17 +6963,144 @@
         "x": 1180,
         "y": 1000,
         "wires": [
-            []
+            [
+                "91531534703e670d"
+            ]
         ]
     },
     {
         "id": "4972c17de3d83982",
         "type": "subflow:eaca82ad.4ed06",
         "z": "5ea7da533109f7d2",
-        "name": "",
-        "x": 1360,
+        "name": "Notify Rob",
+        "x": 1390,
         "y": 1000,
         "wires": []
+    },
+    {
+        "id": "91531534703e670d",
+        "type": "change",
+        "z": "5ea7da533109f7d2",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "The doors are open! HVAC will shut off in 10 minutes.",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1275,
+        "y": 1000,
+        "wires": [
+            [
+                "4972c17de3d83982"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "f650c617ee299696",
+        "type": "subflow:eaca82ad.4ed06",
+        "z": "5ea7da533109f7d2",
+        "name": "Notify Rob",
+        "x": 1390,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "31512695eb7f1654",
+        "type": "change",
+        "z": "5ea7da533109f7d2",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "HVAC auto-shut-off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1275,
+        "y": 1040,
+        "wires": [
+            [
+                "f650c617ee299696"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "656cccd8d5f0a353",
+        "type": "inject",
+        "z": "5ea7da533109f7d2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1215,
+        "y": 940,
+        "wires": [
+            [
+                "91531534703e670d"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "9ec55f898fd81dc4",
+        "type": "inject",
+        "z": "5ea7da533109f7d2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1135,
+        "y": 940,
+        "wires": [
+            [
+                "31512695eb7f1654"
+            ]
+        ],
+        "l": false
     },
     {
         "id": "bf11becc09f647d3",
