@@ -344,43 +344,6 @@
         "icon": "node-red/bridge.svg"
     },
     {
-        "id": "c8062adaf3fbf8cf",
-        "type": "group",
-        "z": "5ea7da533109f7d2",
-        "g": "8f650bf7e6269e6a",
-        "name": "Trigger Notifications",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "ad803091f2f4400c",
-            "ef55c8a7a80a63b4"
-        ],
-        "x": 624,
-        "y": 1239,
-        "w": 172,
-        "h": 82
-    },
-    {
-        "id": "33e506e537a0af84",
-        "type": "group",
-        "z": "5ea7da533109f7d2",
-        "g": "8f650bf7e6269e6a",
-        "name": "Manually control HVAC",
-        "style": {
-            "label": true,
-            "label-position": "sw"
-        },
-        "nodes": [
-            "14f0cde26c936f8c",
-            "89a094886fec2498"
-        ],
-        "x": 614,
-        "y": 1699,
-        "w": 172,
-        "h": 90
-    },
-    {
         "id": "8f650bf7e6269e6a",
         "type": "group",
         "z": "5ea7da533109f7d2",
@@ -410,9 +373,40 @@
             "33e506e537a0af84"
         ],
         "x": 114,
-        "y": 1213,
-        "w": 1302,
-        "h": 602
+        "y": 1213
+    },
+    {
+        "id": "c8062adaf3fbf8cf",
+        "type": "group",
+        "z": "5ea7da533109f7d2",
+        "g": "8f650bf7e6269e6a",
+        "name": "Trigger Notifications",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "ad803091f2f4400c",
+            "ef55c8a7a80a63b4"
+        ],
+        "x": 624,
+        "y": 1239
+    },
+    {
+        "id": "33e506e537a0af84",
+        "type": "group",
+        "z": "5ea7da533109f7d2",
+        "g": "8f650bf7e6269e6a",
+        "name": "Manually control HVAC",
+        "style": {
+            "label": true,
+            "label-position": "sw"
+        },
+        "nodes": [
+            "14f0cde26c936f8c",
+            "89a094886fec2498"
+        ],
+        "x": 614,
+        "y": 1699
     },
     {
         "id": "c6f15bd3bae34137",
@@ -2249,7 +2243,6 @@
         "id": "f34d939765aa04c0",
         "type": "subflow:7435c4c5.81ec14",
         "z": "1090998370659d02",
-        "d": true,
         "name": "",
         "x": 210,
         "y": 100,
