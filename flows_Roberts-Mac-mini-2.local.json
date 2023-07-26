@@ -7178,6 +7178,66 @@
         "wires": []
     },
     {
+        "id": "ad803091f2f4400c",
+        "type": "inject",
+        "z": "5ea7da533109f7d2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 765,
+        "y": 1120,
+        "wires": [
+            [
+                "91531534703e670d"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "ef55c8a7a80a63b4",
+        "type": "inject",
+        "z": "5ea7da533109f7d2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 725,
+        "y": 1240,
+        "wires": [
+            [
+                "31512695eb7f1654"
+            ]
+        ],
+        "l": false
+    },
+    {
         "id": "bf11becc09f647d3",
         "type": "switch",
         "z": "3cee340729aa7e67",
