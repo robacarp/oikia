@@ -415,6 +415,27 @@
         "h": 90
     },
     {
+        "id": "83269420e2cb55e4",
+        "type": "group",
+        "z": "2984f0164b9bafb7",
+        "name": "Keeps a count of what doors are open or closed.",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "5f66bdf9a5df378e",
+            "fcf3fde3acde20c4",
+            "ccc007c9c6a678ac",
+            "14a29f24f119cbfd",
+            "5fd3d630479d46fe",
+            "1988a394294549f4"
+        ],
+        "x": 244,
+        "y": 479,
+        "w": 892,
+        "h": 142
+    },
+    {
         "id": "c6f15bd3bae34137",
         "type": "junction",
         "z": "f9337f21.0eab78",
@@ -5745,39 +5766,23 @@
         "y": 400,
         "wires": [
             [
-                "ccb3166344080cad"
+                "b35a3840dc40ef58"
             ]
         ]
-    },
-    {
-        "id": "ccb3166344080cad",
-        "type": "debug",
-        "z": "2984f0164b9bafb7",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 580,
-        "y": 400,
-        "wires": []
     },
     {
         "id": "5f66bdf9a5df378e",
         "type": "hubitat device",
         "z": "2984f0164b9bafb7",
+        "g": "83269420e2cb55e4",
         "deviceLabel": "Front Door Contact",
         "name": "",
         "server": "252d4ef4.c14b6a",
         "deviceId": "162",
         "attribute": "contact",
         "sendEvent": true,
-        "x": 330,
-        "y": 500,
+        "x": 490,
+        "y": 520,
         "wires": [
             [
                 "ccc007c9c6a678ac"
@@ -5788,14 +5793,15 @@
         "id": "fcf3fde3acde20c4",
         "type": "hubitat device",
         "z": "2984f0164b9bafb7",
+        "g": "83269420e2cb55e4",
         "deviceLabel": "Sunroom-Inside Door",
         "name": "",
         "server": "252d4ef4.c14b6a",
         "deviceId": "196",
         "attribute": "contact",
         "sendEvent": true,
-        "x": 340,
-        "y": 560,
+        "x": 500,
+        "y": 580,
         "wires": [
             [
                 "ccc007c9c6a678ac"
@@ -5806,6 +5812,7 @@
         "id": "ccc007c9c6a678ac",
         "type": "function",
         "z": "2984f0164b9bafb7",
+        "g": "83269420e2cb55e4",
         "name": "open door tally",
         "func": "let status = null;\nlet openDoors = [];\n\nlet sensors = context.get(\"sensors\") || {};\nlet wasOpen = context.get(\"open\") || false;\nlet deviceId\n\nif (typeof msg.payload != \"undefined\" && msg.payload !== null) {\n    deviceId = msg.payload.deviceId;\n}\n\nif (typeof deviceId != \"undefined\") {\n\n    // If we didn't receive an event, the process was triggered by something else (eg. enabling the automation)\n    status = msg.payload.value\n\n    if (typeof sensors[deviceId] == \"undefined\") {\n        sensors[deviceId] = {}\n    }\n\n    let deviceObject = sensors[deviceId]\n\n    deviceObject.state = status\n    deviceObject.displayName = msg.topic\n\n    context.set(\"sensors\", sensors)\n}\n\n\nfor (let [deviceId, values] of Object.entries(sensors)) {\n    if (values.state == 'open') {\n        openDoors.push(values.displayName)\n    }\n}\n\nif (openDoors.length > 0) {\nnode.status({ text: `${openDoors.length}/${Object.entries(sensors).length} open` });\n} else {\n    node.status({ text: `all closed` });\n}\n\nlet newMessage = {\n    topic: env.get(\"Zone Name\"),\n    payload: {\n        anyOpen: openDoors.length > 0,\n        openCount: openDoors.length,\n        openDoors: openDoors\n    },\n}\n\ncontext.set(\"open\", openDoors.length > 0)\nreturn newMessage\n",
         "outputs": 1,
@@ -5813,12 +5820,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 600,
-        "y": 520,
+        "x": 760,
+        "y": 540,
         "wires": [
             [
-                "5fd3d630479d46fe",
-                "e8fa1296d2b92594"
+                "5fd3d630479d46fe"
             ]
         ]
     },
@@ -5826,19 +5832,21 @@
         "id": "14a29f24f119cbfd",
         "type": "link out",
         "z": "2984f0164b9bafb7",
+        "g": "83269420e2cb55e4",
         "name": "Exterior Door Cumulative Status",
         "mode": "link",
         "links": [
             "0143764a4fa79a37"
         ],
-        "x": 935,
-        "y": 520,
+        "x": 1095,
+        "y": 540,
         "wires": []
     },
     {
         "id": "5fd3d630479d46fe",
         "type": "rbe",
         "z": "2984f0164b9bafb7",
+        "g": "83269420e2cb55e4",
         "name": "",
         "func": "rbe",
         "gap": "",
@@ -5847,75 +5855,11 @@
         "septopics": false,
         "property": "payload",
         "topi": "topic",
-        "x": 790,
-        "y": 520,
+        "x": 950,
+        "y": 540,
         "wires": [
             [
-                "14a29f24f119cbfd",
-                "19fcf885eb1ebbc4"
-            ]
-        ]
-    },
-    {
-        "id": "19fcf885eb1ebbc4",
-        "type": "debug",
-        "z": "2984f0164b9bafb7",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 890,
-        "y": 600,
-        "wires": []
-    },
-    {
-        "id": "e8fa1296d2b92594",
-        "type": "debug",
-        "z": "2984f0164b9bafb7",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 710,
-        "y": 600,
-        "wires": []
-    },
-    {
-        "id": "e2885b21e7ad6cd8",
-        "type": "inject",
-        "z": "2984f0164b9bafb7",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 110,
-        "y": 560,
-        "wires": [
-            [
-                "fcf3fde3acde20c4"
+                "14a29f24f119cbfd"
             ]
         ]
     },
@@ -5923,6 +5867,7 @@
         "id": "1988a394294549f4",
         "type": "inject",
         "z": "2984f0164b9bafb7",
+        "g": "83269420e2cb55e4",
         "name": "",
         "props": [
             {
@@ -5940,11 +5885,56 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 110,
-        "y": 500,
+        "x": 305,
+        "y": 560,
         "wires": [
             [
-                "5f66bdf9a5df378e"
+                "5f66bdf9a5df378e",
+                "fcf3fde3acde20c4"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "76bb8e459c35d3a6",
+        "type": "subflow:eaca82ad.4ed06",
+        "z": "2984f0164b9bafb7",
+        "name": "",
+        "x": 830,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "b35a3840dc40ef58",
+        "type": "change",
+        "z": "2984f0164b9bafb7",
+        "name": "Someone is at the door!",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Someone is at the door.",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "sound",
+                "pt": "msg",
+                "to": "bike",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 400,
+        "wires": [
+            [
+                "76bb8e459c35d3a6"
             ]
         ]
     },
