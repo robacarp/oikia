@@ -7226,8 +7226,8 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "HVAC auto-shut-off",
-                "tot": "str"
+                "to": "(\t   payload.openCount = 1 ? \"The \" & payload.openDoors[0] & \" door is open,\" : \"The doors are open,\"\t) & \"HVAC has been shut off.\"",
+                "tot": "jsonata"
             },
             {
                 "t": "set",
