@@ -384,7 +384,7 @@
             "89a094886fec2498",
             "3b22fcad0fefbeee"
         ],
-        "x": 454,
+        "x": 554,
         "y": 1659,
         "w": 292,
         "h": 122
@@ -7003,7 +7003,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 550,
+        "x": 650,
         "y": 1740,
         "wires": [
             [
@@ -7033,7 +7033,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 670,
+        "x": 770,
         "y": 1740,
         "wires": [
             [
@@ -7303,7 +7303,7 @@
         "g": "b24cb766d58f1fa8",
         "name": "Manually enable/disable",
         "info": "",
-        "x": 610,
+        "x": 710,
         "y": 1700,
         "wires": []
     },
