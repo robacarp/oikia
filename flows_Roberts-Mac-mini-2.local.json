@@ -373,7 +373,9 @@
             "33e506e537a0af84"
         ],
         "x": 114,
-        "y": 1213
+        "y": 1213,
+        "w": 1302,
+        "h": 602
     },
     {
         "id": "c8062adaf3fbf8cf",
@@ -389,7 +391,9 @@
             "ef55c8a7a80a63b4"
         ],
         "x": 624,
-        "y": 1239
+        "y": 1239,
+        "w": 172,
+        "h": 82
     },
     {
         "id": "33e506e537a0af84",
@@ -405,8 +409,10 @@
             "14f0cde26c936f8c",
             "89a094886fec2498"
         ],
-        "x": 614,
-        "y": 1699
+        "x": 624,
+        "y": 1699,
+        "w": 172,
+        "h": 90
     },
     {
         "id": "c6f15bd3bae34137",
@@ -7030,7 +7036,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 675,
+        "x": 685,
         "y": 1740,
         "wires": [
             [
@@ -7065,7 +7071,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 745,
+        "x": 755,
         "y": 1740,
         "wires": [
             [
@@ -7185,8 +7191,8 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "The doors are open! HVAC will shut off in 10 minutes.",
-                "tot": "str"
+                "to": "(\t   payload.openCount = 1 ? \"The \" & payload.openDoors[0] & \" door is open,\" : \"The doors are open,\"\t) & \" HVAC will shut off in 10 minutes.\"",
+                "tot": "jsonata"
             },
             {
                 "t": "set",
