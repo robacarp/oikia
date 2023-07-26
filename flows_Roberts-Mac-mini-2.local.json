@@ -344,6 +344,52 @@
         "icon": "node-red/bridge.svg"
     },
     {
+        "id": "c8062adaf3fbf8cf",
+        "type": "group",
+        "z": "5ea7da533109f7d2",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "ad803091f2f4400c",
+            "ef55c8a7a80a63b4",
+            "352a989bb6fc084e"
+        ],
+        "x": 554,
+        "y": 1139,
+        "w": 292,
+        "h": 122
+    },
+    {
+        "id": "b24cb766d58f1fa8",
+        "type": "group",
+        "z": "5ea7da533109f7d2",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "14f0cde26c936f8c",
+            "89a094886fec2498",
+            "3b22fcad0fefbeee"
+        ],
+        "x": 454,
+        "y": 1659,
+        "w": 292,
+        "h": 122
+    },
+    {
         "id": "c6f15bd3bae34137",
         "type": "junction",
         "z": "f9337f21.0eab78",
@@ -412,7 +458,7 @@
         "type": "junction",
         "z": "5ea7da533109f7d2",
         "x": 1080,
-        "y": 1340,
+        "y": 1500,
         "wires": [
             [
                 "63a4250f7ea57a4c",
@@ -437,7 +483,7 @@
         "type": "junction",
         "z": "5ea7da533109f7d2",
         "x": 420,
-        "y": 1420,
+        "y": 1580,
         "wires": [
             [
                 "d0beae73fc634098"
@@ -527,7 +573,7 @@
         "type": "junction",
         "z": "5ea7da533109f7d2",
         "x": 540,
-        "y": 1360,
+        "y": 1520,
         "wires": [
             [
                 "cdcebad23752ae23",
@@ -540,7 +586,7 @@
         "type": "junction",
         "z": "5ea7da533109f7d2",
         "x": 460,
-        "y": 1320,
+        "y": 1480,
         "wires": [
             [
                 "cdcebad23752ae23"
@@ -6817,7 +6863,7 @@
             "14a29f24f119cbfd"
         ],
         "x": 145,
-        "y": 1360,
+        "y": 1520,
         "wires": [
             [
                 "522ca8033f93cc49"
@@ -6843,7 +6889,7 @@
         "repair": false,
         "outputs": 2,
         "x": 300,
-        "y": 1360,
+        "y": 1520,
         "wires": [
             [
                 "fc570f7299eb205c"
@@ -6878,7 +6924,7 @@
         "to": "",
         "reg": false,
         "x": 920,
-        "y": 1420,
+        "y": 1580,
         "wires": [
             [
                 "17055fb592980387"
@@ -6912,7 +6958,7 @@
         "to": "",
         "reg": false,
         "x": 920,
-        "y": 1320,
+        "y": 1480,
         "wires": [
             [
                 "17055fb592980387"
@@ -6930,7 +6976,7 @@
         "command": "",
         "commandArgs": "",
         "x": 1260,
-        "y": 1280,
+        "y": 1440,
         "wires": [
             []
         ]
@@ -6939,7 +6985,8 @@
         "id": "14f0cde26c936f8c",
         "type": "inject",
         "z": "5ea7da533109f7d2",
-        "name": "",
+        "g": "b24cb766d58f1fa8",
+        "name": "Off",
         "props": [
             {
                 "p": "payload"
@@ -6956,20 +7003,20 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 785,
-        "y": 1360,
+        "x": 550,
+        "y": 1740,
         "wires": [
             [
                 "ec8c43b734b488bd"
             ]
-        ],
-        "l": false
+        ]
     },
     {
         "id": "89a094886fec2498",
         "type": "inject",
         "z": "5ea7da533109f7d2",
-        "name": "",
+        "g": "b24cb766d58f1fa8",
+        "name": "On",
         "props": [
             {
                 "p": "payload"
@@ -6986,14 +7033,13 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 785,
-        "y": 1400,
+        "x": 670,
+        "y": 1740,
         "wires": [
             [
                 "d0beae73fc634098"
             ]
-        ],
-        "l": false
+        ]
     },
     {
         "id": "cdcebad23752ae23",
@@ -7013,7 +7059,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 710,
-        "y": 1320,
+        "y": 1480,
         "wires": [
             [
                 "ec8c43b734b488bd",
@@ -7041,7 +7087,7 @@
         "to": "",
         "reg": false,
         "x": 530,
-        "y": 1360,
+        "y": 1520,
         "wires": [
             [
                 "bd0d74f29ece1dcd"
@@ -7062,7 +7108,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1200,
-        "y": 1380,
+        "y": 1540,
         "wires": []
     },
     {
@@ -7083,7 +7129,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 700,
-        "y": 1180,
+        "y": 1340,
         "wires": [
             [
                 "91531534703e670d"
@@ -7117,7 +7163,7 @@
         "to": "",
         "reg": false,
         "x": 870,
-        "y": 1180,
+        "y": 1340,
         "wires": [
             [
                 "77fd588680815925"
@@ -7151,7 +7197,7 @@
         "to": "",
         "reg": false,
         "x": 860,
-        "y": 1220,
+        "y": 1380,
         "wires": [
             [
                 "77fd588680815925"
@@ -7165,7 +7211,7 @@
         "name": "Disables the HVAC when the doors are left open.",
         "info": "",
         "x": 310,
-        "y": 1280,
+        "y": 1440,
         "wires": []
     },
     {
@@ -7174,13 +7220,14 @@
         "z": "5ea7da533109f7d2",
         "name": "",
         "x": 1040,
-        "y": 1200,
+        "y": 1360,
         "wires": []
     },
     {
         "id": "ad803091f2f4400c",
         "type": "inject",
         "z": "5ea7da533109f7d2",
+        "g": "c8062adaf3fbf8cf",
         "name": "",
         "props": [
             {
@@ -7198,8 +7245,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 765,
-        "y": 1120,
+        "x": 745,
+        "y": 1220,
         "wires": [
             [
                 "91531534703e670d"
@@ -7211,6 +7258,7 @@
         "id": "ef55c8a7a80a63b4",
         "type": "inject",
         "z": "5ea7da533109f7d2",
+        "g": "c8062adaf3fbf8cf",
         "name": "",
         "props": [
             {
@@ -7228,14 +7276,36 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 725,
-        "y": 1240,
+        "x": 675,
+        "y": 1220,
         "wires": [
             [
                 "31512695eb7f1654"
             ]
         ],
         "l": false
+    },
+    {
+        "id": "352a989bb6fc084e",
+        "type": "comment",
+        "z": "5ea7da533109f7d2",
+        "g": "c8062adaf3fbf8cf",
+        "name": "Manually Trigger Notifications",
+        "info": "",
+        "x": 700,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "3b22fcad0fefbeee",
+        "type": "comment",
+        "z": "5ea7da533109f7d2",
+        "g": "b24cb766d58f1fa8",
+        "name": "Manually enable/disable",
+        "info": "",
+        "x": 610,
+        "y": 1700,
+        "wires": []
     },
     {
         "id": "bf11becc09f647d3",
