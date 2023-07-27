@@ -378,6 +378,25 @@
         "h": 602
     },
     {
+        "id": "83269420e2cb55e4",
+        "type": "group",
+        "z": "2984f0164b9bafb7",
+        "name": "Keeps a count of what doors are open or closed.",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "5f66bdf9a5df378e",
+            "fcf3fde3acde20c4",
+            "ccc007c9c6a678ac",
+            "14a29f24f119cbfd",
+            "5fd3d630479d46fe",
+            "1988a394294549f4"
+        ],
+        "x": 244,
+        "y": 479
+    },
+    {
         "id": "c8062adaf3fbf8cf",
         "type": "group",
         "z": "5ea7da533109f7d2",
@@ -413,27 +432,6 @@
         "y": 1699,
         "w": 172,
         "h": 90
-    },
-    {
-        "id": "83269420e2cb55e4",
-        "type": "group",
-        "z": "2984f0164b9bafb7",
-        "name": "Keeps a count of what doors are open or closed.",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "5f66bdf9a5df378e",
-            "fcf3fde3acde20c4",
-            "ccc007c9c6a678ac",
-            "14a29f24f119cbfd",
-            "5fd3d630479d46fe",
-            "1988a394294549f4"
-        ],
-        "x": 244,
-        "y": 479,
-        "w": 892,
-        "h": 142
     },
     {
         "id": "c6f15bd3bae34137",
@@ -7216,7 +7214,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "(\t   payload.openCount = 1 ? \"The \" & payload.openDoors[0] & \" door is open,\" : \"The doors are open,\"\t) & \"HVAC has been shut off.\"",
+                "to": "(\t   payload.openCount = 1 ? \"The \" & payload.openDoors[0] & \" door is open,\" : \"The doors are open,\"\t) & \" HVAC has been shut off.\"",
                 "tot": "jsonata"
             },
             {
