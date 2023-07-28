@@ -7152,7 +7152,7 @@
         "g": "8f650bf7e6269e6a",
         "name": "",
         "pauseType": "delay",
-        "timeout": "2",
+        "timeout": "10",
         "timeoutUnits": "minutes",
         "rate": "1",
         "nbRateUnits": "1",
@@ -7163,7 +7163,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 720,
+        "x": 730,
         "y": 1360,
         "wires": [
             [
@@ -7182,7 +7182,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "(\t   payload.openCount = 1 ? \"The \" & payload.openDoors[0] & \" door is open,\" : \"The doors are open,\"\t) & \" HVAC will shut off in 10 minutes.\"",
+                "to": "(\t   payload.openCount = 1 ? \"The \" & payload.openDoors[0] & \" door is open,\" : \"The doors are open,\"\t) & \" HVAC will shut off in 2 minutes.\"",
                 "tot": "jsonata"
             },
             {
