@@ -7319,7 +7319,7 @@
         "type": "inject",
         "z": "5ea7da533109f7d2",
         "g": "8f650bf7e6269e6a",
-        "name": "",
+        "name": "System Reset",
         "props": [
             {
                 "p": "payload"
@@ -7336,8 +7336,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 360,
-        "y": 1320,
+        "x": 370,
+        "y": 1240,
         "wires": [
             [
                 "7752bf1acef47bed"
