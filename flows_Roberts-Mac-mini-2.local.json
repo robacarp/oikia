@@ -8117,15 +8117,7 @@
         "z": "3cee340729aa7e67",
         "d": true,
         "name": "Light Level",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "/* TODO: {\t   \"name\":\"level\",\t   \"value\":\"1\",\t   \"displayName\":\"Rob’s bedside\",\t   \"deviceId\":\"2\",\t   \"descriptionText\":\"Rob’s bedside was set to 1% [digital]\",\t   \"unit\":\"%\",\t   \"type\":\"digital\",\t   \"data\":null\t} */",
-                "tot": "jsonata"
-            }
-        ],
+        "rules": [],
         "action": "",
         "property": "",
         "from": "",
