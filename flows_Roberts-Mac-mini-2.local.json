@@ -344,41 +344,6 @@
         "icon": "node-red/bridge.svg"
     },
     {
-        "id": "8f650bf7e6269e6a",
-        "type": "group",
-        "z": "5ea7da533109f7d2",
-        "name": "Disable the AC/Furnace when the doors are left open",
-        "style": {
-            "label": true,
-            "color": "#000000"
-        },
-        "nodes": [
-            "0143764a4fa79a37",
-            "522ca8033f93cc49",
-            "d0beae73fc634098",
-            "ec8c43b734b488bd",
-            "63a4250f7ea57a4c",
-            "cdcebad23752ae23",
-            "7752bf1acef47bed",
-            "be08985bac81bcb1",
-            "e8d25bbe2111ea4c",
-            "91531534703e670d",
-            "31512695eb7f1654",
-            "77fd588680815925",
-            "17055fb592980387",
-            "3eb370d603c80f68",
-            "bd0d74f29ece1dcd",
-            "fc570f7299eb205c",
-            "c8062adaf3fbf8cf",
-            "33e506e537a0af84",
-            "e22bc785bf7b0520"
-        ],
-        "x": 124,
-        "y": 1173,
-        "w": 1302,
-        "h": 602
-    },
-    {
         "id": "83269420e2cb55e4",
         "type": "group",
         "z": "2984f0164b9bafb7",
@@ -403,7 +368,7 @@
         "id": "c8062adaf3fbf8cf",
         "type": "group",
         "z": "5ea7da533109f7d2",
-        "g": "8f650bf7e6269e6a",
+        "g": "864959de0e1f25cf",
         "name": "Trigger Notifications",
         "style": {
             "label": true
@@ -412,8 +377,8 @@
             "ad803091f2f4400c",
             "ef55c8a7a80a63b4"
         ],
-        "x": 634,
-        "y": 1199,
+        "x": 574,
+        "y": 1219,
         "w": 172,
         "h": 82
     },
@@ -421,7 +386,7 @@
         "id": "33e506e537a0af84",
         "type": "group",
         "z": "5ea7da533109f7d2",
-        "g": "8f650bf7e6269e6a",
+        "g": "864959de0e1f25cf",
         "name": "Manually control HVAC",
         "style": {
             "label": true,
@@ -431,10 +396,51 @@
             "14f0cde26c936f8c",
             "89a094886fec2498"
         ],
-        "x": 634,
-        "y": 1659,
+        "x": 574,
+        "y": 1679,
         "w": 172,
         "h": 90
+    },
+    {
+        "id": "864959de0e1f25cf",
+        "type": "group",
+        "z": "5ea7da533109f7d2",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "0143764a4fa79a37",
+            "522ca8033f93cc49",
+            "d0beae73fc634098",
+            "ec8c43b734b488bd",
+            "63a4250f7ea57a4c",
+            "cdcebad23752ae23",
+            "7752bf1acef47bed",
+            "be08985bac81bcb1",
+            "e8d25bbe2111ea4c",
+            "91531534703e670d",
+            "31512695eb7f1654",
+            "77fd588680815925",
+            "e22bc785bf7b0520",
+            "c140dcc86cd7d1a7",
+            "e4a89303966ef1fb",
+            "17055fb592980387",
+            "3eb370d603c80f68",
+            "bd0d74f29ece1dcd",
+            "fc570f7299eb205c",
+            "c8062adaf3fbf8cf",
+            "33e506e537a0af84"
+        ],
+        "x": 64,
+        "y": 1193,
+        "w": 1352,
+        "h": 602
     },
     {
         "id": "c6f15bd3bae34137",
@@ -504,13 +510,14 @@
         "id": "17055fb592980387",
         "type": "junction",
         "z": "5ea7da533109f7d2",
-        "g": "8f650bf7e6269e6a",
-        "x": 1100,
-        "y": 1520,
+        "g": "864959de0e1f25cf",
+        "x": 1040,
+        "y": 1540,
         "wires": [
             [
                 "63a4250f7ea57a4c",
-                "be08985bac81bcb1"
+                "be08985bac81bcb1",
+                "7752bf1acef47bed"
             ]
         ]
     },
@@ -530,9 +537,9 @@
         "id": "3eb370d603c80f68",
         "type": "junction",
         "z": "5ea7da533109f7d2",
-        "g": "8f650bf7e6269e6a",
-        "x": 440,
-        "y": 1600,
+        "g": "864959de0e1f25cf",
+        "x": 380,
+        "y": 1620,
         "wires": [
             [
                 "d0beae73fc634098"
@@ -621,9 +628,9 @@
         "id": "bd0d74f29ece1dcd",
         "type": "junction",
         "z": "5ea7da533109f7d2",
-        "g": "8f650bf7e6269e6a",
-        "x": 560,
-        "y": 1540,
+        "g": "864959de0e1f25cf",
+        "x": 540,
+        "y": 1460,
         "wires": [
             [
                 "cdcebad23752ae23",
@@ -635,9 +642,9 @@
         "id": "fc570f7299eb205c",
         "type": "junction",
         "z": "5ea7da533109f7d2",
-        "g": "8f650bf7e6269e6a",
-        "x": 480,
-        "y": 1500,
+        "g": "864959de0e1f25cf",
+        "x": 420,
+        "y": 1520,
         "wires": [
             [
                 "cdcebad23752ae23",
@@ -6878,13 +6885,13 @@
         "id": "0143764a4fa79a37",
         "type": "link in",
         "z": "5ea7da533109f7d2",
-        "g": "8f650bf7e6269e6a",
+        "g": "864959de0e1f25cf",
         "name": "link in 1",
         "links": [
             "14a29f24f119cbfd"
         ],
-        "x": 165,
-        "y": 1540,
+        "x": 105,
+        "y": 1560,
         "wires": [
             [
                 "522ca8033f93cc49"
@@ -6895,7 +6902,7 @@
         "id": "522ca8033f93cc49",
         "type": "switch",
         "z": "5ea7da533109f7d2",
-        "g": "8f650bf7e6269e6a",
+        "g": "864959de0e1f25cf",
         "name": "are any doors open?",
         "property": "payload.anyOpen",
         "propertyType": "msg",
@@ -6910,14 +6917,13 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 320,
-        "y": 1540,
+        "x": 260,
+        "y": 1560,
         "wires": [
             [
                 "fc570f7299eb205c"
             ],
             [
-                "7752bf1acef47bed",
                 "3eb370d603c80f68"
             ]
         ],
@@ -6930,7 +6936,7 @@
         "id": "d0beae73fc634098",
         "type": "change",
         "z": "5ea7da533109f7d2",
-        "g": "8f650bf7e6269e6a",
+        "g": "864959de0e1f25cf",
         "name": "Turn on HVAC",
         "rules": [
             {
@@ -6946,8 +6952,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 940,
-        "y": 1600,
+        "x": 880,
+        "y": 1620,
         "wires": [
             [
                 "17055fb592980387"
@@ -6958,7 +6964,7 @@
         "id": "ec8c43b734b488bd",
         "type": "change",
         "z": "5ea7da533109f7d2",
-        "g": "8f650bf7e6269e6a",
+        "g": "864959de0e1f25cf",
         "name": "Turn off HVAC",
         "rules": [
             {
@@ -6981,8 +6987,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 940,
-        "y": 1500,
+        "x": 880,
+        "y": 1520,
         "wires": [
             [
                 "17055fb592980387"
@@ -6993,15 +6999,15 @@
         "id": "63a4250f7ea57a4c",
         "type": "hubitat command",
         "z": "5ea7da533109f7d2",
-        "g": "8f650bf7e6269e6a",
+        "g": "864959de0e1f25cf",
         "deviceLabel": "EcobeeTherm: My ecobee",
         "name": "",
         "server": "252d4ef4.c14b6a",
         "deviceId": "552",
         "command": "",
         "commandArgs": "",
-        "x": 1280,
-        "y": 1460,
+        "x": 1220,
+        "y": 1500,
         "wires": [
             []
         ]
@@ -7028,8 +7034,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 695,
-        "y": 1700,
+        "x": 635,
+        "y": 1720,
         "wires": [
             [
                 "ec8c43b734b488bd"
@@ -7063,8 +7069,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 765,
-        "y": 1700,
+        "x": 705,
+        "y": 1720,
         "wires": [
             [
                 "d0beae73fc634098"
@@ -7077,7 +7083,7 @@
         "id": "cdcebad23752ae23",
         "type": "delay",
         "z": "5ea7da533109f7d2",
-        "g": "8f650bf7e6269e6a",
+        "g": "864959de0e1f25cf",
         "name": "",
         "pauseType": "delay",
         "timeout": "12",
@@ -7091,8 +7097,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 730,
-        "y": 1500,
+        "x": 670,
+        "y": 1520,
         "wires": [
             [
                 "ec8c43b734b488bd",
@@ -7104,8 +7110,8 @@
         "id": "7752bf1acef47bed",
         "type": "change",
         "z": "5ea7da533109f7d2",
-        "g": "8f650bf7e6269e6a",
-        "name": "abort delay!",
+        "g": "864959de0e1f25cf",
+        "name": "Discard pending messages",
         "rules": [
             {
                 "t": "set",
@@ -7120,11 +7126,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 550,
+        "x": 1220,
         "y": 1540,
         "wires": [
             [
-                "bd0d74f29ece1dcd"
+                "c140dcc86cd7d1a7"
             ]
         ]
     },
@@ -7132,7 +7138,7 @@
         "id": "be08985bac81bcb1",
         "type": "debug",
         "z": "5ea7da533109f7d2",
-        "g": "8f650bf7e6269e6a",
+        "g": "864959de0e1f25cf",
         "name": "debug 4",
         "active": false,
         "tosidebar": true,
@@ -7142,15 +7148,15 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1220,
-        "y": 1560,
+        "x": 1160,
+        "y": 1580,
         "wires": []
     },
     {
         "id": "e8d25bbe2111ea4c",
         "type": "delay",
         "z": "5ea7da533109f7d2",
-        "g": "8f650bf7e6269e6a",
+        "g": "864959de0e1f25cf",
         "name": "",
         "pauseType": "delay",
         "timeout": "10",
@@ -7164,8 +7170,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 730,
-        "y": 1360,
+        "x": 670,
+        "y": 1380,
         "wires": [
             [
                 "91531534703e670d"
@@ -7176,7 +7182,7 @@
         "id": "91531534703e670d",
         "type": "change",
         "z": "5ea7da533109f7d2",
-        "g": "8f650bf7e6269e6a",
+        "g": "864959de0e1f25cf",
         "name": "Doors Open!",
         "rules": [
             {
@@ -7199,8 +7205,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 890,
-        "y": 1360,
+        "x": 830,
+        "y": 1380,
         "wires": [
             [
                 "77fd588680815925"
@@ -7211,7 +7217,7 @@
         "id": "31512695eb7f1654",
         "type": "change",
         "z": "5ea7da533109f7d2",
-        "g": "8f650bf7e6269e6a",
+        "g": "864959de0e1f25cf",
         "name": "HVAC off!",
         "rules": [
             {
@@ -7234,8 +7240,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 880,
-        "y": 1400,
+        "x": 820,
+        "y": 1420,
         "wires": [
             [
                 "77fd588680815925"
@@ -7246,10 +7252,10 @@
         "id": "77fd588680815925",
         "type": "subflow:1090998370659d02",
         "z": "5ea7da533109f7d2",
-        "g": "8f650bf7e6269e6a",
+        "g": "864959de0e1f25cf",
         "name": "",
-        "x": 1060,
-        "y": 1380,
+        "x": 1000,
+        "y": 1400,
         "wires": []
     },
     {
@@ -7274,8 +7280,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 765,
-        "y": 1240,
+        "x": 705,
+        "y": 1260,
         "wires": [
             [
                 "91531534703e670d"
@@ -7305,8 +7311,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 695,
-        "y": 1240,
+        "x": 635,
+        "y": 1260,
         "wires": [
             [
                 "31512695eb7f1654"
@@ -7318,7 +7324,7 @@
         "id": "e22bc785bf7b0520",
         "type": "inject",
         "z": "5ea7da533109f7d2",
-        "g": "8f650bf7e6269e6a",
+        "g": "864959de0e1f25cf",
         "name": "System Reset",
         "props": [
             {
@@ -7336,11 +7342,42 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 370,
-        "y": 1240,
+        "x": 970,
+        "y": 1720,
         "wires": [
             [
                 "7752bf1acef47bed"
+            ]
+        ]
+    },
+    {
+        "id": "c140dcc86cd7d1a7",
+        "type": "link out",
+        "z": "5ea7da533109f7d2",
+        "g": "864959de0e1f25cf",
+        "name": "link out 1",
+        "mode": "link",
+        "links": [
+            "e4a89303966ef1fb"
+        ],
+        "x": 1375,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "e4a89303966ef1fb",
+        "type": "link in",
+        "z": "5ea7da533109f7d2",
+        "g": "864959de0e1f25cf",
+        "name": "link in 2",
+        "links": [
+            "c140dcc86cd7d1a7"
+        ],
+        "x": 435,
+        "y": 1460,
+        "wires": [
+            [
+                "bd0d74f29ece1dcd"
             ]
         ]
     },
