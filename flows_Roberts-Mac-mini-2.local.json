@@ -467,8 +467,8 @@
         "id": "17055fb592980387",
         "type": "junction",
         "z": "5ea7da533109f7d2",
-        "x": 1340,
-        "y": 1680,
+        "x": 1300,
+        "y": 1660,
         "wires": [
             [
                 "63a4250f7ea57a4c",
@@ -6948,14 +6948,14 @@
         "id": "63a4250f7ea57a4c",
         "type": "hubitat command",
         "z": "5ea7da533109f7d2",
-        "deviceLabel": "EcobeeTherm: My ecobee",
+        "deviceLabel": "Ecobee",
         "name": "",
         "server": "252d4ef4.c14b6a",
         "deviceId": "552",
         "command": "",
         "commandArgs": "",
-        "x": 1520,
-        "y": 1720,
+        "x": 1400,
+        "y": 1660,
         "wires": [
             []
         ]
@@ -7093,8 +7093,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1460,
-        "y": 1660,
+        "x": 1400,
+        "y": 1580,
         "wires": []
     },
     {
