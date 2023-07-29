@@ -7035,7 +7035,7 @@
         "name": "",
         "pauseType": "delay",
         "timeout": "12",
-        "timeoutUnits": "seconds",
+        "timeoutUnits": "milliseconds",
         "rate": "1",
         "nbRateUnits": "1",
         "rateUnits": "second",
@@ -7045,7 +7045,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 650,
+        "x": 660,
         "y": 1600,
         "wires": [
             [
