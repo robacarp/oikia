@@ -7407,7 +7407,7 @@
         "propertyType": "msg",
         "rules": [
             {
-                "t": "eq",
+                "t": "neq",
                 "v": "auto",
                 "vt": "str"
             }
