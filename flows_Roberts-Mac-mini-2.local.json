@@ -368,6 +368,7 @@
         "id": "c8062adaf3fbf8cf",
         "type": "group",
         "z": "5ea7da533109f7d2",
+        "g": "dbe1dc0e31a5fb56",
         "name": "Trigger Notifications",
         "style": {
             "label": true
@@ -385,6 +386,7 @@
         "id": "33e506e537a0af84",
         "type": "group",
         "z": "5ea7da533109f7d2",
+        "g": "dbe1dc0e31a5fb56",
         "name": "Manually control HVAC",
         "style": {
             "label": true,
@@ -398,6 +400,50 @@
         "y": 1759,
         "w": 172,
         "h": 90
+    },
+    {
+        "id": "dbe1dc0e31a5fb56",
+        "type": "group",
+        "z": "5ea7da533109f7d2",
+        "name": "Shut off HVAC when doors are open",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "0143764a4fa79a37",
+            "522ca8033f93cc49",
+            "d0beae73fc634098",
+            "ec8c43b734b488bd",
+            "63a4250f7ea57a4c",
+            "cdcebad23752ae23",
+            "7752bf1acef47bed",
+            "be08985bac81bcb1",
+            "e8d25bbe2111ea4c",
+            "91531534703e670d",
+            "31512695eb7f1654",
+            "77fd588680815925",
+            "e22bc785bf7b0520",
+            "9f224061934e409c",
+            "7e946ef4a2d3c2fe",
+            "2648b0e2f1734710",
+            "f462e420c508034e",
+            "fb7a5616028de8b7",
+            "65181a2e8282575e",
+            "cc53a25038807fc2",
+            "dcbdd84838c6c713",
+            "c41230b7e1da3814",
+            "3f71a14071503991",
+            "17055fb592980387",
+            "3eb370d603c80f68",
+            "bd0d74f29ece1dcd",
+            "fc570f7299eb205c",
+            "c8062adaf3fbf8cf",
+            "33e506e537a0af84"
+        ],
+        "x": 54,
+        "y": 1273,
+        "w": 1652,
+        "h": 602
     },
     {
         "id": "c6f15bd3bae34137",
@@ -467,6 +513,7 @@
         "id": "17055fb592980387",
         "type": "junction",
         "z": "5ea7da533109f7d2",
+        "g": "dbe1dc0e31a5fb56",
         "x": 1300,
         "y": 1660,
         "wires": [
@@ -493,6 +540,7 @@
         "id": "3eb370d603c80f68",
         "type": "junction",
         "z": "5ea7da533109f7d2",
+        "g": "dbe1dc0e31a5fb56",
         "x": 400,
         "y": 1700,
         "wires": [
@@ -584,6 +632,7 @@
         "id": "bd0d74f29ece1dcd",
         "type": "junction",
         "z": "5ea7da533109f7d2",
+        "g": "dbe1dc0e31a5fb56",
         "x": 530,
         "y": 1540,
         "wires": [
@@ -597,6 +646,7 @@
         "id": "fc570f7299eb205c",
         "type": "junction",
         "z": "5ea7da533109f7d2",
+        "g": "dbe1dc0e31a5fb56",
         "x": 410,
         "y": 1600,
         "wires": [
@@ -6839,6 +6889,7 @@
         "id": "0143764a4fa79a37",
         "type": "link in",
         "z": "5ea7da533109f7d2",
+        "g": "dbe1dc0e31a5fb56",
         "name": "Disable HVAC based on exterior doors",
         "links": [
             "14a29f24f119cbfd"
@@ -6855,6 +6906,7 @@
         "id": "522ca8033f93cc49",
         "type": "switch",
         "z": "5ea7da533109f7d2",
+        "g": "dbe1dc0e31a5fb56",
         "name": "are any doors open?",
         "property": "payload.anyOpen",
         "propertyType": "msg",
@@ -6888,6 +6940,7 @@
         "id": "d0beae73fc634098",
         "type": "change",
         "z": "5ea7da533109f7d2",
+        "g": "dbe1dc0e31a5fb56",
         "name": "Turn on HVAC",
         "rules": [
             {
@@ -6915,6 +6968,7 @@
         "id": "ec8c43b734b488bd",
         "type": "change",
         "z": "5ea7da533109f7d2",
+        "g": "dbe1dc0e31a5fb56",
         "name": "Turn off HVAC",
         "rules": [
             {
@@ -6949,6 +7003,7 @@
         "id": "63a4250f7ea57a4c",
         "type": "hubitat command",
         "z": "5ea7da533109f7d2",
+        "g": "dbe1dc0e31a5fb56",
         "deviceLabel": "Ecobee",
         "name": "",
         "server": "252d4ef4.c14b6a",
@@ -7032,6 +7087,7 @@
         "id": "cdcebad23752ae23",
         "type": "delay",
         "z": "5ea7da533109f7d2",
+        "g": "dbe1dc0e31a5fb56",
         "name": "",
         "pauseType": "delay",
         "timeout": "12",
@@ -7058,6 +7114,7 @@
         "id": "7752bf1acef47bed",
         "type": "change",
         "z": "5ea7da533109f7d2",
+        "g": "dbe1dc0e31a5fb56",
         "name": "Discard pending messages",
         "rules": [
             {
@@ -7085,6 +7142,7 @@
         "id": "be08985bac81bcb1",
         "type": "debug",
         "z": "5ea7da533109f7d2",
+        "g": "dbe1dc0e31a5fb56",
         "name": "debug 4",
         "active": false,
         "tosidebar": true,
@@ -7102,6 +7160,7 @@
         "id": "e8d25bbe2111ea4c",
         "type": "delay",
         "z": "5ea7da533109f7d2",
+        "g": "dbe1dc0e31a5fb56",
         "name": "",
         "pauseType": "delay",
         "timeout": "10",
@@ -7127,6 +7186,7 @@
         "id": "91531534703e670d",
         "type": "change",
         "z": "5ea7da533109f7d2",
+        "g": "dbe1dc0e31a5fb56",
         "name": "Doors Open!",
         "rules": [
             {
@@ -7161,6 +7221,7 @@
         "id": "31512695eb7f1654",
         "type": "change",
         "z": "5ea7da533109f7d2",
+        "g": "dbe1dc0e31a5fb56",
         "name": "HVAC off!",
         "rules": [
             {
@@ -7196,6 +7257,7 @@
         "type": "subflow:1090998370659d02",
         "z": "5ea7da533109f7d2",
         "d": true,
+        "g": "dbe1dc0e31a5fb56",
         "name": "",
         "x": 990,
         "y": 1480,
@@ -7267,6 +7329,7 @@
         "id": "e22bc785bf7b0520",
         "type": "inject",
         "z": "5ea7da533109f7d2",
+        "g": "dbe1dc0e31a5fb56",
         "name": "System Reset",
         "props": [
             {
@@ -7296,6 +7359,7 @@
         "id": "9f224061934e409c",
         "type": "link out",
         "z": "5ea7da533109f7d2",
+        "g": "dbe1dc0e31a5fb56",
         "name": "link out 1",
         "mode": "link",
         "links": [
@@ -7309,6 +7373,7 @@
         "id": "7e946ef4a2d3c2fe",
         "type": "link in",
         "z": "5ea7da533109f7d2",
+        "g": "dbe1dc0e31a5fb56",
         "name": "Discard Pending Messages",
         "links": [
             "9f224061934e409c",
@@ -7326,6 +7391,7 @@
         "id": "2648b0e2f1734710",
         "type": "link out",
         "z": "5ea7da533109f7d2",
+        "g": "dbe1dc0e31a5fb56",
         "name": "link out 2",
         "mode": "link",
         "links": [
@@ -7339,6 +7405,7 @@
         "id": "f462e420c508034e",
         "type": "hubitat device",
         "z": "5ea7da533109f7d2",
+        "g": "dbe1dc0e31a5fb56",
         "deviceLabel": "EcobeeTherm: My ecobee",
         "name": "Current Mode",
         "server": "252d4ef4.c14b6a",
@@ -7357,6 +7424,7 @@
         "id": "fb7a5616028de8b7",
         "type": "hubitat device",
         "z": "5ea7da533109f7d2",
+        "g": "dbe1dc0e31a5fb56",
         "deviceLabel": "EcobeeTherm: My ecobee",
         "name": "Current Mode",
         "server": "252d4ef4.c14b6a",
@@ -7376,6 +7444,7 @@
         "id": "65181a2e8282575e",
         "type": "switch",
         "z": "5ea7da533109f7d2",
+        "g": "dbe1dc0e31a5fb56",
         "name": "is on?",
         "property": "payload.value",
         "propertyType": "msg",
@@ -7404,6 +7473,7 @@
         "id": "cc53a25038807fc2",
         "type": "switch",
         "z": "5ea7da533109f7d2",
+        "g": "dbe1dc0e31a5fb56",
         "name": "is off?",
         "property": "payload.value",
         "propertyType": "msg",
@@ -7432,6 +7502,7 @@
         "id": "dcbdd84838c6c713",
         "type": "hubitat device",
         "z": "5ea7da533109f7d2",
+        "g": "dbe1dc0e31a5fb56",
         "deviceLabel": "EcobeeTherm: My ecobee",
         "name": "Current Mode",
         "server": "252d4ef4.c14b6a",
@@ -7448,6 +7519,7 @@
         "id": "c41230b7e1da3814",
         "type": "delay",
         "z": "5ea7da533109f7d2",
+        "g": "dbe1dc0e31a5fb56",
         "name": "",
         "pauseType": "delay",
         "timeout": "1200",
@@ -7473,6 +7545,7 @@
         "id": "3f71a14071503991",
         "type": "debug",
         "z": "5ea7da533109f7d2",
+        "g": "dbe1dc0e31a5fb56",
         "name": "debug 5",
         "active": false,
         "tosidebar": true,
