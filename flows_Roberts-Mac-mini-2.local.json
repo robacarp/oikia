@@ -368,7 +368,6 @@
         "id": "c8062adaf3fbf8cf",
         "type": "group",
         "z": "5ea7da533109f7d2",
-        "g": "864959de0e1f25cf",
         "name": "Trigger Notifications",
         "style": {
             "label": true
@@ -386,7 +385,6 @@
         "id": "33e506e537a0af84",
         "type": "group",
         "z": "5ea7da533109f7d2",
-        "g": "864959de0e1f25cf",
         "name": "Manually control HVAC",
         "style": {
             "label": true,
@@ -400,47 +398,6 @@
         "y": 1759,
         "w": 172,
         "h": 90
-    },
-    {
-        "id": "864959de0e1f25cf",
-        "type": "group",
-        "z": "5ea7da533109f7d2",
-        "style": {
-            "stroke": "#999999",
-            "stroke-opacity": "1",
-            "fill": "none",
-            "fill-opacity": "1",
-            "label": true,
-            "label-position": "nw",
-            "color": "#a4a4a4"
-        },
-        "nodes": [
-            "0143764a4fa79a37",
-            "522ca8033f93cc49",
-            "d0beae73fc634098",
-            "ec8c43b734b488bd",
-            "63a4250f7ea57a4c",
-            "cdcebad23752ae23",
-            "7752bf1acef47bed",
-            "be08985bac81bcb1",
-            "e8d25bbe2111ea4c",
-            "91531534703e670d",
-            "31512695eb7f1654",
-            "77fd588680815925",
-            "e22bc785bf7b0520",
-            "17055fb592980387",
-            "3eb370d603c80f68",
-            "bd0d74f29ece1dcd",
-            "fc570f7299eb205c",
-            "c8062adaf3fbf8cf",
-            "33e506e537a0af84",
-            "9f224061934e409c",
-            "2648b0e2f1734710"
-        ],
-        "x": 54,
-        "y": 1273,
-        "w": 1302,
-        "h": 602
     },
     {
         "id": "c6f15bd3bae34137",
@@ -510,8 +467,7 @@
         "id": "17055fb592980387",
         "type": "junction",
         "z": "5ea7da533109f7d2",
-        "g": "864959de0e1f25cf",
-        "x": 1030,
+        "x": 1140,
         "y": 1620,
         "wires": [
             [
@@ -536,8 +492,7 @@
         "id": "3eb370d603c80f68",
         "type": "junction",
         "z": "5ea7da533109f7d2",
-        "g": "864959de0e1f25cf",
-        "x": 370,
+        "x": 400,
         "y": 1700,
         "wires": [
             [
@@ -628,7 +583,6 @@
         "id": "bd0d74f29ece1dcd",
         "type": "junction",
         "z": "5ea7da533109f7d2",
-        "g": "864959de0e1f25cf",
         "x": 530,
         "y": 1540,
         "wires": [
@@ -642,7 +596,6 @@
         "id": "fc570f7299eb205c",
         "type": "junction",
         "z": "5ea7da533109f7d2",
-        "g": "864959de0e1f25cf",
         "x": 410,
         "y": 1600,
         "wires": [
@@ -6885,7 +6838,6 @@
         "id": "0143764a4fa79a37",
         "type": "link in",
         "z": "5ea7da533109f7d2",
-        "g": "864959de0e1f25cf",
         "name": "Disable HVAC based on exterior doors",
         "links": [
             "14a29f24f119cbfd"
@@ -6902,7 +6854,6 @@
         "id": "522ca8033f93cc49",
         "type": "switch",
         "z": "5ea7da533109f7d2",
-        "g": "864959de0e1f25cf",
         "name": "are any doors open?",
         "property": "payload.anyOpen",
         "propertyType": "msg",
@@ -6936,7 +6887,6 @@
         "id": "d0beae73fc634098",
         "type": "change",
         "z": "5ea7da533109f7d2",
-        "g": "864959de0e1f25cf",
         "name": "Turn on HVAC",
         "rules": [
             {
@@ -6964,7 +6914,6 @@
         "id": "ec8c43b734b488bd",
         "type": "change",
         "z": "5ea7da533109f7d2",
-        "g": "864959de0e1f25cf",
         "name": "Turn off HVAC",
         "rules": [
             {
@@ -6999,14 +6948,13 @@
         "id": "63a4250f7ea57a4c",
         "type": "hubitat command",
         "z": "5ea7da533109f7d2",
-        "g": "864959de0e1f25cf",
         "deviceLabel": "EcobeeTherm: My ecobee",
         "name": "",
         "server": "252d4ef4.c14b6a",
         "deviceId": "552",
         "command": "",
         "commandArgs": "",
-        "x": 1210,
+        "x": 1340,
         "y": 1620,
         "wires": [
             []
@@ -7083,7 +7031,6 @@
         "id": "cdcebad23752ae23",
         "type": "delay",
         "z": "5ea7da533109f7d2",
-        "g": "864959de0e1f25cf",
         "name": "",
         "pauseType": "delay",
         "timeout": "12",
@@ -7110,7 +7057,6 @@
         "id": "7752bf1acef47bed",
         "type": "change",
         "z": "5ea7da533109f7d2",
-        "g": "864959de0e1f25cf",
         "name": "Discard pending messages",
         "rules": [
             {
@@ -7138,7 +7084,6 @@
         "id": "be08985bac81bcb1",
         "type": "debug",
         "z": "5ea7da533109f7d2",
-        "g": "864959de0e1f25cf",
         "name": "debug 4",
         "active": false,
         "tosidebar": true,
@@ -7148,7 +7093,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1150,
+        "x": 1280,
         "y": 1540,
         "wires": []
     },
@@ -7157,7 +7102,6 @@
         "type": "delay",
         "z": "5ea7da533109f7d2",
         "d": true,
-        "g": "864959de0e1f25cf",
         "name": "",
         "pauseType": "delay",
         "timeout": "10",
@@ -7183,7 +7127,6 @@
         "id": "91531534703e670d",
         "type": "change",
         "z": "5ea7da533109f7d2",
-        "g": "864959de0e1f25cf",
         "name": "Doors Open!",
         "rules": [
             {
@@ -7218,7 +7161,6 @@
         "id": "31512695eb7f1654",
         "type": "change",
         "z": "5ea7da533109f7d2",
-        "g": "864959de0e1f25cf",
         "name": "HVAC off!",
         "rules": [
             {
@@ -7253,7 +7195,6 @@
         "id": "77fd588680815925",
         "type": "subflow:1090998370659d02",
         "z": "5ea7da533109f7d2",
-        "g": "864959de0e1f25cf",
         "name": "",
         "x": 990,
         "y": 1480,
@@ -7325,7 +7266,6 @@
         "id": "e22bc785bf7b0520",
         "type": "inject",
         "z": "5ea7da533109f7d2",
-        "g": "864959de0e1f25cf",
         "name": "System Reset",
         "props": [
             {
@@ -7355,14 +7295,13 @@
         "id": "9f224061934e409c",
         "type": "link out",
         "z": "5ea7da533109f7d2",
-        "g": "864959de0e1f25cf",
         "name": "link out 1",
         "mode": "link",
         "links": [
             "7e946ef4a2d3c2fe"
         ],
-        "x": 445,
-        "y": 1740,
+        "x": 505,
+        "y": 1680,
         "wires": []
     },
     {
@@ -7386,7 +7325,6 @@
         "id": "2648b0e2f1734710",
         "type": "link out",
         "z": "5ea7da533109f7d2",
-        "g": "864959de0e1f25cf",
         "name": "link out 2",
         "mode": "link",
         "links": [
@@ -7395,6 +7333,22 @@
         "x": 455,
         "y": 1340,
         "wires": []
+    },
+    {
+        "id": "f462e420c508034e",
+        "type": "hubitat device",
+        "z": "5ea7da533109f7d2",
+        "deviceLabel": "EcobeeTherm: My ecobee",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "552",
+        "attribute": "thermostatMode",
+        "sendEvent": true,
+        "x": 320,
+        "y": 1780,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "bf11becc09f647d3",
