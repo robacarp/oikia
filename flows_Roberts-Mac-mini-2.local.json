@@ -7091,7 +7091,7 @@
         "name": "",
         "pauseType": "delay",
         "timeout": "12",
-        "timeoutUnits": "milliseconds",
+        "timeoutUnits": "minutes",
         "rate": "1",
         "nbRateUnits": "1",
         "rateUnits": "second",
