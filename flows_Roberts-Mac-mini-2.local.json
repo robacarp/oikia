@@ -360,46 +360,7 @@
             "1988a394294549f4"
         ],
         "x": 244,
-        "y": 479,
-        "w": 892,
-        "h": 142
-    },
-    {
-        "id": "c8062adaf3fbf8cf",
-        "type": "group",
-        "z": "5ea7da533109f7d2",
-        "g": "dbe1dc0e31a5fb56",
-        "name": "Trigger Notifications",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "ad803091f2f4400c",
-            "ef55c8a7a80a63b4"
-        ],
-        "x": 564,
-        "y": 1299,
-        "w": 172,
-        "h": 82
-    },
-    {
-        "id": "33e506e537a0af84",
-        "type": "group",
-        "z": "5ea7da533109f7d2",
-        "g": "dbe1dc0e31a5fb56",
-        "name": "Manually control HVAC",
-        "style": {
-            "label": true,
-            "label-position": "sw"
-        },
-        "nodes": [
-            "14f0cde26c936f8c",
-            "89a094886fec2498"
-        ],
-        "x": 964,
-        "y": 1759,
-        "w": 172,
-        "h": 90
+        "y": 479
     },
     {
         "id": "dbe1dc0e31a5fb56",
@@ -444,6 +405,43 @@
         "y": 1273,
         "w": 1652,
         "h": 602
+    },
+    {
+        "id": "c8062adaf3fbf8cf",
+        "type": "group",
+        "z": "5ea7da533109f7d2",
+        "g": "dbe1dc0e31a5fb56",
+        "name": "Trigger Notifications",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "ad803091f2f4400c",
+            "ef55c8a7a80a63b4"
+        ],
+        "x": 564,
+        "y": 1299,
+        "w": 172,
+        "h": 82
+    },
+    {
+        "id": "33e506e537a0af84",
+        "type": "group",
+        "z": "5ea7da533109f7d2",
+        "g": "dbe1dc0e31a5fb56",
+        "name": "Manually control HVAC",
+        "style": {
+            "label": true,
+            "label-position": "sw"
+        },
+        "nodes": [
+            "14f0cde26c936f8c",
+            "89a094886fec2498"
+        ],
+        "x": 964,
+        "y": 1759,
+        "w": 172,
+        "h": 90
     },
     {
         "id": "c6f15bd3bae34137",
@@ -7003,6 +7001,7 @@
         "id": "63a4250f7ea57a4c",
         "type": "hubitat command",
         "z": "5ea7da533109f7d2",
+        "d": true,
         "g": "dbe1dc0e31a5fb56",
         "deviceLabel": "Ecobee",
         "name": "",
@@ -7256,6 +7255,7 @@
         "id": "77fd588680815925",
         "type": "subflow:1090998370659d02",
         "z": "5ea7da533109f7d2",
+        "d": true,
         "g": "dbe1dc0e31a5fb56",
         "name": "",
         "x": 990,
