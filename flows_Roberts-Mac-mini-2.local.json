@@ -394,7 +394,7 @@
             "14f0cde26c936f8c",
             "89a094886fec2498"
         ],
-        "x": 564,
+        "x": 964,
         "y": 1759,
         "w": 172,
         "h": 90
@@ -467,8 +467,8 @@
         "id": "17055fb592980387",
         "type": "junction",
         "z": "5ea7da533109f7d2",
-        "x": 1140,
-        "y": 1620,
+        "x": 1340,
+        "y": 1680,
         "wires": [
             [
                 "63a4250f7ea57a4c",
@@ -496,8 +496,8 @@
         "y": 1700,
         "wires": [
             [
-                "d0beae73fc634098",
-                "9f224061934e409c"
+                "9f224061934e409c",
+                "fb7a5616028de8b7"
             ]
         ]
     },
@@ -6902,7 +6902,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 870,
+        "x": 1180,
         "y": 1700,
         "wires": [
             [
@@ -6936,7 +6936,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 870,
+        "x": 1180,
         "y": 1600,
         "wires": [
             [
@@ -6954,8 +6954,8 @@
         "deviceId": "552",
         "command": "",
         "commandArgs": "",
-        "x": 1340,
-        "y": 1620,
+        "x": 1520,
+        "y": 1720,
         "wires": [
             []
         ]
@@ -6982,7 +6982,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 625,
+        "x": 1025,
         "y": 1800,
         "wires": [
             [
@@ -7017,7 +7017,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 695,
+        "x": 1095,
         "y": 1800,
         "wires": [
             [
@@ -7048,8 +7048,8 @@
         "y": 1600,
         "wires": [
             [
-                "ec8c43b734b488bd",
-                "31512695eb7f1654"
+                "31512695eb7f1654",
+                "f462e420c508034e"
             ]
         ]
     },
@@ -7093,8 +7093,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1280,
-        "y": 1540,
+        "x": 1460,
+        "y": 1660,
         "wires": []
     },
     {
@@ -7344,10 +7344,12 @@
         "deviceId": "552",
         "attribute": "thermostatMode",
         "sendEvent": false,
-        "x": 280,
-        "y": 1780,
+        "x": 840,
+        "y": 1600,
         "wires": [
-            []
+            [
+                "65181a2e8282575e"
+            ]
         ]
     },
     {
@@ -7360,10 +7362,68 @@
         "deviceId": "552",
         "attribute": "thermostatMode",
         "sendEvent": false,
-        "x": 280,
-        "y": 1840,
+        "x": 840,
+        "y": 1700,
         "wires": [
-            []
+            [
+                "cc53a25038807fc2"
+            ]
+        ]
+    },
+    {
+        "id": "65181a2e8282575e",
+        "type": "switch",
+        "z": "5ea7da533109f7d2",
+        "name": "is on?",
+        "property": "payload.anyOpen",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "auto",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1010,
+        "y": 1600,
+        "wires": [
+            [
+                "ec8c43b734b488bd"
+            ]
+        ],
+        "outputLabels": [
+            "Yes"
+        ]
+    },
+    {
+        "id": "cc53a25038807fc2",
+        "type": "switch",
+        "z": "5ea7da533109f7d2",
+        "name": "is off?",
+        "property": "payload.anyOpen",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "auto",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1010,
+        "y": 1700,
+        "wires": [
+            [
+                "d0beae73fc634098"
+            ]
+        ],
+        "outputLabels": [
+            "Yes"
         ]
     },
     {
