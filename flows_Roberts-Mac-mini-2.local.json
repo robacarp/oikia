@@ -472,7 +472,8 @@
         "wires": [
             [
                 "63a4250f7ea57a4c",
-                "be08985bac81bcb1"
+                "be08985bac81bcb1",
+                "c41230b7e1da3814"
             ]
         ]
     },
@@ -7424,6 +7425,47 @@
         ],
         "outputLabels": [
             "Yes"
+        ]
+    },
+    {
+        "id": "dcbdd84838c6c713",
+        "type": "hubitat device",
+        "z": "5ea7da533109f7d2",
+        "deviceLabel": "EcobeeTherm: My ecobee",
+        "name": "Current Mode",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "552",
+        "attribute": "thermostatMode",
+        "sendEvent": false,
+        "x": 1600,
+        "y": 1740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c41230b7e1da3814",
+        "type": "delay",
+        "z": "5ea7da533109f7d2",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "120",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1410,
+        "y": 1740,
+        "wires": [
+            [
+                "dcbdd84838c6c713"
+            ]
         ]
     },
     {
