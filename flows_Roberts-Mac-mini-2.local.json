@@ -7339,13 +7339,29 @@
         "type": "hubitat device",
         "z": "5ea7da533109f7d2",
         "deviceLabel": "EcobeeTherm: My ecobee",
-        "name": "",
+        "name": "Current Mode",
         "server": "252d4ef4.c14b6a",
         "deviceId": "552",
         "attribute": "thermostatMode",
-        "sendEvent": true,
-        "x": 320,
+        "sendEvent": false,
+        "x": 280,
         "y": 1780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fb7a5616028de8b7",
+        "type": "hubitat device",
+        "z": "5ea7da533109f7d2",
+        "deviceLabel": "EcobeeTherm: My ecobee",
+        "name": "Current Mode",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "552",
+        "attribute": "thermostatMode",
+        "sendEvent": false,
+        "x": 280,
+        "y": 1840,
         "wires": [
             []
         ]
