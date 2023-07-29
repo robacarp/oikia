@@ -377,8 +377,8 @@
             "ad803091f2f4400c",
             "ef55c8a7a80a63b4"
         ],
-        "x": 574,
-        "y": 1219,
+        "x": 564,
+        "y": 1299,
         "w": 172,
         "h": 82
     },
@@ -396,8 +396,8 @@
             "14f0cde26c936f8c",
             "89a094886fec2498"
         ],
-        "x": 574,
-        "y": 1679,
+        "x": 564,
+        "y": 1759,
         "w": 172,
         "h": 90
     },
@@ -428,18 +428,18 @@
             "31512695eb7f1654",
             "77fd588680815925",
             "e22bc785bf7b0520",
-            "c140dcc86cd7d1a7",
-            "e4a89303966ef1fb",
             "17055fb592980387",
             "3eb370d603c80f68",
             "bd0d74f29ece1dcd",
             "fc570f7299eb205c",
             "c8062adaf3fbf8cf",
-            "33e506e537a0af84"
+            "33e506e537a0af84",
+            "9f224061934e409c",
+            "2648b0e2f1734710"
         ],
-        "x": 64,
-        "y": 1193,
-        "w": 1352,
+        "x": 54,
+        "y": 1273,
+        "w": 1302,
         "h": 602
     },
     {
@@ -511,13 +511,12 @@
         "type": "junction",
         "z": "5ea7da533109f7d2",
         "g": "864959de0e1f25cf",
-        "x": 1040,
-        "y": 1540,
+        "x": 1030,
+        "y": 1620,
         "wires": [
             [
                 "63a4250f7ea57a4c",
-                "be08985bac81bcb1",
-                "7752bf1acef47bed"
+                "be08985bac81bcb1"
             ]
         ]
     },
@@ -538,11 +537,12 @@
         "type": "junction",
         "z": "5ea7da533109f7d2",
         "g": "864959de0e1f25cf",
-        "x": 380,
-        "y": 1620,
+        "x": 370,
+        "y": 1700,
         "wires": [
             [
-                "d0beae73fc634098"
+                "d0beae73fc634098",
+                "9f224061934e409c"
             ]
         ]
     },
@@ -629,8 +629,8 @@
         "type": "junction",
         "z": "5ea7da533109f7d2",
         "g": "864959de0e1f25cf",
-        "x": 540,
-        "y": 1460,
+        "x": 530,
+        "y": 1540,
         "wires": [
             [
                 "cdcebad23752ae23",
@@ -643,8 +643,8 @@
         "type": "junction",
         "z": "5ea7da533109f7d2",
         "g": "864959de0e1f25cf",
-        "x": 420,
-        "y": 1520,
+        "x": 410,
+        "y": 1600,
         "wires": [
             [
                 "cdcebad23752ae23",
@@ -6886,12 +6886,12 @@
         "type": "link in",
         "z": "5ea7da533109f7d2",
         "g": "864959de0e1f25cf",
-        "name": "link in 1",
+        "name": "Disable HVAC based on exterior doors",
         "links": [
             "14a29f24f119cbfd"
         ],
-        "x": 105,
-        "y": 1560,
+        "x": 95,
+        "y": 1640,
         "wires": [
             [
                 "522ca8033f93cc49"
@@ -6917,8 +6917,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 260,
-        "y": 1560,
+        "x": 250,
+        "y": 1640,
         "wires": [
             [
                 "fc570f7299eb205c"
@@ -6952,8 +6952,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 880,
-        "y": 1620,
+        "x": 870,
+        "y": 1700,
         "wires": [
             [
                 "17055fb592980387"
@@ -6987,8 +6987,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 880,
-        "y": 1520,
+        "x": 870,
+        "y": 1600,
         "wires": [
             [
                 "17055fb592980387"
@@ -7006,8 +7006,8 @@
         "deviceId": "552",
         "command": "",
         "commandArgs": "",
-        "x": 1220,
-        "y": 1500,
+        "x": 1210,
+        "y": 1620,
         "wires": [
             []
         ]
@@ -7034,8 +7034,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 635,
-        "y": 1720,
+        "x": 625,
+        "y": 1800,
         "wires": [
             [
                 "ec8c43b734b488bd"
@@ -7069,8 +7069,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 705,
-        "y": 1720,
+        "x": 695,
+        "y": 1800,
         "wires": [
             [
                 "d0beae73fc634098"
@@ -7097,8 +7097,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 660,
-        "y": 1520,
+        "x": 650,
+        "y": 1600,
         "wires": [
             [
                 "ec8c43b734b488bd",
@@ -7126,11 +7126,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1220,
-        "y": 1540,
+        "x": 300,
+        "y": 1480,
         "wires": [
             [
-                "c140dcc86cd7d1a7"
+                "bd0d74f29ece1dcd"
             ]
         ]
     },
@@ -7148,8 +7148,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1160,
-        "y": 1580,
+        "x": 1150,
+        "y": 1540,
         "wires": []
     },
     {
@@ -7171,8 +7171,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 670,
-        "y": 1380,
+        "x": 660,
+        "y": 1460,
         "wires": [
             [
                 "91531534703e670d"
@@ -7206,8 +7206,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 830,
-        "y": 1380,
+        "x": 820,
+        "y": 1460,
         "wires": [
             [
                 "77fd588680815925"
@@ -7241,8 +7241,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 820,
-        "y": 1420,
+        "x": 810,
+        "y": 1500,
         "wires": [
             [
                 "77fd588680815925"
@@ -7255,8 +7255,8 @@
         "z": "5ea7da533109f7d2",
         "g": "864959de0e1f25cf",
         "name": "",
-        "x": 1000,
-        "y": 1400,
+        "x": 990,
+        "y": 1480,
         "wires": []
     },
     {
@@ -7281,8 +7281,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 705,
-        "y": 1260,
+        "x": 695,
+        "y": 1340,
         "wires": [
             [
                 "91531534703e670d"
@@ -7312,8 +7312,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 635,
-        "y": 1260,
+        "x": 625,
+        "y": 1340,
         "wires": [
             [
                 "31512695eb7f1654"
@@ -7343,8 +7343,39 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 970,
-        "y": 1720,
+        "x": 330,
+        "y": 1340,
+        "wires": [
+            [
+                "2648b0e2f1734710"
+            ]
+        ]
+    },
+    {
+        "id": "9f224061934e409c",
+        "type": "link out",
+        "z": "5ea7da533109f7d2",
+        "g": "864959de0e1f25cf",
+        "name": "link out 1",
+        "mode": "link",
+        "links": [
+            "7e946ef4a2d3c2fe"
+        ],
+        "x": 445,
+        "y": 1740,
+        "wires": []
+    },
+    {
+        "id": "7e946ef4a2d3c2fe",
+        "type": "link in",
+        "z": "5ea7da533109f7d2",
+        "name": "Discard Pending Messages",
+        "links": [
+            "9f224061934e409c",
+            "2648b0e2f1734710"
+        ],
+        "x": 115,
+        "y": 1480,
         "wires": [
             [
                 "7752bf1acef47bed"
@@ -7352,35 +7383,18 @@
         ]
     },
     {
-        "id": "c140dcc86cd7d1a7",
+        "id": "2648b0e2f1734710",
         "type": "link out",
         "z": "5ea7da533109f7d2",
         "g": "864959de0e1f25cf",
-        "name": "link out 1",
+        "name": "link out 2",
         "mode": "link",
         "links": [
-            "e4a89303966ef1fb"
+            "7e946ef4a2d3c2fe"
         ],
-        "x": 1375,
-        "y": 1540,
+        "x": 455,
+        "y": 1340,
         "wires": []
-    },
-    {
-        "id": "e4a89303966ef1fb",
-        "type": "link in",
-        "z": "5ea7da533109f7d2",
-        "g": "864959de0e1f25cf",
-        "name": "link in 2",
-        "links": [
-            "c140dcc86cd7d1a7"
-        ],
-        "x": 435,
-        "y": 1460,
-        "wires": [
-            [
-                "bd0d74f29ece1dcd"
-            ]
-        ]
     },
     {
         "id": "bf11becc09f647d3",
