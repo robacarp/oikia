@@ -5777,13 +5777,13 @@
         "type": "hubitat device",
         "z": "2984f0164b9bafb7",
         "g": "83269420e2cb55e4",
-        "deviceLabel": "Front Door Contact",
+        "deviceLabel": "Front Door",
         "name": "",
         "server": "252d4ef4.c14b6a",
         "deviceId": "162",
         "attribute": "contact",
         "sendEvent": true,
-        "x": 490,
+        "x": 470,
         "y": 520,
         "wires": [
             [
