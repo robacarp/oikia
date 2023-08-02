@@ -381,7 +381,6 @@
             "be08985bac81bcb1",
             "e8d25bbe2111ea4c",
             "91531534703e670d",
-            "31512695eb7f1654",
             "77fd588680815925",
             "e22bc785bf7b0520",
             "7e946ef4a2d3c2fe",
@@ -409,17 +408,16 @@
         "type": "group",
         "z": "5ea7da533109f7d2",
         "g": "dbe1dc0e31a5fb56",
-        "name": "Trigger Notifications",
+        "name": "Trigger Notification",
         "style": {
             "label": true
         },
         "nodes": [
-            "ad803091f2f4400c",
-            "ef55c8a7a80a63b4"
+            "ad803091f2f4400c"
         ],
-        "x": 694,
+        "x": 764,
         "y": 1299,
-        "w": 172,
+        "w": 126,
         "h": 82
     },
     {
@@ -7100,7 +7098,6 @@
         "y": 1600,
         "wires": [
             [
-                "31512695eb7f1654",
                 "f462e420c508034e"
             ]
         ]
@@ -7213,41 +7210,6 @@
         ]
     },
     {
-        "id": "31512695eb7f1654",
-        "type": "change",
-        "z": "5ea7da533109f7d2",
-        "g": "dbe1dc0e31a5fb56",
-        "name": "HVAC off!",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "(\t   payload.openCount = 1 ? \"The \" & payload.openDoors[0] & \" door is open,\" : \"The doors are open,\"\t) & \" HVAC has been shut off.\"",
-                "tot": "jsonata"
-            },
-            {
-                "t": "set",
-                "p": "sound",
-                "pt": "msg",
-                "to": "tugboat",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 940,
-        "y": 1500,
-        "wires": [
-            [
-                "77fd588680815925"
-            ]
-        ]
-    },
-    {
         "id": "77fd588680815925",
         "type": "subflow:1090998370659d02",
         "z": "5ea7da533109f7d2",
@@ -7284,37 +7246,6 @@
         "wires": [
             [
                 "91531534703e670d"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "ef55c8a7a80a63b4",
-        "type": "inject",
-        "z": "5ea7da533109f7d2",
-        "g": "c8062adaf3fbf8cf",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 755,
-        "y": 1340,
-        "wires": [
-            [
-                "31512695eb7f1654"
             ]
         ],
         "l": false
