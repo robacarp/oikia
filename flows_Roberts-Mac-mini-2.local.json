@@ -4926,8 +4926,8 @@
         "rules": [
             {
                 "t": "neq",
-                "v": "\"129\"",
-                "vt": "str"
+                "v": "129",
+                "vt": "num"
             }
         ],
         "checkall": "true",
