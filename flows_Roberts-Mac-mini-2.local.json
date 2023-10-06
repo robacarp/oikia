@@ -399,7 +399,9 @@
             "5c6e34be82fe0618"
         ],
         "x": 184,
-        "y": 1273
+        "y": 1273,
+        "w": 1452,
+        "h": 602
     },
     {
         "id": "c8062adaf3fbf8cf",
@@ -414,7 +416,9 @@
             "ad803091f2f4400c"
         ],
         "x": 764,
-        "y": 1299
+        "y": 1299,
+        "w": 126,
+        "h": 82
     },
     {
         "id": "33e506e537a0af84",
@@ -431,7 +435,9 @@
             "89a094886fec2498"
         ],
         "x": 1094,
-        "y": 1759
+        "y": 1759,
+        "w": 172,
+        "h": 90
     },
     {
         "id": "c6f15bd3bae34137",
@@ -6433,7 +6439,6 @@
         "id": "f5678ecdd5485f20",
         "type": "within-time-switch",
         "z": "5ea7da533109f7d2",
-        "d": true,
         "name": "",
         "nameInt": "",
         "positionConfig": "96c207ac.2237a8",
@@ -6495,7 +6500,6 @@
         "id": "207b3028d768f770",
         "type": "inject",
         "z": "5ea7da533109f7d2",
-        "d": true,
         "name": "12pm",
         "props": [
             {
@@ -6525,7 +6529,6 @@
         "id": "cf2f830a031481ed",
         "type": "delay",
         "z": "5ea7da533109f7d2",
-        "d": true,
         "name": "",
         "pauseType": "delay",
         "timeout": "5",
@@ -6555,7 +6558,6 @@
         "id": "866b6a36ffb6fe3b",
         "type": "within-time-switch",
         "z": "5ea7da533109f7d2",
-        "d": true,
         "name": "",
         "nameInt": "",
         "positionConfig": "96c207ac.2237a8",
@@ -6617,7 +6619,6 @@
         "id": "c05a83ef8e072485",
         "type": "within-time-switch",
         "z": "5ea7da533109f7d2",
-        "d": true,
         "name": "",
         "nameInt": "",
         "positionConfig": "96c207ac.2237a8",
@@ -6679,7 +6680,6 @@
         "id": "21b8df838d261e07",
         "type": "within-time-switch",
         "z": "5ea7da533109f7d2",
-        "d": true,
         "name": "",
         "nameInt": "",
         "positionConfig": "96c207ac.2237a8",
@@ -6741,7 +6741,6 @@
         "id": "7aa9def8d34a3e64",
         "type": "inject",
         "z": "5ea7da533109f7d2",
-        "d": true,
         "name": "7am",
         "props": [
             {
@@ -6771,7 +6770,6 @@
         "id": "2d781397117ae518",
         "type": "inject",
         "z": "5ea7da533109f7d2",
-        "d": true,
         "name": "6pm",
         "props": [
             {
@@ -6801,7 +6799,6 @@
         "id": "5e46a0effa23ad0b",
         "type": "inject",
         "z": "5ea7da533109f7d2",
-        "d": true,
         "name": "2pm",
         "props": [
             {
