@@ -838,26 +838,6 @@
         "passwordFieldType": "str"
     },
     {
-        "id": "0182a7356cbf23ea",
-        "type": "caseta-bridge",
-        "name": "Lutron Pro Hub",
-        "bridge_ip_address": "172.16.0.11",
-        "device_list": {
-            "SmartBridge": {
-                "sid": "1",
-                "name": "SmartBridge",
-                "label": "Scene",
-                "hash": "SmartBridge",
-                "type": "smartbridge"
-            }
-        },
-        "scene_list": {},
-        "int_report": "{}",
-        "f_append_id": false,
-        "f_debug": true,
-        "f_dont_connect": false
-    },
-    {
         "id": "aa0d64a0.a2b408",
         "type": "comment",
         "z": "c1c7f362.7de41",
