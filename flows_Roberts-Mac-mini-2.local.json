@@ -4250,6 +4250,7 @@
         "id": "f3be4df3.08e528",
         "type": "lutron-status",
         "z": "f9337f21.0eab78",
+        "d": true,
         "confignode": "f2d9c01d.62cb2",
         "name": "Leahs",
         "x": 150,
