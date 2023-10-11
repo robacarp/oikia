@@ -4224,7 +4224,7 @@
         "type": "lutron-status",
         "z": "f9337f21.0eab78",
         "confignode": "f2d9c01d.62cb2",
-        "name": "R Pico",
+        "name": "Leahs",
         "x": 150,
         "y": 1600,
         "wires": [
@@ -5945,7 +5945,7 @@
         "type": "lutron-status",
         "z": "f9337f21.0eab78",
         "confignode": "f2d9c01d.62cb2",
-        "name": "bar\n        ",
+        "name": "Robs",
         "x": 90,
         "y": 2080,
         "wires": [
