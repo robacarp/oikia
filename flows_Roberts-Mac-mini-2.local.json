@@ -5996,27 +5996,6 @@
         "wires": []
     },
     {
-        "id": "8f40371f58ee0263",
-        "type": "caseta-react",
-        "z": "f9337f21.0eab78",
-        "bridge": "0182a7356cbf23ea",
-        "label": "",
-        "device": "SmartBridge",
-        "type_device": "device",
-        "event": "3,4",
-        "type_event": "event",
-        "action": "",
-        "type_action": "action",
-        "f_debug": "",
-        "f_pal_status": "",
-        "label_default": "Scene",
-        "x": 110,
-        "y": 2020,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "734f4b605d12eb34",
         "type": "hubitat device",
         "z": "2984f0164b9bafb7",
