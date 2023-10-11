@@ -515,6 +515,7 @@
         "id": "90aea5fd83ba6ac4",
         "type": "junction",
         "z": "f9337f21.0eab78",
+        "d": true,
         "x": 645,
         "y": 1341,
         "wires": [
@@ -3025,6 +3026,7 @@
         "id": "b8dd13b1.797cb",
         "type": "change",
         "z": "f9337f21.0eab78",
+        "d": true,
         "name": "Turn Off",
         "rules": [
             {
@@ -3052,6 +3054,7 @@
         "id": "5c9841f.19b74c",
         "type": "change",
         "z": "f9337f21.0eab78",
+        "d": true,
         "name": "Turn On",
         "rules": [
             {
@@ -3089,6 +3092,7 @@
         "id": "30aade80.91cb42",
         "type": "within-time-switch",
         "z": "f9337f21.0eab78",
+        "d": true,
         "name": "sunset - sunrise",
         "positionConfig": "96c207ac.2237a8",
         "startTime": "sunsetEnd",
@@ -3151,6 +3155,7 @@
         "id": "76fddf4.66e0da",
         "type": "inject",
         "z": "f9337f21.0eab78",
+        "d": true,
         "name": "",
         "props": [
             {
@@ -3247,6 +3252,7 @@
         "id": "89ce2107.6a1858",
         "type": "link in",
         "z": "f9337f21.0eab78",
+        "d": true,
         "name": "Porch Bulb On",
         "links": [
             "2837495c.ae2176",
@@ -3264,6 +3270,7 @@
         "id": "35f56d8f.e1d64a",
         "type": "link in",
         "z": "f9337f21.0eab78",
+        "d": true,
         "name": "Porch Bulb Off",
         "links": [
             "4e636188.7f332"
@@ -4586,6 +4593,7 @@
         "id": "ba0630734df9353f",
         "type": "hubitat command",
         "z": "f9337f21.0eab78",
+        "d": true,
         "deviceLabel": "Porch Bulb",
         "name": "",
         "server": "252d4ef4.c14b6a",
