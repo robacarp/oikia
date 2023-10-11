@@ -681,7 +681,8 @@
         "name": "Caseta Hub",
         "ipaddress": "172.16.0.11",
         "deviceMap": {
-            "pico": "0"
+            "Leahs": "0",
+            "Robs": "1"
         },
         "timeout": "45000"
     },
