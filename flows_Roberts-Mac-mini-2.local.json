@@ -399,9 +399,7 @@
             "5c6e34be82fe0618"
         ],
         "x": 184,
-        "y": 1273,
-        "w": 1452,
-        "h": 602
+        "y": 1273
     },
     {
         "id": "c8062adaf3fbf8cf",
@@ -416,9 +414,7 @@
             "ad803091f2f4400c"
         ],
         "x": 764,
-        "y": 1299,
-        "w": 126,
-        "h": 82
+        "y": 1299
     },
     {
         "id": "33e506e537a0af84",
@@ -435,9 +431,7 @@
             "89a094886fec2498"
         ],
         "x": 1094,
-        "y": 1759,
-        "w": 172,
-        "h": 90
+        "y": 1759
     },
     {
         "id": "c6f15bd3bae34137",
@@ -5610,10 +5604,10 @@
         "id": "4403b6bd78189a08",
         "type": "hubitat device",
         "z": "f9337f21.0eab78",
-        "deviceLabel": "Rob’s bedside",
+        "deviceLabel": "Rob’s Bedside",
         "name": "",
         "server": "252d4ef4.c14b6a",
-        "deviceId": "2",
+        "deviceId": "554",
         "attribute": "switch",
         "sendEvent": false,
         "x": 660,
