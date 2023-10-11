@@ -540,7 +540,7 @@
         "id": "24bb8f272f701383",
         "type": "junction",
         "z": "f9337f21.0eab78",
-        "x": 540,
+        "x": 740,
         "y": 1880,
         "wires": [
             [
@@ -553,7 +553,7 @@
         "id": "1e3f611957300a48",
         "type": "junction",
         "z": "f9337f21.0eab78",
-        "x": 1120,
+        "x": 1320,
         "y": 1880,
         "wires": [
             [
@@ -566,7 +566,7 @@
         "id": "1f64cf98b7b984de",
         "type": "junction",
         "z": "f9337f21.0eab78",
-        "x": 1120,
+        "x": 1320,
         "y": 1980,
         "wires": [
             [
@@ -579,7 +579,7 @@
         "id": "156fcd5f73bfc8b6",
         "type": "junction",
         "z": "f9337f21.0eab78",
-        "x": 540,
+        "x": 740,
         "y": 1920,
         "wires": [
             [
@@ -5391,7 +5391,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 630,
+        "x": 830,
         "y": 2000,
         "wires": [
             [
@@ -5418,7 +5418,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 980,
+        "x": 1180,
         "y": 1820,
         "wires": [
             [
@@ -5436,7 +5436,7 @@
         "deviceId": "554",
         "command": "",
         "commandArgs": "",
-        "x": 1280,
+        "x": 1480,
         "y": 1880,
         "wires": [
             []
@@ -5452,7 +5452,7 @@
         "deviceId": "1",
         "command": "",
         "commandArgs": "",
-        "x": 1280,
+        "x": 1480,
         "y": 1920,
         "wires": [
             []
@@ -5533,7 +5533,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 630,
+        "x": 830,
         "y": 1900,
         "wires": [
             [
@@ -5551,7 +5551,7 @@
         "deviceId": "1",
         "command": "",
         "commandArgs": "",
-        "x": 800,
+        "x": 1000,
         "y": 1940,
         "wires": [
             []
@@ -5567,7 +5567,7 @@
         "deviceId": "554",
         "command": "",
         "commandArgs": "",
-        "x": 800,
+        "x": 1000,
         "y": 1880,
         "wires": [
             []
@@ -5592,7 +5592,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 630,
+        "x": 830,
         "y": 1940,
         "wires": [
             [
@@ -5610,7 +5610,7 @@
         "deviceId": "554",
         "attribute": "switch",
         "sendEvent": false,
-        "x": 660,
+        "x": 860,
         "y": 1800,
         "wires": [
             [
@@ -5638,7 +5638,7 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 810,
+        "x": 1010,
         "y": 1800,
         "wires": [
             [
@@ -5675,7 +5675,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 990,
+        "x": 1190,
         "y": 1780,
         "wires": [
             [
@@ -5709,7 +5709,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 630,
+        "x": 830,
         "y": 1860,
         "wires": [
             [
@@ -5748,6 +5748,200 @@
         "wires": [
             [
                 "d52d8310f3f1401c"
+            ]
+        ]
+    },
+    {
+        "id": "3e2e7a3da804b116",
+        "type": "change",
+        "z": "f9337f21.0eab78",
+        "name": "Button 1",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.button",
+                "pt": "msg",
+                "to": "1",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 2000,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "887dc8c1a970c922",
+        "type": "switch",
+        "z": "f9337f21.0eab78",
+        "name": "decode lutron",
+        "property": "payload.action",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "8",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "9",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "10",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "11",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 5,
+        "x": 320,
+        "y": 2080,
+        "wires": [
+            [
+                "3e2e7a3da804b116"
+            ],
+            [
+                "b709a7446815bf69"
+            ],
+            [
+                "b4a7a5ed8075a0eb"
+            ],
+            [
+                "ceb5fefdddebf8fa"
+            ],
+            [
+                "a451e1fba6e89875"
+            ]
+        ]
+    },
+    {
+        "id": "b709a7446815bf69",
+        "type": "change",
+        "z": "f9337f21.0eab78",
+        "name": "Button 2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.button",
+                "pt": "msg",
+                "to": "2",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 2040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b4a7a5ed8075a0eb",
+        "type": "change",
+        "z": "f9337f21.0eab78",
+        "name": "Button 3",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.button",
+                "pt": "msg",
+                "to": "3",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 2080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ceb5fefdddebf8fa",
+        "type": "change",
+        "z": "f9337f21.0eab78",
+        "name": "Button 4",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.button",
+                "pt": "msg",
+                "to": "4",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 2120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a451e1fba6e89875",
+        "type": "change",
+        "z": "f9337f21.0eab78",
+        "name": "Other btn ",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.button",
+                "pt": "msg",
+                "to": "payload.action",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 2160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "da31fa73837902c6",
+        "type": "lutron-status",
+        "z": "f9337f21.0eab78",
+        "confignode": "f2d9c01d.62cb2",
+        "name": "bar\n        ",
+        "x": 90,
+        "y": 2080,
+        "wires": [
+            [
+                "887dc8c1a970c922"
             ]
         ]
     },
