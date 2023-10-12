@@ -5764,7 +5764,9 @@
                 "vt": "num"
             },
             {
-                "t": "else"
+                "t": "eq",
+                "v": "5",
+                "vt": "num"
             }
         ],
         "checkall": "false",
@@ -5873,7 +5875,7 @@
         "id": "a451e1fba6e89875",
         "type": "change",
         "z": "f9337f21.0eab78",
-        "name": "Other btn ",
+        "name": "Button 5",
         "rules": [
             {
                 "t": "set",
