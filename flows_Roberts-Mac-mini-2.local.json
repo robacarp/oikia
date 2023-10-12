@@ -5800,27 +5800,27 @@
         "type": "switch",
         "z": "f9337f21.0eab78",
         "name": "decode lutron",
-        "property": "payload.action",
+        "property": "payload.value",
         "propertyType": "msg",
         "rules": [
             {
                 "t": "eq",
-                "v": "8",
+                "v": "1",
                 "vt": "num"
             },
             {
                 "t": "eq",
-                "v": "9",
+                "v": "2",
                 "vt": "num"
             },
             {
                 "t": "eq",
-                "v": "10",
+                "v": "3",
                 "vt": "num"
             },
             {
                 "t": "eq",
-                "v": "11",
+                "v": "4",
                 "vt": "num"
             },
             {
