@@ -683,17 +683,6 @@
         "name": "Robacarp"
     },
     {
-        "id": "f2d9c01d.62cb2",
-        "type": "lutron-config",
-        "name": "Caseta Hub",
-        "ipaddress": "172.16.0.11",
-        "deviceMap": {
-            "Leahs": "0",
-            "Robs": "3"
-        },
-        "timeout": "45000"
-    },
-    {
         "id": "b9350de11f714bc2",
         "type": "ui_base",
         "theme": {
@@ -5942,6 +5931,24 @@
         "wires": []
     },
     {
+        "id": "d0125de6100dd294",
+        "type": "hubitat device",
+        "z": "f9337f21.0eab78",
+        "deviceLabel": "Leahs Pico Remote",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "558",
+        "attribute": "",
+        "sendEvent": true,
+        "x": 90,
+        "y": 1600,
+        "wires": [
+            [
+                "56178c721891bd45"
+            ]
+        ]
+    },
+    {
         "id": "a602bff24bc56b3b",
         "type": "hubitat device",
         "z": "f9337f21.0eab78",
@@ -5957,24 +5964,6 @@
             [
                 "887dc8c1a970c922",
                 "8692bf2108c02adc"
-            ]
-        ]
-    },
-    {
-        "id": "d0125de6100dd294",
-        "type": "hubitat device",
-        "z": "f9337f21.0eab78",
-        "deviceLabel": "Leahs Pico Remote",
-        "name": "",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "558",
-        "attribute": "",
-        "sendEvent": true,
-        "x": 90,
-        "y": 1600,
-        "wires": [
-            [
-                "56178c721891bd45"
             ]
         ]
     },
