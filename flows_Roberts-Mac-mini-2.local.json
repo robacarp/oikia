@@ -5716,11 +5716,12 @@
         "deviceId": "561",
         "attribute": "",
         "sendEvent": true,
-        "x": 210,
+        "x": 150,
         "y": 1600,
         "wires": [
             [
-                "16910248bf6af96e"
+                "16910248bf6af96e",
+                "8692bf2108c02adc"
             ]
         ]
     },
