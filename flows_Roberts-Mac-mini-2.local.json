@@ -4295,90 +4295,25 @@
         "id": "16910248bf6af96e",
         "type": "switch",
         "z": "f9337f21.0eab78",
-        "name": "param",
-        "property": "payload.param",
+        "name": "Pushed Only",
+        "property": "payload.name",
         "propertyType": "msg",
         "rules": [
             {
                 "t": "eq",
-                "v": "3",
+                "v": "pushed",
                 "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "4",
-                "vt": "num"
-            },
-            {
-                "t": "else"
             }
         ],
         "checkall": "false",
         "repair": false,
-        "outputs": 3,
-        "x": 670,
+        "outputs": 1,
+        "x": 690,
         "y": 1580,
         "wires": [
             [
-                "a788d89aee1e0f93"
-            ],
-            [
-                "aec8779c5e9b3213"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "aec8779c5e9b3213",
-        "type": "change",
-        "z": "f9337f21.0eab78",
-        "name": "Released",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload.interaction",
-                "pt": "msg",
-                "to": "released",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 820,
-        "y": 1600,
-        "wires": [
-            [
-                "b2f59f4fef3d8b86",
-                "8cba40559813687b"
+                "b2f59f4fef3d8b86"
             ]
-        ]
-    },
-    {
-        "id": "a788d89aee1e0f93",
-        "type": "change",
-        "z": "f9337f21.0eab78",
-        "name": "Pressed",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload.interaction",
-                "pt": "msg",
-                "to": "pressed",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 820,
-        "y": 1540,
-        "wires": [
-            []
         ]
     },
     {
@@ -5963,23 +5898,6 @@
         "statusType": "auto",
         "x": 260,
         "y": 1740,
-        "wires": []
-    },
-    {
-        "id": "8cba40559813687b",
-        "type": "debug",
-        "z": "f9337f21.0eab78",
-        "name": "debug 6",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1000,
-        "y": 1680,
         "wires": []
     },
     {
