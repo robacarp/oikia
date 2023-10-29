@@ -5482,33 +5482,6 @@
         ]
     },
     {
-        "id": "3e2e7a3da804b116",
-        "type": "change",
-        "z": "f9337f21.0eab78",
-        "name": "Button 1",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload.button",
-                "pt": "msg",
-                "to": "1",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 520,
-        "y": 2000,
-        "wires": [
-            [
-                "4403b6bd78189a08"
-            ]
-        ]
-    },
-    {
         "id": "887dc8c1a970c922",
         "type": "switch",
         "z": "f9337f21.0eab78",
@@ -5545,127 +5518,15 @@
         "checkall": "false",
         "repair": false,
         "outputs": 5,
-        "x": 320,
+        "x": 440,
         "y": 2080,
         "wires": [
             [
-                "3e2e7a3da804b116"
+                "4403b6bd78189a08"
             ],
-            [
-                "b709a7446815bf69"
-            ],
-            [
-                "b4a7a5ed8075a0eb"
-            ],
-            [
-                "ceb5fefdddebf8fa"
-            ],
-            [
-                "a451e1fba6e89875"
-            ]
-        ]
-    },
-    {
-        "id": "b709a7446815bf69",
-        "type": "change",
-        "z": "f9337f21.0eab78",
-        "name": "Button 2",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload.button",
-                "pt": "msg",
-                "to": "2",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 520,
-        "y": 2040,
-        "wires": [
-            [
-                "24bb8f272f701383"
-            ]
-        ]
-    },
-    {
-        "id": "b4a7a5ed8075a0eb",
-        "type": "change",
-        "z": "f9337f21.0eab78",
-        "name": "Button 3",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload.button",
-                "pt": "msg",
-                "to": "3",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 520,
-        "y": 2080,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "ceb5fefdddebf8fa",
-        "type": "change",
-        "z": "f9337f21.0eab78",
-        "name": "Button 4",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload.button",
-                "pt": "msg",
-                "to": "4",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 520,
-        "y": 2120,
-        "wires": [
-            [
-                "156fcd5f73bfc8b6"
-            ]
-        ]
-    },
-    {
-        "id": "a451e1fba6e89875",
-        "type": "change",
-        "z": "f9337f21.0eab78",
-        "name": "Button 5",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload.button",
-                "pt": "msg",
-                "to": "payload.action",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 520,
-        "y": 2160,
-        "wires": [
+            [],
+            [],
+            [],
             [
                 "3a013e0170fbeff0"
             ]
@@ -5698,7 +5559,7 @@
         "deviceId": "557",
         "attribute": "",
         "sendEvent": true,
-        "x": 130,
+        "x": 210,
         "y": 2080,
         "wires": [
             [
