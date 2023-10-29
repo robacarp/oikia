@@ -4216,82 +4216,6 @@
         ]
     },
     {
-        "id": "84f932994c4d9b0e",
-        "type": "change",
-        "z": "f9337f21.0eab78",
-        "name": "Button 1",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload.button",
-                "pt": "msg",
-                "to": "1",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 500,
-        "y": 1520,
-        "wires": [
-            [
-                "16910248bf6af96e"
-            ]
-        ]
-    },
-    {
-        "id": "56178c721891bd45",
-        "type": "switch",
-        "z": "f9337f21.0eab78",
-        "name": "decode lutron",
-        "property": "payload.value",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "1",
-                "vt": "num"
-            },
-            {
-                "t": "eq",
-                "v": "2",
-                "vt": "num"
-            },
-            {
-                "t": "eq",
-                "v": "3",
-                "vt": "num"
-            },
-            {
-                "t": "eq",
-                "v": "4",
-                "vt": "num"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 4,
-        "x": 300,
-        "y": 1600,
-        "wires": [
-            [
-                "84f932994c4d9b0e"
-            ],
-            [
-                "7a7baa4b0d8d96f6"
-            ],
-            [
-                "60d657c7179d9acd"
-            ],
-            [
-                "91c8d55d2179c186"
-            ]
-        ]
-    },
-    {
         "id": "16910248bf6af96e",
         "type": "switch",
         "z": "f9337f21.0eab78",
@@ -4308,92 +4232,11 @@
         "checkall": "false",
         "repair": false,
         "outputs": 1,
-        "x": 790,
+        "x": 350,
         "y": 1600,
         "wires": [
             [
                 "b2f59f4fef3d8b86"
-            ]
-        ]
-    },
-    {
-        "id": "7a7baa4b0d8d96f6",
-        "type": "change",
-        "z": "f9337f21.0eab78",
-        "name": "Button 2",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload.button",
-                "pt": "msg",
-                "to": "2",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 500,
-        "y": 1560,
-        "wires": [
-            [
-                "16910248bf6af96e"
-            ]
-        ]
-    },
-    {
-        "id": "60d657c7179d9acd",
-        "type": "change",
-        "z": "f9337f21.0eab78",
-        "name": "Button 3",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload.button",
-                "pt": "msg",
-                "to": "3",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 500,
-        "y": 1600,
-        "wires": [
-            [
-                "16910248bf6af96e"
-            ]
-        ]
-    },
-    {
-        "id": "91c8d55d2179c186",
-        "type": "change",
-        "z": "f9337f21.0eab78",
-        "name": "Button 4",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload.button",
-                "pt": "msg",
-                "to": "4",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 500,
-        "y": 1640,
-        "wires": [
-            [
-                "16910248bf6af96e"
             ]
         ]
     },
@@ -5855,11 +5698,11 @@
         "deviceId": "558",
         "attribute": "",
         "sendEvent": true,
-        "x": 90,
+        "x": 170,
         "y": 1600,
         "wires": [
             [
-                "56178c721891bd45"
+                "16910248bf6af96e"
             ]
         ]
     },
