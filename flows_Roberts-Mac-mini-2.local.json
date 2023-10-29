@@ -5684,8 +5684,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 220,
-        "y": 2200,
+        "x": 340,
+        "y": 1680,
         "wires": []
     },
     {
@@ -5720,8 +5720,7 @@
         "y": 2080,
         "wires": [
             [
-                "887dc8c1a970c922",
-                "8692bf2108c02adc"
+                "887dc8c1a970c922"
             ]
         ]
     },
