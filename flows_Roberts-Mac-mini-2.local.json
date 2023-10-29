@@ -5697,7 +5697,7 @@
         "server": "252d4ef4.c14b6a",
         "deviceId": "561",
         "attribute": "",
-        "sendEvent": false,
+        "sendEvent": true,
         "x": 170,
         "y": 1600,
         "wires": [
