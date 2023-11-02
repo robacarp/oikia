@@ -5508,16 +5508,11 @@
                 "t": "eq",
                 "v": "4",
                 "vt": "num"
-            },
-            {
-                "t": "eq",
-                "v": "5",
-                "vt": "num"
             }
         ],
         "checkall": "false",
         "repair": false,
-        "outputs": 5,
+        "outputs": 4,
         "x": 400,
         "y": 2060,
         "wires": [
@@ -5532,8 +5527,7 @@
             ],
             [
                 "3a013e0170fbeff0"
-            ],
-            []
+            ]
         ]
     },
     {
@@ -5557,13 +5551,13 @@
         "id": "a602bff24bc56b3b",
         "type": "hubitat device",
         "z": "f9337f21.0eab78",
-        "deviceLabel": "Robs Pico Remote",
+        "deviceLabel": "4 button remote",
         "name": "",
         "server": "252d4ef4.c14b6a",
-        "deviceId": "563",
+        "deviceId": "565",
         "attribute": "",
         "sendEvent": true,
-        "x": 190,
+        "x": 180,
         "y": 2060,
         "wires": [
             [
