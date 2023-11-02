@@ -4219,20 +4219,20 @@
         "id": "16910248bf6af96e",
         "type": "switch",
         "z": "f9337f21.0eab78",
-        "name": "Pushed Only",
+        "name": "Released Only",
         "property": "payload.name",
         "propertyType": "msg",
         "rules": [
             {
                 "t": "eq",
-                "v": "pushed",
+                "v": "released",
                 "vt": "str"
             }
         ],
         "checkall": "false",
         "repair": false,
         "outputs": 1,
-        "x": 350,
+        "x": 360,
         "y": 1600,
         "wires": [
             [
