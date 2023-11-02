@@ -4251,22 +4251,22 @@
             {
                 "t": "eq",
                 "v": "1",
-                "vt": "str"
+                "vt": "num"
             },
             {
                 "t": "eq",
                 "v": "2",
-                "vt": "str"
+                "vt": "num"
             },
             {
                 "t": "eq",
-                "v": "3",
-                "vt": "str"
+                "v": "4",
+                "vt": "num"
             },
             {
                 "t": "eq",
                 "v": "5",
-                "vt": "str"
+                "vt": "num"
             }
         ],
         "checkall": "false",
