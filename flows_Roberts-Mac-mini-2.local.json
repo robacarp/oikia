@@ -5614,6 +5614,49 @@
         "x": 190,
         "y": 2380,
         "wires": [
+            [
+                "09cf1622ecf9cf30"
+            ]
+        ]
+    },
+    {
+        "id": "09cf1622ecf9cf30",
+        "type": "switch",
+        "z": "f9337f21.0eab78",
+        "name": "decode lutron",
+        "property": "payload.value",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "4",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "5",
+                "vt": "num"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 4,
+        "x": 400,
+        "y": 2380,
+        "wires": [
+            [],
+            [],
+            [],
             []
         ]
     },
