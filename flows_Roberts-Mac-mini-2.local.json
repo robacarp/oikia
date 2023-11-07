@@ -5605,7 +5605,7 @@
         "name": "",
         "server": "252d4ef4.c14b6a",
         "deviceId": "569",
-        "attribute": "pushed",
+        "attribute": "",
         "sendEvent": true,
         "x": 190,
         "y": 2380,
