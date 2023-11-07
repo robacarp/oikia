@@ -5605,14 +5605,13 @@
         "name": "",
         "server": "252d4ef4.c14b6a",
         "deviceId": "569",
-        "attribute": "",
+        "attribute": "pushed",
         "sendEvent": true,
         "x": 190,
         "y": 2380,
         "wires": [
             [
-                "09cf1622ecf9cf30",
-                "3fba8e81ee452836"
+                "09cf1622ecf9cf30"
             ]
         ]
     },
@@ -5825,23 +5824,6 @@
                 "4f17c56984653df7"
             ]
         ]
-    },
-    {
-        "id": "3fba8e81ee452836",
-        "type": "debug",
-        "z": "f9337f21.0eab78",
-        "name": "debug 8",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 340,
-        "y": 2460,
-        "wires": []
     },
     {
         "id": "734f4b605d12eb34",
