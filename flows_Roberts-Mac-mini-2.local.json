@@ -644,6 +644,19 @@
         ]
     },
     {
+        "id": "4f17c56984653df7",
+        "type": "junction",
+        "z": "f9337f21.0eab78",
+        "x": 740,
+        "y": 2360,
+        "wires": [
+            [
+                "56921e7715f04b33",
+                "a627786208b7b083"
+            ]
+        ]
+    },
+    {
         "id": "252d4ef4.c14b6a",
         "type": "hubitat config",
         "name": "Hubitat",
@@ -5639,12 +5652,12 @@
             },
             {
                 "t": "eq",
-                "v": "4",
+                "v": "3",
                 "vt": "num"
             },
             {
                 "t": "eq",
-                "v": "5",
+                "v": "4",
                 "vt": "num"
             }
         ],
@@ -5654,10 +5667,179 @@
         "x": 400,
         "y": 2380,
         "wires": [
-            [],
-            [],
-            [],
+            [
+                "cc92d72acf74153b"
+            ],
+            [
+                "4c1fea3ce3b5fbb2"
+            ],
+            [
+                "dfb306d8f4928e10"
+            ],
+            [
+                "4dbaa3738332e358"
+            ]
+        ]
+    },
+    {
+        "id": "56921e7715f04b33",
+        "type": "hubitat command",
+        "z": "f9337f21.0eab78",
+        "deviceLabel": "Leah’s Bedside",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "1",
+        "command": "",
+        "commandArgs": "",
+        "x": 900,
+        "y": 2340,
+        "wires": [
             []
+        ]
+    },
+    {
+        "id": "a627786208b7b083",
+        "type": "hubitat command",
+        "z": "f9337f21.0eab78",
+        "deviceLabel": "Rob’s Bedside",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "554",
+        "command": "",
+        "commandArgs": "",
+        "x": 900,
+        "y": 2400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4c1fea3ce3b5fbb2",
+        "type": "change",
+        "z": "f9337f21.0eab78",
+        "name": "60%",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "setLevel",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "arguments",
+                "pt": "msg",
+                "to": "60",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 2340,
+        "wires": [
+            [
+                "4f17c56984653df7"
+            ]
+        ]
+    },
+    {
+        "id": "dfb306d8f4928e10",
+        "type": "change",
+        "z": "f9337f21.0eab78",
+        "name": "40%",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "setLevel",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "arguments",
+                "pt": "msg",
+                "to": "40",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 2380,
+        "wires": [
+            [
+                "4f17c56984653df7"
+            ]
+        ]
+    },
+    {
+        "id": "4dbaa3738332e358",
+        "type": "change",
+        "z": "f9337f21.0eab78",
+        "name": "off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 2420,
+        "wires": [
+            [
+                "4f17c56984653df7"
+            ]
+        ]
+    },
+    {
+        "id": "cc92d72acf74153b",
+        "type": "change",
+        "z": "f9337f21.0eab78",
+        "name": "60%",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "setLevel",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "arguments",
+                "pt": "msg",
+                "to": "60",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 2300,
+        "wires": [
+            [
+                "4f17c56984653df7"
+            ]
         ]
     },
     {
