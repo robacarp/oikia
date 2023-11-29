@@ -6516,7 +6516,7 @@
         "name": "",
         "nameInt": "",
         "positionConfig": "96c207ac.2237a8",
-        "startTime": "18:00",
+        "startTime": "17:45",
         "startTimeType": "entered",
         "startOffset": 0,
         "startOffsetType": "none",
@@ -6574,7 +6574,7 @@
         "id": "207b3028d768f770",
         "type": "inject",
         "z": "5ea7da533109f7d2",
-        "name": "12:30",
+        "name": "12:30pm",
         "props": [
             {
                 "p": "payload"
@@ -6591,7 +6591,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 120,
+        "x": 110,
         "y": 860,
         "wires": [
             [
@@ -6844,7 +6844,7 @@
         "id": "2d781397117ae518",
         "type": "inject",
         "z": "5ea7da533109f7d2",
-        "name": "6pm",
+        "name": "5:45pm",
         "props": [
             {
                 "p": "payload"
@@ -6861,7 +6861,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 130,
+        "x": 120,
         "y": 940,
         "wires": [
             [
@@ -6873,7 +6873,7 @@
         "id": "5e46a0effa23ad0b",
         "type": "inject",
         "z": "5ea7da533109f7d2",
-        "name": "2pm",
+        "name": "2:45pm",
         "props": [
             {
                 "p": "payload"
@@ -6890,7 +6890,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 130,
+        "x": 120,
         "y": 900,
         "wires": [
             [
