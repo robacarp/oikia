@@ -6,7 +6,8 @@
         "node-red-contrib-hubitat": "0.0.30",
         "node-red-contrib-sun-position": "1.0.17",
         "node-red-dashboard": "2.20.0",
-        "node-red-node-rbe": "0.2.8"
+        "node-red-node-rbe": "0.2.8",
+        "node-red-contrib-postgresql": "0.14.0"
     },
     "node-red": {
         "settings": {
