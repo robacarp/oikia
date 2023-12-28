@@ -7206,26 +7206,9 @@
         "y": 2040,
         "wires": [
             [
-                "0cba41767d3ca200"
+                "34b89c12409475d1"
             ]
         ]
-    },
-    {
-        "id": "0cba41767d3ca200",
-        "type": "debug",
-        "z": "5ea7da533109f7d2",
-        "name": "debug 7",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 700,
-        "y": 2040,
-        "wires": []
     },
     {
         "id": "e155e70edaf24e03",
@@ -7253,6 +7236,69 @@
         "wires": [
             [
                 "271cef27a15ff1e1"
+            ]
+        ]
+    },
+    {
+        "id": "34b89c12409475d1",
+        "type": "switch",
+        "z": "5ea7da533109f7d2",
+        "name": "Current Temp is < 55",
+        "property": "payload.value",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lt",
+                "v": "55",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 780,
+        "y": 2040,
+        "wires": [
+            [
+                "38660179610d158d"
+            ]
+        ]
+    },
+    {
+        "id": "4f025796866fc291",
+        "type": "pushover api",
+        "z": "5ea7da533109f7d2",
+        "keys": "d2fcc025.17ad7",
+        "title": "",
+        "name": "",
+        "x": 1220,
+        "y": 2040,
+        "wires": []
+    },
+    {
+        "id": "38660179610d158d",
+        "type": "change",
+        "z": "5ea7da533109f7d2",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "\"the temperature in the home is < 55!\"",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1020,
+        "y": 2040,
+        "wires": [
+            [
+                "4f025796866fc291"
             ]
         ]
     },
