@@ -7200,7 +7200,7 @@
         "name": "",
         "server": "252d4ef4.c14b6a",
         "deviceId": "552",
-        "attribute": "",
+        "attribute": "temperature",
         "sendEvent": true,
         "x": 540,
         "y": 2040,
