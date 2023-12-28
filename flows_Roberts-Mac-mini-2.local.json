@@ -7227,6 +7227,35 @@
         "wires": []
     },
     {
+        "id": "e155e70edaf24e03",
+        "type": "inject",
+        "z": "5ea7da533109f7d2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 340,
+        "y": 2040,
+        "wires": [
+            [
+                "271cef27a15ff1e1"
+            ]
+        ]
+    },
+    {
         "id": "bf11becc09f647d3",
         "type": "switch",
         "z": "3cee340729aa7e67",
