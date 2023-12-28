@@ -7193,6 +7193,22 @@
         "l": false
     },
     {
+        "id": "271cef27a15ff1e1",
+        "type": "hubitat device",
+        "z": "5ea7da533109f7d2",
+        "deviceLabel": "Ecobee",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "552",
+        "attribute": "",
+        "sendEvent": true,
+        "x": 540,
+        "y": 2040,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "bf11becc09f647d3",
         "type": "switch",
         "z": "3cee340729aa7e67",
