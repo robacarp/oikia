@@ -442,6 +442,66 @@
         "h": 90
     },
     {
+        "id": "16262d29d5c95164",
+        "type": "group",
+        "z": "f9337f21.0eab78",
+        "name": "Progressively Turn On Lamps",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "06f5cc186eb094f4",
+            "4403b6bd78189a08",
+            "63876624b5451920",
+            "9d83d170a863c812",
+            "b561021d0a87f23f",
+            "697d76e7d9469acb",
+            "7a32376e4c071f4f",
+            "0ab527cec932483b",
+            "8c0bd2527ae098ae",
+            "bf7bb0fcda8cc401",
+            "8a063cbbd392a564",
+            "683cb40290b50e0e",
+            "f06f0db1fe0bc640",
+            "44c7448a4d0413a1",
+            "35bc1a06093b8fa5",
+            "2a5089d244255049",
+            "40d57120e89fa53f",
+            "7e20ebaa86d34952"
+        ],
+        "x": 1444,
+        "y": 1799,
+        "w": 1002,
+        "h": 342
+    },
+    {
+        "id": "3a2dc59869c5c86b",
+        "type": "group",
+        "z": "f9337f21.0eab78",
+        "name": "Toggle Lamps Individually",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "f535f3ff9476a0b1",
+            "35877305ba0d9cdd",
+            "5cf4910be9e36505",
+            "551739e80eefd897",
+            "9fc55d4b9326950a",
+            "d04ab2a91a484ed4",
+            "dcb1df6e62a99a7d",
+            "3502622cf58ac02d",
+            "83b85098e12b7232",
+            "7348f834cefd7e4e",
+            "6015f6a7a110e060",
+            "7699836c331d2441"
+        ],
+        "x": 1444,
+        "y": 2199,
+        "w": 862,
+        "h": 302
+    },
+    {
         "id": "c6f15bd3bae34137",
         "type": "junction",
         "z": "f9337f21.0eab78",
@@ -450,32 +510,6 @@
         "wires": [
             [
                 "82929842.1531"
-            ]
-        ]
-    },
-    {
-        "id": "3d10086a6a0f415f",
-        "type": "junction",
-        "z": "f9337f21.0eab78",
-        "x": 1260,
-        "y": 1580,
-        "wires": [
-            [
-                "a0f2d6e.daab828",
-                "407e2a78.c9971c"
-            ]
-        ]
-    },
-    {
-        "id": "9708140dd46c678d",
-        "type": "junction",
-        "z": "f9337f21.0eab78",
-        "x": 1260,
-        "y": 1680,
-        "wires": [
-            [
-                "a0f2d6e.daab828",
-                "407e2a78.c9971c"
             ]
         ]
     },
@@ -549,77 +583,12 @@
         "id": "24bb8f272f701383",
         "type": "junction",
         "z": "f9337f21.0eab78",
-        "x": 700,
-        "y": 1960,
+        "x": 800,
+        "y": 1920,
         "wires": [
             [
-                "7bcf989a027b91b9",
-                "6e8c902afa929ee3"
-            ]
-        ]
-    },
-    {
-        "id": "1e3f611957300a48",
-        "type": "junction",
-        "z": "f9337f21.0eab78",
-        "x": 1280,
-        "y": 1960,
-        "wires": [
-            [
-                "5ae6d9c9a3efb51b",
-                "69d03cb9650a7a36"
-            ]
-        ]
-    },
-    {
-        "id": "1f64cf98b7b984de",
-        "type": "junction",
-        "z": "f9337f21.0eab78",
-        "x": 1280,
-        "y": 2060,
-        "wires": [
-            [
-                "5ae6d9c9a3efb51b",
-                "69d03cb9650a7a36"
-            ]
-        ]
-    },
-    {
-        "id": "156fcd5f73bfc8b6",
-        "type": "junction",
-        "z": "f9337f21.0eab78",
-        "x": 700,
-        "y": 2000,
-        "wires": [
-            [
-                "84150709b87b217b",
-                "6e8c902afa929ee3"
-            ]
-        ]
-    },
-    {
-        "id": "18b6045b22c4cc73",
-        "type": "junction",
-        "z": "f9337f21.0eab78",
-        "x": 660,
-        "y": 1620,
-        "wires": [
-            [
-                "1ebe7fe71271b214",
-                "ad06d2e528474b01"
-            ]
-        ]
-    },
-    {
-        "id": "7dd8873a8c61588a",
-        "type": "junction",
-        "z": "f9337f21.0eab78",
-        "x": 660,
-        "y": 1580,
-        "wires": [
-            [
-                "51cd2c0885dc17a8",
-                "1ebe7fe71271b214"
+                "dd21c9847c33745c",
+                "0058ad36f6d8457e"
             ]
         ]
     },
@@ -652,15 +621,67 @@
         ]
     },
     {
-        "id": "4f17c56984653df7",
+        "id": "99b26a2b29a537d5",
         "type": "junction",
         "z": "f9337f21.0eab78",
-        "x": 740,
-        "y": 2360,
+        "x": 800,
+        "y": 1940,
         "wires": [
             [
-                "56921e7715f04b33",
-                "a627786208b7b083"
+                "dd21c9847c33745c",
+                "448e4baaa28c6cdb"
+            ]
+        ]
+    },
+    {
+        "id": "76ace705f40ca13d",
+        "type": "junction",
+        "z": "f9337f21.0eab78",
+        "x": 800,
+        "y": 2100,
+        "wires": [
+            [
+                "6e8c902afa929ee3",
+                "7bcf989a027b91b9"
+            ]
+        ]
+    },
+    {
+        "id": "2d4487f2e8e5409b",
+        "type": "junction",
+        "z": "f9337f21.0eab78",
+        "x": 800,
+        "y": 2120,
+        "wires": [
+            [
+                "6e8c902afa929ee3",
+                "84150709b87b217b"
+            ]
+        ]
+    },
+    {
+        "id": "089b6a138237765e",
+        "type": "junction",
+        "z": "f9337f21.0eab78",
+        "x": 800,
+        "y": 2020,
+        "wires": [
+            [
+                "dd21c9847c33745c",
+                "6e8c902afa929ee3"
+            ]
+        ]
+    },
+    {
+        "id": "e95538f0d73c773b",
+        "type": "junction",
+        "z": "f9337f21.0eab78",
+        "x": 960,
+        "y": 2340,
+        "wires": [
+            [
+                "5ae6d9c9a3efb51b",
+                "69d03cb9650a7a36"
             ]
         ]
     },
@@ -672,9 +693,9 @@
         "host": "172.16.0.5",
         "port": "80",
         "appId": "14",
-        "nodeRedServer": "http://172.16.0.21:1880",
+        "nodeRedServer": "http://172.16.0.3:1880",
         "webhookPath": "/hubitat/webhook",
-        "autoRefresh": false,
+        "autoRefresh": true,
         "useWebsocket": false,
         "colorEnabled": false,
         "color": "#ff6050"
@@ -684,13 +705,12 @@
         "type": "position-config",
         "name": "Home",
         "isValide": "true",
-        "longitude": "0",
-        "latitude": "0",
         "angleType": "deg",
         "timeZoneOffset": "99",
         "timeZoneDST": "0",
         "stateTimeFormat": "3",
-        "stateDateFormat": "12"
+        "stateDateFormat": "12",
+        "contextStore": ""
     },
     {
         "id": "d2fcc025.17ad7",
@@ -1424,8 +1444,7 @@
         "z": "4c7c8cd1.6a2a1c",
         "name": "Switch Event",
         "links": [
-            "b4f2e905.4ec488",
-            "db637502.ed7b1"
+            "b4f2e905.4ec488"
         ],
         "x": 1455,
         "y": 220,
@@ -2296,8 +2315,7 @@
         "mode": "link",
         "links": [
             "13a205f.9848cfa",
-            "89ce2107.6a1858",
-            "ea9de46ea03554d1"
+            "89ce2107.6a1858"
         ],
         "x": 495,
         "y": 380,
@@ -2310,13 +2328,54 @@
         "name": "At Sunset",
         "nameInt": "⏲ sunset start = timestamp",
         "positionConfig": "96c207ac.2237a8",
-        "payload": "",
-        "payloadType": "date",
-        "payloadTimeFormat": 0,
-        "payloadOffset": 0,
-        "payloadOffsetType": "none",
-        "payloadOffsetMultiplier": 60000,
-        "topic": "",
+        "props": [
+            {
+                "p": "",
+                "pt": "msgPayload",
+                "v": "",
+                "vt": "date",
+                "o": "1",
+                "oT": "none",
+                "oM": "60000",
+                "f": 0,
+                "fS": 0,
+                "fT": "UNIX timestamp (ms)",
+                "fI": "0",
+                "next": true,
+                "days": "*",
+                "months": "*",
+                "onlyOddDays": false,
+                "onlyEvenDays": false,
+                "onlyOddWeeks": false,
+                "onlyEvenWeeks": false
+            },
+            {
+                "p": "",
+                "pt": "msgTopic",
+                "v": "",
+                "vt": "str",
+                "o": "1",
+                "oT": "none",
+                "oM": "60000",
+                "f": 0,
+                "fS": 0,
+                "fT": "UNIX timestamp (ms)",
+                "fI": "0",
+                "next": false,
+                "days": "*",
+                "months": "*",
+                "onlyOddDays": false,
+                "onlyEvenDays": false,
+                "onlyOddWeeks": false,
+                "onlyEvenWeeks": false
+            }
+        ],
+        "injectTypeSelect": "time",
+        "intervalCount": 1,
+        "intervalCountType": "num",
+        "intervalCountMultiplier": 60000,
+        "cron": "",
+        "cronType": "cronexpr",
         "time": "sunsetStart",
         "timeType": "pdsTime",
         "offset": 0,
@@ -2330,6 +2389,8 @@
         "timeDays": "*",
         "timeOnlyOddDays": false,
         "timeOnlyEvenDays": false,
+        "timeOnlyOddWeeks": false,
+        "timeOnlyEvenWeeks": false,
         "timeMonths": "*",
         "timedatestart": "",
         "timedateend": "",
@@ -2343,44 +2404,16 @@
         "timeAltDays": "*",
         "timeAltOnlyOddDays": false,
         "timeAltOnlyEvenDays": false,
+        "timeAltOnlyOddWeeks": false,
+        "timeAltOnlyEvenWeeks": false,
         "timeAltMonths": "*",
         "timeAltOffset": 0,
         "timeAltOffsetType": "none",
         "timeAltOffsetMultiplier": 60000,
         "once": false,
         "onceDelay": 0.1,
-        "addPayload1": "",
-        "addPayload1Type": "none",
-        "addPayload1Value": "",
-        "addPayload1ValueType": "date",
-        "addPayload1Format": "0",
-        "addPayload1Offset": 0,
-        "addPayload1OffsetType": "none",
-        "addPayload1OffsetMultiplier": 60000,
-        "addPayload1Next": true,
-        "addPayload1Days": "*",
-        "addPayload2": "",
-        "addPayload2Type": "none",
-        "addPayload2Value": "",
-        "addPayload2ValueType": "date",
-        "addPayload2Format": "0",
-        "addPayload2Offset": 0,
-        "addPayload2OffsetType": "none",
-        "addPayload2OffsetMultiplier": 60000,
-        "addPayload2Next": true,
-        "addPayload2Days": "*",
-        "addPayload3": "",
-        "addPayload3Type": "none",
-        "addPayload3Value": "",
-        "addPayload3ValueType": "date",
-        "addPayload3Format": "0",
-        "addPayload3Offset": 0,
-        "addPayload3OffsetType": "none",
-        "addPayload3OffsetMultiplier": 60000,
-        "addPayload3Next": true,
-        "addPayload3Days": "*",
         "recalcTime": 2,
-        "x": 340,
+        "x": 330,
         "y": 380,
         "wires": [
             [
@@ -2408,13 +2441,54 @@
         "name": "At Sunrise",
         "nameInt": "⏲ sunrise end = timestamp",
         "positionConfig": "96c207ac.2237a8",
-        "payload": "",
-        "payloadType": "date",
-        "payloadTimeFormat": 0,
-        "payloadOffset": 0,
-        "payloadOffsetType": "none",
-        "payloadOffsetMultiplier": 60000,
-        "topic": "",
+        "props": [
+            {
+                "p": "",
+                "pt": "msgPayload",
+                "v": "",
+                "vt": "date",
+                "o": "1",
+                "oT": "none",
+                "oM": "60000",
+                "f": 0,
+                "fS": 0,
+                "fT": "UNIX timestamp (ms)",
+                "fI": "0",
+                "next": true,
+                "days": "*",
+                "months": "*",
+                "onlyOddDays": false,
+                "onlyEvenDays": false,
+                "onlyOddWeeks": false,
+                "onlyEvenWeeks": false
+            },
+            {
+                "p": "",
+                "pt": "msgTopic",
+                "v": "",
+                "vt": "str",
+                "o": "1",
+                "oT": "none",
+                "oM": "60000",
+                "f": 0,
+                "fS": 0,
+                "fT": "UNIX timestamp (ms)",
+                "fI": "0",
+                "next": false,
+                "days": "*",
+                "months": "*",
+                "onlyOddDays": false,
+                "onlyEvenDays": false,
+                "onlyOddWeeks": false,
+                "onlyEvenWeeks": false
+            }
+        ],
+        "injectTypeSelect": "time",
+        "intervalCount": 1,
+        "intervalCountType": "num",
+        "intervalCountMultiplier": 60000,
+        "cron": "",
+        "cronType": "cronexpr",
         "time": "sunriseEnd",
         "timeType": "pdsTime",
         "offset": 0,
@@ -2428,6 +2502,8 @@
         "timeDays": "*",
         "timeOnlyOddDays": false,
         "timeOnlyEvenDays": false,
+        "timeOnlyOddWeeks": false,
+        "timeOnlyEvenWeeks": false,
         "timeMonths": "*",
         "timedatestart": "",
         "timedateend": "",
@@ -2441,44 +2517,16 @@
         "timeAltDays": "*",
         "timeAltOnlyOddDays": false,
         "timeAltOnlyEvenDays": false,
+        "timeAltOnlyOddWeeks": false,
+        "timeAltOnlyEvenWeeks": false,
         "timeAltMonths": "*",
         "timeAltOffset": 0,
         "timeAltOffsetType": "none",
         "timeAltOffsetMultiplier": 60000,
         "once": false,
         "onceDelay": 0.1,
-        "addPayload1": "",
-        "addPayload1Type": "none",
-        "addPayload1Value": "",
-        "addPayload1ValueType": "date",
-        "addPayload1Format": "0",
-        "addPayload1Offset": 0,
-        "addPayload1OffsetType": "none",
-        "addPayload1OffsetMultiplier": 60000,
-        "addPayload1Next": true,
-        "addPayload1Days": "*",
-        "addPayload2": "",
-        "addPayload2Type": "none",
-        "addPayload2Value": "",
-        "addPayload2ValueType": "date",
-        "addPayload2Format": "0",
-        "addPayload2Offset": 0,
-        "addPayload2OffsetType": "none",
-        "addPayload2OffsetMultiplier": 60000,
-        "addPayload2Next": true,
-        "addPayload2Days": "*",
-        "addPayload3": "",
-        "addPayload3Type": "none",
-        "addPayload3Value": "",
-        "addPayload3ValueType": "date",
-        "addPayload3Format": "0",
-        "addPayload3Offset": 0,
-        "addPayload3OffsetType": "none",
-        "addPayload3OffsetMultiplier": 60000,
-        "addPayload3Next": true,
-        "addPayload3Days": "*",
         "recalcTime": 2,
-        "x": 340,
+        "x": 330,
         "y": 320,
         "wires": [
             [
@@ -2491,8 +2539,56 @@
         "type": "time-inject",
         "z": "f30f9979.39f178",
         "name": "23:30",
-        "nameInt": "⏲ 23:30 = timestamp",
+        "nameInt": "⏲ 23:30 = timestamp⤽1min",
         "positionConfig": "96c207ac.2237a8",
+        "props": [
+            {
+                "p": "",
+                "pt": "msgPayload",
+                "v": "",
+                "vt": "date",
+                "o": "1",
+                "oT": "num",
+                "oM": "60000",
+                "f": 0,
+                "fS": 0,
+                "fT": "UNIX timestamp (ms)",
+                "fI": "0",
+                "next": true,
+                "days": "*",
+                "months": "*",
+                "onlyOddDays": false,
+                "onlyEvenDays": false,
+                "onlyOddWeeks": false,
+                "onlyEvenWeeks": false
+            },
+            {
+                "p": "",
+                "pt": "msgTopic",
+                "v": "",
+                "vt": "str",
+                "o": "1",
+                "oT": "none",
+                "oM": "60000",
+                "f": 0,
+                "fS": 0,
+                "fT": "UNIX timestamp (ms)",
+                "fI": "0",
+                "next": false,
+                "days": "*",
+                "months": "*",
+                "onlyOddDays": false,
+                "onlyEvenDays": false,
+                "onlyOddWeeks": false,
+                "onlyEvenWeeks": false
+            }
+        ],
+        "injectTypeSelect": "time",
+        "intervalCount": 1,
+        "intervalCountType": "num",
+        "intervalCountMultiplier": 60000,
+        "cron": "",
+        "cronType": "cronexpr",
         "time": "23:30",
         "timeType": "entered",
         "offset": 0,
@@ -2506,6 +2602,8 @@
         "timeDays": "*",
         "timeOnlyOddDays": false,
         "timeOnlyEvenDays": false,
+        "timeOnlyOddWeeks": false,
+        "timeOnlyEvenWeeks": false,
         "timeMonths": "*",
         "timedatestart": "",
         "timedateend": "",
@@ -2519,6 +2617,8 @@
         "timeAltDays": "*",
         "timeAltOnlyOddDays": false,
         "timeAltOnlyEvenDays": false,
+        "timeAltOnlyOddWeeks": false,
+        "timeAltOnlyEvenWeeks": false,
         "timeAltMonths": "*",
         "timeAltOffset": 0,
         "timeAltOffsetType": "none",
@@ -2526,7 +2626,7 @@
         "once": false,
         "onceDelay": 0.1,
         "recalcTime": 2,
-        "x": 330,
+        "x": 320,
         "y": 500,
         "wires": [
             [
@@ -2550,15 +2650,56 @@
         "type": "time-inject",
         "z": "f30f9979.39f178",
         "name": "First Light",
-        "nameInt": "timestamp",
+        "nameInt": "⏲ blue hour dawn start = timestamp",
         "positionConfig": "96c207ac.2237a8",
-        "payload": "",
-        "payloadType": "date",
-        "payloadTimeFormat": "0",
-        "payloadOffset": 0,
-        "payloadOffsetType": "num",
-        "payloadOffsetMultiplier": 60000,
-        "topic": "",
+        "props": [
+            {
+                "p": "",
+                "pt": "msgPayload",
+                "v": "",
+                "vt": "date",
+                "o": "1",
+                "oT": "none",
+                "oM": "60000",
+                "f": 0,
+                "fS": 0,
+                "fT": "UNIX timestamp (ms)",
+                "fI": "0",
+                "next": true,
+                "days": "*",
+                "months": "*",
+                "onlyOddDays": false,
+                "onlyEvenDays": false,
+                "onlyOddWeeks": false,
+                "onlyEvenWeeks": false
+            },
+            {
+                "p": "",
+                "pt": "msgTopic",
+                "v": "",
+                "vt": "str",
+                "o": "1",
+                "oT": "none",
+                "oM": "60000",
+                "f": 0,
+                "fS": 0,
+                "fT": "UNIX timestamp (ms)",
+                "fI": "0",
+                "next": false,
+                "days": "*",
+                "months": "*",
+                "onlyOddDays": false,
+                "onlyEvenDays": false,
+                "onlyOddWeeks": false,
+                "onlyEvenWeeks": false
+            }
+        ],
+        "injectTypeSelect": "time",
+        "intervalCount": 1,
+        "intervalCountType": "num",
+        "intervalCountMultiplier": 60000,
+        "cron": "",
+        "cronType": "cronexpr",
         "time": "blueHourDawnStart",
         "timeType": "pdsTime",
         "offset": 0,
@@ -2572,6 +2713,8 @@
         "timeDays": "*",
         "timeOnlyOddDays": false,
         "timeOnlyEvenDays": false,
+        "timeOnlyOddWeeks": false,
+        "timeOnlyEvenWeeks": false,
         "timeMonths": "*",
         "timedatestart": "",
         "timedateend": "",
@@ -2585,44 +2728,16 @@
         "timeAltDays": "*",
         "timeAltOnlyOddDays": false,
         "timeAltOnlyEvenDays": false,
+        "timeAltOnlyOddWeeks": false,
+        "timeAltOnlyEvenWeeks": false,
         "timeAltMonths": "*",
         "timeAltOffset": 0,
         "timeAltOffsetType": "none",
         "timeAltOffsetMultiplier": 60000,
         "once": false,
         "onceDelay": 0.1,
-        "addPayload1": "",
-        "addPayload1Type": "none",
-        "addPayload1Value": "",
-        "addPayload1ValueType": "date",
-        "addPayload1Format": "0",
-        "addPayload1Offset": 0,
-        "addPayload1OffsetType": "num",
-        "addPayload1OffsetMultiplier": 60000,
-        "addPayload1Next": true,
-        "addPayload1Days": "*",
-        "addPayload2": "",
-        "addPayload2Type": "none",
-        "addPayload2Value": "",
-        "addPayload2ValueType": "date",
-        "addPayload2Format": "0",
-        "addPayload2Offset": 0,
-        "addPayload2OffsetType": "num",
-        "addPayload2OffsetMultiplier": 60000,
-        "addPayload2Next": true,
-        "addPayload2Days": "*",
-        "addPayload3": "",
-        "addPayload3Type": "none",
-        "addPayload3Value": "",
-        "addPayload3ValueType": "date",
-        "addPayload3Format": "0",
-        "addPayload3Offset": 0,
-        "addPayload3OffsetType": "num",
-        "addPayload3OffsetMultiplier": 60000,
-        "addPayload3Next": true,
-        "addPayload3Days": "*",
         "recalcTime": 2,
-        "x": 340,
+        "x": 330,
         "y": 240,
         "wires": [
             [
@@ -2636,9 +2751,7 @@
         "z": "f30f9979.39f178",
         "name": "First Light",
         "mode": "link",
-        "links": [
-            "4f6c459db4701abf"
-        ],
+        "links": [],
         "x": 495,
         "y": 240,
         "wires": []
@@ -2651,8 +2764,7 @@
         "mode": "link",
         "links": [
             "13a205f.9848cfa",
-            "89ce2107.6a1858",
-            "ea9de46ea03554d1"
+            "89ce2107.6a1858"
         ],
         "x": 495,
         "y": 440,
@@ -2663,8 +2775,56 @@
         "type": "time-inject",
         "z": "f30f9979.39f178",
         "name": "Last Light",
-        "nameInt": "⏲ blue hour dusk end = timestamp",
+        "nameInt": "⏲ blue hour dusk end = timestamp⤽1min",
         "positionConfig": "96c207ac.2237a8",
+        "props": [
+            {
+                "p": "",
+                "pt": "msgPayload",
+                "v": "",
+                "vt": "date",
+                "o": "1",
+                "oT": "num",
+                "oM": "60000",
+                "f": 0,
+                "fS": 0,
+                "fT": "UNIX timestamp (ms)",
+                "fI": "0",
+                "next": true,
+                "days": "*",
+                "months": "*",
+                "onlyOddDays": false,
+                "onlyEvenDays": false,
+                "onlyOddWeeks": false,
+                "onlyEvenWeeks": false
+            },
+            {
+                "p": "",
+                "pt": "msgTopic",
+                "v": "",
+                "vt": "str",
+                "o": "1",
+                "oT": "none",
+                "oM": "60000",
+                "f": 0,
+                "fS": 0,
+                "fT": "UNIX timestamp (ms)",
+                "fI": "0",
+                "next": false,
+                "days": "*",
+                "months": "*",
+                "onlyOddDays": false,
+                "onlyEvenDays": false,
+                "onlyOddWeeks": false,
+                "onlyEvenWeeks": false
+            }
+        ],
+        "injectTypeSelect": "time",
+        "intervalCount": 1,
+        "intervalCountType": "num",
+        "intervalCountMultiplier": 60000,
+        "cron": "",
+        "cronType": "cronexpr",
         "time": "blueHourDuskEnd",
         "timeType": "pdsTime",
         "offset": 0,
@@ -2678,6 +2838,8 @@
         "timeDays": "*",
         "timeOnlyOddDays": false,
         "timeOnlyEvenDays": false,
+        "timeOnlyOddWeeks": false,
+        "timeOnlyEvenWeeks": false,
         "timeMonths": "*",
         "timedatestart": "",
         "timedateend": "",
@@ -2691,6 +2853,8 @@
         "timeAltDays": "*",
         "timeAltOnlyOddDays": false,
         "timeAltOnlyEvenDays": false,
+        "timeAltOnlyOddWeeks": false,
+        "timeAltOnlyEvenWeeks": false,
         "timeAltMonths": "*",
         "timeAltOffset": 0,
         "timeAltOffsetType": "none",
@@ -2698,7 +2862,7 @@
         "once": false,
         "onceDelay": 0.1,
         "recalcTime": 2,
-        "x": 340,
+        "x": 330,
         "y": 440,
         "wires": [
             [
@@ -2771,7 +2935,6 @@
         "z": "f9337f21.0eab78",
         "name": "Color Temperature Updated",
         "links": [
-            "ac7411a0.a83e9",
             "dc311cbd.e678c8"
         ],
         "x": 1575,
@@ -3866,166 +4029,6 @@
         ]
     },
     {
-        "id": "9a4d93e3.9f5c3",
-        "type": "change",
-        "z": "f9337f21.0eab78",
-        "name": "off",
-        "rules": [
-            {
-                "t": "set",
-                "p": "command",
-                "pt": "msg",
-                "to": "off",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 770,
-        "y": 1700,
-        "wires": [
-            [
-                "9708140dd46c678d"
-            ]
-        ]
-    },
-    {
-        "id": "91e8ca3f.3f295",
-        "type": "change",
-        "z": "f9337f21.0eab78",
-        "name": "Turn On",
-        "rules": [
-            {
-                "t": "set",
-                "p": "command",
-                "pt": "msg",
-                "to": "on",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1120,
-        "y": 1520,
-        "wires": [
-            [
-                "3d10086a6a0f415f"
-            ]
-        ]
-    },
-    {
-        "id": "a0f2d6e.daab828",
-        "type": "hubitat command",
-        "z": "f9337f21.0eab78",
-        "deviceLabel": "Leah’s Bedside",
-        "name": "",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "1",
-        "command": "",
-        "commandArgs": "",
-        "x": 1420,
-        "y": 1580,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "407e2a78.c9971c",
-        "type": "hubitat command",
-        "z": "f9337f21.0eab78",
-        "deviceLabel": "Rob’s Bedside",
-        "name": "",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "554",
-        "command": "",
-        "commandArgs": "",
-        "x": 1420,
-        "y": 1620,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "16910248bf6af96e",
-        "type": "switch",
-        "z": "f9337f21.0eab78",
-        "name": "Released Only",
-        "property": "payload.name",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "released",
-                "vt": "str"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 1,
-        "x": 360,
-        "y": 1600,
-        "wires": [
-            [
-                "b2f59f4fef3d8b86"
-            ]
-        ]
-    },
-    {
-        "id": "b2f59f4fef3d8b86",
-        "type": "switch",
-        "z": "f9337f21.0eab78",
-        "name": "which button",
-        "property": "payload.value",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "1",
-                "vt": "num"
-            },
-            {
-                "t": "eq",
-                "v": "2",
-                "vt": "num"
-            },
-            {
-                "t": "eq",
-                "v": "4",
-                "vt": "num"
-            },
-            {
-                "t": "eq",
-                "v": "5",
-                "vt": "num"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 4,
-        "x": 550,
-        "y": 1600,
-        "wires": [
-            [
-                "c5b379fdf2f7a65f"
-            ],
-            [
-                "7dd8873a8c61588a"
-            ],
-            [
-                "18b6045b22c4cc73"
-            ],
-            [
-                "9a4d93e3.9f5c3"
-            ]
-        ]
-    },
-    {
         "id": "ba0630734df9353f",
         "type": "hubitat command",
         "z": "f9337f21.0eab78",
@@ -4400,182 +4403,6 @@
         ]
     },
     {
-        "id": "ad06d2e528474b01",
-        "type": "change",
-        "z": "f9337f21.0eab78",
-        "name": "40%",
-        "rules": [
-            {
-                "t": "set",
-                "p": "command",
-                "pt": "msg",
-                "to": "setLevel",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "arguments",
-                "pt": "msg",
-                "to": "40",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 770,
-        "y": 1600,
-        "wires": [
-            [
-                "d52d8310f3f1401c"
-            ]
-        ]
-    },
-    {
-        "id": "d52d8310f3f1401c",
-        "type": "hubitat command",
-        "z": "f9337f21.0eab78",
-        "deviceLabel": "Leah’s Bedside",
-        "name": "",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "1",
-        "command": "",
-        "commandArgs": "",
-        "x": 940,
-        "y": 1580,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "909304f270670f74",
-        "type": "hubitat command",
-        "z": "f9337f21.0eab78",
-        "deviceLabel": "Rob’s Bedside",
-        "name": "",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "554",
-        "command": "",
-        "commandArgs": "",
-        "x": 940,
-        "y": 1640,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "1ebe7fe71271b214",
-        "type": "change",
-        "z": "f9337f21.0eab78",
-        "name": "off",
-        "rules": [
-            {
-                "t": "set",
-                "p": "command",
-                "pt": "msg",
-                "to": "off",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 770,
-        "y": 1640,
-        "wires": [
-            [
-                "909304f270670f74"
-            ]
-        ]
-    },
-    {
-        "id": "c5b379fdf2f7a65f",
-        "type": "hubitat device",
-        "z": "f9337f21.0eab78",
-        "deviceLabel": "Leah’s Bedside",
-        "name": "",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "1",
-        "attribute": "switch",
-        "sendEvent": false,
-        "x": 800,
-        "y": 1500,
-        "wires": [
-            [
-                "d806568fcaba0728"
-            ]
-        ]
-    },
-    {
-        "id": "d806568fcaba0728",
-        "type": "switch",
-        "z": "f9337f21.0eab78",
-        "name": "is on",
-        "property": "payload.value",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "on",
-                "vt": "str"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 950,
-        "y": 1500,
-        "wires": [
-            [
-                "fff71a09e63a6fe9"
-            ],
-            [
-                "91e8ca3f.3f295"
-            ]
-        ]
-    },
-    {
-        "id": "fff71a09e63a6fe9",
-        "type": "change",
-        "z": "f9337f21.0eab78",
-        "name": "Set to 100%",
-        "rules": [
-            {
-                "t": "set",
-                "p": "command",
-                "pt": "msg",
-                "to": "setLevel",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "arguments",
-                "pt": "msg",
-                "to": "100",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1130,
-        "y": 1480,
-        "wires": [
-            [
-                "3d10086a6a0f415f"
-            ]
-        ]
-    },
-    {
         "id": "056f0cd790053f1f",
         "type": "change",
         "z": "f9337f21.0eab78",
@@ -4816,44 +4643,17 @@
         "id": "402a7d3deb06c496",
         "type": "hubitat device",
         "z": "f9337f21.0eab78",
-        "deviceLabel": "Bedside Dimmer",
+        "deviceLabel": "Leah’s 5 button",
         "name": "",
         "server": "252d4ef4.c14b6a",
-        "deviceId": "3",
+        "deviceId": "566",
         "attribute": "",
         "sendEvent": true,
-        "x": 190,
-        "y": 1900,
+        "x": 240,
+        "y": 1960,
         "wires": [
             [
-                "6bdfa9b9923cae13"
-            ]
-        ]
-    },
-    {
-        "id": "3a013e0170fbeff0",
-        "type": "change",
-        "z": "f9337f21.0eab78",
-        "name": "off",
-        "rules": [
-            {
-                "t": "set",
-                "p": "command",
-                "pt": "msg",
-                "to": "off",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 790,
-        "y": 2080,
-        "wires": [
-            [
-                "1f64cf98b7b984de"
+                "cce468e9476baafe"
             ]
         ]
     },
@@ -4861,6 +4661,7 @@
         "id": "06f5cc186eb094f4",
         "type": "change",
         "z": "f9337f21.0eab78",
+        "g": "16262d29d5c95164",
         "name": "Turn On",
         "rules": [
             {
@@ -4876,11 +4677,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1140,
-        "y": 1900,
+        "x": 1960,
+        "y": 2100,
         "wires": [
             [
-                "1e3f611957300a48"
+                "8c0bd2527ae098ae"
             ]
         ]
     },
@@ -4894,8 +4695,8 @@
         "deviceId": "554",
         "command": "",
         "commandArgs": "",
-        "x": 1440,
-        "y": 1960,
+        "x": 1180,
+        "y": 2320,
         "wires": [
             []
         ]
@@ -4910,8 +4711,8 @@
         "deviceId": "1",
         "command": "",
         "commandArgs": "",
-        "x": 1440,
-        "y": 2000,
+        "x": 1180,
+        "y": 2360,
         "wires": [
             []
         ]
@@ -4920,7 +4721,7 @@
         "id": "6bdfa9b9923cae13",
         "type": "switch",
         "z": "f9337f21.0eab78",
-        "name": "which button",
+        "name": "decode lutron",
         "property": "payload.value",
         "propertyType": "msg",
         "rules": [
@@ -4943,25 +4744,33 @@
                 "t": "eq",
                 "v": "4",
                 "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "5",
+                "vt": "str"
             }
         ],
         "checkall": "false",
         "repair": false,
-        "outputs": 4,
-        "x": 410,
-        "y": 1900,
+        "outputs": 5,
+        "x": 560,
+        "y": 1960,
         "wires": [
             [
-                "4403b6bd78189a08"
+                "431b94968ba892f8"
             ],
             [
                 "24bb8f272f701383"
             ],
             [
-                "156fcd5f73bfc8b6"
+                "36b41fc813e80842"
             ],
             [
-                "3a013e0170fbeff0"
+                "99b26a2b29a537d5"
+            ],
+            [
+                "089b6a138237765e"
             ]
         ]
     },
@@ -4969,7 +4778,7 @@
         "id": "84150709b87b217b",
         "type": "change",
         "z": "f9337f21.0eab78",
-        "name": "40%",
+        "name": "30%",
         "rules": [
             {
                 "t": "set",
@@ -4982,7 +4791,7 @@
                 "t": "set",
                 "p": "arguments",
                 "pt": "msg",
-                "to": "40",
+                "to": "30",
                 "tot": "str"
             }
         ],
@@ -4991,8 +4800,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 790,
-        "y": 1980,
+        "x": 1010,
+        "y": 2000,
         "wires": [
             [
                 "4ea8f66c15b0c2e6"
@@ -5009,8 +4818,8 @@
         "deviceId": "1",
         "command": "",
         "commandArgs": "",
-        "x": 960,
-        "y": 2020,
+        "x": 1180,
+        "y": 2080,
         "wires": [
             []
         ]
@@ -5025,8 +4834,8 @@
         "deviceId": "554",
         "command": "",
         "commandArgs": "",
-        "x": 960,
-        "y": 1960,
+        "x": 1180,
+        "y": 1980,
         "wires": [
             []
         ]
@@ -5050,8 +4859,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 790,
-        "y": 2020,
+        "x": 1010,
+        "y": 2080,
         "wires": [
             [
                 "29f54d13e765e267"
@@ -5062,14 +4871,15 @@
         "id": "4403b6bd78189a08",
         "type": "hubitat device",
         "z": "f9337f21.0eab78",
+        "g": "16262d29d5c95164",
         "deviceLabel": "Rob’s Bedside",
         "name": "",
         "server": "252d4ef4.c14b6a",
         "deviceId": "554",
-        "attribute": "switch",
+        "attribute": "",
         "sendEvent": false,
-        "x": 820,
-        "y": 1880,
+        "x": 1620,
+        "y": 2080,
         "wires": [
             [
                 "63876624b5451920"
@@ -5080,8 +4890,9 @@
         "id": "63876624b5451920",
         "type": "switch",
         "z": "f9337f21.0eab78",
+        "g": "16262d29d5c95164",
         "name": "is on",
-        "property": "payload.value",
+        "property": "payload.switch.value",
         "propertyType": "msg",
         "rules": [
             {
@@ -5096,11 +4907,11 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 970,
-        "y": 1880,
+        "x": 1790,
+        "y": 2080,
         "wires": [
             [
-                "9d83d170a863c812"
+                "35bc1a06093b8fa5"
             ],
             [
                 "06f5cc186eb094f4"
@@ -5111,6 +4922,7 @@
         "id": "9d83d170a863c812",
         "type": "change",
         "z": "f9337f21.0eab78",
+        "g": "16262d29d5c95164",
         "name": "Set to 100%",
         "rules": [
             {
@@ -5133,11 +4945,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1150,
-        "y": 1860,
+        "x": 2150,
+        "y": 2060,
         "wires": [
             [
-                "1e3f611957300a48"
+                "8c0bd2527ae098ae"
             ]
         ]
     },
@@ -5145,7 +4957,7 @@
         "id": "7bcf989a027b91b9",
         "type": "change",
         "z": "f9337f21.0eab78",
-        "name": "60%",
+        "name": "45%",
         "rules": [
             {
                 "t": "set",
@@ -5158,7 +4970,7 @@
                 "t": "set",
                 "p": "arguments",
                 "pt": "msg",
-                "to": "60",
+                "to": "45",
                 "tot": "str"
             }
         ],
@@ -5167,45 +4979,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 790,
-        "y": 1940,
+        "x": 1010,
+        "y": 1960,
         "wires": [
             [
                 "4ea8f66c15b0c2e6"
-            ]
-        ]
-    },
-    {
-        "id": "51cd2c0885dc17a8",
-        "type": "change",
-        "z": "f9337f21.0eab78",
-        "name": "60%",
-        "rules": [
-            {
-                "t": "set",
-                "p": "command",
-                "pt": "msg",
-                "to": "setLevel",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "arguments",
-                "pt": "msg",
-                "to": "60",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 770,
-        "y": 1560,
-        "wires": [
-            [
-                "d52d8310f3f1401c"
             ]
         ]
     },
@@ -5229,6 +5007,11 @@
             },
             {
                 "t": "eq",
+                "v": "3",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
                 "v": "4",
                 "vt": "num"
             },
@@ -5240,40 +5023,26 @@
         ],
         "checkall": "false",
         "repair": false,
-        "outputs": 4,
-        "x": 400,
-        "y": 2060,
+        "outputs": 5,
+        "x": 560,
+        "y": 2120,
         "wires": [
             [
-                "4403b6bd78189a08"
+                "72e9e2e71dce660b"
             ],
             [
-                "24bb8f272f701383"
+                "76ace705f40ca13d"
             ],
             [
-                "156fcd5f73bfc8b6"
+                "376f756b0385ffee"
             ],
             [
-                "3a013e0170fbeff0"
+                "2d4487f2e8e5409b"
+            ],
+            [
+                "089b6a138237765e"
             ]
         ]
-    },
-    {
-        "id": "8692bf2108c02adc",
-        "type": "debug",
-        "z": "f9337f21.0eab78",
-        "name": "debug 6",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 340,
-        "y": 1680,
-        "wires": []
     },
     {
         "id": "a602bff24bc56b3b",
@@ -5285,30 +5054,11 @@
         "deviceId": "568",
         "attribute": "",
         "sendEvent": true,
-        "x": 180,
-        "y": 2060,
+        "x": 240,
+        "y": 2120,
         "wires": [
             [
-                "887dc8c1a970c922"
-            ]
-        ]
-    },
-    {
-        "id": "e4990f4a210af893",
-        "type": "hubitat device",
-        "z": "f9337f21.0eab78",
-        "deviceLabel": "5 button remote",
-        "name": "",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "566",
-        "attribute": "",
-        "sendEvent": true,
-        "x": 140,
-        "y": 1600,
-        "wires": [
-            [
-                "16910248bf6af96e",
-                "8692bf2108c02adc"
+                "85f793977ebcc690"
             ]
         ]
     },
@@ -5322,11 +5072,11 @@
         "deviceId": "569",
         "attribute": "pushed",
         "sendEvent": true,
-        "x": 190,
-        "y": 2380,
+        "x": 270,
+        "y": 2340,
         "wires": [
             [
-                "09cf1622ecf9cf30"
+                "7efecd32ea4a7cb6"
             ]
         ]
     },
@@ -5362,8 +5112,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 4,
-        "x": 400,
-        "y": 2380,
+        "x": 560,
+        "y": 2340,
         "wires": [
             [
                 "cc92d72acf74153b"
@@ -5377,38 +5127,6 @@
             [
                 "4dbaa3738332e358"
             ]
-        ]
-    },
-    {
-        "id": "56921e7715f04b33",
-        "type": "hubitat command",
-        "z": "f9337f21.0eab78",
-        "deviceLabel": "Leah’s Bedside",
-        "name": "",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "1",
-        "command": "",
-        "commandArgs": "",
-        "x": 900,
-        "y": 2340,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "a627786208b7b083",
-        "type": "hubitat command",
-        "z": "f9337f21.0eab78",
-        "deviceLabel": "Rob’s Bedside",
-        "name": "",
-        "server": "252d4ef4.c14b6a",
-        "deviceId": "554",
-        "command": "",
-        "commandArgs": "",
-        "x": 900,
-        "y": 2400,
-        "wires": [
-            []
         ]
     },
     {
@@ -5437,11 +5155,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 610,
-        "y": 2360,
+        "x": 770,
+        "y": 2320,
         "wires": [
             [
-                "4f17c56984653df7"
+                "e95538f0d73c773b"
             ]
         ]
     },
@@ -5471,11 +5189,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 610,
-        "y": 2400,
+        "x": 770,
+        "y": 2360,
         "wires": [
             [
-                "4f17c56984653df7"
+                "e95538f0d73c773b"
             ]
         ]
     },
@@ -5498,11 +5216,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 610,
-        "y": 2440,
+        "x": 770,
+        "y": 2400,
         "wires": [
             [
-                "4f17c56984653df7"
+                "e95538f0d73c773b"
             ]
         ]
     },
@@ -5532,13 +5250,882 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 610,
-        "y": 2320,
+        "x": 770,
+        "y": 2280,
         "wires": [
             [
-                "4f17c56984653df7"
+                "e95538f0d73c773b"
             ]
         ]
+    },
+    {
+        "id": "36b41fc813e80842",
+        "type": "link out",
+        "z": "f9337f21.0eab78",
+        "name": "Turn Off Lamps",
+        "mode": "link",
+        "links": [
+            "83b85098e12b7232"
+        ],
+        "x": 735,
+        "y": 1900,
+        "wires": []
+    },
+    {
+        "id": "46161f3b7d6ae7ba",
+        "type": "hubitat command",
+        "z": "f9337f21.0eab78",
+        "deviceLabel": "Rob’s Bedside",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "554",
+        "command": "",
+        "commandArgs": "",
+        "x": 1180,
+        "y": 1920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dd21c9847c33745c",
+        "type": "change",
+        "z": "f9337f21.0eab78",
+        "name": "off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1010,
+        "y": 1920,
+        "wires": [
+            [
+                "46161f3b7d6ae7ba"
+            ]
+        ]
+    },
+    {
+        "id": "85f793977ebcc690",
+        "type": "switch",
+        "z": "f9337f21.0eab78",
+        "name": "",
+        "property": "payload.name",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "released",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 385,
+        "y": 2120,
+        "wires": [
+            [
+                "887dc8c1a970c922"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "cce468e9476baafe",
+        "type": "switch",
+        "z": "f9337f21.0eab78",
+        "name": "",
+        "property": "payload.name",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "released",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 385,
+        "y": 1960,
+        "wires": [
+            [
+                "6bdfa9b9923cae13"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "7efecd32ea4a7cb6",
+        "type": "switch",
+        "z": "f9337f21.0eab78",
+        "name": "",
+        "property": "payload.name",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "released",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 385,
+        "y": 2340,
+        "wires": [
+            [
+                "09cf1622ecf9cf30"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "21e663874c230af3",
+        "type": "hubitat command",
+        "z": "f9337f21.0eab78",
+        "deviceLabel": "Leah’s Bedside",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "1",
+        "command": "",
+        "commandArgs": "",
+        "x": 1180,
+        "y": 2140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "448e4baaa28c6cdb",
+        "type": "change",
+        "z": "f9337f21.0eab78",
+        "name": "40%",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "setLevel",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "arguments",
+                "pt": "msg",
+                "to": "40",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1010,
+        "y": 2160,
+        "wires": [
+            [
+                "21e663874c230af3"
+            ]
+        ]
+    },
+    {
+        "id": "0058ad36f6d8457e",
+        "type": "change",
+        "z": "f9337f21.0eab78",
+        "name": "60%",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "setLevel",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "arguments",
+                "pt": "msg",
+                "to": "60",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1010,
+        "y": 2120,
+        "wires": [
+            [
+                "21e663874c230af3"
+            ]
+        ]
+    },
+    {
+        "id": "b561021d0a87f23f",
+        "type": "change",
+        "z": "f9337f21.0eab78",
+        "g": "16262d29d5c95164",
+        "name": "Turn On",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "on",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1960,
+        "y": 1920,
+        "wires": [
+            [
+                "bf7bb0fcda8cc401"
+            ]
+        ]
+    },
+    {
+        "id": "697d76e7d9469acb",
+        "type": "hubitat device",
+        "z": "f9337f21.0eab78",
+        "g": "16262d29d5c95164",
+        "deviceLabel": "Leah’s Bedside",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "1",
+        "attribute": "",
+        "sendEvent": false,
+        "x": 1620,
+        "y": 1900,
+        "wires": [
+            [
+                "7a32376e4c071f4f"
+            ]
+        ]
+    },
+    {
+        "id": "7a32376e4c071f4f",
+        "type": "switch",
+        "z": "f9337f21.0eab78",
+        "g": "16262d29d5c95164",
+        "name": "is on",
+        "property": "payload.switch.value",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "on",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 1790,
+        "y": 1900,
+        "wires": [
+            [
+                "f06f0db1fe0bc640"
+            ],
+            [
+                "b561021d0a87f23f"
+            ]
+        ]
+    },
+    {
+        "id": "0ab527cec932483b",
+        "type": "change",
+        "z": "f9337f21.0eab78",
+        "g": "16262d29d5c95164",
+        "name": "Set to 100%",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "setLevel",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "arguments",
+                "pt": "msg",
+                "to": "100",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2150,
+        "y": 1880,
+        "wires": [
+            [
+                "bf7bb0fcda8cc401"
+            ]
+        ]
+    },
+    {
+        "id": "8c0bd2527ae098ae",
+        "type": "hubitat command",
+        "z": "f9337f21.0eab78",
+        "g": "16262d29d5c95164",
+        "deviceLabel": "Rob’s Bedside",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "554",
+        "command": "",
+        "commandArgs": "",
+        "x": 2340,
+        "y": 2080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bf7bb0fcda8cc401",
+        "type": "hubitat command",
+        "z": "f9337f21.0eab78",
+        "g": "16262d29d5c95164",
+        "deviceLabel": "Leah’s Bedside",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "1",
+        "command": "",
+        "commandArgs": "",
+        "x": 2340,
+        "y": 1920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "72e9e2e71dce660b",
+        "type": "link out",
+        "z": "f9337f21.0eab78",
+        "name": "Turn On Robs Lamp",
+        "mode": "link",
+        "links": [
+            "683cb40290b50e0e"
+        ],
+        "x": 695,
+        "y": 2060,
+        "wires": []
+    },
+    {
+        "id": "431b94968ba892f8",
+        "type": "link out",
+        "z": "f9337f21.0eab78",
+        "name": "Turn On Leahs Lamp",
+        "mode": "link",
+        "links": [
+            "8a063cbbd392a564"
+        ],
+        "x": 695,
+        "y": 1900,
+        "wires": []
+    },
+    {
+        "id": "8a063cbbd392a564",
+        "type": "link in",
+        "z": "f9337f21.0eab78",
+        "g": "16262d29d5c95164",
+        "name": "Turn On Leahs Lamp",
+        "links": [
+            "431b94968ba892f8",
+            "2a5089d244255049"
+        ],
+        "x": 1485,
+        "y": 1900,
+        "wires": [
+            [
+                "697d76e7d9469acb"
+            ]
+        ]
+    },
+    {
+        "id": "683cb40290b50e0e",
+        "type": "link in",
+        "z": "f9337f21.0eab78",
+        "g": "16262d29d5c95164",
+        "name": "Turn On Robs Lamp",
+        "links": [
+            "72e9e2e71dce660b",
+            "44c7448a4d0413a1"
+        ],
+        "x": 1485,
+        "y": 2080,
+        "wires": [
+            [
+                "4403b6bd78189a08"
+            ]
+        ]
+    },
+    {
+        "id": "f06f0db1fe0bc640",
+        "type": "switch",
+        "z": "f9337f21.0eab78",
+        "g": "16262d29d5c95164",
+        "name": "is at 100%",
+        "property": "payload.level.value",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "95",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 1970,
+        "y": 1860,
+        "wires": [
+            [
+                "40d57120e89fa53f"
+            ],
+            [
+                "0ab527cec932483b"
+            ]
+        ]
+    },
+    {
+        "id": "44c7448a4d0413a1",
+        "type": "link out",
+        "z": "f9337f21.0eab78",
+        "g": "16262d29d5c95164",
+        "name": "Turn Off Lamps",
+        "mode": "link",
+        "links": [
+            "683cb40290b50e0e"
+        ],
+        "x": 2145,
+        "y": 1840,
+        "wires": []
+    },
+    {
+        "id": "35bc1a06093b8fa5",
+        "type": "switch",
+        "z": "f9337f21.0eab78",
+        "g": "16262d29d5c95164",
+        "name": "is at 100%",
+        "property": "payload.level.value",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "95",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 1970,
+        "y": 2040,
+        "wires": [
+            [
+                "7e20ebaa86d34952"
+            ],
+            [
+                "9d83d170a863c812"
+            ]
+        ]
+    },
+    {
+        "id": "2a5089d244255049",
+        "type": "link out",
+        "z": "f9337f21.0eab78",
+        "g": "16262d29d5c95164",
+        "name": "Turn Off Lamps",
+        "mode": "link",
+        "links": [
+            "8a063cbbd392a564"
+        ],
+        "x": 2145,
+        "y": 2020,
+        "wires": []
+    },
+    {
+        "id": "376f756b0385ffee",
+        "type": "link out",
+        "z": "f9337f21.0eab78",
+        "name": "Turn Off Lamps",
+        "mode": "link",
+        "links": [
+            "5cf4910be9e36505"
+        ],
+        "x": 735,
+        "y": 2060,
+        "wires": []
+    },
+    {
+        "id": "f535f3ff9476a0b1",
+        "type": "hubitat device",
+        "z": "f9337f21.0eab78",
+        "g": "3a2dc59869c5c86b",
+        "deviceLabel": "Rob’s Bedside",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "554",
+        "attribute": "switch",
+        "sendEvent": false,
+        "x": 1620,
+        "y": 2440,
+        "wires": [
+            [
+                "35877305ba0d9cdd"
+            ]
+        ]
+    },
+    {
+        "id": "35877305ba0d9cdd",
+        "type": "switch",
+        "z": "f9337f21.0eab78",
+        "g": "3a2dc59869c5c86b",
+        "name": "is on",
+        "property": "payload.value",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "on",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 1790,
+        "y": 2440,
+        "wires": [
+            [
+                "551739e80eefd897"
+            ],
+            [
+                "9fc55d4b9326950a"
+            ]
+        ]
+    },
+    {
+        "id": "5cf4910be9e36505",
+        "type": "link in",
+        "z": "f9337f21.0eab78",
+        "g": "3a2dc59869c5c86b",
+        "name": "Toggle Robs Lamp",
+        "links": [
+            "376f756b0385ffee"
+        ],
+        "x": 1485,
+        "y": 2440,
+        "wires": [
+            [
+                "f535f3ff9476a0b1"
+            ]
+        ]
+    },
+    {
+        "id": "551739e80eefd897",
+        "type": "change",
+        "z": "f9337f21.0eab78",
+        "g": "3a2dc59869c5c86b",
+        "name": "Turn Off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1960,
+        "y": 2420,
+        "wires": [
+            [
+                "d04ab2a91a484ed4"
+            ]
+        ]
+    },
+    {
+        "id": "9fc55d4b9326950a",
+        "type": "change",
+        "z": "f9337f21.0eab78",
+        "g": "3a2dc59869c5c86b",
+        "name": "Turn On",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "on",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1960,
+        "y": 2460,
+        "wires": [
+            [
+                "d04ab2a91a484ed4"
+            ]
+        ]
+    },
+    {
+        "id": "d04ab2a91a484ed4",
+        "type": "hubitat command",
+        "z": "f9337f21.0eab78",
+        "g": "3a2dc59869c5c86b",
+        "deviceLabel": "Rob’s Bedside",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "554",
+        "command": "",
+        "commandArgs": "",
+        "x": 2200,
+        "y": 2440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dcb1df6e62a99a7d",
+        "type": "hubitat device",
+        "z": "f9337f21.0eab78",
+        "g": "3a2dc59869c5c86b",
+        "deviceLabel": "Leah’s Bedside",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "1",
+        "attribute": "switch",
+        "sendEvent": false,
+        "x": 1620,
+        "y": 2260,
+        "wires": [
+            [
+                "3502622cf58ac02d"
+            ]
+        ]
+    },
+    {
+        "id": "3502622cf58ac02d",
+        "type": "switch",
+        "z": "f9337f21.0eab78",
+        "g": "3a2dc59869c5c86b",
+        "name": "is on",
+        "property": "payload.value",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "on",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 1790,
+        "y": 2260,
+        "wires": [
+            [
+                "7348f834cefd7e4e"
+            ],
+            [
+                "6015f6a7a110e060"
+            ]
+        ]
+    },
+    {
+        "id": "83b85098e12b7232",
+        "type": "link in",
+        "z": "f9337f21.0eab78",
+        "g": "3a2dc59869c5c86b",
+        "name": "Toggle Leahs Lamp",
+        "links": [
+            "36b41fc813e80842"
+        ],
+        "x": 1485,
+        "y": 2260,
+        "wires": [
+            [
+                "dcb1df6e62a99a7d"
+            ]
+        ]
+    },
+    {
+        "id": "7348f834cefd7e4e",
+        "type": "change",
+        "z": "f9337f21.0eab78",
+        "g": "3a2dc59869c5c86b",
+        "name": "Turn Off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1960,
+        "y": 2240,
+        "wires": [
+            [
+                "7699836c331d2441"
+            ]
+        ]
+    },
+    {
+        "id": "6015f6a7a110e060",
+        "type": "change",
+        "z": "f9337f21.0eab78",
+        "g": "3a2dc59869c5c86b",
+        "name": "Turn On",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "on",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1960,
+        "y": 2280,
+        "wires": [
+            [
+                "7699836c331d2441"
+            ]
+        ]
+    },
+    {
+        "id": "7699836c331d2441",
+        "type": "hubitat command",
+        "z": "f9337f21.0eab78",
+        "g": "3a2dc59869c5c86b",
+        "deviceLabel": "Leah’s Bedside",
+        "name": "",
+        "server": "252d4ef4.c14b6a",
+        "deviceId": "1",
+        "command": "",
+        "commandArgs": "",
+        "x": 2200,
+        "y": 2260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "40d57120e89fa53f",
+        "type": "delay",
+        "z": "f9337f21.0eab78",
+        "g": "16262d29d5c95164",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 2085,
+        "y": 1840,
+        "wires": [
+            [
+                "44c7448a4d0413a1"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "7e20ebaa86d34952",
+        "type": "delay",
+        "z": "f9337f21.0eab78",
+        "g": "16262d29d5c95164",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 2085,
+        "y": 2020,
+        "wires": [
+            [
+                "2a5089d244255049"
+            ]
+        ],
+        "l": false
     },
     {
         "id": "734f4b605d12eb34",
@@ -5730,13 +6317,13 @@
         "id": "8c649af674c27f6f",
         "type": "hubitat device",
         "z": "5ea7da533109f7d2",
-        "deviceLabel": "Nursery Motion",
+        "deviceLabel": "Nursery Temp Sensor",
         "name": "",
         "server": "252d4ef4.c14b6a",
-        "deviceId": "296",
+        "deviceId": "597",
         "attribute": "temperature",
         "sendEvent": true,
-        "x": 400,
+        "x": 420,
         "y": 480,
         "wires": [
             [
@@ -6274,6 +6861,7 @@
         "id": "207b3028d768f770",
         "type": "inject",
         "z": "5ea7da533109f7d2",
+        "d": true,
         "name": "12:30pm",
         "props": [
             {
@@ -6488,6 +7076,7 @@
         "id": "7aa9def8d34a3e64",
         "type": "inject",
         "z": "5ea7da533109f7d2",
+        "d": true,
         "name": "9:30am",
         "props": [
             {
@@ -6517,6 +7106,7 @@
         "id": "2d781397117ae518",
         "type": "inject",
         "z": "5ea7da533109f7d2",
+        "d": true,
         "name": "5:45pm",
         "props": [
             {
@@ -6546,6 +7136,7 @@
         "id": "5e46a0effa23ad0b",
         "type": "inject",
         "z": "5ea7da533109f7d2",
+        "d": true,
         "name": "2:45pm",
         "props": [
             {
@@ -7025,7 +7616,6 @@
         "g": "dbe1dc0e31a5fb56",
         "name": "Discard Pending Messages",
         "links": [
-            "9f224061934e409c",
             "2648b0e2f1734710"
         ],
         "x": 245,
@@ -7431,7 +8021,8 @@
         "y": 360,
         "wires": [
             [
-                "bf11becc09f647d3"
+                "bf11becc09f647d3",
+                "6dcee357469bde7e"
             ]
         ]
     },
@@ -7501,8 +8092,7 @@
         "name": "New Metric Insert",
         "links": [
             "e16cf27bcb6da70f",
-            "47f6d47525adeb9b",
-            "5129b82d1a8558d7"
+            "47f6d47525adeb9b"
         ],
         "x": 235,
         "y": 900,
